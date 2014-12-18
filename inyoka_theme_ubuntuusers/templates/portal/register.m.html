@@ -21,7 +21,7 @@
                             'email'], inline=true)}}
       <dt>Nutzungshinweise:</dt>
       {# include the agreement letter #}
-      <dd>{{ form.terms_of_usage }} <label for="id_terms_of_usage">Ich bestätige den <a href="{{ href('portal', 'lizenz') }}">Lizenztext</a> gelesen zu haben und erkläre mich mit der Veröffentlichung unter dieser Lizenz einverstanden.<br />Durch das Abschließen der Registrierung stimme ich den <a href="{{ href('portal', 'nutzungsbedingungen') }}">Nutzungsbedingungen</a> und <a href="http://wiki.ubuntuusers.de/ubuntuusers/Moderatoren/Forenregeln">Forenregeln</a> ebenfalls zu.</label><br />
+      <dd>{{ form.terms_of_usage }} <label for="id_terms_of_usage">Ich bestätige den <a href="{{ href('portal', 'lizenz') }}">Lizenztext</a> gelesen zu haben und erkläre mich mit der Veröffentlichung unter dieser Lizenz einverstanden.<br />Durch das Abschließen der Registrierung stimme ich den <a href="{{ href('portal', 'nutzungsbedingungen') }}">Nutzungsbedingungen</a> und <a href="//wiki.ubuntuusers.de/ubuntuusers/Moderatoren/Forenregeln">Forenregeln</a> ebenfalls zu.</label><br />
       {{ form.errors.terms_of_usage }}</dd>
       <dd>{{ form.hidden_captcha }}</dd>
       <dd>{{ form.errors.hidden_captcha }}</dd>

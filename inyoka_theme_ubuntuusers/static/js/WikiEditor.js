@@ -317,9 +317,9 @@
       /* Helpbar */
       //this.helpbar.appendTo($('<li />').appendTo(t)).hide();
       if (profile == 'wiki') {
-        link = 'http://wiki.ubuntuusers.de/Wiki/Syntax';
+        link = '//wiki.ubuntuusers.de/Wiki/Syntax';
       } else {
-        link = 'http://wiki.ubuntuusers.de/Forum/Syntax';
+        link = '//wiki.ubuntuusers.de/Forum/Syntax';
       }
       $('<span class="syntax_help note"><a href="' + link + '">Hilfe zur Syntax</a></span>')
         .appendTo($('<li />').appendTo(t));
