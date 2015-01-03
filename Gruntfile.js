@@ -5,29 +5,29 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    banner: ' * <%= pkg.title %>\n' +
+            ' * <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %>\n' +
+            ' * <%= pkg.homepage %>\n' +
+            ' * :copyright: (c) 2007-<%= grunt.template.today("yyyy") %> by the <%= pkg.author %>\n' +
+            ' * :license: <%= pkg.license %>\n' +
+            ' */\n',
     // Task configuration.
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '/**\n<%= banner %>',
+        compress: true,
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        expand: true,
+        cwd: 'inyoka_theme_ubuntuusers/static/js/',
+        src: [
+          '*.js',
+          '!*.min.js',
+          '!less.js',
+          '!jquery.js',
+        ],
+        dest: 'inyoka_theme_ubuntuusers/static/js/',
+        ext: '.min.js',
       }
     },
     jshint: {
@@ -60,6 +60,7 @@ module.exports = function(grunt) {
     less: {
       production: {
         options: {
+          banner: '/*!\n<%= banner %>',
           compress: true
         },
         files: [
@@ -91,6 +92,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'less', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'less', 'uglify']);
 
 };
