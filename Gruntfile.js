@@ -28,6 +28,7 @@ module.exports = function(grunt) {
         ],
         dest: 'inyoka_theme_ubuntuusers/static/js/',
         ext: '.min.js',
+        extDot: 'last',
       }
     },
     jshint: {
