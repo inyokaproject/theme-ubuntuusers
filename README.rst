@@ -5,7 +5,26 @@ Inyoka ubuntuusers Theme
 Installation
 ============
 
-Add ``'inyoka_theme_ubuntuusers'`` to the ``INSTALLED_APPS``.
+On development systems:
+-----------------------
+
+1. Run ``git clone git@github.com:inyokaproject/theme-ubuntuusers.git``
+2. Switch into the repository: ``cd theme-ubuntusers``
+3. Install as a development package: ``python setup.py develop``
+
+On Production
+-------------
+
+1. Run ``pip install -U "git+ssh://git@github.com:inyokaproject/theme-ubuntuusers.git@staging#egg=inyoka-theme-ubuntuusers"``
+
+Let Django know about the theme
+-------------------------------
+
+Add ``'inyoka_theme_ubuntuusers'`` to the ``INSTALLED_APPS``::
+
+    INSTALLED_APPS = INSTALLED_APPS + (
+        'inyoka_theme_ubuntuusers',
+    )
 
 
 Building
