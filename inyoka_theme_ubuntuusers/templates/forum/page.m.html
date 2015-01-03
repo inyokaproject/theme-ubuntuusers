@@ -27,11 +27,11 @@
   {{ super() }}
   {% if SETTINGS.DEBUG %}
     <script type="text/javascript"
-            src="{{ href('static', 'forum', 'js', 'overall.m.js') }}">
+            src="{{ href('static', 'js', 'forum.m.js') }}">
     </script>
   {% else %}
     <script type="text/javascript"
-            src="{{ href('static', 'forum', 'js', 'overall.m.min.js') }}">
+            src="{{ href('static', 'js', 'forum.m.min.js') }}">
     </script>
   {% endif %}
 {% endblock %}
