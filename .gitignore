@@ -1,5 +1,6 @@
 *.css
 *.egg-info
+*.min.js
 *.py[cod]
 
 dist
@@ -8,3 +9,7 @@ node_modules
 inyoka_theme_ubuntuusers/static/img/forum-sprite1-*.png
 inyoka_theme_ubuntuusers/static/img/header-sprite-*.png
 inyoka_theme_ubuntuusers/static/img/icons/editor-sprite-*.png
+
+!inyoka_theme_ubuntuusers/static/js/jquery.min.js
+!inyoka_theme_ubuntuusers/static/js/jquery.ba-hashchange.min.js
+!inyoka_theme_ubuntuusers/static/js/jquery.cookie.min.js
