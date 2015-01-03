@@ -1,5 +1,6 @@
-*.py[cod]
+*.css
 *.egg-info
+*.py[cod]
 
 dist
 node_modules
