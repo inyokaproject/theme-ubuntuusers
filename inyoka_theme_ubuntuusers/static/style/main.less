@@ -7,9 +7,44 @@
  * :copyright: (c) 2007-2015 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
-
+ 
+@import 'fonts.less';
 @import 'layout.less';
 @import 'main-sprite.less';
+
+/*
+ * Liberation Sans
+ */
+@font-face {
+  .bulletproof-FontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Regular/LiberationSans-Regular-webfont");
+}
+
+@font-face {
+  .bulletproof-FontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Italic/LiberationSans-Italic-webfont"; @Style: italic);
+}
+
+@font-face {
+  .bulletproof-FontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Bold/LiberationSans-Bold-webfont"; bold);
+}
+
+@font-face {
+  .bulletproof-FontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/BoldItalic/LiberationSans-BoldItalic-webfont"; bold; italic);
+}
+
+/* Liberation Mono */
+@font-face {
+  .bulletproof-FontFace(dl_liberation_mono; "Liberation_webkit_macroman/Mono/Regular/LiberationMono-Regular-webfont");
+}
+
+/* Ubuntu
+ * (only Bold and light)
+ */
+@font-face {
+  .simple-FontFace(dl_ubuntu; "ubuntu-font-family-0.80/Ubuntu-B"; bold)
+}
+@font-face {
+  .simple-FontFace(dl_ubuntu; "ubuntu-font-family-0.80/Ubuntu-L"; lighter)
+}
 
 * {
   padding: 0;
@@ -17,10 +52,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: @font-content;
   color: black;
-  font-size: 0.9em;
-  line-height: 1.5;
+  font-size: @font-size;
+  line-height: @line-height;
 }
 
 html, body {
@@ -61,7 +96,7 @@ a.strong {
 }
 input {
   border: 1px solid #AAA;
-  font-family: 'Verdana', 'Deja-Vu Sans', 'Bitstream Vera Sans', sans-serif;
+  font-family: @font-monospace;
   font-size: 1em;
   background-color: #FFFFFF;
   color: #000000;
@@ -74,6 +109,7 @@ input[type="radio"] {
 }
 input[type="submit"], input[type="button"], input[type="reset"] {
   border-color: #777;
+  font-family: @font-content;
   background-color: #eee;
   color: #333333;
 }
@@ -105,7 +141,7 @@ input.linkbutton {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  font-family: 'Verdana', 'Deja-Vu Sans', 'Bitstream Vera Sans', sans-serif;
+  font-family: @font-content;
 }
 input.linkbutton:active {
   border: none;
@@ -118,13 +154,15 @@ input.linkbutton:active {
 textarea {
   border: 1px solid #AAA;
   width:100%;
+  font-family: @font-monospace;
+  font-size: @font-size;
 }
 div.actions {
   margin: 1em 0 0 0;
 }
 select {
   border: 1px solid #AAA;
-  font-family: 'Verdana', 'Deja-Vu Sans', 'Bitstream Vera Sans', sans-serif;
+  font-family: @font-content;
   font-size: 1em;
 }
 hr {
@@ -133,7 +171,7 @@ hr {
   background-color: #AAA;
 }
 h1, h2, h3, h4 {
-  font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+  font-family: @font-header;
   font-weight: bold;
   margin: 0.7em 0.0em 0.4em;
 }
@@ -179,11 +217,11 @@ blockquote {
   margin-left: 1.0em;
 }
 code {
-  font-family: monospace;
+  font-family: @font-monospace;
 }
 pre {
   background-color: #eee;
-  font-family: monospace;
+  font-family: @font-monospace;
   border: 1px solid #aaa;
   padding: 0 0.4em;
   overflow: auto;
@@ -228,10 +266,8 @@ div.pagination_right {
   float: right;
 }
 div.pagination .pageselect, div.pagination .next, div.pagination .ellipsis, div.pagination .prev {
-  font-size: 13px;
-  line-height: 1.4em;
+  font-size: 0.9em;
   background-color: white;
-  height: 1.4em;
   padding: 0 0.5em;
   margin-left: 1px;
 }
@@ -333,6 +369,7 @@ table tr.head th,table thead th {
   .table-header-gradient;
   padding: 0.3em 0;
   text-align: center;
+  font-family: @font-header;
   color: #673B1A;
   vertical-align:middle;
 }
@@ -636,18 +673,17 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
     padding-top: 0.5em;
   }
   h3 {
-    font-weight: bold;
+    font-weight: lighter;
     border-bottom: solid 1px #888;
     font-size: 1.1em;
     margin-bottom: 0;
-    color: #444;
-    padding: 0.5em 0.5em 0.5em 28px;
+    color: #333;
+    padding: 0.5em 0.5em 0.25em 28px;
     background-repeat: no-repeat;
     background-position: left center;
     a {
-      color: #444;
+      color: #333;
       text-decoration: none;
-      font-weight: 100;
     }
     img {
       float: right;
@@ -756,7 +792,6 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   margin: 0 20px 1.0em 20px;
   h1 {
     color: #a48f65;
-    font-family: 'Trebuchet MS',sans-serif;
     font-size: 2.6em;
     margin: 0 0 0.2em 0;
     display:inline;
@@ -771,7 +806,6 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   }
   h2 {
     color: @orange_d_dark;
-    font-family: 'Trebuchet MS',sans-serif;
     font-size: 1.5em;
     margin: -0.3em 0 0 0.5em;
     display:inline;
@@ -819,6 +853,7 @@ form.search {
     padding: 0;
   }
   .search_query {
+    font-family: @font-content;
     border: solid 1px #888;
     background-color: #fefefe;
     padding: 1px;
@@ -928,8 +963,6 @@ form.search ul.search_area li.area_ikhaya, .search input.area_ikhaya {
     text-align: center;
     width: 50%;
     img {
-      line-height: 12px!important;
-      height: 12px!important;
       vertical-align: middle;
     }
   }
@@ -1167,7 +1200,7 @@ div.pathbar_extension {
 select.firstletterselect {
   option:first-letter {
     color: #CCC;
-    font-family: monospace;
+    font-family: @font-monospace;
   }
 }
 .staticwikinote {
@@ -1194,9 +1227,9 @@ div#database_debug_table {
   border: 1px solid #52170b;
   clear: both;
   color: #000;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: @font-header;
   font-size: .9em;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 20px;
   margin: 20px 0 0;
   opacity: 0.5px;
@@ -1208,12 +1241,10 @@ div#database_debug_table {
     color: #90A818;
   }
   strong {
-    font-family: Arial, sans-serif;
     margin: -10px 0 0;
     padding: 0;
   }
   ul {
-    font-family: Arial, sans-serif;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1249,7 +1280,7 @@ div#database_debug_table ul li pre,div#database_debug_table table {
   background-color: #f9f6f2;
   border-bottom: 1px solid #a87818;
   border-top: 1px solid #523a0b;
-  font-family: Consolas, 'Deja Vu Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-family: @font-monospace;
   font-size: 1em;
   margin: 0 -10px;
   padding: 10px;
@@ -1313,7 +1344,7 @@ div#database_debug_table ul li pre,div#database_debug_table table {
         -o-transition: opacity .20s linear;
       }
       .description {
-        font-size: 18px;
+        font-size: 1.4em;
         font-weight: bold;
         margin: 5px;
         vertical-align: middle;
