@@ -8,7 +8,11 @@ Installation
 On development systems:
 -----------------------
 
-1. Run ``git clone git@github.com:inyokaproject/theme-ubuntuusers.git`` in the directory, where also the cloned inyoka-reprository lies. After cloning the filstructure should look like: ::
+1. Run ``git clone git@github.com:inyokaproject/theme-ubuntuusers.git`` next to
+   the cloned Inyoka repository. (Basically, it doesn't matter were you clone
+   the theme repository, but for support reasons it might be better to use the
+   same base folder like for Inyoka). After cloning the file-structure should
+   look like::
 
         $ tree -L 1
         .
@@ -34,7 +38,8 @@ Building
 Let Django know about the theme
 -------------------------------
 
-Add ``'inyoka_theme_ubuntuusers'`` to the ``INSTALLED_APPS`` in ``inyoka/development_settings.py``::
+Add ``'inyoka_theme_ubuntuusers'`` to the ``INSTALLED_APPS`` in
+``inyoka/development_settings.py``::
 
     INSTALLED_APPS = INSTALLED_APPS + (
         'inyoka_theme_ubuntuusers',
