@@ -8,7 +8,14 @@ Installation
 On development systems:
 -----------------------
 
-1. Run ``git clone git@github.com:inyokaproject/theme-ubuntuusers.git``
+1. Run ``git clone git@github.com:inyokaproject/theme-ubuntuusers.git`` in the directory, where also the cloned inyoka-reprository lies. After cloning the filstructure should look like: ::
+
+        $ tree -L 1
+        .
+        ├── inyoka
+        ├── theme-ubuntuusers
+        └── maybe another-theme
+
 2. Switch into the repository: ``cd theme-ubuntusers``
 3. Install as a development package: ``python setup.py develop``
 
@@ -32,6 +39,3 @@ Add ``'inyoka_theme_ubuntuusers'`` to the ``INSTALLED_APPS`` in ``inyoka/develop
     INSTALLED_APPS = INSTALLED_APPS + (
         'inyoka_theme_ubuntuusers',
     )
-
-
-
