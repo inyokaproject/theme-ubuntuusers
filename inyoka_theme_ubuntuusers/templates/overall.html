@@ -26,7 +26,7 @@
         <meta name="robots" content="{% if deny_robots == true %}noindex, nofollow{% else %}{{ deny_robots }}{% endif %}" />
       {%- endif %}
       {#- This way the local stylesheets can override styles without problems. #}
-      {%- set styles = ['main-sprite', 'markup'] + styles|default([]) -%}
+      {%- set styles = ['main', 'markup'] + styles|default([]) -%}
       {%- for style in styles %}
         {%- if SETTINGS.DEBUG %}
           {% set style = style.split('-sprite', 1)[0] %}

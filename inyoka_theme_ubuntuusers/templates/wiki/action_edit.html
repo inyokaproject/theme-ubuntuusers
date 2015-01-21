@@ -13,7 +13,7 @@
 {% set title = page.title if page else title %}
 {% do BREADCRUMB.append(_('Edit'), page|url('edit') if page else href('wiki', title, action='edit'), True) %}
 {% set scripts = ['WikiEditor'] %}
-{% set styles = ['editor-sprite'] %}
+{% set styles = ['editor'] %}
 {% set action = 'edit' %}
 {% block wiki_content %}
   <form enctype="multipart/form-data" action="?action=edit" method="post">

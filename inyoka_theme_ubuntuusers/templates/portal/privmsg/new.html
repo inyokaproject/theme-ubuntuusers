@@ -9,7 +9,7 @@
 #}
 {%- extends 'portal/privmsg/overall.html' %}
 {% from 'macros.html' import render_form %}
-{% set styles = ['editor-sprite'] %}
+{% set styles = ['editor'] %}
 {% set scripts = ['WikiEditor', 'jquery.autocomplete', 'jquery.tokenfield'] %}
 {% do BREADCRUMB.append(_('Compose message'), href('portal', 'privmsg', 'new'), True) %}
 {% set selected = 'new' %}

@@ -8,8 +8,8 @@
  * :license: BSD, see LICENSE for more details.
  */
 
-/** sprite: header; sprite-image: url('../img/header-sprite-${md5}.png'); sprite-layout: vertical; sprite-ie6-mode: none */
 @import 'layout.less';
+@import 'main-sprite.less';
 
 * {
   padding: 0;
@@ -508,16 +508,19 @@ table.syntaxtable {
     opacity: 1.0;
 
     .tab_left {
-      background-image: url(../img/tabbar_left_hover.png); /** sprite-ref: header; */
+      .sprite-image(@tabbar_left_hover);
+      .sprite-position(@tabbar_left_hover);
     }
 
     .tab_center {
-      background-image: url(../img/tabbar_center_hover.png); /** sprite-ref: header; sprite-alignment: repeat; */
+      .sprite-image(@tabbar_center_hover);
+      .sprite-position(@tabbar_center_hover);
       background-repeat: repeat-x;
     }
 
     .tab_right {
-      background-image: url(../img/tabbar_right_hover.png); /** sprite-ref: header; */
+      .sprite-image(@tabbar_right_hover);
+      .sprite-position(@tabbar_right_hover);
     }
 
     a {
@@ -526,41 +529,44 @@ table.syntaxtable {
   }
 
   li.portal a span {
-    background-image: url(../img/icons/portal.png) !important; /** sprite-ref: header; */
+    .sprite(@portal);
   }
 
   li.forum a span {
-      background-image: url(../img/icons/forum.png) !important; /** sprite-ref: header; */
+    .sprite(@forum);
   }
 
   li.wiki a span {
-      background-image: url(../img/icons/wiki.png) !important; /** sprite-ref: header; */
+    .sprite(@wiki);
   }
 
   li.ikhaya a span {
-      background-image: url(../img/icons/ikhaya.png) !important; /** sprite-ref: header; */
+    .sprite(@ikhaya);
   }
 
   li.planet a span {
-      background-image: url(../img/icons/planet.png) !important; /** sprite-ref: header; */
+    .sprite(@planet);
   }
 
   li.community a span {
-      background-image: url(../img/icons/community.png) !important; /** sprite-ref: header; */
+    .sprite(@community);
   }
 
   li:active {
     .tab_left {
-      background-image: url(../img/tabbar_left.png); /** sprite-ref: header; */
+      .sprite-image(@tabbar_left);
+      .sprite-position(@tabbar_left);
     }
 
     .tab_center {
-      background-image: url(../img/tabbar_center.png); /** sprite-ref: header; sprite-alignment: repeat; */
+      .sprite-image(@tabbar_center);
+      .sprite-position(@tabbar_center);
       background-repeat: repeat-x;
     }
 
     .tab_right {
-      background-image: url(../img/tabbar_right.png); /** sprite-ref: header; */
+      .sprite-image(@tabbar_right);
+      .sprite-position(@tabbar_right);
     }
   }
 }
