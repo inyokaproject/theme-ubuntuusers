@@ -58,6 +58,64 @@ module.exports = function(grunt) {
         tasks: ['jshint:gruntfile']
       }
     },
+    sprite: {
+      editor: {
+        src: [
+          'inyoka_theme_ubuntuusers/static/img/icons/bold.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/italic.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/underlined.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/code.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/stroke.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/monospace.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/mark.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/wikilink.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/link.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/user.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/quote.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/pre.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/picture.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/color.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/smiley.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/date.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/sig.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/shrink.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/enlarge.png',
+        ],
+        dest: 'inyoka_theme_ubuntuusers/static/img/editor-sprite.png',
+        destCss: 'inyoka_theme_ubuntuusers/static/style/editor-sprite.less',
+        imgPath: '../img/editor-sprite.png',
+        algorithm: 'top-down',
+        padding: 2
+      },
+      forum: {
+        src: 'inyoka_theme_ubuntuusers/static/img/forum/*.png',
+        dest: 'inyoka_theme_ubuntuusers/static/img/forum-sprite.png',
+        destCss: 'inyoka_theme_ubuntuusers/static/style/forum-sprite.less',
+        imgPath: '../img/forum-sprite.png',
+        algorithm: 'top-down',
+        padding: 8
+      },
+      main: {
+        src: [
+          'inyoka_theme_ubuntuusers/static/img/tabbar_left.png',
+          'inyoka_theme_ubuntuusers/static/img/tabbar_center.png',
+          'inyoka_theme_ubuntuusers/static/img/tabbar_right.png',
+          'inyoka_theme_ubuntuusers/static/img/tabbar_left_hover.png',
+          'inyoka_theme_ubuntuusers/static/img/tabbar_center_hover.png',
+          'inyoka_theme_ubuntuusers/static/img/tabbar_right_hover.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/portal.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/forum.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/wiki.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/ikhaya.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/planet.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/community.png'
+        ],
+        dest: 'inyoka_theme_ubuntuusers/static/img/main-sprite.png',
+        destCss: 'inyoka_theme_ubuntuusers/static/style/main-sprite.less',
+        imgPath: '../img/main-sprite.png',
+        algorithm: 'top-down'
+      }
+    },
     less: {
       production: {
         options: {
@@ -68,7 +126,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'inyoka_theme_ubuntuusers/static/style/',
-            src: ['*.less', '!*.m.less'],
+            src: ['*.less', '!*-sprite.less', '!*.m.less'],
             dest: 'inyoka_theme_ubuntuusers/static/style/',
             ext: '.css',
           },
@@ -87,12 +145,13 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-spritesmith');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'less', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'uglify']);
 
 };

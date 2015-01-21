@@ -9,7 +9,7 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 {% set scripts = ['WikiEditor'] %}
-{% set styles = ['editor-sprite'] %}
+{% set styles = ['editor'] %}
 
 {% do BREADCRUMB.append('Neue Meldung', article|url('report_new'), True) %}
 {% do BREADCRUMB.append('Meldungen', article|url('reports')) %}

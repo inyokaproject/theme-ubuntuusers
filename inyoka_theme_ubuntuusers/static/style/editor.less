@@ -8,7 +8,14 @@
  * :license: BSD, see LICENSE for more details.
  */
  
-/** sprite: editor; sprite-image: url('../img/icons/editor-sprite-${md5}.png'); sprite-ie6-mode: none */
+@import 'editor-sprite.less';
+
+.editor-button(@sprite) {
+  .sprite-image(@sprite);
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: (@sprite-offset-x + 2) (@sprite-offset-y + 2);
+}
 
 p.ubuntu_version {
   font-size: 0.8em;
@@ -56,66 +63,66 @@ ul.toolbar {
       }
     }
     #button-bold {
-      background-image: url(../img/icons/bold.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@bold);
     }
     #button-italic {
-      background-image: url(../img/icons/italic.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@italic);
     }
     #button-underlined {
-      background-image: url(../img/icons/underlined.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@underlined);
     }
     #button-code {
-      background-image: url(../img/icons/code.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@code);
     }
     #button-stroke {
-      background-image: url(../img/icons/stroke.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@stroke);
     }
     #button-monospace {
-      background-image: url(../img/icons/monospace.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@monospace);
     }
     #button-mark {
-      background-image: url(../img/icons/mark.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@mark);
     }
     #button-wiki-link {
-      background-image: url(../img/icons/wikilink.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@wikilink);
     }
     #button-external-link {
-      background-image: url(../img/icons/link.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@link);
     }
     #button-user-link {
-      background-image: url(../img/icons/user.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@user);
     }
     #button-quote {
-      background-image: url(../img/icons/quote.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@quote);
     }
     #button-pre {
-      background-image: url(../img/icons/pre.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@pre);
     }
     #button-picture {
-      background-image: url(../img/icons/picture.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@picture);
     }
     #button-color {
-      background-image: url(../img/icons/color.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@color);
     }
     #button-smilies {
-      background-image: url(../img/icons/smiley.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@smiley);
     }
     #button-date {
-      background-image: url(../img/icons/date.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@date);
     }
     #button-sig {
-      background-image: url(../img/icons/sig.png); /** sprite-ref: editor; sprite-margin-left: 2px; sprite-margin-right: 2px; sprite-margin-top: 2px; sprite-margin-bottom: 2px; */
+      .editor-button(@sig);
     }
     #button-shrink {
-      background-image: url(../img/icons/shrink.png); /** sprite-ref: editor; */
+      .editor-button(@shrink);
       height: 12px;
     }
     #button-enlarge {
-      background-image: url(../img/icons/enlarge.png); /** sprite-ref: editor; */
+      .editor-button(@enlarge);
       height: 12px;
       position: relative;
       left:-30px;
-      top:15px;
+      top:14px;
     }
     table.codebox {
       width: auto !important;

@@ -8,9 +8,13 @@
  * :license: BSD, see LICENSE for more details.
  */
 
-/** sprite: forum1; sprite-image: url('../img/forum-sprite1-${md5}.png'); sprite-ie6-mode: none */
-
 @import 'layout.less';
+@import 'forum-sprite.less';
+
+.forum-sprite(@sprite) {
+  .sprite(@sprite);
+  background-repeat: no-repeat;
+}
 
 div.content {
   padding: 0;
@@ -38,13 +42,14 @@ table.forum {
     vertical-align: middle;
 
     div.icon {
+      .sprite-image(@topic);
+      .sprite-position(@topic);
+      background-repeat: no-repeat;
       position: relative;
-      background-image: url('../img/forum/topic.png');
-      background-position: 4px;
       display: inline-block;
       width: 40px;
       height: 40px;
-      background-repeat: no-repeat;
+      margin: 3px -4px -4px 4px;
 
       div {
         position: absolute;
@@ -53,38 +58,37 @@ table.forum {
       }
 
       .sticky {
-        background-image: url('../img/forum/sticky.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
-        top: 13px;
-        left: 13px;
+        .forum-sprite(@sticky);
+        top: 10px;
+        left: 10px;
         z-index: 50;
       }
 
       .new {
-        background-image: url('../img/forum/new.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
-        top: 0px;
-        left: 24px;
+        .forum-sprite(@new);
+        top: -4px;
+        left: 20px;
         z-index: 20;
       }
       
       .solved {
-        background-image: url('../img/forum/solved.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
-        top: 24px;
-        left: 24px;
+        .forum-sprite(@solved);
+        top: 20px;
+        left: 20px;
         z-index: 10;
       }
       
       .locked {
-        background-image: url('../img/forum/locked.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
-        top: 0;
-        left: 0;
-        width: 13px;
+        .forum-sprite(@lock);
+        top: -4px;
+        left: -4px;
         z-index: 30;
       }
       
       .reported {
-        background-image: url('../img/forum/reported.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
-        top: 24px;
-        left: 0;
+        .forum-sprite(@reported);
+        top: 20px;
+        left: -4px;
         z-index: 40;
       }
     }
@@ -305,49 +309,49 @@ table.topic table td, table.topic table th {
 }
 
 .action_split {
-  background-image: url('../img/forum/split.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@split);
 }
 .action_move {
-  background-image: url('../img/forum/move.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@move);
 }
 .action_unlock {
-  background-image: url('../img/forum/unlock.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@unlock);
 }
 .action_lock {
-  background-image: url('../img/forum/lock.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@lock);
 }
 .action_restore {
-  background-image: url('../img/forum/restore.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@restore);
 }
 .action_delete {
-  background-image: url('../img/forum/delete.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@delete);
 }
 .action_hide {
-  background-image: url('../img/forum/hide.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@hide);
 }
 .action_reply {
-  background-image: url('../img/forum/comment_add.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@comment_add);
 }
 .action_subscribe {
-  background-image: url('../img/forum/subscribe.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@subscribe);
 }
 .action_unsolve {
-  background-image: url('../img/forum/unsolve.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@unsolve);
 }
 .action_solve {
-  background-image: url('../img/forum/solve.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@solve);
 }
 .action_report {
-  background-image: url('../img/forum/report.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@report);
 }
 .action_review {
-  background-image: url('../img/forum/review.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@review);
 }
 .action_edit {
-  background-image: url('../img/forum/comment_edit.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@comment_edit);
 }
 .action_quote {
-  background-image: url('../img/forum/quote.png'); /** sprite-ref: forum1; sprite-margin-bottom: 2px; */
+  .forum-sprite(@quote);
 }
 
 form.poll {
@@ -547,32 +551,40 @@ div.code {
 tr.unstable {
   .topic_title {
     padding-left: 20px;
-    background: url(../img/forum/unstable.png) no-repeat 0px 1px;
+    .sprite-image(@unstable);
+    .sprite-position(@unstable);
+    background-repeat: no-repeat;
   }
 }
 .topic_box_content {
   .ubuntu_version.unstable {
     padding-left: 20px;
-    background: url(../img/forum/unstable.png) no-repeat left top;
+    .forum-sprite(@unstable);
   }
 }
 p.version_chooser {
   padding-left: 22px;
   margin-left: 22px;
 }
-span#version_info.unstable,span#version_info.lts,span#version_info.current {
+span#version_info.unstable,
+span#version_info.lts,
+span#version_info.current {
   padding: 5px 10px 5px 10px;
   .rounded(5px);
 }
 span#version_info.unstable {
   color: #fff;
   padding-left: 20px;
-  background: #cc0033 url(../img/forum/unstable.png) no-repeat left center;
+  .sprite-image(@unstable);
+  background-position: (@unstable-offset-x + 2) (@unstable-offset-y + 5);
+  background-repeat: no-repeat;
+  background-color: #cc0033;
   border: 1px solid #a8a887;
 
   a { color: #fff; }
 }
-span#version_info.lts,span#version_info.current {
+span#version_info.lts,
+span#version_info.current {
   background-color: #ffffcc;
   border: 1px solid #a8a887;
   color: #000;
