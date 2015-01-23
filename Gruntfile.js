@@ -53,9 +53,24 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        atBegin: true
+      },  
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
+      },
+      sprite: {
+        files: ['<%= sprite.editor.src %>', '<%= sprite.forum.src %>', '<%= sprite.main.src %>'],
+        tasks: ['sprite'],
+      },
+      style: {
+        files: [
+          'inyoka_theme_ubuntuusers/static/style/*.less',
+          '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
+          '!inyoka_theme_ubuntuusers/static/style/*.m.less'
+        ],
+        tasks: ['less'],
       }
     },
     sprite: {
@@ -125,8 +140,11 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'inyoka_theme_ubuntuusers/static/style/',
-            src: ['*.less', '!*-sprite.less', '!*.m.less'],
+            src: [
+              'inyoka_theme_ubuntuusers/static/style/*.less',
+              '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
+              '!inyoka_theme_ubuntuusers/static/style/*.m.less'
+            ],
             dest: 'inyoka_theme_ubuntuusers/static/style/',
             ext: '.css',
           },
