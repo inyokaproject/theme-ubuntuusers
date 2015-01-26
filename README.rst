@@ -22,18 +22,21 @@ On development systems:
 
 2. Switch into the repository: ``cd theme-ubuntusers``
 3. Install as a development package: ``python setup.py develop``
+4. Run ``npm install`` to install *Grunt*
+5. Run ``./node_modules/grunt-cli/bin/grunt watch`` to build all static files
+   and watch for file changes on the CSS / JS files
 
 On Production
 -------------
 
 1. Run ``pip install -U "git+ssh://git@github.com:inyokaproject/theme-ubuntuusers.git@staging#egg=inyoka-theme-ubuntuusers"``
 
-Building
-~~~~~~~~
+Deployment
+----------
 
-1. Run ``npm install`` to install grunt with lesscss support
+1. Run ``npm install`` to install *Grunt*
 2. Run ``./node_modules/grunt-cli/bin/grunt`` to build all static files
-3. Run ``manage.py collectstatic`` in you Django project
+3. Run ``manage.py collectstatic`` in your Django project
 
 Let Django know about the theme
 -------------------------------
