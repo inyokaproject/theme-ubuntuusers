@@ -8,16 +8,15 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'portal/privmsg/overall.html' %}
-{% from 'macros.html' import render_pagination %}
-{% set rendered_pagination = render_pagination(pagination) %}
+{% import 'macros.html' as macros %}
+{% set rendered_pagination = macros.render_pagination(pagination) %}
 {% set selected = folder.id %}
 {% do BREADCRUMB.append(folder.name, folder.href, True) %}
 
 {% block portal_content %}
   {%- if message %}
     <div class="prvmsg">
-      <img class="avatar" src="{{ message.author.avatar_url|e }}"
-           alt="{%- trans user=message.author.username|e %}Avatar of {{ user }}{% endtrans %}" />
+      {{ macros.add_user_avatar(message.author) }}
       <dl class="prvmsg_header">
         <dt>{% trans %}From:{% endtrans %}</dt>
         <dd><a{% if not message.author.is_active %} class="user_inactive"{% endif %} href="{{ message.author|url }}">

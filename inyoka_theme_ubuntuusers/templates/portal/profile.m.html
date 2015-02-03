@@ -9,6 +9,8 @@
 #}
 {%- extends 'portal/overall.m.html' %}
 
+{% import 'macros.html' as macros %}
+
 {% macro show_item(label, item, link=None) %}
   {%- if user[item] -%}
     <dt>{{ label }}</dt>
@@ -39,7 +41,7 @@
   {%- elif user.is_deleted or user.is_banned %}
     {{ user.username|e }} ist nicht mehr verfügbar.
   {%- else %}
-    <img class="userinfo avatar" src="{{ user.avatar_url|e }}"/>
+    {{ macros.add_user_avatar(user) }}
     <dl class="userinfo">
       {{ show_private_item('E-Mail-Adresse', 'email') }}
       {{ show_item('Webseite', 'website', user.website) }}

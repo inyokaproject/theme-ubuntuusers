@@ -10,7 +10,7 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
-{% from 'macros.html' import breadcrumb, render_pagination %}
+{% from 'macros.html' import breadcrumb, render_pagination, add_user_avatar %}
 {% from 'forum/_forum.html' import render_article_list %}
 
 {% do BREADCRUMB.append(topic.title, topic|url, True) %}
@@ -207,8 +207,7 @@
               <div class="member_title">{% trans %}(Topic starter){% endtrans %}</div>
             {%- endif %}
             {%- if post.author.has_avatar and not USER.settings['hide_avatars'] %}
-              <img class="avatar" src="{{ post.author.avatar_url }}"
-                   alt="{% trans user=post.author.username|e %}Avatar of {{ user }}{% endtrans %}" />
+              {{ add_user_avatar(post.author) }}
             {%- endif %}
             <p>{% trans %}Member since:{% endtrans %}<br />{{ post.author.date_joined|naturalday }}</p>
             <p class="posts">{% trans %}Posts:{% endtrans %} <a href="{{ href('forum', 'author', post.author.username) }}" rel="nofollow">{{ post.author.post_count }}</a></p>

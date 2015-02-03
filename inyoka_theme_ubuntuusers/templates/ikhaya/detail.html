@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'ikhaya/page.html' %}
-{% from 'macros.html' import render_form %}
+{% from 'macros.html' import render_form, add_user_avatar %}
 
 {% do BREADCRUMB.append(article.subject, article|url, True) %}
 {% set styles = ['editor']%}
@@ -33,8 +33,7 @@
       {%- endif %}
     </p>
     {%- if user.has_avatar and not USER.settings['hide_avatars'] %}
-      <img class="avatar" src="{{ user.avatar_url }}"
-           alt="{% trans user=user.username|e %}Avatar of {{ user }}{% endtrans %}" />
+      {{ add_user_avatar(user) }}
     {%- endif %}
   </td>
 {% endmacro %}
