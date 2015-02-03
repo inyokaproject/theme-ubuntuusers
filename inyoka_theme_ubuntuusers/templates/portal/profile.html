@@ -12,6 +12,7 @@
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 {% set styles = ['portal', 'highlight'] %}
+{% import 'macros.html' as macros %}
 
 {% macro show_item(item) %}
   {%- if user[item] and user.settings['show_'+item] -%}
@@ -66,8 +67,7 @@
         <th>{% trans %}Name{% endtrans %}</th>
         <td>{{ user.username|e }}</td>
         <td rowspan="7">
-          <img class="userinfo_avatar" src="{{ user.avatar_url|e }}"
-               alt="{% trans user=user.username|e %}Avatar of {{ user }}{% endtrans %}" />
+          {{ macros.add_user_avatar(user) }}
         </td>
       </tr>
       <tr>

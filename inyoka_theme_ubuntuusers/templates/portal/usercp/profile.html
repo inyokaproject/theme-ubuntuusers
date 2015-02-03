@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'portal/usercp/overall.html' %}
-{% from 'macros.html' import render_form %}
+{% import 'macros.html' as macros %}
 {% do BREADCRUMB.append(_('Profile'), href('portal', 'usercp', 'profile'), True) %}
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
@@ -21,7 +21,9 @@
     <h3>{% trans %}Avatar settings{% endtrans %}</h3>
     <dl>
       <dt>{{ form.avatar.label_tag() }}:</dt>
-      <dd><img class="usercp_avatar" src="{% if user.avatar %}{{ user.avatar.url }}{% else %}{{ href('static', 'img', 'portal', 'no_avatar.png') }}{% endif %}" alt="Avatar" /></dd>
+      <dd>
+        {{ macros.add_user_avatar(user, 'usercp_avatar') }}
+      </dd>
       <dd>{{ form.avatar }}</dd>
       {%- if max_avatar_height >= 0 and max_avatar_width >= 0 %}
       <dd class="note">
@@ -64,10 +66,10 @@
       {% endfor %}
     </dl>
     <h3>{% trans %}Miscellaneous settings{% endtrans %}</h3>
-    {{ render_form(form, ['occupation', 'interests', 'website',
+    {{ macros.render_form(form, ['occupation', 'interests', 'website',
                           'launchpad', 'gpgkey']) }}
     <h4>{% trans %}Geographical location{% endtrans %}</h4>
-    {{ render_form(form, ['location', 'coordinates']) }}
+    {{ macros.render_form(form, ['location', 'coordinates']) }}
     <h3>{% trans %}OpenIDs{% endtrans %}</h3>
     <p>
       {% if openids %}

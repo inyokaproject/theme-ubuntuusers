@@ -8,6 +8,7 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'portal/user_admin.html' %}
+{% import 'macros.html' as macros %}
 
 {% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.urlsafe_username, 'edit', 'profile'), True) %}
 {% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
@@ -31,7 +32,9 @@
     </dd>
     <h3>{% trans %}Avatar settings{% endtrans %}:</h3>
     <dt>{{ form.avatar.label_tag() }}:</dt>
-    <dd><img class="usercp_avatar" src="{{ user.avatar_url }}" alt="Avatar" /></dd>
+    <dd>
+      {{ macros.add_user_avatar(user, 'usercp_avatar') }}
+    </dd>
     <dd>{{ form.avatar }}</dd>
     <dd class="note">{% trans height=avatar_height, width=avatar_width -%}
       (Will be scaled to {{ width }}x{{ height }})
