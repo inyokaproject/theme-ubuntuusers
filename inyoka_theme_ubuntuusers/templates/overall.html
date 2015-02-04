@@ -28,29 +28,14 @@
       {#- This way the local stylesheets can override styles without problems. #}
       {%- set styles = ['main', 'markup'] + styles|default([]) -%}
       {%- for style in styles %}
-        {%- if SETTINGS.DEBUG %}
-          {% set style = style.split('-sprite', 1)[0] %}
-          <link rel="stylesheet/less" type="text/css"
-                href="{{ href('static', 'style', '%s.less'|format(style)) }}" />
-        {%- else %}
-          <link rel="stylesheet" type="text/css"
-                href="{{ href('static', 'style', '%s.css'|format(style)) }}" />
-        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style)) }}" />
       {%- endfor %}
 
-      <link rel="stylesheet" type="text/css"
-            href="{{ href('portal', 'markup.css') }}" />
-      {%- if SETTINGS.DEBUG %}
-        <link rel="stylesheet/less" type="text/css"
-              href="{{ href('static', 'style', 'print.less') }}" media="print" />
-      {%- else %}
-        <link rel="stylesheet" type="text/css"
-              href="{{ href('static', 'style', 'print.css') }}" media="print" />
-      {%- endif %}
+      <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css') }}" />
+      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css') }}" media="print" />
 
       {%- for title, url in feeds %}
-        <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}"
-              type="application/atom+xml" />
+        <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" />
       {%- endfor %}
       <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" />
       <link rel="search" type="application/opensearchdescription+xml"
@@ -285,10 +270,6 @@
         $SIDEBAR_HIDDEN = {{ USER.settings.portal_sidebar_hidden and 'true' or 'false' }};
     /*]]>*/
     </script>
-    {%- if SETTINGS.DEBUG %}
-      <script type="text/javascript"
-              src="{{ href('static', 'js/less.js') }}"></script>
-    {% endif %}
 
    {%- for script in ['jquery', 'classy', 'jquery.extensions', 'overall'] + scripts|default([]) %}
      {%- if SETTINGS.DEBUG %}
