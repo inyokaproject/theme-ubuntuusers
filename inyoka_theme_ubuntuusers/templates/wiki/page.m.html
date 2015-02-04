@@ -12,13 +12,5 @@
 
 {% block styles %}
   {{ super() }}
-  {% if SETTINGS.DEBUG %}
-    <link rel="stylesheet/less"
-          type="text/css"
-          href="{{ href('static', 'wiki', 'style', 'overall.m.less') }}" />
-  {% else %}
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{ href('static', 'wiki', 'style', 'overall.m.css') }}" />
-  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ href('static', 'wiki', 'style', 'overall.m.css') }}" />
 {% endblock %}

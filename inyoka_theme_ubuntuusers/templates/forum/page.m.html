@@ -12,26 +12,14 @@
 {% set active_app = 'forum' %}
 {% block styles %}
   {{ super() }}
-  {% if SETTINGS.DEBUG %}
-    <link rel="stylesheet/less"
-          type="text/css"
-          href="{{ href('static', 'forum', 'style', 'overall.m.less') }}" />
-  {% else %}
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{ href('static', 'forum', 'style', 'overall.m.css') }}" />
-  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ href('static', 'forum', 'style', 'overall.m.css') }}" />
 {% endblock %}
 
 {% block scripts %}
   {{ super() }}
   {% if SETTINGS.DEBUG %}
-    <script type="text/javascript"
-            src="{{ href('static', 'js', 'forum.m.js') }}">
-    </script>
+    <script type="text/javascript" src="{{ href('static', 'js', 'forum.m.js') }}"></script>
   {% else %}
-    <script type="text/javascript"
-            src="{{ href('static', 'js', 'forum.m.min.js') }}">
-    </script>
+    <script type="text/javascript" src="{{ href('static', 'js', 'forum.m.min.js') }}"></script>
   {% endif %}
 {% endblock %}

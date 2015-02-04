@@ -21,15 +21,7 @@
     <meta http-equiv="cleartype" content="on" />
     <meta name="theme-color" content="#a87300" />
     {% block styles %}
-      {% if SETTINGS.DEBUG %}
-        <link rel="stylesheet/less"
-              type="text/css"
-              href="{{ href('static', 'style', 'overall.m.less') }}" />
-      {% else %}
-        <link rel="stylesheet"
-              type="text/css"
-              href="{{ href('static', 'style', 'overall.m.css') }}" />
-      {% endif %}
+      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'overall.m.css') }}" />
     {% endblock %}
   </head>
   <body>
@@ -99,28 +91,13 @@
 
     {% block scripts %}
       {% if SETTINGS.DEBUG %}
-        <script type="text/javascript"
-                src="{{ href('static', 'js/less.js') }}">
-        </script>
-        <script type="text/javascript"
-                src="{{ href('static', 'js/jquery.js') }}">
-        </script>
-        <script type="text/javascript"
-                src='{{ href('static', 'js/jquery.ba-hashchange.js') }}'>
-        </script>
-        <script type="text/javascript"
-                src="{{ href('static', 'js', 'overall.m.js') }}">
-        </script>
+        <script type="text/javascript" src="{{ href('static', 'js/jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.js') }}"></script>
+        <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.js') }}"></script>
       {% else %}
-        <script type="text/javascript"
-                src='{{ href('static', 'js/jquery.min.js') }}'>
-        </script>
-        <script type="text/javascript"
-                src='{{ href('static', 'js/jquery.ba-hashchange.min.js') }}'>
-        </script>
-        <script type="text/javascript"
-                src="{{ href('static', 'js', 'overall.m.min.js') }}">
-        </script>
+        <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.min.js') }}"></script>
+        <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.min.js') }}"></script>
       {% endif %}
     {% endblock %}
 
