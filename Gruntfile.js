@@ -145,7 +145,6 @@ module.exports = function(grunt) {
               '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
               '!inyoka_theme_ubuntuusers/static/style/*.m.less'
             ],
-            dest: 'inyoka_theme_ubuntuusers/static/style/',
             ext: '.css',
           },
           {
