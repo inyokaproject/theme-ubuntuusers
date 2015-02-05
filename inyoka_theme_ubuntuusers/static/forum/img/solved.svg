@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="63.392849"
+   height="33.035709"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="solved.svg"
+   inkscape:export-filename="/home/chris/Dev/theme-ubuntuusers/inyoka_theme_ubuntuusers/static/forum/img/solved.png"
+   inkscape:export-xdpi="92.279999"
+   inkscape:export-ydpi="92.279999">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-49.826616"
+     inkscape:cy="17.805561"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1595"
+     inkscape:window-height="792"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-554.46429,-549.6479)">
+    <path
+       style="fill:#e1ebbc;stroke:#969696;fill-opacity:1;stroke-opacity:1;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 560.53572,582.68361 39.82142,0 17.5,-15.17857 -7.67857,-17.85714 -31.25,24.28571 -8.92857,-9.64286 -15.53571,11.25 z"
+       id="path3000"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="92.279999"
+       inkscape:export-ydpi="92.279999" />
+  </g>
+</svg>
