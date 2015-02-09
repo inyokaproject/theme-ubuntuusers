@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-02-05 23:50+0100\n"
+"POT-Creation-Date: 2015-02-10 00:56+0100\n"
 "PO-Revision-Date: 2012-11-03 11:11+0000\n"
 "Last-Translator: Markus Holtermann <inyoka@markusholtermann.eu>\n"
 "Language-Team: German (Germany) "
@@ -142,12 +142,9 @@ msgid "Wiki"
 msgstr "Wiki"
 
 #: inyoka_theme_ubuntuusers/templates/overall.html:170
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:25
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:26
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:27
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:11
-msgid "News"
-msgstr "Nachrichten"
+msgid "Ikhaya"
+msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/overall.html:173
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:13
@@ -1491,6 +1488,12 @@ msgid "No event was added yet, <a href=\"%(link)s\">create</a> the first one now
 msgstr ""
 "Es wurde noch keine Veranstaltung hinzugefügt, <a "
 "href=\"%(link)s\">erstelle</a> jetzt die erste!"
+
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:25
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:26
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:27
+msgid "News"
+msgstr "Nachrichten"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:65
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.m.html:22
