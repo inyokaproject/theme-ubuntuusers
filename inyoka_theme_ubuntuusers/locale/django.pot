@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-02-05 23:50+0100\n"
+"POT-Creation-Date: 2015-02-10 14:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,11 +138,8 @@ msgid "Wiki"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/overall.html:170
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:25
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:26
-#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:27
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:11
-msgid "News"
+msgid "Ikhaya"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/overall.html:173
@@ -1447,6 +1444,12 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/ikhaya/events.html:52
 #, python-format
 msgid "No event was added yet, <a href=\"%(link)s\">create</a> the first one now!"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:25
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:26
+#: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:27
+msgid "News"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:65
