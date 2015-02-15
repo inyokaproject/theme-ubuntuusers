@@ -1,0 +1,66 @@
+/**
+ * style.fonts
+ * ~~~~~~~~~~~
+ * 
+ * Mixins and variables for fonts.
+ * 
+ * :copyright: (c) 2011-2015 by the Inyoka Team, see AUTHORS for more details.
+ * :license: BSD, see LICENSE for more details.
+ */
+
+/* The following first rule checks, whether the font is installed on the local
+ * machine. If it is not installed, a font should be download from the cdn.
+ * The third and last one is a fallback for the case that the browser does
+ * not support @font-face or the font is not installed on the local machine
+ * and @font-face is disabled.
+ */
+@font-header: "Ubuntu", dl_ubuntu, serif;
+@font-content: "Liberation Sans", dl_liberation_sans, sans-serif;
+@font-monospace: "Liberation Mono", dl_liberation_mono, monospace;
+
+@font-size: 0.92em;
+@line-height: 1.45;
+
+@font-folder: '../font/'; /* notice the slash at the end! */
+
+.font(@weight: normal; @size; @font-family) {
+    font: @arguments;
+}
+
+/** Mixin for the *inner* body of a @font-face-declaration.
+ *  So the usage is as following:
+ * 
+ *  @font-face {
+ *      .bulletproof-FontFace(<parameters>);
+ *  }
+ * 
+ * Important: the @Filename must not include its file-type (.tff f.e.)
+ * 
+ */
+.bulletproof-FontFace(@Family; @Filename; @Weight: normal; @Style: normal) {
+    font-family: @Family;
+    src: url('@{font-folder}@{Filename}.eot');
+    src: url('@{font-folder}@{Filename}.eot?#iefix') format('embedded-opentype'),
+          url('@{font-folder}@{Filename}.woff') format('woff'),
+          url('@{font-folder}@{Filename}.ttf') format('truetype'),
+          url('@{font-folder}@{Filename}.svg#@{Family}') format('svg');
+    font-style: @Style;
+    font-weight: @Weight;
+}
+
+/** Mixin for the *inner* body of a @font-face-declaration.
+ *  So the usage is as following:
+ * 
+ *  @font-face {
+ *      .simple-FontFace(<parameters>);
+ *  }
+ * 
+ * Important: the @Filename must not include its file-type (.tff f.e.)
+ * 
+ */
+.simple-FontFace(@Family; @Filename; @Weight: normal; @Style: normal; @Filetype: '.ttf') {
+    font-family: @Family;
+    src: url('@{font-folder}@{Filename}@{Filetype}');
+    font-style: @Style;
+    font-weight: @Weight;
+}
