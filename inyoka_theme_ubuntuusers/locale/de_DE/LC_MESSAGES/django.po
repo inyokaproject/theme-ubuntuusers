@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-02-15 12:32+0100\n"
-"PO-Revision-Date: 2015-02-15 12:42+0100\n"
+"POT-Creation-Date: 2015-02-15 13:10+0100\n"
+"PO-Revision-Date: 2015-02-15 13:20+0100\n"
 "Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/"
 "language/de_DE/)\n"
@@ -758,7 +758,7 @@ msgstr "Willkommensnachricht"
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:101
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:82
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:76
 msgid "Submit"
 msgstr "Speichern"
@@ -2281,24 +2281,6 @@ msgstr "Einen neuen Benutzer erstellen."
 msgid "No users were found."
 msgstr "Es wurden keine Benutzer gefunden."
 
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:13
-msgid "Connect OpenID"
-msgstr "OpenID verknüpfen"
-
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:14
-#, python-format
-msgid ""
-"There is no account linked to the OpenID “%(openid)s”. Please log in with your "
-"user name and password to connect the OpenID with your account:"
-msgstr ""
-"Es wurde noch kein Konto mit der OpenID „%(openid)s“ verknüpft. Bitte melde dich "
-"nun mit deinem Benutzernamen und Passwort an, um die OpenID mit deinem Konto zu "
-"verknüpfen."
-
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:22
-msgid "Connect"
-msgstr "Verknüpfen"
-
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:33
 msgid "FAQ"
 msgstr "FAQ"
@@ -2574,7 +2556,7 @@ msgid "Geographical location"
 msgstr "Geographische Lage"
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:92
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:73
 msgid "Signature"
 msgstr "Signatur"
 
@@ -2905,24 +2887,7 @@ msgstr ""
 msgid "Show in profile"
 msgstr "Im Profil anzeigen"
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:73
-msgid "OpenIDs"
-msgstr "OpenIDs"
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:76
-msgid "Selected OpenIDs will be removed!"
-msgstr "Die gewählten OpenIDs werden gelöscht!"
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:78
-msgid "No OpenID is associated with your account."
-msgstr "Es ist keine OpenID mit deinem Konto verknüpft."
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:81
-msgid "To associate an OpenID with your account, login with your OpenID."
-msgstr ""
-"Um eine OpenID mit deinem Konto zu verknüpfen, melde dich mit deiner OpenID an."
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:93
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:74
 #, python-format
 msgid ""
 "The signature will be appended to every post. It cannot contain more than %(n)s "
@@ -2931,7 +2896,7 @@ msgstr ""
 "Die Signatur wird an jeden Beitrag angehängt. Sie kann nicht länger als %(n)s "
 "Zeichen sein. Bitte beachte die <a href=\"%(link)s\">Signaturregeln</a>."
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:104
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:85
 msgid "Show my profile"
 msgstr "Mein Profil anzeigen"
 
@@ -3441,6 +3406,3 @@ msgstr "Verlauf"
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:64
 msgid "Discussion"
 msgstr "Diskussion"
-
-#~ msgid "Advanced search"
-#~ msgstr "Erweiterte Suche"
