@@ -70,25 +70,6 @@
                           'launchpad', 'gpgkey']) }}
     <h4>{% trans %}Geographical location{% endtrans %}</h4>
     {{ macros.render_form(form, ['location', 'coordinates']) }}
-    <h3>{% trans %}OpenIDs{% endtrans %}</h3>
-    <p>
-      {% if openids %}
-        {% trans %}Selected OpenIDs will be removed!{% endtrans %}
-      {% else %}
-        {% trans %}No OpenID is associated with your account.{% endtrans %}
-      {% endif %}
-    </p>
-    <p>{% trans -%}
-      To associate an OpenID with your account, login with your OpenID.
-    {%- endtrans %}</p>
-    <ul>
-      {% for openid in openids %}
-        <li>
-          <input type="checkbox" name="openids" value="{{ openid.id }}" />
-          {{ openid.value }}
-        </li>
-      {% endfor %}
-    </ul>
     <h3>{% trans %}Signature{% endtrans %}</h3>
     <p class="note">{% trans n=max_sig_length, link=href('wiki', 'ubuntuusers/Moderatoren/Forenregeln', _anchor='8-Signaturregeln') -%}
       The signature will be appended to every post. It cannot contain more than {{ n }} characters. Please follow the <a href="{{ link }}">signature rules</a>.

@@ -34,10 +34,3 @@
 
   </form>
 {% endblock %}
-
-{% block additional_scripts %}
-  {{ super() }}
-  <script type="text/javascript">
-    var input = OpenIDHelper($('input[name="username"]'), {{ OPENID_PROVIDERS|jsonencode }});
-  </script>
-{% endblock %}

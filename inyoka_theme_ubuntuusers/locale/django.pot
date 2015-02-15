@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-02-15 12:32+0100\n"
+"POT-Creation-Date: 2015-02-15 13:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -740,7 +740,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:101
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:82
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:76
 msgid "Submit"
 msgstr ""
@@ -2194,21 +2194,6 @@ msgstr ""
 msgid "No users were found."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:13
-msgid "Connect OpenID"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:14
-#, python-format
-msgid ""
-"There is no account linked to the OpenID “%(openid)s”. Please log in with"
-" your user name and password to connect the OpenID with your account:"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/openid_connect.html:22
-msgid "Connect"
-msgstr ""
-
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:33
 msgid "FAQ"
 msgstr ""
@@ -2478,7 +2463,7 @@ msgid "Geographical location"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:92
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:73
 msgid "Signature"
 msgstr ""
 
@@ -2794,23 +2779,7 @@ msgstr ""
 msgid "Show in profile"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:73
-msgid "OpenIDs"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:76
-msgid "Selected OpenIDs will be removed!"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:78
-msgid "No OpenID is associated with your account."
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:81
-msgid "To associate an OpenID with your account, login with your OpenID."
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:93
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:74
 #, python-format
 msgid ""
 "The signature will be appended to every post. It cannot contain more than"
@@ -2818,7 +2787,7 @@ msgid ""
 "rules</a>."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:104
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:85
 msgid "Show my profile"
 msgstr ""
 
