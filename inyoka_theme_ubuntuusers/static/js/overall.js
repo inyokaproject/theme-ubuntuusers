@@ -152,65 +152,6 @@ $(document).ready(function () {
     });
   }());
 
-  // if we have JavaScript we style the search bar so that it looks
-  // like a firefox search thingy and apply some behavior
-  (function () {
-    if (navigator.appName.toLowerCase() == 'konqueror') return;
-    var
-    initialized = false,
-        $currentSearchArea = $('select.search_area').val(),
-        $currentAreaName = $('select.search_area option:selected').html(),
-        areaPopup = $('<ul class="search_area" />'),
-        searchArea = $('select.search_area').hide();
-    $('.search_query').addClass('area_' + $currentSearchArea);
-    $('form.search').submit(function () {
-      var url = $(this).attr('action'),
-          tmp = $('input.search_query').val();
-      if ($('input.search_query').hasClass('default_value')) tmp = '';
-      if (tmp) {
-        url += '?query=' + encodeURIComponent(tmp) + '&area=' + $currentSearchArea;
-      }
-      document.location.href = url;
-      return false;
-    }).append($('<div class="search_expander" />').click(function () {
-      if (!initialized) {
-        initialized = true;
-        $('option', searchArea).each(function () {
-          var currentArea = $(this).val();
-          var item = $('<li />').text($(this).text()).addClass('area_' + $(this).val()).click(function () {
-            $currentAreaName = $(this).html();
-            $('.search_query').removeClass('area_' + $currentSearchArea);
-            $currentSearchArea = currentArea;
-            $currentAreaName = $('select.search_area option[value=' + $currentSearchArea + ']').html();
-            $('.search_query').addClass('area_' + $currentSearchArea);
-            $('li', areaPopup).each(function () {
-              $(this).removeClass('active');
-            });
-            $(this).addClass('active').parent();
-            $('.search_query').focus();
-            areaPopup.hide();
-            return false;
-          }).appendTo(areaPopup);
-          if (currentArea == $currentSearchArea) item.addClass('active');
-        });
-        areaPopup.prependTo('form.search');
-      } else areaPopup.toggle();
-      return false;
-    }));
-    $('.search_query').addClass('search_query_js').blur(function () {
-      var e = $(this);
-      if (e.val() == '' || e.val() == $currentAreaName) e.addClass('default_value').val($currentAreaName);
-    }).focus(function () {
-      var e = $(this);
-      if (e.hasClass('default_value')) e.val('').removeClass('default_value');
-    });
-    $('.search_query').blur();
-    $(document).click(function () {
-      if (areaPopup.is(':visible')) areaPopup.hide();
-      if (loginForm && loginForm.is(':visible')) loginForm.slideUp();
-    });
-  })();
-
   // add a sidebar toggler if there is an sidebar
   (function () {
     var sidebar = $('.navi_sidebar');
@@ -225,7 +166,7 @@ $(document).ready(function () {
         component: window.location.hostname.split('.')[0]
       });
       return false;
-    }).insertAfter('form.search');
+    }).prependTo('.pathbar');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 
