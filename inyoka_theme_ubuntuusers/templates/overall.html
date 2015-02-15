@@ -38,15 +38,6 @@
         <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" />
       {%- endfor %}
       <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" />
-      <link rel="search" type="application/opensearchdescription+xml"
-            title="ubuntuusers" href="{{ href('portal', 'opensearch', 'portal') }}" />
-      {%- for app in ('forum', 'wiki', 'ikhaya', 'planet') %}
-        {%- if app == active_app %}
-          <link rel="search" type="application/opensearchdescription+xml"
-                title="{{ SETTINGS.BASE_DOMAIN_NAME }} - {{ app|capitalize }}"
-                href="{{ href('portal', 'opensearch', app) }}" />
-        {%- endif -%}
-      {%- endfor %}
       <meta name="theme-color" content="#a87300" />
     {%- endblock %}
   </head>
