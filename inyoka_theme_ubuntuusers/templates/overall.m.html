@@ -37,12 +37,6 @@
         </nav>
       </header>
       <div id="top_menu">
-        <div class="button">
-          <img class="icon" src="{{ href('static', 'img', 'mobile_menu_icons', 'search.png') }}" />
-          <form action="{{ href('portal', 'search') }}" class="search">
-            <div class="title"><input type="text" name="query" value="{{ query|e }}"></input></div>
-          </form>
-        </div>
         <div class="separator">{% trans %}Applications{% endtrans %}</div>
         {%- for app in ('portal', 'forum', 'wiki', 'ikhaya', 'planet') %}
           <a class="button{% if app == active_app %} active{% endif %}" href="{{ href(app) }}">
