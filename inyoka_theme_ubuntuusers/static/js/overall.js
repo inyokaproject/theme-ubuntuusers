@@ -152,6 +152,111 @@ $(document).ready(function () {
     });
   }());
 
+  // searchintegration for startpage
+  // only temporarily, done fast and thus a bit hacky!
+  (function () {
+    // object that lists, in which locations the user can search
+    // schema: { internalID : displayedTextToUser }
+    var searchAreas = {"portal": "Überall", "forum": "Forum", "ikhaya": "Ikhaya",
+                       "planet": "Planet", "wiki": "Wiki"};
+
+    // search area in which the user wants find something; defaults to active app
+    var selectedArea = $("form.search").attr("data-active-app");
+
+    // via the popup a differnt searcharea is selected
+    var popup = $('<ul class="search_area" />');
+    var popupBuild = false;
+
+    // init the values of searchField with default values
+    var searchField = $('.search_query')
+    searchField.addClass('area_' + selectedArea);
+    searchField.attr('placeholder', searchAreas[selectedArea]);
+
+    /* as the user wants to start the search, the search is limited to the
+     * selected subdomain. The last information is added by prefixing the
+     * searchwords with `site:example.org` in a hidden field.
+     * The search engine will only recognize the value of the hidden input.
+     */
+    document.getElementsByClassName("search")[0].onsubmit = (function() {
+      $('form.search input[name=query]').val( function() {
+        var searchWords = searchField.val();
+
+        switch(selectedArea) {
+          case "forum":
+            return "site:forum.ubuntuusers.de " + searchWords;
+          case "ikhaya":
+            return "site:ikhaya.ubuntuusers.de " + searchWords;
+          case "planet":
+            return "site:planet.ubuntuusers.de " + searchWords;
+          case "wiki":
+            return "site:wiki.ubuntuusers.de " + searchWords;
+          default: // equals "portal"
+            return "site:ubuntuusers.de " + searchWords;
+        }
+      });
+    });
+
+    var expander = $('<div class="search_expander" />');
+    expander.click(function () {
+      if (!popupBuild) {
+        popupBuild = true;
+
+        // build popup
+        // for each area the user can search, insert a li to the ul/popup
+        $.each(searchAreas, function (key, value) {
+          var listItemArea = key;
+
+          var item = $('<li />').text(value);
+          item.addClass('area_' + key);
+          item.click(function() {
+            // update classes of searchField → change icon of area
+            searchField.removeClass('area_' + selectedArea);
+            selectedArea = listItemArea;
+            searchField.addClass('area_' + selectedArea);
+
+            // update .active-class in the popup list
+            // → current selected item will be displayed bold
+            $('li.active', popup).removeClass('active');
+            $(this).addClass('active');
+
+            searchField.attr('placeholder', value);
+            searchField.focus();
+
+            popup.toggle();
+          }).appendTo(popup);
+
+          if (listItemArea === selectedArea) item.addClass('active');
+        });
+
+        popup.prependTo('form.search');
+      } else { // popupBuild = true
+         popup.toggle();
+      }
+    });
+    $('form.search').append(expander);
+
+    $(document).click(function (e) {
+      if(e.target.className != "search_expander") {
+        popup.hide();
+      }
+    });
+
+    /* quickfix for Firefox
+     * otherwise the searchbutton will stay disabled, if you go back one page
+     * see https://bugzilla.mozilla.org/show_bug.cgi?id=443289#c6
+     */
+    window.addEventListener('pageshow', PageShowHandler, false);
+    window.addEventListener('unload', UnloadHandler, false);
+
+    function PageShowHandler() {
+        window.addEventListener('unload', UnloadHandler, false);
+    }
+
+    function UnloadHandler() {
+        window.removeEventListener('unload', UnloadHandler, false);
+    }
+  })();
+
   // add a sidebar toggler if there is an sidebar
   (function () {
     var sidebar = $('.navi_sidebar');
@@ -166,7 +271,7 @@ $(document).ready(function () {
         component: window.location.hostname.split('.')[0]
       });
       return false;
-    }).prependTo('.pathbar');
+    }).insertAfter('form.search');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 

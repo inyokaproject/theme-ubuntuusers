@@ -138,6 +138,19 @@
       </div>{# .appheader #}
 
       <div class="pathbar">
+        
+        {# search via startpage
+           requires JS to work #}
+        <form method=POST accept-charset="UTF-8" action='https://startpage.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}"> 
+          <div>
+            <input type="text" name="keyword" class="search_query" />
+            <input type="hidden" name="query">
+            <input value="deutsch" type="hidden" name="language">
+            
+            <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" /> via <img src="https://startpage.com/graphics/startpage_searchbox_logo.jpg" />
+          </div>
+        </form>
+        
         {% block pathbar_extensions %}
         {% endblock %}
 
