@@ -70,21 +70,21 @@ table.forum {
         left: 20px;
         z-index: 20;
       }
-      
+
       .solved {
         .forum-sprite(@solved);
         top: 20px;
         left: 20px;
         z-index: 10;
       }
-      
+
       .locked {
         .forum-sprite(@lock);
         top: -4px;
         left: -4px;
         z-index: 30;
       }
-      
+
       .reported {
         .forum-sprite(@reported);
         top: 20px;
@@ -191,10 +191,8 @@ table.forum th.last_post, table.forum th.post_count, table.forum th.view_count {
     padding: 0.3em 0;
     border-bottom: 1px solid #ccc;
   }
-  div {
+  >div {
     padding: 5px 10px 5px 10px;
-    line-height: 170%;
-    font-size: 0.85em;
   }
 }
 .topic_box.discussion_info {
@@ -550,6 +548,10 @@ tr.unstable {
   .ubuntu_version.unstable {
     padding-left: 20px;
     .forum-sprite(@unstable);
+  }
+
+  strong, span {
+    font-size: 0.9em;
   }
 }
 p.version_chooser {
