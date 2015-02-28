@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-02-15 13:10+0100\n"
+"POT-Creation-Date: 2015-02-28 09:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,27 +52,27 @@ msgstr ""
 msgid "Avatar of %(user)s"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:81
+#: inyoka_theme_ubuntuusers/templates/overall.html:72
 #, python-format
 msgid "Logout [%(user)s]"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:86
+#: inyoka_theme_ubuntuusers/templates/overall.html:77
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:12
 msgid "Control panel"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:93
+#: inyoka_theme_ubuntuusers/templates/overall.html:84
 #, python-format
 msgid "Private messages (%(count)s)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:98
+#: inyoka_theme_ubuntuusers/templates/overall.html:89
 msgid "Private messages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:105
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:70
+#: inyoka_theme_ubuntuusers/templates/overall.html:96
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:64
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:15
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:35
@@ -80,97 +80,60 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:110
+#: inyoka_theme_ubuntuusers/templates/overall.html:101
 msgid "Register"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:121
+#: inyoka_theme_ubuntuusers/templates/overall.html:112
 msgid "Admin"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:122
+#: inyoka_theme_ubuntuusers/templates/overall.html:113
 msgid "Turn admin links on/off"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:128
+#: inyoka_theme_ubuntuusers/templates/overall.html:119
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:12
 msgid "Reported topics"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:131
+#: inyoka_theme_ubuntuusers/templates/overall.html:122
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:13
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:16
 msgid "Article suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:135
+#: inyoka_theme_ubuntuusers/templates/overall.html:126
 msgid "Spelling mistakes"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:139
+#: inyoka_theme_ubuntuusers/templates/overall.html:130
 msgid "Event suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:143
+#: inyoka_theme_ubuntuusers/templates/overall.html:134
 msgid "Please turn on JavaScript!"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:161
-msgid "Overall"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:164
-#: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:21
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:13
-#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:24
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:19
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:29
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:50
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:36
-msgid "Forum"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:167
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:22
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:105
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:27
-msgid "Wiki"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:170
-#: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:11
-msgid "Ikhaya"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:173
-#: inyoka_theme_ubuntuusers/templates/planet/page.html:13
-#: inyoka_theme_ubuntuusers/templates/planet/page.html:29
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:21
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:88
-msgid "Planet"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:176
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:46
-#: inyoka_theme_ubuntuusers/templates/portal/search.m.html:14
+#: inyoka_theme_ubuntuusers/templates/overall.html:150
 msgid "Search"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:198
+#: inyoka_theme_ubuntuusers/templates/overall.html:171
 msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:225
+#: inyoka_theme_ubuntuusers/templates/overall.html:198
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:227
+#: inyoka_theme_ubuntuusers/templates/overall.html:200
 #, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:242
+#: inyoka_theme_ubuntuusers/templates/overall.html:215
 msgid "To mobile version"
 msgstr ""
 
@@ -178,20 +141,20 @@ msgstr ""
 msgid "« Back"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:46
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:40
 msgid "Applications"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:53
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:47
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:57
 msgid "More"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:57
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:51
 msgid "Messages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:61
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:55
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/index.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:21
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:16
@@ -200,11 +163,11 @@ msgstr ""
 msgid "Subscriptions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:65
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:59
 msgid "Logout"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.m.html:80
+#: inyoka_theme_ubuntuusers/templates/overall.m.html:74
 msgid "To classic version"
 msgstr ""
 
@@ -699,7 +662,6 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/page_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/portal/pages.html:31
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:13
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_password.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:14
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:13
@@ -709,6 +671,16 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:54
 msgid "Edit"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:21
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:13
+#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:24
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:19
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:29
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:49
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:33
+msgid "Forum"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:27
@@ -734,14 +706,13 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/page_edit.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:25
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_password.html:23
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:51
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:49
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:82
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:76
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
 msgid "Submit"
 msgstr ""
 
@@ -1371,7 +1342,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/event_edit.html:50
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:87
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:75
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:74
 msgid "General"
 msgstr ""
 
@@ -1465,6 +1436,10 @@ msgstr[1] ""
 msgid "There is no article."
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:11
+msgid "Ikhaya"
+msgstr ""
+
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:28
 msgid "About Ikhaya"
 msgstr ""
@@ -1513,19 +1488,19 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:84
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:60
 #: inyoka_theme_ubuntuusers/templates/portal/configuration.html:13
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:72
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:71
 msgid "Configuration"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:90
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:78
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:77
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:14
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:17
 msgid "Stylesheets"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:93
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:81
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:80
 #: inyoka_theme_ubuntuusers/templates/portal/page_edit.html:19
 #: inyoka_theme_ubuntuusers/templates/portal/pages.html:12
 #: inyoka_theme_ubuntuusers/templates/portal/pages.html:15
@@ -1536,7 +1511,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:18
 #: inyoka_theme_ubuntuusers/templates/portal/files.html:14
 #: inyoka_theme_ubuntuusers/templates/portal/files.html:17
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:84
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:83
 msgid "Static files"
 msgstr ""
 
@@ -1806,6 +1781,13 @@ msgstr ""
 msgid "No articles were aggregated"
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/planet/page.html:13
+#: inyoka_theme_ubuntuusers/templates/planet/page.html:29
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:21
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:88
+msgid "Planet"
+msgstr ""
+
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:32
 msgid "Export blogs"
 msgstr ""
@@ -1915,6 +1897,12 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/confirm.html:26
 msgid "Please enter the string which was sent to you by email below:"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:22
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:105
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:27
+msgid "Wiki"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:32
@@ -2159,7 +2147,6 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/special_rights.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:15
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_password.html:15
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:15
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:16
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:15
@@ -2207,20 +2194,20 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:48
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:47
 #: inyoka_theme_ubuntuusers/templates/portal/whoisonline.html:13
 msgid "Who is online?"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:64
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:63
 msgid "Suggest an article"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:65
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:64
 msgid "Suggest an event"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/overall.html:69
+#: inyoka_theme_ubuntuusers/templates/portal/overall.html:68
 msgid "Suggest a blog"
 msgstr ""
 
@@ -2399,17 +2386,6 @@ msgstr ""
 msgid "delete"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_password.html:12
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_password.html:21
-#: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:35
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:13
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:17
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:38
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/index.html:27
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:20
-msgid "Change password"
-msgstr ""
-
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:12
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:25
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:34
@@ -2532,12 +2508,12 @@ msgstr ""
 msgid "Note: More settings will be available after creating the user."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:36
+#: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:35
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:45
 msgid "State"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:39
+#: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:38
 msgid "View public profile"
 msgstr ""
 
@@ -2692,6 +2668,14 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.m.html:25
 msgid "Send"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:13
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:17
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:38
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/index.html:27
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:20
+msgid "Change password"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:20
