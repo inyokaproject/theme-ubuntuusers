@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-02-28 09:27+0100\n"
+"POT-Creation-Date: 2015-03-02 00:02+0100\n"
 "PO-Revision-Date: 2015-02-15 13:20+0100\n"
 "Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
 "Language-Team: German (Germany) "
@@ -1274,8 +1274,9 @@ msgid "Subscribe comments"
 msgstr "Kommentare abonnieren"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:74
-msgid "Report misspelling"
-msgstr "Rechtschreibfehler melden"
+#: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:59
+msgid "Report an error in this article"
+msgstr "Fehler im Artikel melden"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:159
 #, python-format
@@ -1597,10 +1598,6 @@ msgstr "Artikel bearbeiten"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:56
 msgid "There are no reports yet."
 msgstr "Es existieren noch keine Fehlermeldungen."
-
-#: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:59
-msgid "Report a new spelling mistake"
-msgstr "Einen Rechtschreibfehler melden!"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_delete.html:16
 msgid "Explanation for the author of the suggestion:"
@@ -3431,7 +3428,4 @@ msgstr "Verlauf"
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:64
 msgid "Discussion"
 msgstr "Diskussion"
-
-#~ msgid "Overall"
-#~ msgstr "Überall"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-02-28 09:27+0100\n"
+"POT-Creation-Date: 2015-03-02 00:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1240,7 +1240,8 @@ msgid "Subscribe comments"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:74
-msgid "Report misspelling"
+#: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:59
+msgid "Report an error in this article"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:159
@@ -1550,10 +1551,6 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:56
 msgid "There are no reports yet."
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:59
-msgid "Report a new spelling mistake"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_delete.html:16

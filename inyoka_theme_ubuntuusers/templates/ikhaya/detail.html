@@ -71,7 +71,7 @@
           <a href="{{ article|url('subscribe') }}" class="action action_subscribe">{% trans %}Subscribe comments{% endtrans %}</a>
         {%- endif %}
       {%- endif %}
-      <a href="{{ article|url('reports') }}" class="action action_report">{% trans %}Report misspelling{% endtrans %}</a>
+      <a href="{{ article|url('reports') }}" class="action action_report">{% trans %}Report an error in this article{% endtrans %}</a>
     </p>
     {%- if article.comments_enabled %}
       <table id="comments" class="comments">
