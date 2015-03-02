@@ -7,7 +7,7 @@
  * :copyright: (c) 2007-2015 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
- 
+
 @import 'fonts.less';
 @import 'layout.less';
 @import 'main-sprite.less';
@@ -453,30 +453,34 @@ div.code {
     max-height: none;
   }
 }
+.notranslate:not(.syntax) {
+  font-size: 0.85em;
+}
 table.syntaxtable {
   border: 1px solid #ddd;
   margin: 0 !important;
   width: 100% !important;
   overflow-x: scroll;
+
   pre {
     line-height: 1.4em;
     padding: 0.4em 1em;
-    margin: 0;
     border: none;
   }
   td {
     padding: 0;
     vertical-align: top;
-  }
-  td.linenos {
-    width: 60px;
-    color: #888888;
-    font-weight: bold;
-    text-align: right;
-    border-right: 1px solid #DDDDDD;
-  }
-  td.code {
-    background-color: #F0F0F0;
+
+    &.linenos {
+      width: 60px;
+      color: #888888;
+      font-weight: bold;
+      text-align: right;
+      border-right: 1px solid #DDDDDD;
+    }
+    &.code {
+      background-color: #F0F0F0;
+    }
   }
 }
 .linklist {
