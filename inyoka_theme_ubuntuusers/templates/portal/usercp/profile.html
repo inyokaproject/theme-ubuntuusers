@@ -77,6 +77,10 @@
     <p>
       {{ form.signature }}
     </p>
+    <h3>{% trans %}User page{% endtrans %}</h3>
+    <p>
+      {{ form.userpage }}
+    </p>
     {{ form.errors.signature }}
     <p>
       <input type="submit" value="{% trans %}Submit{% endtrans %}" />
@@ -94,7 +98,9 @@
 
   <script type="text/javascript">
     /*<![CDATA[*/
-    var editor = new WikiEditor('textarea[name="signature"]');
+    var signatureeditor = new WikiEditor('textarea[name="signature"]');
+
+    var userpageeditor = new WikiEditor('textarea[name="userpage"]');
 
     $(function() {
       $('p.note', $('#id_coordinates').parent())

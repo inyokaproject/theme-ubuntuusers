@@ -48,6 +48,8 @@
     {{ render_form(form, ['location', 'coordinates_long', 'coordinates_lat']) }}
     <h3>{% trans %}Signature{% endtrans %}</h3>
     <p>{{ form.signature }}</p>
+    <h3>{% trans %}User page{% endtrans %}</h3>
+    <p>{{ form.userpage }}</p>
     <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
   </form>
 {% endblock %}
