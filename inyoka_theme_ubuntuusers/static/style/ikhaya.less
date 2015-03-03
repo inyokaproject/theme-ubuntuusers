@@ -102,84 +102,57 @@ table.comments {
   table-layout: fixed;
   margin: 0;
   border: 0;
-  clear: right;
   width: 97% !important;
-  tr.deleted {
-    text-align: center;
-    background-color: #eee;
-    color: #444;
-    font-style: italic;
-  }
+
   td.author {
     vertical-align: top;
     background: #eeeeee;
     border-right: 1px solid #cccccc;
     width: 150px;
+
     p {
       margin: 2px 0 5px 0;
-      font-size: 0.8em;
       text-align: left;
-    }
-    p.username {
-      position: relative;
-      a {
-        margin: 3px 0 10px 0;
-        font-size: 1.1em;
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
+
+      &.username {
+        position: relative;
+
+        a {
+          margin: 3px 0 10px 0;
+          color: black;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        &.inactive {
+          a {
+            color: #444;
+            text-decoration: line-through;
+          }
+        }
       }
-    }
-    p.username.inactive {
-      a {
-        color: #444;
-        text-decoration: line-through;
-      }
-    }
-    img.avatar {
-      margin: 10px 0 0 0;
-    }
-    img.teamicon {
-      position: absolute;
-      top: 0px;
-      right: 0px;
     }
     div.member_title {
       line-height: 1.2em;
-      font-size: 0.6em;
+      font-size: 0.85em;
       margin-bottom: 10px;
     }
   }
   td.comment {
-    font-size: 0.9em;
     padding: 10px;
     vertical-align: top;
-    div.text {
+
+    .text {
       overflow: auto;
     }
-    div.commentinfo {
+    .commentinfo {
       .table-header-alternative-gradient;
       font-size: 0.9em;
-      margin: -10px -10px 10px -10px;
+      margin: -10px;
+      margin-bottom: 10px;
       padding: 6px 10px;
       border-bottom: 1px solid #CCC;
     }
-    div.signature {
-      margin: 20px 0 -5px 0;
-      padding: 5px 0 0 0;
-      border-top: 1px solid #AAA;
-      color: #666;
-      font-size: .9em;
-      line-height: 140%;
-      p {
-        padding: 0 0 5px 0;
-        margin: 0;
-      }
-      a {
-        color: #666;
-      }
-    }
-    div.linklist {
+    .linklist {
       float: right;
     }
   }
