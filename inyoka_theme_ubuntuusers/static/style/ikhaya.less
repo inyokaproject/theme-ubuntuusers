@@ -103,28 +103,32 @@ table.comments {
   margin: 0;
   border: 0;
   width: 97% !important;
+
   td.author {
     vertical-align: top;
     background: #eeeeee;
     border-right: 1px solid #cccccc;
     width: 150px;
+
     p {
       margin: 2px 0 5px 0;
       text-align: left;
-    }
-    p.username {
-      position: relative;
-      a {
-        margin: 3px 0 10px 0;
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
-      }
-    }
-    p.username.inactive {
-      a {
-        color: #444;
-        text-decoration: line-through;
+
+      &.username {
+        position: relative;
+
+        a {
+          margin: 3px 0 10px 0;
+          color: black;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        &.inactive {
+          a {
+            color: #444;
+            text-decoration: line-through;
+          }
+        }
       }
     }
     div.member_title {
