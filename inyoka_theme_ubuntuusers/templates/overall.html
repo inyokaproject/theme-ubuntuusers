@@ -107,14 +107,6 @@
         {%- if USER.can('manage_topics') or USER.can('article_edit') or USER.can('event_edit') %}
           <div id="admin_menu">
             <div class="bar">
-              <a id="admin_layer_button">{#
-                #}<img src="{{ href('static', 'img/admin/switch.png') }}"
-                       alt="{% trans %}Admin{% endtrans %}"
-                       title="{% trans %}Turn admin links on/off{% endtrans %}" />{#
-                #}<span class="description"></span>{#
-              #}</a>
-            </div>
-            <div class="bar">
               {%- if USER.can('manage_topics') %}
                 {{ render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
               {%- endif %}
@@ -131,6 +123,13 @@
                 {{ render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
               {%- endif %}
             </div>
+            <div class="bar">
+              <a id="admin_layer_button">
+                <img src="{{ href('static', 'img/admin/switch.png') }}"
+                    alt="{% trans %}Admin{% endtrans %}"
+                    title="{% trans %}Turn admin links on/off{% endtrans %}" />
+              </a>
+            </div>
           <noscript><strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong></noscript>
           </div>
         {%- endif %}
@@ -138,19 +137,19 @@
       </div>{# .appheader #}
 
       <div class="pathbar">
-        
+
         {# search via startpage
            requires JS to work #}
-        <form method=POST accept-charset="UTF-8" action='https://startpage.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}"> 
+        <form method=POST accept-charset="UTF-8" action='https://startpage.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
             <input type="text" name="keyword" class="search_query" />
             <input type="hidden" name="query">
             <input value="deutsch" type="hidden" name="language">
-            
+
             <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" /> via <img src="https://startpage.com/graphics/startpage_searchbox_logo.jpg" />
           </div>
         </form>
-        
+
         {% block pathbar_extensions %}
         {% endblock %}
 
