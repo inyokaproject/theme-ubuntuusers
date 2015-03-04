@@ -69,6 +69,11 @@
  * Other mixins
  */
 
+.break-word() {
+  overflow-wrap: break-word; /* "newer" name; only supported in Chrome/Opera */
+  word-wrap: break-word; /* "older" alternative name */
+}
+
 .reset() {
   /* reset margin and padding */
   padding: 0;
