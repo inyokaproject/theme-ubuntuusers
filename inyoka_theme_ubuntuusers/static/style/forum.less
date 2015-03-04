@@ -431,19 +431,22 @@ form.post_editor {
   background-color: #ffaaaa;
   color: red;
 }
-div.preview_wrapper {
+.preview_wrapper {
   border: 1px solid #ccc;
-  margin: 10px 0 10px 0;
-  padding: 10px 10px 0 10px;
   font-size: 0.9em;
+  margin-top: 10px;
+
   h2.title {
     .table-header-gradient;
-    margin: -10px -10px 10px -10px;
     text-align: center;
     font-size: 1.2em;
-    padding: 0.3em 0 0.4em 0;
+    margin: 0;
+    padding: 0.3em 0;
     border-bottom: 1px solid #ccc;
     color: #673B1A;
+  }
+  > .preview {
+    padding: 0 10px;
   }
 }
 input[name="cancel"] {
