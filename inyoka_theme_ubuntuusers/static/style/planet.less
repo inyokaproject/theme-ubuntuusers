@@ -10,45 +10,48 @@
 
 @import 'layout.less';
 
-.navi_sidebar .navi_planet {
-  background-image: url('../img/icons/planet.png');
-}
 .navi_sidebar {
+  .navi_planet {
+    background-image: url('../img/icons/planet.png');
+  }
   .navi_blogs {
     background-image: url('../img/icons/blogs.png');
   }
 }
-
-div.articles {
+.articles {
   .day > {
     h2 {
       font-size: 2.4em;
       margin: 0;
     }
   }
-  div.article {
+  .article {
     margin: 1.5em 0 1.5em 0;
     padding: 1px 0 0 0;
-    div.contents {
+
+    .contents {
       .rounded(10px);
       border: 1px solid #DDD;
-      div.post {
+
+      .post {
         .hidden {
           color: #ccc;
         }
       }
     }
-    div.head {
+    .head {
       background: url(../img/planet/bubble-nipple.png) no-repeat 120px bottom;
       position: relative;
       top: 2px;
       height: 110px;
+
       img {
         float: left;
         margin-left: 30px;
       }
       p {
         margin-left: 160px;
+
         a {
           color: #888;
           text-decoration: none;
@@ -58,16 +61,18 @@ div.articles {
         margin: 0 0 0 160px;
         font-size: 1.6em;
         line-height: 1em;
+
         a {
           color: black;
           text-decoration: none;
-        }
-        a.headerlink {
-          color: #999;
+
+          &.headerlink {
+            color: #999;
+          }
         }
       }
     }
-    div.text {
+    .text {
       padding: 10px 30px 0 30px;
 
       h1 {
@@ -78,6 +83,7 @@ div.articles {
       }
       h3 {
         font-size: 1.3em;
+
         .note {
           font-size: 0.7em;
           padding-left: 0px;
@@ -91,10 +97,11 @@ div.articles {
         height: auto;
       }
     }
-    div.post {
+    .post {
       .rounded(10px);
       background: #F8F8F8;
       border: 1px solid #BFBFBF;
+
       img.uu-float {
         float: right;
         margin-left: 0.6em;
@@ -103,44 +110,35 @@ div.articles {
     p {
       margin: 0;
       padding: 0.5em 0.5em 0.5em 0;
+
+      &.easy-navigation {
+        text-align: right;
+        margin-right: 25px;
+        padding-bottom: 10px;
+      }
     }
-    p.easy-navigation {
-      text-align: right;
-      margin-right: 25px;
-      padding-bottom: 10px;
-    }
-    div.meta {
+    .meta {
       margin-right: 20px;
       clear: right;
+
       p {
         text-align: right;
         font-size: 0.9em;
         padding: 10px 10px 20px 0;
+
         a {
           text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
 }
-
 .newestarticles {
   h2 {
     font-size: 1.1em;
-  }
-
-  ul:last-child {
-    padding-left: 0;
-    margin-left: 0;
-    line-height: 150%;
-    li {
-      display: inline;
-      padding-left: 0;
-      margin-left: 0;
-    }
   }
   ul {
     li::before {
@@ -149,6 +147,16 @@ div.articles {
     }
     li:first-child::before {
       content: "";
+    }
+    &:last-child {
+      padding-left: 0;
+      margin-left: 0;
+      line-height: 150%;
+      li {
+        display: inline;
+        padding-left: 0;
+        margin-left: 0;
+      }
     }
   }
 }
