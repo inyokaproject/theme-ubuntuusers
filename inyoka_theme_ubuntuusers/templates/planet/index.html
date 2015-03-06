@@ -21,12 +21,12 @@
   {%- if days %}
     {%- if page == 1 %}
       <div class="newestarticles">
-      <h2>{% trans %}Recent articles{% endtrans %}</h2>
-      <ul>
-        {%- for article in articles[:10] %}
-          <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
-        {%- endfor %}
-      </ul>
+        <h2>{% trans %}Recent articles{% endtrans %}</h2>
+        <ul>
+          {%- for article in articles[:10] %}
+            <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
+          {%- endfor %}
+        </ul>
       </div>
     {%- endif %}
 
@@ -43,7 +43,6 @@
                   <img
                     src="{{ article.blog.icon_url|default(href('static','img','planet','anonymous.png'), true)|e }}"
                     alt="" />
-                  <br />
                 </a>
                 <p>
                   <a href="{{ article.blog|url|e }}">{{ article.blog.name|e }}</a>
@@ -62,22 +61,24 @@
                   {%- endif %}
                 </p>
               </div>
-              <div class="contents">
-                <div class="post{% if article.hidden %} hidden{% endif %}">
-                  <div class="text">{{ article.text }}</div>
-                  <div class="meta">
-                    <p>
-                      <a href="{{ article|url|e }}">{% trans %}Permanent link{% endtrans %}</a>
-                      {% if USER.can('blog_edit') %}
-                        {% if article.hidden and article.hidden_by %} |
-                          {% trans link=article.hidden_by|url, name=article.hidden_by.username|e -%}
-                            Hidden by: <a href="{{ link }}">{{ name }}</a>
-                          {%- endtrans %}
+              <div class="post{% if article.hidden %} hidden{% endif %}">
+                <div class="text">{{ article.text }}</div>
+                <div class="meta">
+                  <a href="{{ article|url|e }}">{% trans %}Permanent link{% endtrans %}</a>
+                  {% if USER.can('blog_edit') %}
+                    {% if article.hidden and article.hidden_by %}
+                      {% trans link=article.hidden_by|url, name=article.hidden_by.username|e -%}
+                        | Hidden by: <a href="{{ link }}">{{ name }}</a>
+                      {%- endtrans %}
+                    {% endif %}
+                      <a href="{{ article|url('hide')|e }}" class="admin_link"> |
+                        {% if article.hidden %}
+                          {% trans %}Restore{% endtrans %}
+                        {% else %}
+                          {% trans %}Hide{% endtrans %}
                         {% endif %}
-                        <span class="admin_link">| <a href="{{ article|url('hide')|e }}">{% if article.hidden %}{% trans %}Restore{% endtrans %}{% else %}{% trans %}Hide{% endtrans %}{% endif %}</a></span>
-                      {% endif %}
-                    </p>
-                  </div>
+                      </a>
+                  {% endif %}
                 </div>
               </div>
             </div>
