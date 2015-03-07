@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-03-02 00:02+0100\n"
+"POT-Creation-Date: 2015-03-07 11:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,56 +84,56 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:112
-msgid "Admin"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:113
-msgid "Turn admin links on/off"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:119
+#: inyoka_theme_ubuntuusers/templates/overall.html:111
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:12
 msgid "Reported topics"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:122
+#: inyoka_theme_ubuntuusers/templates/overall.html:114
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:13
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:16
 msgid "Article suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:126
+#: inyoka_theme_ubuntuusers/templates/overall.html:118
 msgid "Spelling mistakes"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:130
+#: inyoka_theme_ubuntuusers/templates/overall.html:122
 msgid "Event suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:134
+#: inyoka_theme_ubuntuusers/templates/overall.html:129
+msgid "Admin"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/overall.html:130
+msgid "Turn admin links on/off"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/overall.html:133
 msgid "Please turn on JavaScript!"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:150
+#: inyoka_theme_ubuntuusers/templates/overall.html:149
 msgid "Search"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:171
+#: inyoka_theme_ubuntuusers/templates/overall.html:170
 msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:198
+#: inyoka_theme_ubuntuusers/templates/overall.html:197
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:200
+#: inyoka_theme_ubuntuusers/templates/overall.html:199
 #, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:215
+#: inyoka_theme_ubuntuusers/templates/overall.html:214
 msgid "To mobile version"
 msgstr ""
 
@@ -318,7 +318,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reportlist.html:35
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:41
 #: inyoka_theme_ubuntuusers/templates/planet/hide_entry.html:20
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:77
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:78
 msgid "Hide"
 msgstr ""
 
@@ -909,7 +909,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:96
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:39
 #: inyoka_theme_ubuntuusers/templates/planet/hide_entry.html:20
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:77
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:76
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.html:47
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.m.html:59
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:83
@@ -1755,25 +1755,25 @@ msgstr ""
 msgid "Recent articles"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:58
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:57
 msgid "« Previous"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:61
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:60
 msgid "Next »"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:70
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:67
 #: inyoka_theme_ubuntuusers/templates/planet/index.m.html:24
 msgid "Permanent link"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:73
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:70
 #, python-format
-msgid "Hidden by: <a href=\"%(link)s\">%(name)s</a>"
+msgid "| Hidden by: <a href=\"%(link)s\">%(name)s</a>"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:92
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:93
 #: inyoka_theme_ubuntuusers/templates/planet/index.m.html:33
 msgid "No articles were aggregated"
 msgstr ""
