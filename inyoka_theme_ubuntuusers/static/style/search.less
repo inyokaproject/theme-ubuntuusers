@@ -12,24 +12,29 @@
 
 form.search {
   float:right;
-  
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   img { /* startpage icon */
     max-height: 2em;
     vertical-align: bottom;
   }
-  
+
   .search_query { /* text-input-field for the search-words */
     font-family: @font-content;
     border: solid 1px #888;
     background-color: #fefefe;
     width: 10.0em;
-    
+
     background-image: url(../img/icons/small/portal.png);
     background-repeat: no-repeat;
     background-position: 1px 1px;
     padding: 1px 1px 1px 22px;
   }
-  
+
   input[type=submit] {
     background: url(../img/search.png);
     background-color: #eee;
@@ -53,7 +58,7 @@ form.search {
     width: 20px;
     height: 18px;
   }
-  
+
   ul.search_area { /* a popup where the search-location can be selected */
     position: absolute;
     z-index: 99;

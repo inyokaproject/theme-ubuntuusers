@@ -146,7 +146,9 @@
             <input type="hidden" name="query">
             <input value="deutsch" type="hidden" name="language">
 
-            <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" /> via <img src="https://startpage.com/graphics/startpage_searchbox_logo.jpg" />
+            <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" />
+
+            <a href="{{ href('wiki', 'Suchfunktion') }}">via <img src="https://startpage.com/graphics/startpage_searchbox_logo.jpg" /></a>
           </div>
         </form>
 
