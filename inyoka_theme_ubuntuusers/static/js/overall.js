@@ -235,6 +235,21 @@ $(document).ready(function () {
     });
     $('form.search').append(expander);
 
+    /* if an middleclick appears on the submit-button, `target=_blank` is
+     * added as attribute to the search-form. Thus, the page with the
+     * search results will open up in a new tab.
+     *
+     * Could couse a pop-up-warning.
+     */
+    $("form.search input[type=submit]").mousedown(function(event) {
+      if(event.which === 2) {
+        $("form.search").attr('target','_blank');
+        $("form.search").submit();
+      } else {
+        $("form.search").removeAttr('target');
+      }
+    });
+
     $(document).click(function (e) {
       if(e.target.className != "search_expander") {
         popup.hide();
