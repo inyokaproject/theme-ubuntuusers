@@ -275,19 +275,6 @@ $(document).ready(function () {
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 
-  // use javascript to deactivate the submit button on click
-  // we don't make the elements really disabled because then
-  // the button won't appear in the form data transmitted
-  (function () {
-    var submitted = false;
-    $('form').submit(function () {
-      if ($(this).hasClass('nosubmitprotect')) return true;
-      if (submitted) return false;
-      $('input[type="submit"]').addClass('disabled');
-      submitted = true;
-    });
-  })();
-
   // add links to the "package" macro
   $('.package-list-apturl, .package-list').each(function (i, elm) {
     var tmp = $('.bash', elm);
