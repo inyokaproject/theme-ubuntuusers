@@ -10,6 +10,10 @@
 
 @import 'layout.less';
 
+@icon-size: 96px;
+@link-color: #888;
+
+
 .navi_sidebar {
   .navi_planet {
     background-image: url('../img/icons/planet.png');
@@ -28,38 +32,47 @@
   .article {
     margin: 1.5em 0;
 
-    .head {
+    > .head {
       display:block;
-      padding: 0 20px;
+      padding: 5px 20px;
+      min-height: @icon-size;
 
       img {
         float: left;
+        max-width: @icon-size;
+        max-height: @icon-size;
+      }
+      > .title-column  {
+        display: inline-block;
+        width: ~"calc(100% - @{icon-size} - 10px)";
+        padding-left: 10px;
       }
       a {
-        color: #888;
+        color: @link-color;
         text-decoration: none;
       }
       h3 {
         font-size: 1.6em;
         line-height: 1em;
+        clear: right;
 
         a {
           color: black;
 
           &.headerlink {
-            color: #999;
+            color: @link-color;
           }
         }
       }
       .easy-navigation {
-        text-align: right;
+        float: right;
 
         > a:not(:first-child)::before {
           content: " | ";
         }
       }
     }
-    .post {
+    > .post {
       .rounded(10px);
       background: #F8F8F8;
       border: 1px solid #BFBFBF;
@@ -69,6 +82,9 @@
         color: #ccc;
       }
       .text {
+        max-width: 100% !important;
+        overflow: auto;
+
         h1 {
           font-size: 1.8em;
         }
@@ -96,7 +112,7 @@
         }
         img {
           max-width: 100% !important;
-          height: auto;
+          max-height: 250px;
         }
       }
       .meta {
