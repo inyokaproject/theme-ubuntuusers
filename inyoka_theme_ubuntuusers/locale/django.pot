@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-03-07 11:08+0100\n"
+"POT-Creation-Date: 2015-03-10 19:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,21 +119,21 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:170
+#: inyoka_theme_ubuntuusers/templates/overall.html:172
 msgid "Please install at least Internet Explorer 8."
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:197
-#, python-format
-msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/overall.html:199
 #, python-format
+msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/overall.html:201
+#, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:214
+#: inyoka_theme_ubuntuusers/templates/overall.html:216
 msgid "To mobile version"
 msgstr ""
 
@@ -1755,11 +1755,11 @@ msgstr ""
 msgid "Recent articles"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:57
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:52
 msgid "« Previous"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/planet/index.html:60
+#: inyoka_theme_ubuntuusers/templates/planet/index.html:55
 msgid "Next »"
 msgstr ""
 
