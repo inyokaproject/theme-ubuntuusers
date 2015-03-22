@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-03-10 19:00+0100\n"
+"POT-Creation-Date: 2015-03-22 07:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -707,11 +707,11 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:25
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:51
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:53
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:82
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:86
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
 msgid "Submit"
 msgstr ""
@@ -1825,7 +1825,6 @@ msgid "Details"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/calendar_detail.html:65
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:182
 msgid "edit"
 msgstr ""
 
@@ -2440,6 +2439,11 @@ msgstr ""
 msgid "Signature"
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:51
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
+msgid "User page"
+msgstr ""
+
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:12
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:21
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:32
@@ -2726,12 +2730,6 @@ msgstr ""
 msgid "Deactivate my account “%(name)s”"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/index.html:31
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/index.html:33
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:29
-msgid "User page"
-msgstr ""
-
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:17
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:36
 msgid "Overview"
@@ -2768,7 +2766,7 @@ msgid ""
 "rules</a>."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:85
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:89
 msgid "Show my profile"
 msgstr ""
 
