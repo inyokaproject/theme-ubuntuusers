@@ -57,6 +57,7 @@ body {
   color: black;
   font-size: @font-size;
   line-height: @line-height;
+  padding: 10px;
 }
 
 html, body {
@@ -64,14 +65,14 @@ html, body {
 }
 
 div.wrap {
-  margin: 10px;
+  margin: 0 auto;
   background-image:url(../img/head.jpg);
   background-repeat: no-repeat;
-  background-position: -3px -2px;
+  background-position: -3px -2px; /* hide the border inside of head.jpg */
   background-color: #FFFFFF;
   border: darken(@main_background, 10%) 2px solid;
   min-width: 780px;
-  max-width: 1900px;
+  max-width: 1900-3px; /* see backgrpound-position */
   .rounded();
 }
 
