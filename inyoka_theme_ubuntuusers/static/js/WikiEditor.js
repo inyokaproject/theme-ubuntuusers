@@ -251,7 +251,7 @@
         evt.target.selectedIndex = 0;
     }, ['wiki'], help("= Überschrift =")),
     dropdown('macro', 'Textbausteine', [
-        item('[[Vorlage(InArbeit, %s)]]', 'in Arbeit'),
+        item('[[Vorlage(Baustelle, %s)]]', 'Baustelle'),
         item('[[Inhaltsverzeichnis(%s)]]', 'Inhaltsverzeichnis'),
         item('[[Vorlage(Getestet, %s)]]', 'Getestet'),
         item('{{{#!vorlage Paketinstallation\n{S/Paket, info}\n}}}', 'Paketinstallation'),
