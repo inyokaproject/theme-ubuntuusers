@@ -79,9 +79,9 @@
       {%- endif %}
       {%- if topic.hidden %}
         <a href="{{ topic|url('restore') }}"
-           class="action action_restore adminlink">{% trans %}Restore{% endtrans %}</a> |
+           class="action action_restore admin_link">{% trans %}Restore{% endtrans %}</a> |
         <a href="{{ topic|url('delete') }}"
-           class="action action_delete adminlink">{% trans %}Delete{% endtrans %}</a>
+           class="action action_delete admin_link">{% trans %}Delete{% endtrans %}</a>
       {%- else %}
         <a href="{{ topic|url('hide') }}"
            class="action action_hide admin_link">{% trans %}Hide{% endtrans %}</a>
