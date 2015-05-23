@@ -1848,9 +1848,9 @@ msgid "Permanent link"
 msgstr "Permalink"
 
 #: inyoka_theme_ubuntuusers/templates/planet/index.html:70
-#, fuzzy, python-format
+#, python-format
 msgid "| Hidden by: <a href=\"%(link)s\">%(name)s</a>"
-msgstr "Verborgen von: <a href=\"%(link)s\">%(name)s</a>"
+msgstr "| Verborgen von: <a href=\"%(link)s\">%(name)s</a>"
 
 #: inyoka_theme_ubuntuusers/templates/planet/index.html:93
 #: inyoka_theme_ubuntuusers/templates/planet/index.m.html:33
