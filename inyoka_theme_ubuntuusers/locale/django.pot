@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-04-26 09:42+0200\n"
+"POT-Creation-Date: 2015-05-23 12:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,19 +209,19 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/_edit_latestpost_row.html:15
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:72
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:212
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:216
 msgid "Member since:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/_edit_latestpost_row.html:16
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:73
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:213
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:217
 msgid "Posts:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/_edit_latestpost_row.html:20
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:80
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:269
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:282
 msgid "Post"
 msgstr ""
 
@@ -290,8 +290,8 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:129
 #: inyoka_theme_ubuntuusers/templates/forum/post_delete.html:25
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:84
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:223
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:240
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:227
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:244
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_delete.html:24
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_edit.html:53
 #: inyoka_theme_ubuntuusers/templates/ikhaya/event_delete.html:18
@@ -312,8 +312,8 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/delete_topic.html:32
 #: inyoka_theme_ubuntuusers/templates/forum/post_delete.html:25
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:87
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:246
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:89
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:250
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:98
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reportlist.html:35
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:41
@@ -379,7 +379,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:54
 #: inyoka_theme_ubuntuusers/templates/forum/edit.m.html:38
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:118
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:122
 #, python-format
 msgid "This topic is the discussion of the article %(article_list)s."
 msgid_plural "This topic is the discussion of the articles %(article_list)s."
@@ -646,8 +646,8 @@ msgid "Create forum"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:18
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:253
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:257
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:266
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:270
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:95
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_edit.html:18
 #: inyoka_theme_ubuntuusers/templates/ikhaya/category_edit.html:16
@@ -905,7 +905,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/revisions.html:24
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:82
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:236
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:240
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:96
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:39
 #: inyoka_theme_ubuntuusers/templates/planet/hide_entry.html:20
@@ -966,12 +966,12 @@ msgid "The following posts will be split off:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:67
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:207
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:211
 msgid "(Topic starter)"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:79
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:268
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:281
 msgid "Link to this post"
 msgstr ""
 
@@ -1019,38 +1019,48 @@ msgstr ""
 msgid "Lock"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:94
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:86
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:256
+msgid "Mark ham"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:91
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:259
+msgid "Mark spam"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:98
 msgid "This topic"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:102
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:106
 msgid "Status:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:104
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:108
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reportlist.html:37
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:45
 msgid "Solved"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:104
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:108
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:47
 msgid "Unsolved"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:164
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:168
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:50
 #, python-format
 msgid "The poll was started on %(start_date)s and it ended on %(end_date)s."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:168
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:172
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:54
 #, python-format
 msgid "The poll was started on %(start_date)s and it will end on %(end_date)s."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:173
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:177
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:60
 #, python-format
 msgid "%(count)s vote"
@@ -1058,7 +1068,7 @@ msgid_plural "%(count)s votes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:175
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:179
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:62
 #, python-format
 msgid "%(count)s voter"
@@ -1066,57 +1076,57 @@ msgid_plural "%(count)s voters"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:181
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:185
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:71
 msgid "Hide results"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:183
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:187
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:73
 msgid "Vote"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:184
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:188
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:74
 msgid "Show results"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:200
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:204
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:29
 msgid "Team icon"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:215
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:219
 msgid "Residence:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:229
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:233
 msgid "Show revisions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:262
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:265
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:275
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:278
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:90
 msgid "Quote"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:273
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:286
 msgid "last edited:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:278
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:291
 msgid "Split:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:281
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:294
 msgid "From here:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:333
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:346
 msgid "« Previous topic"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/topic.html:335
+#: inyoka_theme_ubuntuusers/templates/forum/topic.html:348
 msgid "Next topic »"
 msgstr ""
 
