@@ -176,7 +176,7 @@
         this.setSelection(this.quoteText(selection));
     }, ['forum'], help("Auswahl zitieren")),
     button('picture', 'Bild', insert('[[Bild(%s)]]', 'Bildname'),
-           ['wiki', 'forum'], help("[[Bild(Bildname)]]")),
+           ['wiki'], help("[[Bild(Bildname)]]")),
     (function(editor) {
       if (editor.profile == 'small') {
         return;
