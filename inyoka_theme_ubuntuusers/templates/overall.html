@@ -211,6 +211,10 @@
           {%- else -%}
             Inyoka revision unavailable
           {%- endif -%}
+          {%- if SETTINGS.DEBUG -%}
+            <br />
+            {{ sql_queries_count }} SQL queries in {{ sql_queries_time }}s
+          {%- endif -%}
         </li>
         <li class="license">
           <a href="?flavour=mobile" class="flavour_switch" >{% trans %}To mobile version{% endtrans %}</a><br />
