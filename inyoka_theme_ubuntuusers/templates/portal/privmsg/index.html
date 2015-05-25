@@ -31,7 +31,7 @@
         <dd>{{ message.pub_date|datetime }}</dd>
       </dl>
       <div class="prvmsg_body">
-        {{ message.rendered_text }}
+        {{ message.text_rendered }}
       </div>
       <div class="linklist pn_actions">
         {%- if not message.author == USER %}
