@@ -24,7 +24,7 @@
         <a href="#report_{{ report.id }}">#{{ report.id }}</a>
       </div>
       <div class="text">
-        {{ report.rendered_text }}
+        {{ report.text_rendered }}
       </div>
       <p class="meta admin_link_hover">
         {% trans link=report.author|url, author=report.author.username|e -%}

@@ -13,7 +13,7 @@
 
 {% block forum_content %}
   <h1>{{ message.title|e }}</h1>
-  {{ message.rendered_text }}
+  {{ message.text_rendered }}
   <form method="post" action="{{ forum|url('welcome') }}">
     {{ csrf_token() }}
     <input type="hidden" name="goto_url" value="{{ goto_url|e }}" />
