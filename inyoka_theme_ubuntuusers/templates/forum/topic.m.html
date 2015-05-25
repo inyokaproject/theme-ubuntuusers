@@ -9,11 +9,21 @@
 #}
 {% extends 'forum/page.m.html' %}
 {% from 'macros.html' import render_pagination_mobile %}
+{% from 'forum/_forum.html' import render_article_list %}
 {% set back = topic.forum|url %}
 {% set rendered_pagination = render_pagination_mobile(pagination) %}
 
 {% block content %}
   <h2>{{ topic.title|e }}</h2>
+  {%- if discussions %}
+    <div class="topic_box discussion_info">
+      {%- trans count=discussions|count, article_list=render_article_list(discussions) -%}
+        This topic is the discussion of the article {{ article_list }}.
+      {%- pluralize -%}
+        This topic is the discussion of the articles {{ article_list }}.
+      {%- endtrans -%}
+    </div>
+  {%- endif %}
   {% if polls %}
     <form action="" method="post" class="poll">
       {{ csrf_token() }}
