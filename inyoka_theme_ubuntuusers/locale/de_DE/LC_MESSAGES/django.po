@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-05-24 11:38+0200\n"
+"POT-Creation-Date: 2015-05-25 11:34+0200\n"
 "PO-Revision-Date: 2015-02-15 13:20+0100\n"
 "Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
 "Language-Team: German (Germany) "
@@ -137,7 +137,7 @@ msgstr "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgid "(rendered in %(seconds)s seconds)"
 msgstr "(in %(seconds)s Sekunden gerendert)"
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:216
+#: inyoka_theme_ubuntuusers/templates/overall.html:220
 msgid "To mobile version"
 msgstr "Zur mobilen Version"
 
