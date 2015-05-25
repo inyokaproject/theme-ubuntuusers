@@ -26,7 +26,7 @@
           {%- endtrans %}
         {% endif %}
       </span>
-      <div class="text">{{ article.rendered_intro }}</div>
+      <div class="text">{{ article.get_intro() }}</div>
     </div>
   {%- else %}
     <p>{% trans %}There is no article.{% endtrans %}</p>

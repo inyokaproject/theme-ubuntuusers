@@ -26,10 +26,10 @@
       </span>
     </span>
     <div class="intro">
-      {{ article.rendered_intro }}
+      {{ article.get_intro() }}
     </div>
     <div class="text">
-      {{ article.rendered_text }}
+      {{ article.get_text() }}
     </div>
   </article>
   {%- if article.comments_enabled %}
@@ -44,7 +44,7 @@
                 <a href="#comment_{{ loop.index }}"><strong>{{ loop.index }}.</strong></a>
                 <a href="{{ comment.author|url }}">{{ comment.author.username|e }}</a></span>
             </p>
-            <div class="text">{{ comment.rendered_text }}</div>
+            <div class="text">{{ comment.text_rendered }}</div>
           </div>
         {% endif %}
       {% endfor %}

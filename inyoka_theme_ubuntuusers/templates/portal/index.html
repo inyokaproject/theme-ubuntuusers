@@ -73,7 +73,7 @@
       </div>
       <h4><a href="{{ article|url }}">{{ article.subject|e }}</a></h4>
       <p class="text">
-        {{ article.simplified_intro|truncate(250, true)|e }}
+        {{ article.intro_rendered }}
       </p>
     </div>
     {%- endfor %}
