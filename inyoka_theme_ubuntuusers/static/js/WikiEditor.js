@@ -142,7 +142,7 @@
         seconds = orig.getUTCSeconds();
     return (year + '-' + (month < 9 ? '0' : '') + (month + 1) + '-' +
                          (date < 10 ? '0' : '') + date + 'T' +
-                         (hours < 10 ? '0' : '') + hours + ':' + 
+                         (hours < 10 ? '0' : '') + hours + ':' +
                          (minutes < 10 ? '0' : '') + minutes + ':' +
                          (seconds < 10 ? '0' : '') + seconds + 'Z');
   };
@@ -160,6 +160,18 @@
            ['forum', 'small'], help("__Text__")),
     button('stroke', 'Durchgestrichener Text', insert('--(%s)--'),
            ['forum'], help("--(Text)--")),
+    button('bulletlist', 'Liste', function(evt) {
+      var selection = this.getSelection();
+      if (selection.length)
+        this.setSelection(this.listText(selection, '*'));
+      else this.insertTag(' * %s', 'Formatierter Text');
+    }, ['wiki', 'forum'], help(" * Text")),
+    button('numlist', 'Nummerierte Liste', function(evt) {
+      var selection = this.getSelection();
+      if (selection.length)
+        this.setSelection(this.listText(selection, '1.'));
+      else this.insertTag(' 1. %s', 'Formatierter Text');
+    }, ['wiki', 'forum'], help(" 1. Text")),
     button('monospace', 'Monotype', insert('`%s`'),
            ['wiki'], help("`Text`")),
     button('mark', 'Hervorgehobener Text', insert('[mark]%s[/mark]'),
@@ -199,7 +211,7 @@
       });
       for (var i = 0; i < tds.length / 2; i++) {
         $('<tr />')
-          .appendTo(codebox)        
+          .appendTo(codebox)
           .append(tds[i], tds[i + tds.length / 2]);
       }
       $(document).click(function() {
@@ -478,6 +490,23 @@
         lines.push('>' + (this.charAt(0) != '>' ? ' ' : '') + this);
       });
       return lines.join('\n') + '\n';
-    }
+    },
+    /**
+     * Convert a given text to a list.
+     */
+    listText : function(text, mode) {
+      if (!text)
+        return '';
+      var lines = [];
+      $.each(text.split(/\r\n|\r|\n/), function() {
+        if (/^ +(\*|1\.)/.test(this)) {
+            lines.push(' '+this);
+        }
+        else {
+            lines.push(' ' + mode + ' ' + this);
+        }
+      });
+      return lines.join('\n');
+    },
   });
 })();

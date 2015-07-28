@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     watch: {
       options: {
         atBegin: true
-      },  
+      },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
@@ -79,6 +79,8 @@ module.exports = function(grunt) {
           'inyoka_theme_ubuntuusers/static/img/icons/bold.png',
           'inyoka_theme_ubuntuusers/static/img/icons/italic.png',
           'inyoka_theme_ubuntuusers/static/img/icons/underlined.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/bulletlist.png',
+          'inyoka_theme_ubuntuusers/static/img/icons/numlist.png',
           'inyoka_theme_ubuntuusers/static/img/icons/code.png',
           'inyoka_theme_ubuntuusers/static/img/icons/stroke.png',
           'inyoka_theme_ubuntuusers/static/img/icons/monospace.png',
