@@ -111,6 +111,11 @@
           }
         }
         img {
+          /* `!important` needed as width and height are sometimes inline
+           defined (→ wrong form-factor if scaled) */
+          width: auto !important;
+          height: auto !important;
+
           max-width: 100% !important;
           max-height: 250px;
         }
