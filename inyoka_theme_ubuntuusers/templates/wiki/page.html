@@ -27,22 +27,51 @@
 {% do BREADCRUMB.append(_('Wiki'), href('wiki'), True) %}
 {% set styles = styles|default([]) + ['wiki', 'highlight'] %}
 {% set active_app = 'wiki' %}
-{% set navi_type  = 'tabbar' %}
 
-{% block pathbar_extensions %}
-  <div class="dropdown">
-    <ul class="dropdown">
-      <li>
-        <span>{% trans %}Overview{% endtrans %}</span>
-      </li>
-      <li>
-        <ul>
-          <li><a href="{{ href('wiki', 'Wiki', 'Letzte Änderungen') }}">{% trans %}Recent changes{% endtrans %}</a></li>
-          <li><a href="{{ href('wiki', 'Wiki', 'Index') }}">{% trans %}Index{% endtrans %}</a></li>
-          <li><a href="{{ href('wiki', 'Wiki', 'Tags') }}">{% trans %}Tags{% endtrans %}</a></li>
-        </ul>
-      </li>
+{% set navi_type  = 'both' %}
+
+{% block sidebar %}
+  <div class="container">
+    <h3 class="navi_wiki">{% trans %}Wiki{% endtrans %}</h3>
+    <ul>
+      <li><a href="{{ href('wiki', 'Wiki', 'Index') }}">{% trans %}Index{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Letzte Änderungen') }}">{% trans %}Recent changes{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki') }}">{% trans %}Overview{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'FAQ_-_häufig_gestellte_Fragen') }}">{% trans %}FAQ{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Benutzung') }}">{% trans %}Usage{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Kategorien') }}">{% trans %}Category{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Tags') }}">{% trans %}Tag Cloud{% endtrans %}</a></li>
     </ul>
+    <h3 class="navi_join">{% trans %}Participation{% endtrans %}</h3>
+    <ul>
+      <li><a href="{{ href('wiki', 'Wikiartikel_anlegen') }}">{% trans %}Create a wiki article{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'HowTo') }}">{% trans %}Create a Howto{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Referenz') }}">{% trans %}Wiki Reference{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Syntax') }}">{% trans %}Wiki Syntax{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Baustelle') }}">{% trans %}Sites under construction{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Artikelideen') }}">{% trans %}Article Ideas{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'ungetestet') }}">{% trans %}Untested Articles{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Ausbaufähig')}}?action=backlinks">{% trans %}Expandable Articles{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Fehlerhaft')}}?action=backlinks">{% trans %}Incorrect Articles{% endtrans %}</a></li>
+      <li><a href="{{ href('forum', 'forum', 'wiki') }}">{% trans %}Around the Wiki{% endtrans %}</a></li>
+    </ul>
+    {%- if can and can.manage %}
+    <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
+    <ul>
+      <li><a href="?action=rename">{% trans %}Rename page{% endtrans %}</a></li>
+      {%- if can.delete %}
+        <li><a href="?action=delete">{% trans %}Delete page{% endtrans %}</a></li>
+      {%- endif %}
+        {%- if page.name.startswith('Baustelle/Verlassen') %}
+          <li><a href="?action=mv_baustelle">{% trans %}Mark page as “under construction”{% endtrans %}</a></li>
+        {%- elif page.name.startswith('Baustelle') %}
+          <li><a href="?action=mv_discontinued">{% trans %}Move page to “discontinued”{% endtrans %}</a></li>
+          <li><a href="?action=mv_back">{% trans %}Move page back to the wiki{% endtrans %}</a></li>
+        {%- else %}
+          <li><a href="?action=mv_baustelle">{% trans %}Mark page as “under construction”{% endtrans %}</a></li>
+      {%- endif %}
+  {%- endif %}
+  </ul>
   </div>
 {% endblock %}
 
