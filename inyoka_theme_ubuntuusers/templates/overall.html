@@ -140,9 +140,9 @@
 
       <div class="pathbar">
 
-        {# search via startpage
+        {# search via ixquick
            requires JS to work #}
-        <form method=POST accept-charset="UTF-8" action='https://startpage.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}">
+        <form method=POST accept-charset="UTF-8" action='https://ixquick.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
             <input type="text" name="keyword" class="search_query" />
             <input type="hidden" name="query">
@@ -151,7 +151,7 @@
 
             <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" />
 
-            <a href="{{ href('wiki', 'Suchfunktion') }}">via <img src="https://startpage.com/graphics/startpage_searchbox_logo.jpg" /></a>
+            <a href="{{ href('wiki', 'Suchfunktion') }}">via <img src="https://ixquick.com/graphics/ixquick_logo_small_option1.jpg" /></a>
           </div>
         </form>
 
