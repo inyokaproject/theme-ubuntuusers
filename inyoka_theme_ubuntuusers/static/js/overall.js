@@ -194,6 +194,8 @@ $(document).ready(function () {
             return "site:ubuntuusers.de " + searchWords;
         }
       });
+
+      $('form.search input[name=host]').remove(); // remove to prevent two site:-parameters
     });
 
     var expander = $('<div class="search_expander" />');

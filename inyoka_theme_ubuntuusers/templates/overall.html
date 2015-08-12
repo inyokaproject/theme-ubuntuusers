@@ -66,6 +66,9 @@
       <div class="appheader">
         {%- if not hide_quicklinks %}
           <ul class="navi_global">
+            <li>
+              <noscript><strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong></noscript>
+            </li>
             {%- if USER.is_authenticated() %}
               <li>
                 <a href="{{ href('portal', 'logout', next=CURRENT_URL) }}">
@@ -130,7 +133,6 @@
                     title="{% trans %}Turn admin links on/off{% endtrans %}" />
               </a>
             </div>
-          <noscript><strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong></noscript>
           </div>
         {%- endif %}
         {{ BREADCRUMB.render('appheader') }}
@@ -145,6 +147,7 @@
             <input type="text" name="keyword" class="search_query" />
             <input type="hidden" name="query">
             <input value="deutsch" type="hidden" name="language">
+            <input value="ubuntuusers.de" type="hidden" name="host"> {# fallback for no-JS-users: restricts search-entries to ubuntuusers.de #}
 
             <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" />
 
