@@ -14,7 +14,8 @@
 {% block planet_content %}
   {# TODO: Text should be changeable via interface #}
   <p>{% trans %}With this form you can suggest a new blog for the planet.{% endtrans %}</p>
-  <p>Die wichtigsten Kriterien sind:</p>
+  <p>Die wichtigsten Kriterien sind (siehe <a href="{{ href('wiki', 'ubuntuusers',
+    'Ikhayateam', 'Planetenregeln') }}">vollständigen Planetenregeln</a>):</p>
   <ul>
     <li>Ubuntu/Linux-bezogener Inhalt, bei gemischtem Inhalt muss ein separater Feed zur Verfügung gestellt werden.</li>
     <li>Der Feed muss den gesamten Beitrag enthalten.</li>
