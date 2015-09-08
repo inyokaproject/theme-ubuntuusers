@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-08-03 15:31+0200\n"
-"PO-Revision-Date: 2015-02-15 13:20+0100\n"
-"Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
+"POT-Creation-Date: 2015-09-08 18:03+0200\n"
+"PO-Revision-Date: 2015-09-08 18:11+0200\n"
+"Last-Translator: Unknown <chris@Arch-Dev-Virtual>\n"
 "Language-Team: German (Germany) "
 "(http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -150,7 +150,7 @@ msgid "Applications"
 msgstr "Anwendungen"
 
 #: inyoka_theme_ubuntuusers/templates/overall.m.html:47
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:86
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:87
 msgid "More"
 msgstr "Mehr"
 
@@ -347,7 +347,7 @@ msgstr "Verbergen"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_delete.html:24
 #: inyoka_theme_ubuntuusers/templates/pastebin/delete_entry.html:22
 #: inyoka_theme_ubuntuusers/templates/planet/hide_entry.html:21
-#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:34
+#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:35
 #: inyoka_theme_ubuntuusers/templates/portal/files_delete.html:17
 #: inyoka_theme_ubuntuusers/templates/portal/page_delete.html:20
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:44
@@ -532,7 +532,7 @@ msgstr "Neue Beiträge"
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:135
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:71
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:75
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:96
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:97
 msgid "Unsubscribe"
 msgstr "Abbestellen"
 
@@ -541,7 +541,7 @@ msgstr "Abbestellen"
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:51
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:139
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:73
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:98
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:99
 msgid "Subscribe"
 msgstr "Abonnieren"
 
@@ -690,7 +690,7 @@ msgstr "Forum erstellen"
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:12
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:14
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:83
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:84
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -720,7 +720,7 @@ msgstr "Willkommensnachricht"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_new.html:31
 #: inyoka_theme_ubuntuusers/templates/pastebin/add.html:29
 #: inyoka_theme_ubuntuusers/templates/planet/blog_edit.html:27
-#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:33
+#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:34
 #: inyoka_theme_ubuntuusers/templates/portal/configuration.html:83
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:37
 #: inyoka_theme_ubuntuusers/templates/portal/group_edit.html:64
@@ -1544,7 +1544,7 @@ msgstr "Gesamten Artikel anzeigen"
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:60
 #: inyoka_theme_ubuntuusers/templates/portal/configuration.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:71
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:59
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:60
 msgid "Configuration"
 msgstr "Konfiguration"
 
@@ -1878,7 +1878,7 @@ msgstr "Ein Blog vorschlagen"
 msgid "With this form you can suggest a new blog for the planet."
 msgstr "Hier kannst du einen Blog für den Planeten vorschlagen."
 
-#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:25
+#: inyoka_theme_ubuntuusers/templates/planet/suggest.html:26
 msgid ""
 "Please be patient. It could take a while, until we approve your "
 "suggestion."
@@ -2300,7 +2300,7 @@ msgid "No users were found."
 msgstr "Es wurden keine Benutzer gefunden."
 
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:33
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:40
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:41
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -2872,7 +2872,7 @@ msgid "Deactivate my account “%(name)s”"
 msgstr "Deaktiviere mein Konto „%(name)s“"
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:17
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:39
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:40
 msgid "Overview"
 msgstr "Übersicht"
 
@@ -3050,7 +3050,7 @@ msgid "New attachment:"
 msgstr "Neuer Anhang:"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:13
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:85
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:86
 msgid "Backlinks"
 msgstr "Backlinks"
 
@@ -3215,29 +3215,29 @@ msgid "Edit page"
 msgstr "Seite bearbeiten"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:24
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:61
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:62
 msgid "Rename page"
 msgstr "Seite umbenennen"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:27
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:63
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:64
 msgid "Delete page"
 msgstr "Seite löschen"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:31
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:36
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:66
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:71
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:67
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:72
 msgid "Mark page as “under construction”"
 msgstr "Seite in die Baustelle verschieben"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:33
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:68
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:69
 msgid "Move page to “discontinued”"
 msgstr "Seite nach „Baustelle/Verlassen/“ verschieben"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:34
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:69
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:70
 msgid "Move page back to the wiki"
 msgstr "Seite zurück ins Wiki verschieben"
 
@@ -3431,77 +3431,74 @@ msgstr "Index"
 msgid "Recent changes"
 msgstr "Letzte Änderungen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:41
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:39
+msgid "List of new articles"
+msgstr "Liste neuer Artikel"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:42
 msgid "Usage"
 msgstr "Benutzung"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:42
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:43
 msgid "Category"
 msgstr "Kategorie"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:43
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:44
 msgid "Tag Cloud"
 msgstr "Wortwolke"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:45
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:46
 msgid "Participation"
 msgstr "Mitmachen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:47
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:48
 msgid "Create a wiki article"
 msgstr "Wikiartikel anlegen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:48
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:49
 msgid "Create a Howto"
 msgstr "Howto anlegen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:49
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:50
 msgid "Wiki Reference"
 msgstr "Wiki-Referenz"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:50
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:51
 msgid "Wiki Syntax"
 msgstr "Wiki-Syntax"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:51
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:52
 msgid "Sites under construction"
 msgstr "Baustellen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:52
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:53
 msgid "Article Ideas"
 msgstr "Artikelideen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:53
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:54
 msgid "Untested Articles"
 msgstr "Ungetestete Artikel"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:54
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:55
 msgid "Expandable Articles"
 msgstr "Ausbaufähige Artikel"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:55
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:56
 msgid "Incorrect Articles"
 msgstr "Fehlerhafte Artikel"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:56
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:57
 msgid "Around the Wiki"
 msgstr "Rund ums Wiki"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:82
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:83
 msgid "Article"
 msgstr "Artikel"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:84
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:85
 msgid "Log"
 msgstr "Verlauf"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:93
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
 msgid "Discussion"
 msgstr "Diskussion"
-
-#~ msgid "Construction Sites"
-#~ msgstr "Baustellen"
-
-#~ msgid "Tags"
-#~ msgstr "Tags"
-
