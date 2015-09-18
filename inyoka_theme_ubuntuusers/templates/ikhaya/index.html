@@ -42,14 +42,14 @@
           {%- endif %}
           {% if full %}
             <div class="intro">
-              {{ article.rendered_intro }}
+              {{ article.intro_rendered }}
             </div>
             <div class="text">
-              {{ article.rendered_text }}
+              {{ article.text_rendered }}
             </div>
             <br />
           {% else %}
-            <div class="text">{{ article.rendered_intro }}</div>
+            <div class="text">{{ article.intro_rendered }}</div>
           {% endif %}
           <p class="meta admin_link_hover">
             {% trans link=article.author|url, author=article.author.username|e -%}
