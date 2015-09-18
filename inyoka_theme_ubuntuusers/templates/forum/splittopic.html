@@ -2,7 +2,7 @@
     forum/splittopic.html
     ~~~~~~~~~~~~~~~~
 
-    This page shows the "splittopic" form. 
+    This page shows the "splittopic" form.
 
     :copyright: (c) 2007-2015 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
@@ -110,7 +110,7 @@
               {%- endif %}
               {%- if post.author.signature and not USER.settings['hide_signatures'] %}
                 <div class="signature">
-                  {{ post.author.rendered_signature }}
+                  {{ post.author.signature_rendered }}
                 </div>
               {%- endif %}
             </td>

@@ -55,10 +55,11 @@
       {%- endif %}
     </p>
   </form>
-  {%- if preview %}
+  {%- if preview_intro %}
     <div class="preview_wrapper">
       <h2 class="title">{% trans %}Preview{% endtrans %}</h2>
-      <div class="preview">{{ preview }}</div>
+      <div class="preview">{{ preview_intro }}</div>
+      <div class="preview">{{ preview_text }}</div>
     </div>
   {%- endif %}
 {%- endblock %}
