@@ -19,9 +19,9 @@
     </head>
     <body>
       <h1 class="title">{{ page.title|e }}</h1>
-      {{ page.rev.text.render(request=request, format='html') }}
+      {{ page.rev.text.value_rendered }}
     </body>
   </html>
 {% else %}
-  {{ page.rev.text.render(request=request, format='html') }}
+  {{ page.rev.text.value_rendered }}
 {% endif %}
