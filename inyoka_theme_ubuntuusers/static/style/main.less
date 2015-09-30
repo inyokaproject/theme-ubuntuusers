@@ -114,11 +114,13 @@ input[type="submit"], input[type="button"], input[type="reset"] {
   font-family: @font-content;
   background-color: #eee;
   color: #333333;
+
+  &:active, &:focus {
+    border: 1px #aaa inset;
+    background-color: #f2f2f2!important;
+  }
 }
-input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
-  border: 1px #aaa inset;
-  background-color: #f2f2f2!important;
-}
+
 input[type="submit"] {
   border-color: #333;
   font-weight: bold;
@@ -126,11 +128,6 @@ input[type="submit"] {
 input.cancel[type="submit"] {
   border-color: #777;
   font-weight: normal;
-}
-input.disabled, input.disabled:active {
-  color: #888!important;
-  background-color: #e2e2e2!important;
-  border: 1px solid #ccc!important;
 }
 input.linkbutton {
   height: 1.2em;
@@ -153,6 +150,7 @@ input.linkbutton:active {
   margin: 0;
   padding: 0;
 }
+
 textarea {
   box-sizing: border-box;
   border: 1px solid #AAA;
