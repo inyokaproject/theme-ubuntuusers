@@ -8,9 +8,8 @@
     :license: BSD, see LICENSE for more details.
 #}
 
-{%- extends 'portal/overall.html' %}
+{% extends 'portal/overall.html' %}
 {% set styles = ['feedselector'] %}
-{% set scripts = ['FeedSelector'] %}
 
 {% block portal_content %}
   <h3>Feed generieren</h3>
@@ -64,9 +63,9 @@
   {%- endif %}
   {%- if ikhaya_form %}
   <form action="/feeds/ikhaya/" method="post" id="ikhaya">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <h4>Ikhaya</h4>
-  
+
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
     <dd>{{ ikhaya_form.category.label_tag() }}: {{ ikhaya_form.category }}</dd>
@@ -84,7 +83,7 @@
   {%- endif %}
   {%- if planet_form %}
   <form action="/feeds/planet/" method="post" id="planet">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <h4>{% trans %}Planet{% endtrans %}</h4>
   <dl>
     <dt>{% trans %}How{% endtrans %}</dt>
@@ -101,7 +100,7 @@
   {%- endif %}
   {%- if wiki_form %}
   <form action="/feeds/wiki/" method="post" id="wiki">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <h4>{% trans %}Wiki{% endtrans %}</h4>
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
