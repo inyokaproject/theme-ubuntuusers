@@ -34,7 +34,6 @@
       </dd>
       {%- endif %}
       {%- if form.errors.avatar %}<dd>{{ form.errors.avatar }}</dd>{% endif %}
-      <hr style="clear: both;" />
       <dt>{% trans %}Gravatar:{% endtrans %}</dt>
       {% if user.settings.use_gravatar %}
       <dd><img class="usercp_avatar" src="{{ user.gravatar_url }}" alt="Gravatar" /></dd>
@@ -51,7 +50,7 @@
           By default, the email and jabber addresses are not displayed in your public profile. To publish them, you need to check the “show in profile” box.
         {%- endtrans %}</p>
       </dd>
-      {% for item in ['email', 'jabber'] %}
+      {% for item in ['email', 'gpgkey', 'jabber', 'website', 'launchpad', 'location'] %}
         <dt>
           <label for="{{ form[item].auto_id }}">{{ form[item].label_tag() }}:</label>
         </dt>
@@ -65,10 +64,6 @@
         {%- if form.errors[item] %}<dd>{{ form.errors[item] }}</dd>{% endif %}
       {% endfor %}
     </dl>
-    <h3>{% trans %}Miscellaneous settings{% endtrans %}</h3>
-    <h4>{% trans %}Geographical location{% endtrans %}</h4>
-    {{ macros.render_form(form, ['location',]) }}
-    {{ macros.render_form(form, ['website', 'launchpad', 'gpgkey']) }}
     <h3>{% trans %}Signature{% endtrans %}</h3>
     <p class="note">{% trans n=max_sig_length, link=href('wiki', 'ubuntuusers/Moderatoren/Forenregeln', _anchor='8-Signaturregeln') -%}
       The signature will be appended to every post. It cannot contain more than {{ n }} characters. Please follow the <a href="{{ link }}">signature rules</a>.
