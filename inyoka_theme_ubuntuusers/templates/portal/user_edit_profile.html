@@ -40,7 +40,7 @@
       (Will be scaled to {{ width }}x{{ height }})
     {%- endtrans %}</dd>
     <h3>{% trans %}Contact addresses{% endtrans %}</h3>
-    {{ render_form(form, ['email', 'gpgkey', 'jabber', 'website', 'launchpad']) }}
+    {{ render_form(form, ['email', 'gpgkey', 'jabber', 'website', 'launchpad', 'location']) }}
     <h3>{% trans %}Signature{% endtrans %}</h3>
     <p>{{ form.signature }}</p>
     <h3>{% trans %}User page{% endtrans %}</h3>
