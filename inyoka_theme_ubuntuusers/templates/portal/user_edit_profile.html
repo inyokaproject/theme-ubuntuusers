@@ -40,12 +40,7 @@
       (Will be scaled to {{ width }}x{{ height }})
     {%- endtrans %}</dd>
     <h3>{% trans %}Contact addresses{% endtrans %}</h3>
-    {{ render_form(form, ['email', 'jabber', 'icq', 'msn', 'aim', 'yim', 'skype', 'wengophone', 'sip']) }}
-    <h3>{% trans %}Miscellaneous settings{% endtrans %}</h3>
-    {{ render_form(form, ['occupation', 'interests', 'website',
-                          'launchpad', 'gpgkey']) }}
-    <h4>{% trans %}Geographical location{% endtrans %}</h4>
-    {{ render_form(form, ['location', 'coordinates_long', 'coordinates_lat']) }}
+    {{ render_form(form, ['email', 'gpgkey', 'jabber', 'website', 'launchpad', 'location']) }}
     <h3>{% trans %}Signature{% endtrans %}</h3>
     <p>{{ form.signature }}</p>
     <h3>{% trans %}User page{% endtrans %}</h3>

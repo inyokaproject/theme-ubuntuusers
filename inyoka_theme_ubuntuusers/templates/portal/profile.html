@@ -110,41 +110,11 @@
       </tr>
       <tr>
         <th>{% trans %}Residence{% endtrans %}</th>
-        <th>{% trans %}Job{% endtrans %}</th>
-        <th>{% trans %}Interests{% endtrans %}</th>
-      </tr>
-      <tr>
-        <td>{{ user.location|e or '–' }}</td>
-        <td>{{ user.occupation|e or '–' }}</td>
-        <td>{{ user.interests|e or '–' }}</td>
-      </tr>
-      <tr>
-        <th>{% trans %}MSN{% endtrans %}</th>
-        <th>{% trans %}ICQ{% endtrans %}</th>
-        <th>{% trans %}AIM{% endtrans %}</th>
-      </tr>
-      <tr>
-        <td>{{ user.msn|e or '–' }}</td>
-        <td>{{ user.icq|e or '–' }}</td>
-        <td>{{ user.aim|e or '–' }}</td>
-      </tr>
-      <tr>
-        <th>{% trans %}Yahoo Messenger{% endtrans %}</th>
-        <th>{% trans %}Skype{% endtrans %}</th>
-        <th>{% trans %}WengoPhone{% endtrans %}</th>
-      </tr>
-      <tr>
-        <td>{{ user.yim|e or '–' }}</td>
-        <td>{{ user.skype|e or '–' }}</td>
-        <td>{{ user.wengophone|e or '–' }}</td>
-      </tr>
-      <tr>
-        <th>{% trans %}SIP{% endtrans %}</th>
         <th>{% trans %}Jabber{% endtrans %}</th>
         <th>{% trans %}Contact{% endtrans %}</th>
       </tr>
       <tr>
-        <td>{{ user.sip|e or '–' }}</td>
+        <td>{{ user.location|e or '–' }}</td>
         {% if user.jabber and user.settings['show_jabber'] -%}
         <td><a href="{{ user.jabber_url|e }}">{{ user.jabber|e }}</a></td>
         {%- elif user.jabber and REQUEST.user.can('user_edit') -%}
