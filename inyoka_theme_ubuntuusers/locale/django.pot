@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-08 18:03+0200\n"
+"POT-Creation-Date: 2015-10-06 17:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,26 +52,30 @@ msgstr ""
 msgid "Avatar of %(user)s"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:72
+#: inyoka_theme_ubuntuusers/templates/overall.html:70
+msgid "Please turn on JavaScript!"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/overall.html:75
 #, python-format
 msgid "Logout [%(user)s]"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:77
+#: inyoka_theme_ubuntuusers/templates/overall.html:80
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:12
 msgid "Control panel"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:84
+#: inyoka_theme_ubuntuusers/templates/overall.html:87
 #, python-format
 msgid "Private messages (%(count)s)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:89
+#: inyoka_theme_ubuntuusers/templates/overall.html:92
 msgid "Private messages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:96
+#: inyoka_theme_ubuntuusers/templates/overall.html:99
 #: inyoka_theme_ubuntuusers/templates/overall.m.html:64
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:15
@@ -80,60 +84,56 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:101
+#: inyoka_theme_ubuntuusers/templates/overall.html:104
 msgid "Register"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:111
+#: inyoka_theme_ubuntuusers/templates/overall.html:114
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:12
 msgid "Reported topics"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:114
+#: inyoka_theme_ubuntuusers/templates/overall.html:117
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:13
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:16
 msgid "Article suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:118
+#: inyoka_theme_ubuntuusers/templates/overall.html:121
 msgid "Spelling mistakes"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:122
+#: inyoka_theme_ubuntuusers/templates/overall.html:125
 msgid "Event suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:129
+#: inyoka_theme_ubuntuusers/templates/overall.html:132
 msgid "Admin"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:130
+#: inyoka_theme_ubuntuusers/templates/overall.html:133
 msgid "Turn admin links on/off"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:133
-msgid "Please turn on JavaScript!"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/overall.html:149
+#: inyoka_theme_ubuntuusers/templates/overall.html:152
 msgid "Search"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:172
+#: inyoka_theme_ubuntuusers/templates/overall.html:175
 msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:199
+#: inyoka_theme_ubuntuusers/templates/overall.html:202
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:201
+#: inyoka_theme_ubuntuusers/templates/overall.html:204
 #, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:220
+#: inyoka_theme_ubuntuusers/templates/overall.html:223
 msgid "To mobile version"
 msgstr ""
 
@@ -677,8 +677,8 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:21
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:13
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:24
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:19
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:29
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:18
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:33
 msgid "Forum"
@@ -708,11 +708,11 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:25
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:53
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:48
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:86
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
 msgid "Submit"
 msgstr ""
@@ -1792,8 +1792,8 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:13
 #: inyoka_theme_ubuntuusers/templates/planet/page.html:29
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:21
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:88
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:20
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:87
 msgid "Planet"
 msgstr ""
 
@@ -1907,40 +1907,40 @@ msgstr ""
 msgid "Please enter the string which was sent to you by email below:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:22
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:105
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:21
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:104
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:27
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:35
 msgid "Wiki"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:32
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:71
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:107
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:31
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:70
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:106
 msgid "What"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:37
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:36
 msgid "All"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:41
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:40
 msgid "For the following forum:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:46
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:45
 msgid "For a topic"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:47
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:46
 msgid ""
 "Please click on the link in the topic, there are too much topics to list "
 "all of them here."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:52
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:73
-#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:90
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:51
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:72
+#: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:89
 msgid "How"
 msgstr ""
 
@@ -2200,7 +2200,7 @@ msgid "Downloads"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:45
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:144
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:114
 msgid "Contact"
 msgstr ""
 
@@ -2288,58 +2288,22 @@ msgid "GPG key"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:113
-msgid "Job"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:114
-msgid "Interests"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:122
-msgid "MSN"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:123
-msgid "ICQ"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:124
-msgid "AIM"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:132
-msgid "Yahoo Messenger"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:133
-msgid "Skype"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:134
-msgid "WengoPhone"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:142
-msgid "SIP"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:143
 msgid "Jabber"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:156
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:126
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/overall.html:10
 msgid "Private message"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:160
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:130
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:12
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:21
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:33
 msgid "Group memberships"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:171
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:141
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr ""
@@ -2434,27 +2398,17 @@ msgid "(Will be scaled to %(width)sx%(height)s)"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:42
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:47
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:46
 msgid "Contact addresses"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:44
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:68
-msgid "Miscellaneous settings"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:47
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:71
-msgid "Geographical location"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:73
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:67
 msgid "Signature"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:51
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:46
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:74
 msgid "User page"
 msgstr ""
 
@@ -2757,22 +2711,22 @@ msgid ""
 "automatically be resized."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:38
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:37
 msgid "Gravatar:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:50
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:49
 msgid ""
 "By default, the email and jabber addresses are not displayed in your "
 "public profile. To publish them, you need to check the “show in profile” "
 "box."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:61
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:60
 msgid "Show in profile"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:74
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:68
 #, python-format
 msgid ""
 "The signature will be appended to every post. It cannot contain more than"
@@ -2780,7 +2734,7 @@ msgid ""
 "rules</a>."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:89
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:83
 msgid "Show my profile"
 msgstr ""
 
