@@ -60,7 +60,7 @@
             <h3 class="title">{{ suggestion.title|e }}</h3>
             <div class="intro">{{ suggestion.intro_rendered }}</div>
             <div class="text">{{ suggestion.text_rendered }}</div>
-            {%- if suggestion.rendered_notes %}
+            {% if suggestion.notes_rendered %}
               <hr />
               <div>{{ suggestion.notes_rendered }}</div>
             {%- endif %}
