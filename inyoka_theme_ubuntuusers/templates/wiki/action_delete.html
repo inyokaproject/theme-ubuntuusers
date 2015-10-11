@@ -10,7 +10,7 @@
 -#}
 
 
-<form action="{{ href('wiki', page.name, action='delete')|e }}" method="post">
+<form action="{{ href('wiki', page.name, 'delete')|e }}" method="post">
   {{ csrf_token() }}
   <p>{% trans %}Are you sure you want to delete this page?{% endtrans %}</p>
   <p>{% trans %}Reason:{% endtrans %}</p>
