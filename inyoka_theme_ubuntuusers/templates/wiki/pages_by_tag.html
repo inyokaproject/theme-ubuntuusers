@@ -1,0 +1,29 @@
+{#
+    wiki/tag_list.html
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This template is used to show the list of wiki tags or the a list of wiki
+    articles tagged by a specified tag.
+
+    :copyright: (c) 2007-2015 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+
+{%- extends 'wiki/page.html' %}
+{% do BREADCRUMB.append(active_tag|e, '', True) %}
+{% do BREADCRUMB.append('Tags', href('wiki', 'wiki/tags'), True) %}
+{% set styles = styles|default([]) + ['wiki', 'highlight'] %}
+{% set active_app = 'wiki' %}
+
+{% block wiki_content %}
+  <div class="main_content">
+    <h1>{% trans tag=active_tag|e %}Wiki articles tagged with "{{ tag }}"{% endtrans %}</h1>
+    <p>{% trans tag=active_tag|e %}The following wiki articles have been tagged with "{{ tag }}":{% endtrans %}</p>
+    <ul>
+    {% for page in page_list %}
+      <li><a href="/{{ page }}">{{ page }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
