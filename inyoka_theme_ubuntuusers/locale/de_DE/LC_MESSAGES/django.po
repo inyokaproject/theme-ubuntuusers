@@ -6,20 +6,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka\n"
+"Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-10-27 00:21+0100\n"
+"POT-Creation-Date: 2015-10-27 19:41+0100\n"
 "PO-Revision-Date: 2015-10-26 21:25-0300\n"
 "Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language: de_DE\n"
-"Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/"
-"language/de_DE/)\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: German (Germany) "
+"(http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
-"X-Generator: Poedit 1.7.7\n"
 
 #: inyoka_theme_ubuntuusers/templates/500.html:13
 #: inyoka_theme_ubuntuusers/templates/500.html:16
@@ -183,31 +182,33 @@ msgstr "Fehlerhafte Abfrage"
 
 #: inyoka_theme_ubuntuusers/templates/errors/400_csrf.html:16
 msgid ""
-"The browser did not transmit a valid control key and therefore the processing "
-"has been canceled for security reasons."
+"The browser did not transmit a valid control key and therefore the "
+"processing has been canceled for security reasons."
 msgstr ""
-"Der Browser hat keinen oder einen fehlerhaften Kontrollschlüssel übertragen; die "
-"Weiterverarbeitung wurde aus Sicherheitsgründen abgebrochen."
+"Der Browser hat keinen oder einen fehlerhaften Kontrollschlüssel "
+"übertragen; die Weiterverarbeitung wurde aus Sicherheitsgründen "
+"abgebrochen."
 
 #: inyoka_theme_ubuntuusers/templates/errors/400_csrf.html:21
 msgid ""
-"This error usually occurs when you are trying to transfer data automatically to "
-"the server. In rare cases this can also happen if the browser configuration was "
-"changed while the form data is transmitted."
+"This error usually occurs when you are trying to transfer data "
+"automatically to the server. In rare cases this can also happen if the "
+"browser configuration was changed while the form data is transmitted."
 msgstr ""
-"Dieser Fehler tritt normalerweise auf, wenn versucht wurde Daten automatisiert "
-"auf den Server zu übertragen. In seltenen Fällen kann dies auch passieren, wenn "
-"die Browserkonfiguration verändert wurde, während die Formulardaten übertragen "
-"wurden."
+"Dieser Fehler tritt normalerweise auf, wenn versucht wurde Daten "
+"automatisiert auf den Server zu übertragen. In seltenen Fällen kann dies "
+"auch passieren, wenn die Browserkonfiguration verändert wurde, während "
+"die Formulardaten übertragen wurden."
 
 #: inyoka_theme_ubuntuusers/templates/errors/400_csrf.html:26
 msgid ""
-"In some browsers it is possible to click on the \"back\" or the \"reload\" "
-"button to request a new control key the sending the page again."
+"In some browsers it is possible to click on the \"back\" or the "
+"\"reload\" button to request a new control key the sending the page "
+"again."
 msgstr ""
 "In manchen Browsern ist es möglich durch Klicken auf „Zurück“ und dann "
-"„Aktualiseren“ einen neuen Kontrollschlüssel anzufordern, um das Absenden erneut "
-"durchzuführen."
+"„Aktualiseren“ einen neuen Kontrollschlüssel anzufordern, um das Absenden"
+" erneut durchzuführen."
 
 #: inyoka_theme_ubuntuusers/templates/errors/403.html:18
 msgid "You do not have permissions to access this page."
@@ -284,10 +285,11 @@ msgstr "Gemeldetes Thema"
 #: inyoka_theme_ubuntuusers/templates/forum/delete_topic.html:16
 #, python-format
 msgid ""
-"Do you really want to delete the topic “%(title)s”? This action cannot be undone!"
+"Do you really want to delete the topic “%(title)s”? This action cannot be"
+" undone!"
 msgstr ""
-"Möchtest du das Thema „%(title)s“ wirklich löschen? Diese Aktion kann nicht "
-"rückgängig gemacht werden!"
+"Möchtest du das Thema „%(title)s“ wirklich löschen? Diese Aktion kann "
+"nicht rückgängig gemacht werden!"
 
 #: inyoka_theme_ubuntuusers/templates/forum/delete_topic.html:20
 #, python-format
@@ -379,11 +381,11 @@ msgstr "Neue Antwort"
 
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:38
 msgid ""
-"Please save long code snippets or program outputs in our paste service and link "
-"to the respective entry."
+"Please save long code snippets or program outputs in our paste service "
+"and link to the respective entry."
 msgstr ""
-"Bitte speichere lange Code-Ausschnitte oder Programmausgaben in unserer Ablage "
-"und verlinke den entsprechenden Beitrag."
+"Bitte speichere lange Code-Ausschnitte oder Programmausgaben in unserer "
+"Ablage und verlinke den entsprechenden Beitrag."
 
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:39
 msgid "Paste"
@@ -443,7 +445,8 @@ msgstr "Dauer der Umfrage: %(duration)s Tage"
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:118
 msgid "Leave that feel empty for an endless duration"
 msgstr ""
-"Lasse dieses Feld frei, um die Umfrage zeitlich unbegrenzt offen zu lassen."
+"Lasse dieses Feld frei, um die Umfrage zeitlich unbegrenzt offen zu "
+"lassen."
 
 #: inyoka_theme_ubuntuusers/templates/forum/edit.html:119
 msgid "Add poll"
@@ -868,11 +871,12 @@ msgstr "Thema „%(topic)s“ melden"
 #: inyoka_theme_ubuntuusers/templates/forum/report.m.html:20
 #, python-format
 msgid ""
-"Here you can report a topic to the moderators if it is against our <a href="
-"\"%(link)s\">rules</a>. Please add a short explanation:"
+"Here you can report a topic to the moderators if it is against our <a "
+"href=\"%(link)s\">rules</a>. Please add a short explanation:"
 msgstr ""
-"Hier kannst du ein Thema den Moderatoren melden, falls es gegen unsere <a href="
-"\"%(link)s\">Portalregeln</a> verstößt. Bitte füge eine kurze Beschreibung hinzu:"
+"Hier kannst du ein Thema den Moderatoren melden, falls es gegen unsere <a"
+" href=\"%(link)s\">Portalregeln</a> verstößt. Bitte füge eine kurze "
+"Beschreibung hinzu:"
 
 #: inyoka_theme_ubuntuusers/templates/forum/report.html:27
 #: inyoka_theme_ubuntuusers/templates/forum/report.m.html:25
@@ -960,8 +964,8 @@ msgstr "Thema „%(topic)s“ aufteilen"
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:22
 msgid "The chosen posts can form a new topic or be attached to an existing topic."
 msgstr ""
-"Die gewählten Beiträge können hier in ein eigenes Thema abgetrennt werden oder "
-"an ein bestehendes Thema angehängt werden."
+"Die gewählten Beiträge können hier in ein eigenes Thema abgetrennt werden"
+" oder an ein bestehendes Thema angehängt werden."
 
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:27
 msgid "Create new topic"
@@ -1082,7 +1086,8 @@ msgstr "Die Umfrage wurde am %(start_date)s gestartet und endete am %(end_date)s
 #, python-format
 msgid "The poll was started on %(start_date)s and it will end on %(end_date)s."
 msgstr ""
-"Die Umfrage wurde am %(start_date)s gestartet und wird am %(end_date)s enden."
+"Die Umfrage wurde am %(start_date)s gestartet und wird am %(end_date)s "
+"enden."
 
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:177
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:70
@@ -1192,19 +1197,21 @@ msgstr "Archiv"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/archive.html:16
 #, python-format
 msgid ""
-"Here are all published articles in chronological order. You can find the most "
-"recent articles on <a href=\"%(link)s\">the front page</a>."
+"Here are all published articles in chronological order. You can find the "
+"most recent articles on <a href=\"%(link)s\">the front page</a>."
 msgstr ""
-"Hier finden sich alle Artikel in chronologischer Reihenfolge. Die aktuellsten "
-"Artikel sind auf der <a href=\"%(link)s\">Startseite</a> zu sehen."
+"Hier finden sich alle Artikel in chronologischer Reihenfolge. Die "
+"aktuellsten Artikel sind auf der <a href=\"%(link)s\">Startseite</a> zu "
+"sehen."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_delete.html:19
 #, python-format
 msgid ""
-"Are you sure you want to delete the article <a href=\"%(link)s\">%(article)s</a>?"
+"Are you sure you want to delete the article <a "
+"href=\"%(link)s\">%(article)s</a>?"
 msgstr ""
-"Bist du sicher, dass du den Artikel <a href=\"%(link)s\">%(article)s</a> löschen "
-"möchtest?"
+"Bist du sicher, dass du den Artikel <a href=\"%(link)s\">%(article)s</a> "
+"löschen möchtest?"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_delete.html:25
 msgid "Unpublish"
@@ -1219,8 +1226,8 @@ msgstr "Neuer Artikel"
 #, python-format
 msgid "Edit article “<a href=\"%(link)s\" title=\"Show article\">%(article)s</a>”"
 msgstr ""
-"Bearbeite Artikel „<a href=\"%(link)s\" title=\"Artikel anzeigen\">%(article)s</"
-"a>“"
+"Bearbeite Artikel „<a href=\"%(link)s\" title=\"Artikel "
+"anzeigen\">%(article)s</a>“"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/article_edit.html:51
 msgid "Show article"
@@ -1307,8 +1314,8 @@ msgstr "Neuer Kommentar"
 #, python-format
 msgid "Do you really want to delete the event <a href=\"%(link)s\">%(event)s</a>?"
 msgstr ""
-"Möchtest du die Veranstaltung <a href=\"%(link)s\">%(event)s</a> wirklich "
-"löschen?"
+"Möchtest du die Veranstaltung <a href=\"%(link)s\">%(event)s</a> wirklich"
+" löschen?"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/event_edit.html:15
 msgid "Add"
@@ -1401,16 +1408,17 @@ msgstr "Veranstaltung vorschlagen"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/event_suggest.html:19
 #, python-format
 msgid ""
-"By using this form you can suggest a new entry for the <a href="
-"\"%(link_calendar)s\">calendar</a>. A team member will review your suggestion as "
-"soon as possible. If you want to change an existing calendar entry please "
-"contact the <a href=\"%(link_newsteam)s\">news team</a>."
+"By using this form you can suggest a new entry for the <a "
+"href=\"%(link_calendar)s\">calendar</a>. A team member will review your "
+"suggestion as soon as possible. If you want to change an existing "
+"calendar entry please contact the <a href=\"%(link_newsteam)s\">news "
+"team</a>."
 msgstr ""
-"Mit diesem Formular kannst du einen neuen Eintrag in unseren <a href="
-"\"%(link_calendar)s\">Kalender</a> eintragen. Ein Ikhayateammitglied wird sich "
-"deinen Vorschlag so schnell wie möglich ansehen. Wenn du Änderungen an einem "
-"bestehenden Kalendereintrag hast, wende dich bitte an ein Mitglied des <a href="
-"\"%(link_newsteam)s\">Ikhayateams</a>."
+"Mit diesem Formular kannst du einen neuen Eintrag in unseren <a "
+"href=\"%(link_calendar)s\">Kalender</a> eintragen. Ein Ikhayateammitglied"
+" wird sich deinen Vorschlag so schnell wie möglich ansehen. Wenn du "
+"Änderungen an einem bestehenden Kalendereintrag hast, wende dich bitte an"
+" ein Mitglied des <a href=\"%(link_newsteam)s\">Ikhayateams</a>."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/events.html:17
 #: inyoka_theme_ubuntuusers/templates/ikhaya/page.html:39
@@ -1462,8 +1470,8 @@ msgstr "Kopieren"
 #, python-format
 msgid "No event was added yet, <a href=\"%(link)s\">create</a> the first one now!"
 msgstr ""
-"Es wurde noch keine Veranstaltung hinzugefügt, <a href=\"%(link)s\">erstelle</a> "
-"jetzt die erste!"
+"Es wurde noch keine Veranstaltung hinzugefügt, <a "
+"href=\"%(link)s\">erstelle</a> jetzt die erste!"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:25
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:26
@@ -1572,11 +1580,12 @@ msgstr "Neue Meldung zum Artikel „<a href=\"%(link)s\">%(article)s</a>“"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/report_new.html:26
 #, python-format
 msgid ""
-"Describe here briefly the discovered mistake. Please make sure that the mistake "
-"was not <a href=\"%(link)s\">already reported</a>."
+"Describe here briefly the discovered mistake. Please make sure that the "
+"mistake was not <a href=\"%(link)s\">already reported</a>."
 msgstr ""
-"Bitte beschreibe hier kurz die im Artikel gefundenen Fehler. Bitte achte darauf, "
-"dass der Fehler nicht bereits <a href=\"%(link)s\">gemeldet wurde</a>."
+"Bitte beschreibe hier kurz die im Artikel gefundenen Fehler. Bitte achte "
+"darauf, dass der Fehler nicht bereits <a href=\"%(link)s\">gemeldet "
+"wurde</a>."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reportlist.html:12
 #: inyoka_theme_ubuntuusers/templates/ikhaya/reports.html:12
@@ -1612,8 +1621,8 @@ msgid ""
 "Leave this field empty if the suggestion should be deleted without an "
 "explanation."
 msgstr ""
-"Lasse dieses Feld leer, wenn du den Vorschlag ohne eine Erläuterung löschen "
-"möchtest."
+"Lasse dieses Feld leer, wenn du den Vorschlag ohne eine Erläuterung "
+"löschen möchtest."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_new.html:17
 msgid "Suggest new article"
@@ -1622,32 +1631,34 @@ msgstr "Artikel vorschlagen"
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_new.html:19
 msgid "If you want to suggest a new article please submit your article below."
 msgstr ""
-"Du willst, dass wir etwas Bestimmtes im Ikhaya veröffentlichen? Eine wichtige "
-"Nachricht ist noch nicht online? Du hast einen Erfahrungsbericht, den Du anderen "
-"zugänglich machen willst? Du möchtest eine Software vorstellen? Dann schreibe "
-"Deinen Beitrag hier!"
+"Du willst, dass wir etwas Bestimmtes im Ikhaya veröffentlichen? Eine "
+"wichtige Nachricht ist noch nicht online? Du hast einen "
+"Erfahrungsbericht, den Du anderen zugänglich machen willst? Du möchtest "
+"eine Software vorstellen? Dann schreibe Deinen Beitrag hier!"
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_new.html:22
 msgid ""
-"It is not possible to submit images along with the article. If you want to use "
-"images please upload them elsewhere and insert the links in the article."
+"It is not possible to submit images along with the article. If you want "
+"to use images please upload them elsewhere and insert the links in the "
+"article."
 msgstr ""
-"Bilder können in dem Artikelvorschlag leider nicht direkt eingebunden werden. "
-"Soll Dein Artikel Bilder enthalten, lade diese bitte irgendwo hoch und füge die "
-"Bildlinks an die von Dir gewünschte Stelle des Artikelvorschlags."
+"Bilder können in dem Artikelvorschlag leider nicht direkt eingebunden "
+"werden. Soll Dein Artikel Bilder enthalten, lade diese bitte irgendwo "
+"hoch und füge die Bildlinks an die von Dir gewünschte Stelle des "
+"Artikelvorschlags."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggest_new.html:25
 #, python-format
 msgid ""
-"I assure that my submission does not violate any other legal rights and it does "
-"not violate the <a href=\"%(link_rules)s\">platform rules</a>. Additionally I "
-"accept that my submission is published under the <a href=\"%(link_license)s"
-"\">license</a> of the platform."
+"I assure that my submission does not violate any other legal rights and "
+"it does not violate the <a href=\"%(link_rules)s\">platform rules</a>. "
+"Additionally I accept that my submission is published under the <a "
+"href=\"%(link_license)s\">license</a> of the platform."
 msgstr ""
-"Ich versichere hiermit, dass der Beitrag weder fremde Rechte noch die <a href="
-"\"%(link_rules)s\">Portalregeln</a> verletzt. Ich willige ein, diesen Beitrag "
-"unter der von ubuntuusers.de vorgegebenen <a href=\"%(link_license)s\">Lizenz</"
-"a> zu veröffentlichen."
+"Ich versichere hiermit, dass der Beitrag weder fremde Rechte noch die <a "
+"href=\"%(link_rules)s\">Portalregeln</a> verletzt. Ich willige ein, "
+"diesen Beitrag unter der von ubuntuusers.de vorgegebenen <a "
+"href=\"%(link_license)s\">Lizenz</a> zu veröffentlichen."
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:18
 #, python-format
@@ -1696,15 +1707,16 @@ msgstr "Funktion:"
 
 #: inyoka_theme_ubuntuusers/templates/pastebin/add.html:21
 msgid ""
-"This is a pastebin where you can save error messages, logs, configuration files "
-"or source codes to keep threads or IRC channels clean. To do this, just copy the "
-"text in the box below and choose the appropriate language. After that, you copy "
-"the URL into the topic or the channel."
+"This is a pastebin where you can save error messages, logs, configuration"
+" files or source codes to keep threads or IRC channels clean. To do this,"
+" just copy the text in the box below and choose the appropriate language."
+" After that, you copy the URL into the topic or the channel."
 msgstr ""
-"Dies ist eine Ablage, in der du Fehlermeldungen, Logs, Konfigurationsdateien "
-"oder Quelltexte speichern kannst, um Forenthemen oder IRC-Kanäle nicht unnötig "
-"unleserlich zu machen. Dazu kopierst du den Text in das Textfeld und wählst die "
-"passende Sprache aus. Dann kopierst du die URL in das Thema bzw. den Kanal."
+"Dies ist eine Ablage, in der du Fehlermeldungen, Logs, "
+"Konfigurationsdateien oder Quelltexte speichern kannst, um Forenthemen "
+"oder IRC-Kanäle nicht unnötig unleserlich zu machen. Dazu kopierst du den"
+" Text in das Textfeld und wählst die passende Sprache aus. Dann kopierst "
+"du die URL in das Thema bzw. den Kanal."
 
 #: inyoka_theme_ubuntuusers/templates/pastebin/browse.html:12
 msgid "Entries"
@@ -1713,11 +1725,11 @@ msgstr "Einträge"
 #: inyoka_theme_ubuntuusers/templates/pastebin/browse.html:20
 #, python-format
 msgid ""
-"<a href=\"%(entry_link)s\">%(title)s</a> by <a href=\"%(author_link)s\">"
-"%(author)s</a>"
+"<a href=\"%(entry_link)s\">%(title)s</a> by <a "
+"href=\"%(author_link)s\">%(author)s</a>"
 msgstr ""
-"<a href=\"%(entry_link)s\">%(title)s</a> von <a href=\"%(author_link)s\">"
-"%(author)s</a>"
+"<a href=\"%(entry_link)s\">%(title)s</a> von <a "
+"href=\"%(author_link)s\">%(author)s</a>"
 
 #: inyoka_theme_ubuntuusers/templates/pastebin/browse.html:32
 msgid "No pastes were created yet."
@@ -1727,7 +1739,8 @@ msgstr "Es wurden noch keine Einträge erstellt."
 #, python-format
 msgid "Do you really want to delete the entry <a href=\"%(link)s\">%(entry)s</a>?"
 msgstr ""
-"Möchtest du den Eintrag <a href=\"%(link)s\">%(entry)s</a> wirklich löschen?"
+"Möchtest du den Eintrag <a href=\"%(link)s\">%(entry)s</a> wirklich "
+"löschen?"
 
 #: inyoka_theme_ubuntuusers/templates/pastebin/display.html:26
 msgid "Author:"
@@ -1867,10 +1880,12 @@ msgid "With this form you can suggest a new blog for the planet."
 msgstr "Hier kannst du einen Blog für den Planeten vorschlagen."
 
 #: inyoka_theme_ubuntuusers/templates/planet/suggest.html:26
-msgid "Please be patient. It could take a while, until we approve your suggestion."
+msgid ""
+"Please be patient. It could take a while, until we approve your "
+"suggestion."
 msgstr ""
-"Bitte habe ein wenig Geduld mit der Bearbeitung. Es kann etwas dauern, bis der "
-"Blog von uns geprüft wurde."
+"Bitte habe ein wenig Geduld mit der Bearbeitung. Es kann etwas dauern, "
+"bis der Blog von uns geprüft wurde."
 
 #: inyoka_theme_ubuntuusers/templates/portal/calendar_detail.html:25
 #, python-format
@@ -1953,22 +1968,24 @@ msgstr "Maximale Teamicon Größe"
 
 #: inyoka_theme_ubuntuusers/templates/portal/confirm.html:20
 msgid ""
-"You can restore your account here if you deleted it. Please note that this is "
-"only possible one month after the deletion."
+"You can restore your account here if you deleted it. Please note that "
+"this is only possible one month after the deletion."
 msgstr ""
-"Du kannst hier dein Konto wiedeherstellen, falls du es gelöscht hast. Bitte "
-"beachte, dass dies maximal einen Monat nach der Löschung möglich ist."
+"Du kannst hier dein Konto wiedeherstellen, falls du es gelöscht hast. "
+"Bitte beachte, dass dies maximal einen Monat nach der Löschung möglich "
+"ist."
 
 #: inyoka_theme_ubuntuusers/templates/portal/confirm.html:22
 msgid "You can reset your email address here if you changed it accidently."
 msgstr ""
-"Du kannst hier deine E-Mail Adresse zurücksetzen, falls du sie versehentlich "
-"geändert hast."
+"Du kannst hier deine E-Mail Adresse zurücksetzen, falls du sie "
+"versehentlich geändert hast."
 
 #: inyoka_theme_ubuntuusers/templates/portal/confirm.html:26
 msgid "Please enter the string which was sent to you by email below:"
 msgstr ""
-"Bitte gib die Zeichenkette, welche dir per E-Mail zugesandt wurde, hier ein:"
+"Bitte gib die Zeichenkette, welche dir per E-Mail zugesandt wurde, hier "
+"ein:"
 
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:21
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:104
@@ -1997,11 +2014,11 @@ msgstr "Für ein Thema:"
 
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:46
 msgid ""
-"Please click on the link in the topic, there are too much topics to list all of "
-"them here."
+"Please click on the link in the topic, there are too much topics to list "
+"all of them here."
 msgstr ""
-"Bitte im Thema auf den Link klicken, es gibt zu viele Themen um sie alle hier "
-"aufzulisten."
+"Bitte im Thema auf den Link klicken, es gibt zu viele Themen um sie alle "
+"hier aufzulisten."
 
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:51
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:72
@@ -2015,10 +2032,11 @@ msgstr "Erstellen"
 
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:26
 msgid ""
-"CAUTION: A change of the file destroys all links from articles to this file!"
+"CAUTION: A change of the file destroys all links from articles to this "
+"file!"
 msgstr ""
-"VORSICHT: Eine Änderung der Datei zerstört alle Links von Artikeln, die auf "
-"diese Datei verweisen!"
+"VORSICHT: Eine Änderung der Datei zerstört alle Links von Artikeln, die "
+"auf diese Datei verweisen!"
 
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:27
 msgid "URL:"
@@ -2060,7 +2078,8 @@ msgstr "Gruppen"
 #: inyoka_theme_ubuntuusers/templates/portal/group.html:21
 msgid "This group is private and the membership is not shown public."
 msgstr ""
-"Diese Gruppe ist privat, die Mitgliedschaft wird nicht öffentlich angezeigt."
+"Diese Gruppe ist privat, die Mitgliedschaft wird nicht öffentlich "
+"angezeigt."
 
 #: inyoka_theme_ubuntuusers/templates/portal/group.html:23
 msgid "This is a public group."
@@ -2119,11 +2138,13 @@ msgstr "Team-Icon löschen"
 #: inyoka_theme_ubuntuusers/templates/portal/group_edit.html:51
 #, python-format
 msgid ""
-"Please note that the team icon can not be bigger than %(width)sx%(height)s "
-"pixel. Images exceeding this limit will be resized automatically."
+"Please note that the team icon can not be bigger than "
+"%(width)sx%(height)s pixel. Images exceeding this limit will be resized "
+"automatically."
 msgstr ""
-"Bitte beachte, dass das Teamicon nicht größer als %(width)sx%(height)s Pixel "
-"sein darf. Bilder, die dieses Limit überschreiten werden automatisch verkleinert."
+"Bitte beachte, dass das Teamicon nicht größer als %(width)sx%(height)s "
+"Pixel sein darf. Bilder, die dieses Limit überschreiten werden "
+"automatisch verkleinert."
 
 #: inyoka_theme_ubuntuusers/templates/portal/group_edit.html:61
 msgid "Forum privileges:"
@@ -2137,12 +2158,12 @@ msgstr "Bitte aktiviere JavaScript, um die Berechtigungen zu ändern."
 #, python-format
 msgid "In total there is %(count)s group, you are in %(usercount)s group."
 msgid_plural ""
-"In total there are %(count)s groups, you are in %(usercount)s of them (printed "
-"bold)."
+"In total there are %(count)s groups, you are in %(usercount)s of them "
+"(printed bold)."
 msgstr[0] "Insgesamt gibt es %(count)s Gruppe, du bist in %(usercount)s Gruppe."
 msgstr[1] ""
-"Insgesamt gibt es %(count)s Gruppen, du bist in %(usercount)s davon (fett "
-"gedruckt)."
+"Insgesamt gibt es %(count)s Gruppen, du bist in %(usercount)s davon (fett"
+" gedruckt)."
 
 #: inyoka_theme_ubuntuusers/templates/portal/grouplist.html:27
 msgid "Create new group"
@@ -2167,62 +2188,64 @@ msgstr[1] "%(count)s Kommentare"
 #: inyoka_theme_ubuntuusers/templates/portal/login.m.html:17
 #, python-format
 msgid ""
-"You can login here if you are already <a href=\"%(register)s\">registered</a>. "
-"If you lost your password, you can <a href=\"%(lost_password)s\">request a new "
-"one</a>."
+"You can login here if you are already <a "
+"href=\"%(register)s\">registered</a>. If you lost your password, you can "
+"<a href=\"%(lost_password)s\">request a new one</a>."
 msgstr ""
-"Du kannst dich hier anmelden, wenn du bereits <a href=\"%(register)s"
-"\">registriert bist</a>. Falls du dein Passwort vergessen hast, kannst du dir <a "
-"href=\"%(lost_password)s\">ein neues zusenden lassen</a>."
+"Du kannst dich hier anmelden, wenn du bereits <a "
+"href=\"%(register)s\">registriert bist</a>. Falls du dein Passwort "
+"vergessen hast, kannst du dir <a href=\"%(lost_password)s\">ein neues "
+"zusenden lassen</a>."
 
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:28
 msgid ""
 "Don’t choose this option if you are using a public computer. Otherwise, "
 "unauthorized persons may enter your account."
 msgstr ""
-"Wähle diese Option nicht aus, wenn du dich an einem öffentlichen Computer "
-"befindest, da sonst fremde Personen möglicherweise Zugang zu deinem Konto "
-"erhalten."
+"Wähle diese Option nicht aus, wenn du dich an einem öffentlichen Computer"
+" befindest, da sonst fremde Personen möglicherweise Zugang zu deinem "
+"Konto erhalten."
 
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.html:11
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.m.html:11
 #, python-format
 msgid ""
-"Login failed because the password for the user “%(name)s” was wrong or the user "
-"does not exist."
+"Login failed because the password for the user “%(name)s” was wrong or "
+"the user does not exist."
 msgstr ""
-"Du konntest nicht angemeldet werden, da das Passwort für den Benutzer „%(name)s“ "
-"falsch war oder der Benutzer nicht existiert."
+"Du konntest nicht angemeldet werden, da das Passwort für den Benutzer "
+"„%(name)s“ falsch war oder der Benutzer nicht existiert."
 
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.html:17
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.m.html:17
 #, python-format
 msgid ""
-"Login failed because the user “%(name)s” is currently banned. You were informed "
-"about that. If you don’t agree with the ban or if it is a mistake, please "
-"contact <a href=\"%(mailto)s\">%(mail)s</a>."
+"Login failed because the user “%(name)s” is currently banned. You were "
+"informed about that. If you don’t agree with the ban or if it is a "
+"mistake, please contact <a href=\"%(mailto)s\">%(mail)s</a>."
 msgstr ""
-"Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit gesperrt "
-"ist. Du wurdest darüber weitgehend informiert. Solltest du dem nicht zustimmen "
-"oder sollte ein Irrtum vorliegen, so schreibe bitte eine Nachricht an <a href="
-"\"%(mailto)s\">%(mail)s</a>."
+"Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit "
+"gesperrt ist. Du wurdest darüber weitgehend informiert. Solltest du dem "
+"nicht zustimmen oder sollte ein Irrtum vorliegen, so schreibe bitte eine "
+"Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>."
 
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/login_text.m.html:24
 #, python-format
 msgid ""
-"Login failed because the user “%(name)s” is inactive. You probably didn’t click "
-"on the link in the activation mail which was sent to you after your "
-"registration. If you didn’t received that mail, you can <a href=\"%(resend)s"
-"\">request a new one</a>. If it is still not working, contact us: <a href="
-"\"%(mailto)s\">%(mail)s</a>"
+"Login failed because the user “%(name)s” is inactive. You probably didn’t"
+" click on the link in the activation mail which was sent to you after "
+"your registration. If you didn’t received that mail, you can <a "
+"href=\"%(resend)s\">request a new one</a>. If it is still not working, "
+"contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
 msgstr ""
-"Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit inaktiv "
-"ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink in der "
-"Bestätigungsmail, die dir nach der Registrierung zugeschickt wurde, nicht "
-"aufgerufen hast. Solltest du diese Mail nicht bekommen haben, kannst du sie <a "
-"href=\"%(resend)s\">erneut anfordern</a>. Falls es weiterhin nicht funktioniert, "
-"schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>"
+"Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit "
+"inaktiv ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink"
+" in der Bestätigungsmail, die dir nach der Registrierung zugeschickt "
+"wurde, nicht aufgerufen hast. Solltest du diese Mail nicht bekommen "
+"haben, kannst du sie <a href=\"%(resend)s\">erneut anfordern</a>. Falls "
+"es weiterhin nicht funktioniert, schreibe bitte eine Nachricht an <a "
+"href=\"%(mailto)s\">%(mail)s</a>"
 
 #: inyoka_theme_ubuntuusers/templates/portal/lost_password.html:14
 #: inyoka_theme_ubuntuusers/templates/portal/lost_password.html:16
@@ -2418,14 +2441,14 @@ msgstr[1] "%(n)s Benutzer haben besondere Berechtigungen:"
 
 #: inyoka_theme_ubuntuusers/templates/portal/styles.html:18
 msgid ""
-"You can edit here the stylesheet which is responsibly for formatting the syntax "
-"elements. It is included on all pages. Please do only add already tested "
-"stylesheets, otherwise all users will get a corrupt stylesheet."
+"You can edit here the stylesheet which is responsibly for formatting the "
+"syntax elements. It is included on all pages. Please do only add already "
+"tested stylesheets, otherwise all users will get a corrupt stylesheet."
 msgstr ""
-"Hier kannst du das Stylesheet bearbeiten, das für die Formatierung von Syntax-"
-"Elementen zuständig ist. Es wird auf allen Seiten eingebunden. Bitte trage hier "
-"nur Styles ein, die du schon vorher getestet hast, da sonst alle Nutzer ein "
-"möglicherweise fehlerhaftes Stylesheet sehen."
+"Hier kannst du das Stylesheet bearbeiten, das für die Formatierung von "
+"Syntax-Elementen zuständig ist. Es wird auf allen Seiten eingebunden. "
+"Bitte trage hier nur Styles ein, die du schon vorher getestet hast, da "
+"sonst alle Nutzer ein möglicherweise fehlerhaftes Stylesheet sehen."
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_admin.html:17
 #, python-format
@@ -2570,8 +2593,8 @@ msgstr "Authentifizierung:"
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:29
 msgid "Note: More settings will be available after creating the user."
 msgstr ""
-"Hinweis: Nach der Erstellung des Benutzers werden mehr Einstellungen verfügbar "
-"sein."
+"Hinweis: Nach der Erstellung des Benutzers werden mehr Einstellungen "
+"verfügbar sein."
 
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:35
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:45
@@ -2663,11 +2686,11 @@ msgstr "Nachricht löschen"
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.html:56
 #, python-format
 msgid ""
-"If you received a spam message, please forward it to a <a href=\"%(moderators)s"
-"\">moderator</a>."
+"If you received a spam message, please forward it to a <a "
+"href=\"%(moderators)s\">moderator</a>."
 msgstr ""
-"Wenn du eine Spam-Nachricht erhalten hast, leite diese bitte an einen <a href="
-"\"%(moderators)s\">Moderator</a> weiter."
+"Wenn du eine Spam-Nachricht erhalten hast, leite diese bitte an einen <a "
+"href=\"%(moderators)s\">Moderator</a> weiter."
 
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.html:67
 msgid "Subject"
@@ -2747,11 +2770,11 @@ msgstr "Passwort ändern"
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:20
 msgid ""
-"You can change your password with this form. For security reasons, you need to "
-"enter your old password."
+"You can change your password with this form. For security reasons, you "
+"need to enter your old password."
 msgstr ""
-"Du kannst mit diesem Formular dein Passwort ändern. Aus Sicherheitsgründen musst "
-"du dein altes Passwort eingeben."
+"Du kannst mit diesem Formular dein Passwort ändern. Aus "
+"Sicherheitsgründen musst du dein altes Passwort eingeben."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:26
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/change_password.html:59
@@ -2777,22 +2800,23 @@ msgstr "Konto deaktivieren"
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/deactivate.html:17
 #, python-format
 msgid ""
-"You can deactivate your account “%(name)s” here. By doing this, we will remove "
-"all your personal data. All your forum posts and wiki articles will remain."
+"You can deactivate your account “%(name)s” here. By doing this, we will "
+"remove all your personal data. All your forum posts and wiki articles "
+"will remain."
 msgstr ""
-"Du kannst hier dein Konto „%(name)s“ deaktivieren. Wenn du das tust, werden wir "
-"alle deine persönlichen Daten löschen. Forenbeiträge und Wikiartikel werden "
-"allerdings erhalten bleiben."
+"Du kannst hier dein Konto „%(name)s“ deaktivieren. Wenn du das tust, "
+"werden wir alle deine persönlichen Daten löschen. Forenbeiträge und "
+"Wikiartikel werden allerdings erhalten bleiben."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/deactivate.html:20
 #, python-format
 msgid ""
-"Keep in mind that deactivating your account cannot be undone. After that, you "
-"will never be able to log in with the account “%(name)s” again."
+"Keep in mind that deactivating your account cannot be undone. After that,"
+" you will never be able to log in with the account “%(name)s” again."
 msgstr ""
-"Bitte beachte, dass die Deaktivierung deines Kontos nicht rückgängig gemacht "
-"werden kann. Du wirst danach nicht mehr in der Lage sein, dich mit deinem Konto "
-"„%(name)s“ wieder anzumelden."
+"Bitte beachte, dass die Deaktivierung deines Kontos nicht rückgängig "
+"gemacht werden kann. Du wirst danach nicht mehr in der Lage sein, dich "
+"mit deinem Konto „%(name)s“ wieder anzumelden."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/deactivate.html:25
 msgid "To deactivate your account, you need to enter your password."
@@ -2811,13 +2835,13 @@ msgstr "Übersicht"
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:30
 #, python-format
 msgid ""
-"Please note that the maximum size for the avatar is %(width)sx%(height)s pixels "
-"and %(size)s KiB. Everything that exceeds this limit will automatically be "
-"resized."
+"Please note that the maximum size for the avatar is %(width)sx%(height)s "
+"pixels and %(size)s KiB. Everything that exceeds this limit will "
+"automatically be resized."
 msgstr ""
-"Bitte beachte, dass die maximale Größe eines Avatars %(width)sx%(height)s Pixel "
-"und %(size)s KiB beträgt. Avatare, die dieses Limit überschreiten, werden "
-"automatisch verkleinert."
+"Bitte beachte, dass die maximale Größe eines Avatars %(width)sx%(height)s"
+" Pixel und %(size)s KiB beträgt. Avatare, die dieses Limit überschreiten,"
+" werden automatisch verkleinert."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:37
 msgid "Gravatar:"
@@ -2825,11 +2849,13 @@ msgstr "Gravatar:"
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:49
 msgid ""
-"By default, the email and jabber addresses are not displayed in your public "
-"profile. To publish them, you need to check the “show in profile” box."
+"By default, the email and jabber addresses are not displayed in your "
+"public profile. To publish them, you need to check the “show in profile” "
+"box."
 msgstr ""
 "Standardmäßig werden deine E-Mail- und Jabber-Adresse nicht öffentlich "
-"angezeigt. Um sie zu veröffentlichen, aktiviere die \"Im Profil anzeigen\"-Box."
+"angezeigt. Um sie zu veröffentlichen, aktiviere die \"Im Profil "
+"anzeigen\"-Box."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:60
 msgid "Show in profile"
@@ -2838,11 +2864,13 @@ msgstr "Im Profil anzeigen"
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:68
 #, python-format
 msgid ""
-"The signature will be appended to every post. It cannot contain more than %(n)s "
-"characters. Please follow the <a href=\"%(link)s\">signature rules</a>."
+"The signature will be appended to every post. It cannot contain more than"
+" %(n)s characters. Please follow the <a href=\"%(link)s\">signature "
+"rules</a>."
 msgstr ""
-"Die Signatur wird an jeden Beitrag angehängt. Sie kann nicht länger als %(n)s "
-"Zeichen sein. Bitte beachte die <a href=\"%(link)s\">Signaturregeln</a>."
+"Die Signatur wird an jeden Beitrag angehängt. Sie kann nicht länger als "
+"%(n)s Zeichen sein. Bitte beachte die <a "
+"href=\"%(link)s\">Signaturregeln</a>."
 
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:83
 msgid "Show my profile"
@@ -2947,11 +2975,12 @@ msgstr[1] "Diese Seite hat aktuell %(count)s Anhänge."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:55
 msgid ""
-"To refer to an attachment you can either link to the corresponding wiki page or "
-"include it with the <code>[[Bild()]]</code> macro."
+"To refer to an attachment you can either link to the corresponding wiki "
+"page or include it with the <code>[[Bild()]]</code> macro."
 msgstr ""
-"Um auf einen Anhang zu verweisen, kannst du entweder zu der entsprechenden "
-"Wikiseite verlinken oder diese mit dem <code>[[Bild()]]</code> Makro einbinden."
+"Um auf einen Anhang zu verweisen, kannst du entweder zu der "
+"entsprechenden Wikiseite verlinken oder diese mit dem "
+"<code>[[Bild()]]</code> Makro einbinden."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:65
 #, python-format
@@ -2984,10 +3013,11 @@ msgstr "Backlinks"
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:18
 #, python-format
 msgid ""
-"The following pages are referring to the article “%(title)s” by manual linking:"
+"The following pages are referring to the article “%(title)s” by manual "
+"linking:"
 msgstr ""
-"Die folgenden Seiten beziehen sich auf den Artikel „%(title)s“ durch manuelle "
-"Verlinkung:"
+"Die folgenden Seiten beziehen sich auf den Artikel „%(title)s“ durch "
+"manuelle Verlinkung:"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:30
 msgid "The following pages are embedding this articles as attachment."
@@ -2995,11 +3025,13 @@ msgstr "Die folgenden Seiten binden diesen Artikel als Anhang ein:"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:34
 msgid ""
-"But the article itself is not listed as an attachment, perhaps these pages are "
-"using the article mistakenly or an old revision was an attachment."
+"But the article itself is not listed as an attachment, perhaps these "
+"pages are using the article mistakenly or an old revision was an "
+"attachment."
 msgstr ""
-"Aber der Artikel selbst ist nicht als Anhang aufgeführt; vielleicht verwenden "
-"diese Seiten den Artikel versehentlich oder eine alte Revision war ein Anhang."
+"Aber der Artikel selbst ist nicht als Anhang aufgeführt; vielleicht "
+"verwenden diese Seiten den Artikel versehentlich oder eine alte Revision "
+"war ein Anhang."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:52
 msgid "This attachment is an orphan and not referenced by any site."
@@ -3020,44 +3052,48 @@ msgstr "Unterschied"
 #: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:22
 #, python-format
 msgid ""
-"You are trying to compare two equal revision of the article “<a href=\"%(link)s"
-"\">%(article)s</a>”. For this reason no change is displayed."
+"You are trying to compare two equal revision of the article “<a "
+"href=\"%(link)s\">%(article)s</a>”. For this reason no change is "
+"displayed."
 msgstr ""
-"Du vergleichst zwei identische Revisionen des Arikels „<a href=\"%(link)s\">"
-"%(article)s</a>. Daher werden keine Änderungen angezeigt."
+"Du vergleichst zwei identische Revisionen des Arikels „<a "
+"href=\"%(link)s\">%(article)s</a>. Daher werden keine Änderungen "
+"angezeigt."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:27
 #, python-format
 msgid ""
-"But you can display <a href=\"%(link)s\">a list of changes</a> of this page and "
-"compare individual revisions."
+"But you can display <a href=\"%(link)s\">a list of changes</a> of this "
+"page and compare individual revisions."
 msgstr ""
-"Aber du kannst dir eine <a href=\"%(link)s\">Liste an Änderungen</a> dieser "
-"Seite anzeigen und einzelne Revisionen vergleichen."
+"Aber du kannst dir eine <a href=\"%(link)s\">Liste an Änderungen</a> "
+"dieser Seite anzeigen und einzelne Revisionen vergleichen."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:33
 #, python-format
 msgid ""
-"The following table shows the difference of the article “<a href="
-"\"%(article_link)s\">%(article)s</a>” between <a href=\"%(old_rev_link)s"
-"\">revision %(old_rev)s</a> (%(old_rev_note)s) and <a href=\"%(new_rev_link)s"
-"\">revision %(new_rev)s</a> (%(new_rev_note)s)."
+"The following table shows the difference of the article “<a "
+"href=\"%(article_link)s\">%(article)s</a>” between <a "
+"href=\"%(old_rev_link)s\">revision %(old_rev)s</a> (%(old_rev_note)s) and"
+" <a href=\"%(new_rev_link)s\">revision %(new_rev)s</a> "
+"(%(new_rev_note)s)."
 msgstr ""
-"Die folgende Tabelle zeigt die Änderungen im Artikel „<a href=\"%(article_link)s"
-"\">%(article)s</a>“ zwischen <a href=\"%(old_rev_link)s\">Revision %(old_rev)s</"
-"a> (%(old_rev_note)s) und <a href=\"%(new_rev_link)s\">Revision %(new_rev)s</a> "
-"(%(new_rev_note)s) auf."
+"Die folgende Tabelle zeigt die Änderungen im Artikel „<a "
+"href=\"%(article_link)s\">%(article)s</a>“ zwischen <a "
+"href=\"%(old_rev_link)s\">Revision %(old_rev)s</a> (%(old_rev_note)s) und"
+" <a href=\"%(new_rev_link)s\">Revision %(new_rev)s</a> (%(new_rev_note)s)"
+" auf."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:44
 #, python-format
 msgid ""
-"You can also download the changes as <a href=\"%(link_diff)s\">unified diff</a> "
-"or display a <a href=\"%(link_list)s\">list of the last changes</a> and compare "
-"individual revisions."
+"You can also download the changes as <a href=\"%(link_diff)s\">unified "
+"diff</a> or display a <a href=\"%(link_list)s\">list of the last "
+"changes</a> and compare individual revisions."
 msgstr ""
-"Du kannst dir die Änderungen als <a href=\"%(link_diff)s\">unified diff</a> "
-"herunterladen oder dir eine <a href=\"%(link_list)s\">Liste an Änderungen</a> "
-"anzeigen und einzelne Revisionen vergleichen."
+"Du kannst dir die Änderungen als <a href=\"%(link_diff)s\">unified "
+"diff</a> herunterladen oder dir eine <a href=\"%(link_list)s\">Liste an "
+"Änderungen</a> anzeigen und einzelne Revisionen vergleichen."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:34
 msgid "Save"
@@ -3070,41 +3106,43 @@ msgstr "Seitenrevisionen"
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:26
 #, python-format
 msgid ""
-"The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(count)s "
-"revision."
+"The article “<a href=\"%(link)s\">%(article)s</a>” has currently "
+"%(count)s revision."
 msgid_plural ""
-"The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(count)s "
-"revisions."
+"The article “<a href=\"%(link)s\">%(article)s</a>” has currently "
+"%(count)s revisions."
 msgstr[0] "Der Artikel “<a href=\"%(link)s\">%(article)s</a>“ hat eine Revision."
 msgstr[1] ""
-"Der Artikel „<a href=\"%(link)s\">%(article)s</a>“ hat %(count)s Revisionen."
+"Der Artikel „<a href=\"%(link)s\">%(article)s</a>“ hat %(count)s "
+"Revisionen."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:33
 #, python-format
 msgid ""
-"The <a href=\"%(rev_link)s\">most recent revision</a> is %(rev)s and was created "
-"by <a href=\"%(author_link)s\">%(author)s</a>."
+"The <a href=\"%(rev_link)s\">most recent revision</a> is %(rev)s and was "
+"created by <a href=\"%(author_link)s\">%(author)s</a>."
 msgstr ""
-"Die <a href=\"%(rev_link)s\">aktuelle Revision</a> ist %(rev)s und wurde durch "
-"<a href=\"%(author_link)s\">%(author)s</a> erstellt."
+"Die <a href=\"%(rev_link)s\">aktuelle Revision</a> ist %(rev)s und wurde "
+"durch <a href=\"%(author_link)s\">%(author)s</a> erstellt."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:38
 #, python-format
 msgid ""
-"The <a href=\"%(rev_link)s\">most recent revision</a> is %(rev)s and was created "
-"by %(author)s."
+"The <a href=\"%(rev_link)s\">most recent revision</a> is %(rev)s and was "
+"created by %(author)s."
 msgstr ""
-"Die <a href=\"%(rev_link)s\">aktuelle Revision</a> ist %(rev)s und wurde durch "
-"%(author)s erstellt."
+"Die <a href=\"%(rev_link)s\">aktuelle Revision</a> ist %(rev)s und wurde "
+"durch %(author)s erstellt."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:45
 #, python-format
 msgid ""
-"To be always up to date you can read the <a href=\"%(feed_link)s\">atom feed</a> "
-"or <a href=\"%(subscribe_link)s\">subscribe</a>."
+"To be always up to date you can read the <a href=\"%(feed_link)s\">atom "
+"feed</a> or <a href=\"%(subscribe_link)s\">subscribe</a>."
 msgstr ""
-"Um immer auf dem aktuellen Stand zu sein, kannst du den <a href=\"%(feed_link)s"
-"\">Atom Feed</a> lesen oder <a href=\"%(subscribe_link)s\">abonnieren</a>."
+"Um immer auf dem aktuellen Stand zu sein, kannst du den <a "
+"href=\"%(feed_link)s\">Atom Feed</a> lesen oder <a "
+"href=\"%(subscribe_link)s\">abonnieren</a>."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:51
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:91
@@ -3227,11 +3265,12 @@ msgstr "Als Verlassen markieren"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_rename.html:16
 msgid ""
-"If you rename this page, all revisions will be renamed. The old page will "
-"redirect to the new one."
+"If you rename this page, all revisions will be renamed. The old page will"
+" redirect to the new one."
 msgstr ""
-"Beim Umbenennen dieser Seite werden auch alle ihre Revisionen umbenannt. Unter "
-"der alten Seite wird dann eine Weiterleitung zum neuen Namen eingerichtet."
+"Beim Umbenennen dieser Seite werden auch alle ihre Revisionen umbenannt. "
+"Unter der alten Seite wird dann eine Weiterleitung zum neuen Namen "
+"eingerichtet."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_rename.html:20
 msgid "New page name:"
@@ -3252,19 +3291,20 @@ msgstr "Doppelte Anhänge der Zielseite werden überschrieben!"
 #: inyoka_theme_ubuntuusers/templates/wiki/action_show.html:26
 #, python-format
 msgid ""
-"<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by <a href="
-"\"%(author_link)s\">%(author)s</a>."
+"<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by <a "
+"href=\"%(author_link)s\">%(author)s</a>."
 msgstr ""
-"<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von <a href="
-"\"%(author_link)s\">%(author)s</a> erstellt."
+"<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von <a "
+"href=\"%(author_link)s\">%(author)s</a> erstellt."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_show.html:31
 #, python-format
 msgid ""
-"<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by %(author)s."
+"<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by "
+"%(author)s."
 msgstr ""
-"<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von %(author)s "
-"erstellt."
+"<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von "
+"%(author)s erstellt."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_show.html:38
 msgid "At this page the following tags have been assigned:"
@@ -3285,18 +3325,20 @@ msgstr "Der Artikel „%(title)s“ existiert noch nicht."
 #: inyoka_theme_ubuntuusers/templates/wiki/missing_page.m.html:25
 #, python-format
 msgid ""
-"The article “%(title)s” was deleted. You can restore it or create a new one in "
-"the action menu."
+"The article “%(title)s” was deleted. You can restore it or create a new "
+"one in the action menu."
 msgstr ""
-"Der Artikel „%(title)s” wurde gelöscht. Du kannst ihn wiederherstellen oder über "
-"das Aktionsmenü einen neuen erstellen."
+"Der Artikel „%(title)s” wurde gelöscht. Du kannst ihn wiederherstellen "
+"oder über das Aktionsmenü einen neuen erstellen."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/missing_page.html:33
 #: inyoka_theme_ubuntuusers/templates/wiki/missing_page.m.html:32
-msgid "The article is already under construction, help improving and finishing it!"
+msgid ""
+"The article is already under construction, help improving and finishing "
+"it!"
 msgstr ""
-"Dieser Artikel existiert bereits in der Baustelle; hilf dabei ihn zu verbessern "
-"und fertigzustellen!"
+"Dieser Artikel existiert bereits in der Baustelle; hilf dabei ihn zu "
+"verbessern und fertigzustellen!"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/missing_page.html:45
 #: inyoka_theme_ubuntuusers/templates/wiki/missing_page.m.html:44
@@ -3402,15 +3444,6 @@ msgstr "Verlauf"
 msgid "Discussion"
 msgstr "Diskussion"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:14
-#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:18
-msgid "Recent Changes"
-msgstr "Letzte Änderungen"
-
-#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:53
-msgid "Recent Changes are currently unavailable."
-msgstr "Letzte Änderungen sind aktuell noch nicht verfügbar."
-
 #: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
 #, python-format
 msgid "Wiki articles tagged with \"%(tag)s\""
@@ -3421,15 +3454,25 @@ msgstr "Wikiartikel mit dem Tag \"%(tag)s\""
 msgid "The following wiki articles have been tagged with \"%(tag)s\":"
 msgstr "Die folgenden Wikiartikel haben den Tag \"%(tag)s\":"
 
+#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:14
+#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:18
+msgid "Recent Changes"
+msgstr "Letzte Änderungen"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:53
+msgid "Recent Changes are currently unavailable."
+msgstr "Letzte Änderungen sind aktuell noch nicht verfügbar."
+
 #: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
 msgid ""
-"Wiki articles can be tagged by key words. The following tag list overviews them. "
-"This is useful to find more articles to a specified topic, etc."
+"Wiki articles can be tagged by key words. The following tag list "
+"overviews them. This is useful to find more articles to a specified "
+"topic, etc."
 msgstr ""
-"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen, die dann auf "
-"dieser Wiki-Seite insgesamt angezeigt werden. Dadurch kann man schnell einen "
-"Überblick gewinnen, was zu einem Stichwort bzw. Thema sonst noch interessant "
-"sein könnte."
+"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen, die dann "
+"auf dieser Wiki-Seite insgesamt angezeigt werden. Dadurch kann man "
+"schnell einen Überblick gewinnen, was zu einem Stichwort bzw. Thema sonst"
+" noch interessant sein könnte."
 
 #: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
 msgid "pages"
@@ -3438,3 +3481,4 @@ msgstr "Seiten"
 #: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
 msgid "There are no tags in the wiki, yet."
 msgstr "Es wurden bisher noch keine Wikiartikel mit Tags markiert."
+
