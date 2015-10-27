@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-10-26 21:04+0100\n"
+"POT-Creation-Date: 2015-10-27 00:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3273,5 +3273,28 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:53
 msgid "Recent Changes are currently unavailable."
+
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
+#, python-format
+msgid "Wiki articles tagged with \"%(tag)s\""
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:22
+#, python-format
+msgid "The following wiki articles have been tagged with \"%(tag)s\":"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
+msgid ""
+"Wiki articles can be tagged by key words. The following tag list "
+"overviews them. This is useful to find more articles to a specified "
+"topic, etc."
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
+msgid "pages"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
+msgid "There are no tags in the wiki, yet."
+msgstr ""

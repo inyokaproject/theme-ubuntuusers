@@ -213,3 +213,10 @@ div.conflict {
 .tagcloud {
   text-align: center;
 }
+.tagclasses(@counter) when (@counter > 0) {
+  .tagclasses((@counter - 1));    // next iteration
+  .tag-@{counter} {
+    font-size: 85+@counter*15%;
+  }
+}
+.tagclasses(10);

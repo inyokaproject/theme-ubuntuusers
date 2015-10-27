@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-10-26 21:04+0100\n"
-"PO-Revision-Date: 2015-10-26 21:08+0100\n"
-"Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
+"POT-Creation-Date: 2015-10-27 00:21+0100\n"
+"PO-Revision-Date: 2015-10-26 21:25-0300\n"
+"Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/"
 "language/de_DE/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.7.7\n"
 
 #: inyoka_theme_ubuntuusers/templates/500.html:13
 #: inyoka_theme_ubuntuusers/templates/500.html:16
@@ -3410,3 +3410,31 @@ msgstr "Letzte Änderungen"
 #: inyoka_theme_ubuntuusers/templates/wiki/recentchanges.html:53
 msgid "Recent Changes are currently unavailable."
 msgstr "Letzte Änderungen sind aktuell noch nicht verfügbar."
+
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
+#, python-format
+msgid "Wiki articles tagged with \"%(tag)s\""
+msgstr "Wikiartikel mit dem Tag \"%(tag)s\""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:22
+#, python-format
+msgid "The following wiki articles have been tagged with \"%(tag)s\":"
+msgstr "Die folgenden Wikiartikel haben den Tag \"%(tag)s\":"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
+msgid ""
+"Wiki articles can be tagged by key words. The following tag list overviews them. "
+"This is useful to find more articles to a specified topic, etc."
+msgstr ""
+"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen, die dann auf "
+"dieser Wiki-Seite insgesamt angezeigt werden. Dadurch kann man schnell einen "
+"Überblick gewinnen, was zu einem Stichwort bzw. Thema sonst noch interessant "
+"sein könnte."
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
+msgid "pages"
+msgstr "Seiten"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
+msgid "There are no tags in the wiki, yet."
+msgstr "Es wurden bisher noch keine Wikiartikel mit Tags markiert."
