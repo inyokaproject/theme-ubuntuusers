@@ -16,11 +16,12 @@
 {% set styles = ['editor'] %}
 {% set action = 'edit' %}
 {% block wiki_content %}
-  <form enctype="multipart/form-data" action="?action=edit" method="post">
+  <form enctype="multipart/form-data" action="" method="post">
     {{ csrf_token() }}
 
     {{ wiki_edit_note_rendered|default('', True) }}
 
+    {{ form.non_field_errors }}
     <div class="editor">{{ form.text }}</div>
     {{ form.errors.text }}
     {%- if license_note_rendered is not none %}
@@ -28,8 +29,8 @@
     {%- endif %}
     <div class="actions">
       {% trans %}Edit summary:{% endtrans %} {{ form.note }}
-      <input type="hidden" name="edit_time" value="{{ edit_time }}" />
-      <input type="hidden" name="rev" value="{{ rev }}" />
+      {{ form.edit_time }}
+      {{ form.revision }}
       <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}" />
       <input type="submit" value="{% trans %}Save{% endtrans %}" />
       <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" />
