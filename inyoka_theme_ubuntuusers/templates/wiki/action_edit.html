@@ -21,7 +21,7 @@
 
     {{ wiki_edit_note_rendered|default('', True) }}
 
-    {{ form.non_field_errors }}
+    {{ form.non_field_errors() }}
     <div class="editor">{{ form.text }}</div>
     {{ form.errors.text }}
     {%- if license_note_rendered is not none %}
