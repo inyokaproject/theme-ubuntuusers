@@ -9,8 +9,8 @@
 #}
 {%- extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMB.append(_('Settings'), href('portal', 'user', user.urlsafe_username, 'edit', 'settings'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
+{% do BREADCRUMB.append(_('Settings'), href('portal', 'user', user.username, 'edit', 'settings'), True) %}
+{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 
@@ -21,7 +21,7 @@
   <h3>{% trans %}Settings{% endtrans %}</h3>
   <dl>
     {{ render_form(form, ['notify', 'notifications', 'ubuntu_version'], inline=True) }}
-    {#<p class="note"><a href="{{ href('portal', 'user', user.urlsafe_username, 'edit', 'subscriptions') }}">Abonnements ansehen/bearbeiten</a></p>#}
+    {#<p class="note"><a href="{{ href('portal', 'user', user.username, 'edit', 'subscriptions') }}">Abonnements ansehen/bearbeiten</a></p>#}
     {{ render_form(form, ['timezone'], inline=true) }}
     <dt>{% trans %}Interface{% endtrans %}</dt>
     <dd>{{ form.hide_avatars }} <label for="id_hide_avatars">{{ form.hide_avatars.label }}</label>

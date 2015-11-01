@@ -10,8 +10,8 @@
 {%- extends 'portal/user_admin.html' %}
 {% import 'macros.html' as macros %}
 
-{% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.urlsafe_username, 'edit', 'profile'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
+{% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.username, 'edit', 'profile'), True) %}
+{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 
