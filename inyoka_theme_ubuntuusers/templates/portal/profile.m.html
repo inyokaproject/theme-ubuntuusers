@@ -50,7 +50,7 @@
       {{ show_item('Launchpad', 'launchpad', user.launchpad_url) }}
       {{ show_item('Wohnort', 'location') }}
       {{ show_item('Anmeldungsdatum', 'date_joined') }}
-      {{ show_item('Beiträge', 'post_count', href('forum', 'author', user.urlsafe_username)) }}
+      {{ show_item('Beiträge', 'post_count', href('forum', 'author', user.username)) }}
       {{ show_item('Signatur', 'signature') }}
       <dt>Kontakt</dt>
         <dd><a href="{{ user|url('privmsg') }}">Private Nachricht</a></dd>

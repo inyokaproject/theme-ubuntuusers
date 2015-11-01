@@ -9,8 +9,8 @@
 #}
 {% extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMB.append(_('Group memberships'), href('portal', 'user', user.urlsafe_username, 'edit', 'groups'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
+{% do BREADCRUMB.append(_('Group memberships'), href('portal', 'user', user.username, 'edit', 'groups'), True) %}
+{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 
