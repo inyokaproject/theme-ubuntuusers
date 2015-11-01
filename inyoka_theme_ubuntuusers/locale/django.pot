@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-10-27 19:41+0100\n"
+"POT-Creation-Date: 2015-11-01 09:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1238,7 +1238,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/ikhaya/detail.html:60
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:62
-#: inyoka_theme_ubuntuusers/templates/portal/index.html:61
+#: inyoka_theme_ubuntuusers/templates/portal/index.html:51
 msgid "Last update:"
 msgstr ""
 
@@ -2079,15 +2079,11 @@ msgstr[1] ""
 msgid "Create new group"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/index.html:40
-msgid "There are no upcoming events."
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/index.html:62
+#: inyoka_theme_ubuntuusers/templates/portal/index.html:52
 msgid "Created:"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/index.html:66
+#: inyoka_theme_ubuntuusers/templates/portal/index.html:56
 #, python-format
 msgid "%(count)s comment"
 msgid_plural "%(count)s comments"
@@ -2189,6 +2185,10 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:60
 msgid "No users were found."
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/portal/minicalendar.html:9
+msgid "There are no upcoming events."
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:33
