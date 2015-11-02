@@ -20,26 +20,26 @@
     :license: BSD, see LICENSE for more details.
 #}
 {% macro render_form(form, fields, inline=false) %}
-{%- if not inline %}
+{% if not inline %}
 <dl>
-{%- endif %}
-  {%- for field in fields %}
-  {%- if form[field] %}
+{% endif %}
+  {% for field in fields %}
+  {% if form[field] %}
   <dt>
-    <label for="{{ form[field].auto_id }}">{{ form[field].label }}:</label>
+    {{ form[field].label_tag() }}
   </dt>
   <dd>
     {{ form[field] }} {{ form.errors[field] }}
-    {%- if form[field].help_text %}
+    {% if form[field].help_text %}
     <p class="note">{{ form[field].help_text }}</p>
-    {%- endif %}
+    {% endif %}
   </dd>
-  {%- endif %}
-  {%- endfor %}
-{%- if not inline %}
+  {% endif %}
+  {% endfor %}
+{% if not inline %}
 </dl>
-{%- endif %}
-{%- endmacro %}
+{% endif %}
+{% endmacro %}
 
 {# render a list entry of the mod nav #}
 {% macro render_modnavi_li(label, href, icon, count=False) %}

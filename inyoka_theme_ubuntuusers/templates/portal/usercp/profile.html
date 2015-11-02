@@ -20,7 +20,7 @@
     {{ csrf_token() }}
     <h3>{% trans %}Avatar settings{% endtrans %}</h3>
     <dl>
-      <dt>{{ form.avatar.label_tag() }}:</dt>
+      <dt>{{ form.avatar.label_tag() }}</dt>
       <dd>
         {{ macros.add_user_avatar(user, 'usercp_avatar') }}
       </dd>
@@ -52,7 +52,7 @@
       </dd>
       {% for item in ['email', 'gpgkey', 'jabber', 'website', 'launchpad', 'location'] %}
         <dt>
-          <label for="{{ form[item].auto_id }}">{{ form[item].label_tag() }}:</label>
+          {{ form[item].label_tag() }}
         </dt>
         <dd>{{ form[item] }}
           {%- if item in ['email', 'jabber'] %}
