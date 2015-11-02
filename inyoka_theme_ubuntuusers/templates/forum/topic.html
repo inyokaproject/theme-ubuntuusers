@@ -227,7 +227,7 @@
                      class="action action_delete">{% trans %}Delete{% endtrans %}</a> |
                 {%- endif %}
                 {%- if can_moderate %}
-                  {%- if post.has_revision %}
+                  {%- if post.has_revisions() %}
                     <span class="admin_link">
                       <a href="{{ post|url('revisions') }}"
                          class="action action_review">{% trans %}Show revisions{% endtrans %}</a> |
@@ -282,8 +282,8 @@
                 <img src="{{ href('static', 'img', 'icon_minipost.gif') }}" alt="{% trans %}Post{% endtrans %}" />{#
               #}</a>
               {{ post.pub_date|datetime }}
-              {% if post.has_revision %}
-               ({% trans %}last edited:{% endtrans %} {{ post.revisions.latest('store_date').store_date|datetime }})
+              {% if post.has_revisions() %}
+               ({% trans %}last edited:{% endtrans %} {{ post.text_revisions.latest().time|datetime }})
               {% endif %}
             </div>
             {% if can_moderate %}

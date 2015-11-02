@@ -20,11 +20,13 @@
         <tr id="post-{{ post.id }}"{% if post.hidden %} class="hidden"{% endif %}>
           <td class="post admin_link_hover">
             <div class="postinfo">
+              {% if not loop.first %}
               <div class="linklist">
                 <a href="{{ rev|url('restore') }}" class="action action_review admin_link">{% trans %}Restore{% endtrans %}</a>
               </div>
-              {% trans date=rev.store_date|datetime %}Edited: {{ date }}{% endtrans %}
-              {% if post.text_rendered == rev.text_rendered %}
+              {% endif %}
+              {% trans date=rev.time|datetime %}Edited: {{ date }}{% endtrans %}
+              {% if loop.first %}
                 | {% trans %}Current revision{% endtrans %}
               {% endif %}
             </div>
