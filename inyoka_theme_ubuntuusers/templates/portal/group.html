@@ -36,7 +36,6 @@
       <th>{{ table.get_html('username', _('Username')) }}</th>
       <th>{{ table.get_html('location', _('Residence')) }}</th>
       <th>{{ table.get_html('date_joined', _('Member since')) }}</th>
-      <th>{{ table.get_html('post_count', _('Posts')) }}</th>
     </tr>
     {%- for user in users %}
     <tr>
@@ -45,7 +44,6 @@
         <a href="{{ user|url }}">{{ user.username|e }}</a></td>
       <td>{{ user.location }}</td>
       <td>{{ user.date_joined|datetime }}</td>
-      <td>{{ user.post_count }}</td>
     </tr>
     {%- endfor %}
   </table>
