@@ -10,7 +10,7 @@
 -#}
 
 
-<form action="{{ href('wiki', page.name, action='mv_back')|e }}" method="post">
+<form action="{{ page|url('mv_back')|e }}" method="post">
   {{ csrf_token() }}
   <p>
     {% trans %}Are you sure you want to move the page into the wiki?{% endtrans %}
