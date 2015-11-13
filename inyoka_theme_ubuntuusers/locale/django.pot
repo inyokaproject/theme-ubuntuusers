@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-01 09:07+0100\n"
+"POT-Creation-Date: 2015-11-04 20:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -680,7 +680,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:18
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:33
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:27
 msgid "Forum"
 msgstr ""
 
@@ -709,11 +709,11 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:48
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:30
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:68
 msgid "Submit"
 msgstr ""
 
@@ -2423,7 +2423,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:26
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:28
 msgid "Interface"
 msgstr ""
@@ -3207,6 +3207,8 @@ msgid "Category"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:44
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:20
 msgid "Tag Cloud"
 msgstr ""
 
@@ -3266,6 +3268,12 @@ msgstr ""
 msgid "Discussion"
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:15
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:20
+msgid "Tag List"
+msgstr ""
+
 #: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
 #, python-format
 msgid "Wiki articles tagged with \"%(tag)s\""
@@ -3285,18 +3293,31 @@ msgstr ""
 msgid "Recent Changes are currently unavailable."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:23
+#, python-format
 msgid ""
 "Wiki articles can be tagged by key words. The following tag list "
 "overviews them. This is useful to find more articles to a specified "
-"topic, etc."
+"topic, etc. There is also a complete %(start_link)salphabetical "
+"list%(end_link)s of all tags in the wiki."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:26
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:28
 msgid "pages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:30
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:33
 msgid "There are no tags in the wiki, yet."
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:23
+#, python-format
+msgid ""
+"Wiki articles can be tagged by key words. The following alphabetical tag "
+"list shows all of them. This is useful to find more articles to a "
+"specified topic, etc. There is also a %(start_link)stag cloud%(end_link)s"
+" overviewing the most used tags of the wiki."
 msgstr ""
 
