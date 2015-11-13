@@ -13,7 +13,7 @@
 {%- extends 'wiki/page.html' %}
 {% set action = 'show' %}
 {% block wiki_content %}
-  <h1 class="pagetitle"><a href="{{ href('wiki', page.name, action='backlinks')|e }}">{{ page.short_title|e }}</a></h1>
+  <h1 class="pagetitle"><a href="{{ page|url('backlinks')|e }}">{{ page.short_title|e }}</a></h1>
 
   {% if page.rev.attachment %}
     <div id="attachment">{{ page.rev.attachment.html_representation }}</div>

@@ -10,7 +10,7 @@
 -#}
 
 
-<form action="{{ href('wiki', page.name, 'rename')|e }}" method="post">
+<form action="{{ page|url('rename')|e }}" method="post">
   {{ csrf_token() }}
   <p><small>
     {%- trans -%}
