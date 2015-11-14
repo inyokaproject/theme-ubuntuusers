@@ -11,12 +11,13 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
+{% do BREADCRUMB.append(_('Inactive blogs'), href('planet', 'blogs', 'inactive'), True) %}
 {% do BREADCRUMB.append(_('Bloglist'), href('planet', 'blogs'), True) %}
 
 {% block content %}
   <h3>{% trans %}Blogs{% endtrans %}</h3>
   <a href="{{ href('planet', 'blog', 'new') }}">{% trans %}Add new blog{% endtrans %}</a> |
-  <a href="{{ href('planet', 'blogs', 'inactive') }}">{% trans %}Inactive blogs{% endtrans %}</a>
+  <a href="{{ href('planet', 'blogs') }}">{% trans %}Active blogs{% endtrans %}</a>
   <table class="static_pages">
     <colgroup>
       <col width="40%" />
