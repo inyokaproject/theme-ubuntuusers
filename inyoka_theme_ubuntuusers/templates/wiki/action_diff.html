@@ -49,7 +49,7 @@
       </p>
       {{ diff.render() }}
     {%- endif %}
-    <h1 class="pagetitle">{% trans %}Current revision{% endtrans %}</h1>
+    <h1 class="pagetitle">{% trans new_rev=diff.new_rev.change_date|datetime %} Revision {{ new_rev }} {% endtrans %}</h1>
     {{ diff.new_rev.rendered_text }}
   </div>
 {% endblock %}
