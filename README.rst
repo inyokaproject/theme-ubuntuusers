@@ -2,6 +2,10 @@
 Inyoka ubuntuusers Theme
 ========================
 
+.. image:: https://ci.ubuntu-de.org/buildStatus/icon?job=theme-ubuntuusers
+    :target: https://ci.ubuntu-de.org/job/theme-ubuntuusers/
+    :alt: Build status of the staging branch
+
 Installation
 ============
 
