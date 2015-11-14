@@ -32,7 +32,7 @@
       {{ recentchanges[day][page][0]['time'] }}
       {%- endif %}
       </td>
-      <td><a href="{{ page|url|e }}">{{ page|e }}</a> (<a href="{{ page|url('log')|e }}">{{ recentchanges[day][page]|length }}x</a>)</td>
+      <td><a href="{{ href('wiki', page)|e }}">{{ page|e }}</a> (<a href="{{ href('wiki', page, 'a', 'log')|e }}">{{ recentchanges[day][page]|length }}x</a>)</td>
       <td class="note">
        <ul class="note_list">
        {%- for change in recentchanges[day][page] %}
