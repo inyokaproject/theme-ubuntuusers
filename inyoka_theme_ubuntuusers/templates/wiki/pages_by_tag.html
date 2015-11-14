@@ -12,7 +12,7 @@
 
 {%- extends 'wiki/page.html' %}
 {% do BREADCRUMB.append(active_tag|e, '', True) %}
-{% do BREADCRUMB.append(_('Tag List'), href('wiki', 'wiki/taglist'), True) %}
+{% do BREADCRUMB.append(_('Tag List'), href('wiki', 'wiki/tags'), True) %}
 {% set styles = styles|default([]) + ['wiki', 'highlight'] %}
 {% set active_app = 'wiki' %}
 
