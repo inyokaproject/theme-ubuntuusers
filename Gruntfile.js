@@ -143,7 +143,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             src: [
-              'inyoka_theme_ubuntuusers/static/style/*.less',
+              'inyoka_theme_ubuntuusers/static/style/**/*.less',
               '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
               '!inyoka_theme_ubuntuusers/static/style/*.m.less'
             ],
