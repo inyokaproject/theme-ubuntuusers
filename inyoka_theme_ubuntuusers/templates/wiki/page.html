@@ -45,15 +45,15 @@
     </ul>
     <h3 class="navi_join">{% trans %}Participation{% endtrans %}</h3>
     <ul>
-      <li><a href="{{ href('wiki', 'Wikiartikel_anlegen') }}">{% trans %}Create a wiki article{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'wiki', 'create') }}">{% trans %}Create a wiki article{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'HowTo') }}">{% trans %}Create a Howto{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'Wiki', 'Referenz') }}">{% trans %}Wiki Reference{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'Wiki', 'Syntax') }}">{% trans %}Wiki Syntax{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'Baustelle') }}">{% trans %}Sites under construction{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'Wiki', 'Artikelideen') }}">{% trans %}Article Ideas{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'Wiki', 'ungetestet') }}">{% trans %}Untested Articles{% endtrans %}</a></li>
-      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Ausbaufähig')}}?action=backlinks">{% trans %}Expandable Articles{% endtrans %}</a></li>
-      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Fehlerhaft')}}?action=backlinks">{% trans %}Incorrect Articles{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Ausbaufähig', 'a', 'backlinks') }}">{% trans %}Expandable Articles{% endtrans %}</a></li>
+      <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Fehlerhaft', 'a', 'backlinks') }}">{% trans %}Incorrect Articles{% endtrans %}</a></li>
       <li><a href="{{ href('forum', 'forum', 'wiki') }}">{% trans %}Around the Wiki{% endtrans %}</a></li>
     </ul>
     {%- if can and can.manage %}
