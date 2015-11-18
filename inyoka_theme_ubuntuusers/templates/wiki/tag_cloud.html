@@ -18,9 +18,7 @@
   <div class="main_content">
     {% if tag_list %}
       <h1>{% trans %}Tag Cloud{% endtrans %}</h1>
-      {% set start_link = '<a href="/wiki/tags">' %}
-      {% set end_link = '</a>' %}
-      <p>{% trans %}Wiki articles can be tagged by key words. The following tag list overviews them. This is useful to find more articles to a specified topic, etc. There is also a complete {{ start_link }}alphabetical list{{ end_link }} of all tags in the wiki.{% endtrans %}</p>
+      <p>{% trans %}Wiki articles can be tagged by key words. The following tag list overviews them. This is useful to find more articles to a specified topic, etc. There is also a complete <a href="/wiki/tags">alphabetical list</a> of all tags in the wiki.{% endtrans %}</p>
       <div class="tagcloud">
       {% for tag in tag_list %}
         <a title="{{ tag.count }} {% trans %}pages{% endtrans %}" href="/wiki/tags/{{ tag.name|e }}" class="tag-{{ tag.size }}">{{ tag.name|e }}</a>

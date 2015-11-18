@@ -63,9 +63,7 @@
             <p class="description note">
               {% trans author=username|e,
                     userlink=href('portal', 'user', username|e),
-                    link=href('forum', 'author', username|e, 'topic', post.topic.slug) %}
-                <a href="{{ link }}">Posts</a> by <a href="{{ userlink }}">{{ author }}</a> in this topic
-              {% endtrans %}
+                    link=href('forum', 'author', username|e, 'topic', post.topic.slug) %}<a href="{{ link }}">Posts</a> by <a href="{{ userlink }}">{{ author }}</a> in this topic{% endtrans %}
               {% if post.topic.paginated %} |
                 {% trans %}Go to page{% endtrans %}
                 <span class="pagination">{{ render_small_pagination(post.topic.get_pagination()) }}</span>
@@ -79,9 +77,7 @@
             <p class="description note">
               {% trans author=username|e, 
                     userlink=href('portal', 'user', username|e),
-                    link=href('forum', 'author', username|e, 'forum', post.topic.forum.slug) %}
-                <a href="{{ link }}">Posts</a> by <a href="{{ userlink }}">{{ author }}</a> in this forum
-              {% endtrans %}
+                    link=href('forum', 'author', username|e, 'forum', post.topic.forum.slug) %}<a href="{{ link }}">Posts</a> by <a href="{{ userlink }}">{{ author }}</a> in this forum{% endtrans %}
             </p>
           </td>
         </tr>
