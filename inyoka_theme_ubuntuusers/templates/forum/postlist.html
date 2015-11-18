@@ -13,10 +13,10 @@
 {% from 'macros.html' import render_pagination, render_small_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% if forum != None %}
+{% if forum %}
     {% do BREADCRUMB.append(forum.name, href('forum', 'author', username|e, 'forum', forum.slug), True) %}
 {% endif %}
-{% if topic != None %}
+{% if topic %}
     {% do BREADCRUMB.append(topic.title, href('forum', 'author', username|e, 'topic', topic.slug), True) %}
 {% endif %}
 {% do BREADCRUMB.append(username, href('forum', 'author', username|e), True) %}
