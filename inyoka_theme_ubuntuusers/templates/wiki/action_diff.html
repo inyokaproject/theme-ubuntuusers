@@ -41,16 +41,15 @@
         {%- endtrans -%}
       </p>
       <p>
-        {%- trans link_diff=href('wiki', diff.page.name, action='diff',
-                                rev=diff.old_rev.id, new_rev=diff.new_rev.id,
-                                format='udiff'),
-                 link_list=href('wiki', diff.page.name, action='log') -%}
+        {%- trans link_diff=href('wiki', diff.page.name, 'a', 'udiff',
+                                diff.old_rev.id, diff.new_rev.id),
+                 link_list=diff.page|url('log') -%}
           You can also download the changes as <a href="{{ link_diff }}">unified diff</a> or display a <a href="{{ link_list }}">list of the last changes</a> and compare individual revisions.
         {%- endtrans -%}
       </p>
       {{ diff.render() }}
     {%- endif %}
-    <h1 class="pagetitle">{% trans %}Current revision{% endtrans %}</h1>
+    <h1 class="pagetitle">{% trans new_rev=diff.new_rev.change_date|datetime %} Revision {{ new_rev }} {% endtrans %}</h1>
     {{ diff.new_rev.rendered_text }}
   </div>
 {% endblock %}

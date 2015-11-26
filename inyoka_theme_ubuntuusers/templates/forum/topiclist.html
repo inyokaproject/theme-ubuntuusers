@@ -1,5 +1,5 @@
 {#
-    forum/newposts.html
+    forum/topiclist.html
     ~~~~~~~~~~~~~~~~~~~
 
     Show a list of all recent posts.
@@ -65,7 +65,7 @@
           </td>
           <td><a href="{{ topic.forum|url }}">{{ topic.forum.name|e }}</a></td>
           <td class="view_count">{{ topic.view_count }}</td>
-          <td class="post_count">{{ topic.post_count - 1 }}</td>
+          <td class="post_count">{{ topic.post_count.value() - 1 }}</td>
           <td class="last_post">
             {%- if topic.last_post %}
               <a href="{{ topic.last_post|url}}" class="date">{{

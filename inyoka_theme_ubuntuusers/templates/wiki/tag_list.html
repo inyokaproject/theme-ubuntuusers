@@ -2,8 +2,7 @@
     wiki/tag_list.html
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    This template is used to show the list of wiki tags or the a list of wiki
-    articles tagged by a specified tag.
+    This template is used to show a alphabetical list of all wiki tags.
 
     :copyright: (c) 2007-2015 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
@@ -11,19 +10,21 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append('Tags', href('wiki', 'wiki/tags'), True) %}
+{% do BREADCRUMB.append(_('Tag List'), href('wiki', 'wiki/tags'), True) %}
 {% set styles = styles|default([]) + ['wiki', 'highlight'] %}
 {% set active_app = 'wiki' %}
 
 {% block wiki_content %}
   <div class="main_content">
     {% if tag_list %}
-      <h1>Tags</h1>
-      <p>{% trans %}Wiki articles can be tagged by key words. The following tag list overviews them. This is useful to find more articles to a specified topic, etc.{% endtrans %}</p>
-      <div class="tagcloud">
-      {% for tag in tag_list %}
-        <a title="{{ tag.count }} {% trans %}pages{% endtrans %}" href="/wiki/tags/{{ tag.name|e }}" class="tag-{{ tag.size }}">{{ tag.name|e }}</a>
-      {% endfor %}
+      <h1>{% trans %}Tag List{% endtrans %}</h1>
+      <p>{% trans %}Wiki articles can be tagged by key words. The following alphabetical tag list shows all of them. This is useful to find more articles to a specified topic, etc. There is also a <a href="/wiki/tagcloud">tag cloud</a> overviewing the most used tags of the wiki.{% endtrans %}</p>
+      <div>
+        <ul>
+        {% for tag in tag_list %}
+          <li><a title="{{ tag.count }} {% trans %}pages{% endtrans %}" href="/wiki/tags/{{ tag.name|e }}">{{ tag.name|e }}</a></li>
+        {% endfor %}
+        </ul>
       </div>
     {% else %}
       <p>{% trans %}There are no tags in the wiki, yet.{% endtrans %}</p>

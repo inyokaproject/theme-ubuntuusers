@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2015-11-01 09:07+0100\n"
-"PO-Revision-Date: 2015-10-26 21:25-0300\n"
-"Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
+"POT-Creation-Date: 2015-11-26 11:19+0100\n"
+"PO-Revision-Date: 2015-11-18 22:15+0100\n"
+"Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) "
 "(http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
@@ -151,7 +151,6 @@ msgid "Applications"
 msgstr "Anwendungen"
 
 #: inyoka_theme_ubuntuusers/templates/overall.m.html:47
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:87
 msgid "More"
 msgstr "Mehr"
 
@@ -235,6 +234,7 @@ msgid "Posts:"
 msgstr "Beiträge:"
 
 #: inyoka_theme_ubuntuusers/templates/forum/_edit_latestpost_row.html:20
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:32
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:80
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:282
 msgid "Post"
@@ -298,7 +298,7 @@ msgstr "Möchtest du das Thema „%(title)s“ wirklich verbergen?"
 
 #: inyoka_theme_ubuntuusers/templates/forum/delete_topic.html:27
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:16
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:16
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:15
 msgid "Reason:"
 msgstr "Begründung:"
 
@@ -353,11 +353,12 @@ msgstr "Verbergen"
 #: inyoka_theme_ubuntuusers/templates/portal/page_delete.html:20
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:44
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:42
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:21
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:19
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:35
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:36
 #: inyoka_theme_ubuntuusers/templates/wiki/action_mv_back.html:19
 #: inyoka_theme_ubuntuusers/templates/wiki/action_mv_discontinued.html:19
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:19
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:18
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -512,9 +513,9 @@ msgstr "Thema als „Wichtig:“ markieren"
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.html:50
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.m.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.m.html:30
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:33
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:40
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:57
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:34
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:41
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:58
 msgid "Preview"
 msgstr "Vorschau"
 
@@ -533,7 +534,7 @@ msgstr "Neue Beiträge"
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:135
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:71
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:75
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:97
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:104
 msgid "Unsubscribe"
 msgstr "Abbestellen"
 
@@ -542,7 +543,7 @@ msgstr "Abbestellen"
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:51
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:139
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:73
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:99
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:106
 msgid "Subscribe"
 msgstr "Abonnieren"
 
@@ -589,6 +590,7 @@ msgid "Posts: <strong>%(n)s</strong>"
 msgstr "Beiträge: <strong>%(n)s</strong>"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:85
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:33
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:28
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:23
 msgid "Topic"
@@ -610,21 +612,26 @@ msgstr "Letzter Beitrag"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:104
 #: inyoka_theme_ubuntuusers/templates/forum/forum.m.html:50
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:57
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:42
 msgid "Sticky:"
 msgstr "Wichtig:"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:105
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:58
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:43
 msgid "Poll:"
 msgstr "Umfrage:"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:106
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:49
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:59
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:44
 msgid "[Hidden]"
 msgstr "[Verborgen]"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:107
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:60
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:45
 msgid "[Reported]"
 msgstr "[Gemeldet]"
@@ -646,6 +653,7 @@ msgid "by <a href=\"%(link)s\">%(author)s</a>"
 msgstr "von <a href=\"%(link)s\">%(author)s</a>"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:124
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:68
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:61
 msgid "Go to page"
 msgstr "Gehe zu Seite"
@@ -691,17 +699,18 @@ msgstr "Forum erstellen"
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:12
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:14
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:84
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:93
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:21
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:13
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:34
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:18
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:33
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:27
 msgid "Forum"
 msgstr "Forum"
 
@@ -730,11 +739,11 @@ msgstr "Willkommensnachricht"
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:48
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:30
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:68
 msgid "Submit"
 msgstr "Speichern"
 
@@ -855,6 +864,38 @@ msgstr "Möchtest du den <a href=\"%(link)s\">Beitrag von %(author)s</a> lösche
 msgid "Do you want to hide the <a href=\"%(link)s\">post from %(author)s</a>?"
 msgstr "Möchtest du den <a href=\"%(link)s\">Beitrag von %(author)s</a> verbergen?"
 
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:50
+msgid "Go to post"
+msgstr "Gehe zu Beitrag"
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:53
+#, python-format
+msgid "Posted on %(date)s</a>"
+msgstr "Geschrieben am %(date)s</a>"
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:64
+#, python-format
+msgid ""
+"<a href=\"%(link)s\">Posts</a> by <a href=\"%(userlink)s\">%(author)s</a>"
+" in this topic"
+msgstr ""
+"<a href=\"%(link)s\">Beiträge</a> von <a "
+"href=\"%(userlink)s\">%(author)s</a> in diesem Thema"
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:78
+#, python-format
+msgid ""
+"<a href=\"%(link)s\">Posts</a> by <a href=\"%(userlink)s\">%(author)s</a>"
+" in this forum"
+msgstr ""
+"<a href=\"%(link)s\">Beiträge</a> von <a "
+"href=\"%(userlink)s\">%(author)s</a> in diesem Forum"
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:87
+#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:82
+msgid "No topics were found."
+msgstr "Es wurden keine Themen gefunden"
+
 #: inyoka_theme_ubuntuusers/templates/forum/report.html:13
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:63
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:143
@@ -937,8 +978,8 @@ msgstr "Alte Revisionen"
 #: inyoka_theme_ubuntuusers/templates/planet/index.html:76
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.html:47
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.m.html:59
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:83
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:18
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:84
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:17
 msgid "Restore"
 msgstr "Wiederherstellen"
 
@@ -948,7 +989,6 @@ msgid "Edited: %(date)s"
 msgstr "Bearbeitet am: %(date)s"
 
 #: inyoka_theme_ubuntuusers/templates/forum/revisions.html:28
-#: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:53
 msgid "Current revision"
 msgstr "Aktuelle Revision"
 
@@ -1166,10 +1206,6 @@ msgstr "Anhänge"
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:27
 msgid "Last reply"
 msgstr "Letzte Antwort"
-
-#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:82
-msgid "No topics were found."
-msgstr "Es wurden keine Themen gefunden"
 
 #: inyoka_theme_ubuntuusers/templates/forum/welcome.html:12
 msgid "Rules"
@@ -2027,6 +2063,7 @@ msgid "How"
 msgstr "Wie"
 
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:14
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:20
 msgid "Create"
 msgstr "Erstellen"
 
@@ -2111,13 +2148,6 @@ msgstr "Wohnort"
 #: inyoka_theme_ubuntuusers/templates/portal/special_rights.html:27
 msgid "Member since"
 msgstr "Mitglied seit"
-
-#: inyoka_theme_ubuntuusers/templates/portal/group.html:39
-#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:47
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:101
-#: inyoka_theme_ubuntuusers/templates/portal/special_rights.html:28
-msgid "Posts"
-msgstr "Beiträge"
 
 #: inyoka_theme_ubuntuusers/templates/portal/group_edit.html:15
 msgid "New group"
@@ -2293,7 +2323,7 @@ msgstr "Zeige Nutzer mit Sonderrechten"
 msgid "Create a new user"
 msgstr "Einen neuen Benutzer erstellen."
 
-#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:60
+#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:58
 msgid "No users were found."
 msgstr "Es wurden keine Benutzer gefunden."
 
@@ -2389,6 +2419,10 @@ msgstr "Website"
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:88
 msgid "Launchpad username"
 msgstr "Launchpad-Benutzername"
+
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:101
+msgid "Posts"
+msgstr "Beiträge"
 
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:104
 msgid "show"
@@ -2539,7 +2573,7 @@ msgstr "Benutzerseite"
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:26
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:28
 msgid "Interface"
 msgstr "Oberfläche"
@@ -2950,7 +2984,7 @@ msgstr "Anlage hinzufügen"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:35
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:36
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:30
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:31
 msgid "Edit summary:"
 msgstr "Änderungskommentar:"
 
@@ -3006,7 +3040,6 @@ msgid "New attachment:"
 msgstr "Neuer Anhang:"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:13
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:86
 msgid "Backlinks"
 msgstr "Backlinks"
 
@@ -3040,6 +3073,10 @@ msgstr "Dieser Anhang ist verwaist und von keiner Seite referenziert."
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:56
 msgid "This article is an orphan and not referenced by any site."
 msgstr "Dieser Artikel ist verwaist und von keiner Seite referenziert."
+
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:13
+msgid "create"
+msgstr "Erstellen"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:15
 msgid "Are you sure you want to delete this page?"
@@ -3095,7 +3132,12 @@ msgstr ""
 "diff</a> herunterladen oder dir eine <a href=\"%(link_list)s\">Liste an "
 "Änderungen</a> anzeigen und einzelne Revisionen vergleichen."
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:34
+#: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:52
+#, python-format
+msgid " Revision %(new_rev)s "
+msgstr "Revision %(new_rev)s"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:35
 msgid "Save"
 msgstr "Speichern"
 
@@ -3144,17 +3186,18 @@ msgstr ""
 "href=\"%(feed_link)s\">Atom Feed</a> lesen oder <a "
 "href=\"%(subscribe_link)s\">abonnieren</a>."
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:51
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:91
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:52
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:92
 msgid "Compare"
 msgstr "Vergleichen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:80
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:81
 msgid "View"
 msgstr "Ansehen"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:86
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:87
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:45
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:79
 msgid "Raw"
 msgstr "Rohformat"
 
@@ -3202,6 +3245,7 @@ msgid "Show log"
 msgstr "Verlauf anzeigen"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:41
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:74
 msgid "Show backlinks"
 msgstr "Backlinks anzeigen"
 
@@ -3210,10 +3254,12 @@ msgid "Export page:"
 msgstr "Seite exportieren:"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:46
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:80
 msgid "HTML"
 msgstr "HTML"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:47
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:81
 msgid "AST"
 msgstr "AST"
 
@@ -3222,6 +3268,7 @@ msgid "Export metadata"
 msgstr "Metadaten exportieren"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:51
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:75
 msgid "Manage attachments"
 msgstr "Anhänge verwalten"
 
@@ -3231,6 +3278,7 @@ msgstr "Cache leeren"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:57
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage_discussion.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:76
 msgid "Link discussion"
 msgstr "Diskussion verlinken"
 
@@ -3385,6 +3433,8 @@ msgid "Category"
 msgstr "Kategorie"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:44
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:20
 msgid "Tag Cloud"
 msgstr "Wortwolke"
 
@@ -3432,17 +3482,31 @@ msgstr "Fehlerhafte Artikel"
 msgid "Around the Wiki"
 msgstr "Rund ums Wiki"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:83
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:77
+msgid "Export"
+msgstr "Exportieren"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:78
+msgid "Metadata"
+msgstr "Metadaten"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:92
 msgid "Article"
 msgstr "Artikel"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:85
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
 msgid "Log"
 msgstr "Verlauf"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:101
 msgid "Discussion"
 msgstr "Diskussion"
+
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:15
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:20
+msgid "Tag List"
+msgstr "Tagliste"
 
 #: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
 #, python-format
@@ -3463,22 +3527,39 @@ msgstr "Letzte Änderungen"
 msgid "Recent Changes are currently unavailable."
 msgstr "Letzte Änderungen sind aktuell noch nicht verfügbar."
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:21
 msgid ""
 "Wiki articles can be tagged by key words. The following tag list "
 "overviews them. This is useful to find more articles to a specified "
-"topic, etc."
+"topic, etc. There is also a complete <a href=\"/wiki/tags\">alphabetical "
+"list</a> of all tags in the wiki."
 msgstr ""
-"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen, die dann "
-"auf dieser Wiki-Seite insgesamt angezeigt werden. Dadurch kann man "
-"schnell einen Überblick gewinnen, was zu einem Stichwort bzw. Thema sonst"
-" noch interessant sein könnte."
+"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen. Die "
+"nachfolgende Ansicht stellt eine Übersicht der verfügbaren Tags dar. "
+"Zusätzlich gibt es auch eine <a href=\"/wiki/tags\">alphabetische "
+"sortierte Liste</a> aller Tags."
 
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:24
 #: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
 msgid "pages"
 msgstr "Seiten"
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:28
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:30
 msgid "There are no tags in the wiki, yet."
 msgstr "Es wurden bisher noch keine Wikiartikel mit Tags markiert."
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:21
+msgid ""
+"Wiki articles can be tagged by key words. The following alphabetical tag "
+"list shows all of them. This is useful to find more articles to a "
+"specified topic, etc. There is also a <a href=\"/wiki/tagcloud\">tag "
+"cloud</a> overviewing the most used tags of the wiki."
+msgstr ""
+"Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen. Dadurch "
+"kann man schnell einen Überblick gewinnen, was zu einem Stichwort bzw. "
+"Thema sonst noch interessant sein könnte. Auf dieser Seite werden alle "
+"Tags vom Wiki alphabetisch sortiert aufgelistet. Es gibt außerdem die <a "
+"href=\"/wiki/tagcloud\">Wortwolke</a>, welche einen Überblick über die "
+"meistgenutzten Tags gibt."
 

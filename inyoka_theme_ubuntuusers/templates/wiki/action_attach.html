@@ -21,7 +21,7 @@
   <h1 class="pagetitle">{% trans %}Add attachment{% endtrans %}</h1>
 
   <div id="page">
-    <form action="?action=attach" method="post"
+    <form action="{{ page|url('attachments') }}" method="post"
       enctype="multipart/form-data" id="form_addattachment">
       {{ csrf_token() }}
       <p>

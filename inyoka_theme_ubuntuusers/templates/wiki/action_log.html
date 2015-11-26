@@ -17,7 +17,7 @@
 {% do BREADCRUMB.append(_('Revisions'), page|url('log'), True) %}
 {% set action = 'log' %}
 {% set feeds = [
-  (_('Page revisions'), '?action=log&format=atom')
+  (_('Page revisions'), page|url('feed'))
 ] %}
 {% block wiki_content %}
   <div class="main_content">
@@ -42,12 +42,13 @@
       {% endif %}
     </p>
     <p>
-      {%- trans feed_link='?action=log&amp;format=atom',
-               subscribe_link='?action=subscribe' -%}
+      {%- trans feed_link=page|url('feed'),
+               subscribe_link=page|url('subscribe') -%}
         To be always up to date you can read the <a href="{{ feed_link }}">atom feed</a> or <a href="{{ subscribe_link }}">subscribe</a>.
       {%- endtrans -%}
     </p>
-    <form action="" method="get" class="nosubmitprotect">
+    <form action="" method="post" class="nosubmitprotect">
+      {{ csrf_token() }}
       <input type="submit" value="{% trans %}Compare{% endtrans %}" />
       <input type="hidden" name="action" value="diff" />
 
@@ -79,10 +80,10 @@
             <td class="actions">
               <a href="{{ revision|url|e }}" class="view" title="{% trans %}View{% endtrans %}"><span>{% trans %}View{% endtrans %}</span></a>
               {%- if can.manage %}
-              <a href="?action=revert&amp;rev={{ revision.id }}" class="revert"
+              <a href="{{ page|url('revert', revision=revision.id) }}" class="revert"
                  title="{% trans %}Restore{% endtrans %}"><span>{% trans %}Restore{% endtrans %}</span></a>
               {%- endif %}
-              <a href="?action=export&amp;format=raw&amp;rev={{ revision.id }}" class="raw"
+              <a href=" {{ page|url('export', format='raw', revision=revision.id) }}" class="raw"
                  title="{% trans %}Raw{% endtrans %}"><span>{% trans %}Raw{% endtrans %}</span></a>
             </td>
           </tr>

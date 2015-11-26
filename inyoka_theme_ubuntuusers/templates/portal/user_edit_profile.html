@@ -10,8 +10,8 @@
 {%- extends 'portal/user_admin.html' %}
 {% import 'macros.html' as macros %}
 
-{% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.urlsafe_username, 'edit', 'profile'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
+{% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.username, 'edit', 'profile'), True) %}
+{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 
@@ -20,7 +20,7 @@
   <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
 		{{ csrf_token() }}
     {{ render_form(form, ['username'], inline=true) }}
-    <dt>{{ form.member_title.label_tag() }}:</dt>
+    <dt>{{ form.member_title.label_tag() }}</dt>
     <dd>{{ form.member_title }}
       {% if user.groups.all() %}
       <div class="group_titles">
@@ -31,7 +31,7 @@
       {%- endif %}
     </dd>
     <h3>{% trans %}Avatar settings{% endtrans %}:</h3>
-    <dt>{{ form.avatar.label_tag() }}:</dt>
+    <dt>{{ form.avatar.label_tag() }}</dt>
     <dd>
       {{ macros.add_user_avatar(user, 'usercp_avatar') }}
     </dd>

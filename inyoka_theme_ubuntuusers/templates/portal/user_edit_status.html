@@ -9,8 +9,8 @@
 #}
 {%- extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMB.append(_('Status'), href('portal', 'user', user.urlsafe_username, 'edit', 'status'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.urlsafe_username, 'edit'), True) %}
+{% do BREADCRUMB.append(_('Status'), href('portal', 'user', user.username, 'edit', 'status'), True) %}
+{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
 {% do BREADCRUMB.append(user.username, user|url, True) %}
 {% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
 
@@ -20,7 +20,7 @@
 		{{ csrf_token() }}
     <h3>{% trans %}Status{% endtrans %}</h3>
       {{ form.non_field_errors() }}
-      <dt>{{ form.status.label_tag() }}:</dt>
+      <dt>{{ form.status.label_tag() }}</dt>
       <dd>{{ form.status }} {{ form.errors.status }}
         <div class="note">{% trans date=user.last_login|datetime -%}
           Last login: {{ date }}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-01 09:07+0100\n"
+"POT-Creation-Date: 2015-11-26 11:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -146,7 +146,6 @@ msgid "Applications"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/overall.m.html:47
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:87
 msgid "More"
 msgstr ""
 
@@ -220,6 +219,7 @@ msgid "Posts:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/_edit_latestpost_row.html:20
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:32
 #: inyoka_theme_ubuntuusers/templates/forum/splittopic.html:80
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:282
 msgid "Post"
@@ -281,7 +281,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/delete_topic.html:27
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:16
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:16
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:15
 msgid "Reason:"
 msgstr ""
 
@@ -336,11 +336,12 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/page_delete.html:20
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:44
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:42
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:21
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:19
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:35
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:36
 #: inyoka_theme_ubuntuusers/templates/wiki/action_mv_back.html:19
 #: inyoka_theme_ubuntuusers/templates/wiki/action_mv_discontinued.html:19
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:19
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:18
 msgid "Cancel"
 msgstr ""
 
@@ -491,9 +492,9 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.html:50
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.m.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/new.m.html:30
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:33
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:40
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:57
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:34
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:41
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:58
 msgid "Preview"
 msgstr ""
 
@@ -512,7 +513,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:135
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:71
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:75
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:97
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:104
 msgid "Unsubscribe"
 msgstr ""
 
@@ -521,7 +522,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:51
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:139
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:73
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:99
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:106
 msgid "Subscribe"
 msgstr ""
 
@@ -568,6 +569,7 @@ msgid "Posts: <strong>%(n)s</strong>"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:85
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:33
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:28
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:23
 msgid "Topic"
@@ -589,21 +591,26 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:104
 #: inyoka_theme_ubuntuusers/templates/forum/forum.m.html:50
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:57
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:42
 msgid "Sticky:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:105
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:58
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:43
 msgid "Poll:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:106
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:49
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:59
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:44
 msgid "[Hidden]"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:107
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:60
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:45
 msgid "[Reported]"
 msgstr ""
@@ -625,6 +632,7 @@ msgid "by <a href=\"%(link)s\">%(author)s</a>"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum.html:124
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:68
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:61
 msgid "Go to page"
 msgstr ""
@@ -670,17 +678,18 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:12
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:14
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:84
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:93
 msgid "Edit"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/forum_edit.html:21
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:13
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:34
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:18
 #: inyoka_theme_ubuntuusers/templates/portal/feedselector.html:28
 #: inyoka_theme_ubuntuusers/templates/portal/overall.html:49
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:33
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:27
 msgid "Forum"
 msgstr ""
 
@@ -709,11 +718,11 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_groups.html:42
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_privileges.html:40
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_profile.html:48
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:46
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:30
 #: inyoka_theme_ubuntuusers/templates/portal/user_edit_status.html:49
 #: inyoka_theme_ubuntuusers/templates/portal/user_new.html:33
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/profile.html:80
-#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:70
+#: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:68
 msgid "Submit"
 msgstr ""
 
@@ -834,6 +843,34 @@ msgstr ""
 msgid "Do you want to hide the <a href=\"%(link)s\">post from %(author)s</a>?"
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:50
+msgid "Go to post"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:53
+#, python-format
+msgid "Posted on %(date)s</a>"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:64
+#, python-format
+msgid ""
+"<a href=\"%(link)s\">Posts</a> by <a href=\"%(userlink)s\">%(author)s</a>"
+" in this topic"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:78
+#, python-format
+msgid ""
+"<a href=\"%(link)s\">Posts</a> by <a href=\"%(userlink)s\">%(author)s</a>"
+" in this forum"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/postlist.html:87
+#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:82
+msgid "No topics were found."
+msgstr ""
+
 #: inyoka_theme_ubuntuusers/templates/forum/report.html:13
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:63
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:143
@@ -913,8 +950,8 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/planet/index.html:76
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.html:47
 #: inyoka_theme_ubuntuusers/templates/portal/privmsg/index.m.html:59
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:83
-#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:18
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:84
+#: inyoka_theme_ubuntuusers/templates/wiki/action_revert.html:17
 msgid "Restore"
 msgstr ""
 
@@ -924,7 +961,6 @@ msgid "Edited: %(date)s"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/revisions.html:28
-#: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:53
 msgid "Current revision"
 msgstr ""
 
@@ -1137,10 +1173,6 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:27
 msgid "Last reply"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/forum/topiclist.html:82
-msgid "No topics were found."
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/welcome.html:12
@@ -1946,6 +1978,7 @@ msgid "How"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/file_edit.html:14
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:20
 msgid "Create"
 msgstr ""
 
@@ -2025,13 +2058,6 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:97
 #: inyoka_theme_ubuntuusers/templates/portal/special_rights.html:27
 msgid "Member since"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/portal/group.html:39
-#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:47
-#: inyoka_theme_ubuntuusers/templates/portal/profile.html:101
-#: inyoka_theme_ubuntuusers/templates/portal/special_rights.html:28
-msgid "Posts"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/group_edit.html:15
@@ -2183,7 +2209,7 @@ msgstr ""
 msgid "Create a new user"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:60
+#: inyoka_theme_ubuntuusers/templates/portal/memberlist.html:58
 msgid "No users were found."
 msgstr ""
 
@@ -2278,6 +2304,10 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:88
 msgid "Launchpad username"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/portal/profile.html:101
+msgid "Posts"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/portal/profile.html:104
@@ -2423,7 +2453,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:26
+#: inyoka_theme_ubuntuusers/templates/portal/user_edit_settings.html:24
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/settings.html:28
 msgid "Interface"
 msgstr ""
@@ -2813,7 +2843,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach.html:35
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:36
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:30
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:31
 msgid "Edit summary:"
 msgstr ""
 
@@ -2866,7 +2896,6 @@ msgid "New attachment:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:13
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:86
 msgid "Backlinks"
 msgstr ""
 
@@ -2894,6 +2923,10 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_backlinks.html:56
 msgid "This article is an orphan and not referenced by any site."
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/action_create.html:13
+msgid "create"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_delete.html:15
@@ -2937,7 +2970,12 @@ msgid ""
 "changes</a> and compare individual revisions."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:34
+#: inyoka_theme_ubuntuusers/templates/wiki/action_diff.html:52
+#, python-format
+msgid " Revision %(new_rev)s "
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:35
 msgid "Save"
 msgstr ""
 
@@ -2977,17 +3015,18 @@ msgid ""
 "feed</a> or <a href=\"%(subscribe_link)s\">subscribe</a>."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:51
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:91
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:52
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:92
 msgid "Compare"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:80
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:81
 msgid "View"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:86
+#: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:87
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:45
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:79
 msgid "Raw"
 msgstr ""
 
@@ -3035,6 +3074,7 @@ msgid "Show log"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:41
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:74
 msgid "Show backlinks"
 msgstr ""
 
@@ -3043,10 +3083,12 @@ msgid "Export page:"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:46
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:80
 msgid "HTML"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:47
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:81
 msgid "AST"
 msgstr ""
 
@@ -3055,6 +3097,7 @@ msgid "Export metadata"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:51
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:75
 msgid "Manage attachments"
 msgstr ""
 
@@ -3064,6 +3107,7 @@ msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:57
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage_discussion.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:76
 msgid "Link discussion"
 msgstr ""
 
@@ -3207,6 +3251,8 @@ msgid "Category"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:44
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:20
 msgid "Tag Cloud"
 msgstr ""
 
@@ -3254,16 +3300,30 @@ msgstr ""
 msgid "Around the Wiki"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:83
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:77
+msgid "Export"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:78
+msgid "Metadata"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:92
 msgid "Article"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:85
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
 msgid "Log"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:101
 msgid "Discussion"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:15
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:13
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:20
+msgid "Tag List"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/pages_by_tag.html:21
@@ -3285,18 +3345,29 @@ msgstr ""
 msgid "Recent Changes are currently unavailable."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:22
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:21
 msgid ""
 "Wiki articles can be tagged by key words. The following tag list "
 "overviews them. This is useful to find more articles to a specified "
-"topic, etc."
+"topic, etc. There is also a complete <a href=\"/wiki/tags\">alphabetical "
+"list</a> of all tags in the wiki."
 msgstr ""
 
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:24
 #: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:25
 msgid "pages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:29
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_cloud.html:28
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:30
 msgid "There are no tags in the wiki, yet."
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/tag_list.html:21
+msgid ""
+"Wiki articles can be tagged by key words. The following alphabetical tag "
+"list shows all of them. This is useful to find more articles to a "
+"specified topic, etc. There is also a <a href=\"/wiki/tagcloud\">tag "
+"cloud</a> overviewing the most used tags of the wiki."
 msgstr ""
 

@@ -12,7 +12,7 @@
 {%- extends 'wiki/page.html' %}
 {% do BREADCRUMB.append(_('Link discussion'), page|url('manage_discussion'), True) %}
 {% block wiki_content %}
-  <form action="?action=manage_discussion" method="post">
+  <form action="{{ page|url('discussion')|e }}" method="post">
     {{ csrf_token() }}
     <p>
       {%- trans %}You can choose a topic as the discussion topic of this article.{% endtrans -%}
