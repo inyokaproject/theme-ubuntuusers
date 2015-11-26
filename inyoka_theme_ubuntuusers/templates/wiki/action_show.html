@@ -39,7 +39,7 @@
         At this page the following tags have been assigned:
       {%- endtrans %}
       {% for tag in tags -%}
-        <a href="wiki/tags/{{ tag|e }}">{{ tag|e }}</a>
+        <a href="{{ href('wiki', 'wiki', 'tags', tag|e) }}">{{ tag|e }}</a>
         {%- if not loop.last %}, {% endif %}
       {%- endfor %}
     {%- endif %}
