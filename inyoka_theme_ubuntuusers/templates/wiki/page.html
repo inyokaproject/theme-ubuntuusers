@@ -57,6 +57,7 @@
       <li><a href="{{ href('forum', 'forum', 'wiki') }}">{% trans %}Around the Wiki{% endtrans %}</a></li>
     </ul>
 
+{% if page %}
     <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
       <ul>
       {% if can %}
@@ -94,6 +95,7 @@
           </ul>
         </li>
     </ul>
+{% endif %}
   </div>
 {% endblock %}
 
