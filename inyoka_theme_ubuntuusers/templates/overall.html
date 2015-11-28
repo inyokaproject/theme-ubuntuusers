@@ -34,6 +34,10 @@
       <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css') }}" />
       <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css') }}" media="print" />
 
+      {% if special_day_css %}
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css) }}" />
+      {% endif %}
+
       {%- for title, url in feeds %}
         <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" />
       {%- endfor %}

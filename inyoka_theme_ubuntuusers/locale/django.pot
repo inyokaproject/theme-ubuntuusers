@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-26 11:19+0100\n"
+"POT-Creation-Date: 2015-11-28 18:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,30 +52,30 @@ msgstr ""
 msgid "Avatar of %(user)s"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:70
+#: inyoka_theme_ubuntuusers/templates/overall.html:74
 msgid "Please turn on JavaScript!"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:75
+#: inyoka_theme_ubuntuusers/templates/overall.html:79
 #, python-format
 msgid "Logout [%(user)s]"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:80
+#: inyoka_theme_ubuntuusers/templates/overall.html:84
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/overall.html:12
 msgid "Control panel"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:87
+#: inyoka_theme_ubuntuusers/templates/overall.html:91
 #, python-format
 msgid "Private messages (%(count)s)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:92
+#: inyoka_theme_ubuntuusers/templates/overall.html:96
 msgid "Private messages"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:99
+#: inyoka_theme_ubuntuusers/templates/overall.html:103
 #: inyoka_theme_ubuntuusers/templates/overall.m.html:64
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:13
 #: inyoka_theme_ubuntuusers/templates/portal/login.html:15
@@ -84,56 +84,56 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:104
+#: inyoka_theme_ubuntuusers/templates/overall.html:108
 msgid "Register"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:114
+#: inyoka_theme_ubuntuusers/templates/overall.html:118
 #: inyoka_theme_ubuntuusers/templates/forum/reportlist.html:12
 msgid "Reported topics"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:117
+#: inyoka_theme_ubuntuusers/templates/overall.html:121
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:13
 #: inyoka_theme_ubuntuusers/templates/ikhaya/suggestions.html:16
 msgid "Article suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:121
+#: inyoka_theme_ubuntuusers/templates/overall.html:125
 msgid "Spelling mistakes"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:125
+#: inyoka_theme_ubuntuusers/templates/overall.html:129
 msgid "Event suggestions"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:132
+#: inyoka_theme_ubuntuusers/templates/overall.html:136
 msgid "Admin"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:133
+#: inyoka_theme_ubuntuusers/templates/overall.html:137
 msgid "Turn admin links on/off"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:152
+#: inyoka_theme_ubuntuusers/templates/overall.html:156
 msgid "Search"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:175
+#: inyoka_theme_ubuntuusers/templates/overall.html:179
 msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:202
+#: inyoka_theme_ubuntuusers/templates/overall.html:206
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:204
+#: inyoka_theme_ubuntuusers/templates/overall.html:208
 #, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/overall.html:223
+#: inyoka_theme_ubuntuusers/templates/overall.html:227
 msgid "To mobile version"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:135
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:71
 #: inyoka_theme_ubuntuusers/templates/portal/usercp/subscriptions.html:75
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:104
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:116
 msgid "Unsubscribe"
 msgstr ""
 
@@ -522,7 +522,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/forum/topic.html:51
 #: inyoka_theme_ubuntuusers/templates/forum/topic.m.html:139
 #: inyoka_theme_ubuntuusers/templates/ikhaya/index.html:73
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:106
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:118
 msgid "Subscribe"
 msgstr ""
 
@@ -678,7 +678,7 @@ msgstr ""
 #: inyoka_theme_ubuntuusers/templates/portal/user_overview.html:12
 #: inyoka_theme_ubuntuusers/templates/wiki/action_attach_edit.html:14
 #: inyoka_theme_ubuntuusers/templates/wiki/action_edit.html:14
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:93
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:105
 msgid "Edit"
 msgstr ""
 
@@ -774,62 +774,68 @@ msgid "Filter"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:30
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:64
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:68
 msgid "My posts"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:31
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:35
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:40
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:39
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:44
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:48
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:52
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:56
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:60
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:64
 msgid "only here"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:34
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:65
-msgid "My topics"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:69
+msgid "Created topics"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:39
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:67
-msgid "New posts"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:38
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:70
+msgid "Involved topics"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:43
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:68
-msgid "Unanswered topics"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:72
+msgid "New posts"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:47
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:69
-msgid "Unsolved topics"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:73
+msgid "Unanswered topics"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:51
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:70
-msgid "24 hours"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:74
+msgid "Unsolved topics"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:55
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:71
-msgid "12 hours"
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:75
+msgid "24 hours"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/forum/page.html:59
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:72
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:76
+msgid "12 hours"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:63
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:77
 msgid "6 hours"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:82
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:84
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:87
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:89
 msgid "Create new forum"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/forum/page.html:87
+#: inyoka_theme_ubuntuusers/templates/forum/page.html:92
 msgid "Mark all forums as read"
 msgstr ""
 
@@ -3025,89 +3031,12 @@ msgid "View"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/action_log.html:87
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:45
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:79
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:91
 msgid "Raw"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:15
-msgid "The following features are available for this page:"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:18
-msgid "Show page"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:21
-msgid "Edit page"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:24
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:62
-msgid "Rename page"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:27
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:64
-msgid "Delete page"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:31
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:36
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:67
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:72
-msgid "Mark page as “under construction”"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:33
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:69
-msgid "Move page to “discontinued”"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:34
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:70
-msgid "Move page back to the wiki"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:40
-msgid "Show log"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:41
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:74
-msgid "Show backlinks"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:44
-msgid "Export page:"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:46
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:80
-msgid "HTML"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:47
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:81
-msgid "AST"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:48
-msgid "Export metadata"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:51
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:75
-msgid "Manage attachments"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:54
-msgid "Prune cache"
-msgstr ""
-
-#: inyoka_theme_ubuntuusers/templates/wiki/action_manage.html:57
 #: inyoka_theme_ubuntuusers/templates/wiki/action_manage_discussion.html:13
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:76
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:78
 msgid "Link discussion"
 msgstr ""
 
@@ -3300,23 +3229,60 @@ msgstr ""
 msgid "Around the Wiki"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:77
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:64
+msgid "Rename page"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:66
+msgid "Delete page"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:70
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:75
+msgid "Mark page as “under construction”"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:72
+msgid "Move page to “discontinued”"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:73
+msgid "Move page back to the wiki"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:82
+msgid "Manage attachments"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:85
+msgid "Show backlinks"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:88
 msgid "Export"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:78
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:90
 msgid "Metadata"
 msgstr ""
 
 #: inyoka_theme_ubuntuusers/templates/wiki/page.html:92
+msgid "HTML"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:93
+msgid "AST"
+msgstr ""
+
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:104
 msgid "Article"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:94
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:106
 msgid "Log"
 msgstr ""
 
-#: inyoka_theme_ubuntuusers/templates/wiki/page.html:101
+#: inyoka_theme_ubuntuusers/templates/wiki/page.html:113
 msgid "Discussion"
 msgstr ""
 
