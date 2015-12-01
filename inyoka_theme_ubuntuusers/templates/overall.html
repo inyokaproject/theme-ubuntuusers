@@ -210,13 +210,8 @@
             {%- endtrans %}
           {% endif %}
           <br />
-          {%- if INYOKA_REVISION -%}
-          Inyoka {{ INYOKA_REVISION['tag'] }}
-            {%- if SETTINGS.DEBUG -%}
-              -{{ INYOKA_REVISION['commit'] }}
-            {%- endif -%}
-          {%- else -%}
-            Inyoka revision unavailable
+          {%- if INYOKA_VERSION -%}
+          Inyoka {{ INYOKA_VERSION }}
           {%- endif -%}
           {%- if SETTINGS.DEBUG -%}
             <br />
