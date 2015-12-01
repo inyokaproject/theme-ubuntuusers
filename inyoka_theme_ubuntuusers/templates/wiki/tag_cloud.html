@@ -11,13 +11,11 @@
 
 {%- extends 'wiki/page.html' %}
 {% do BREADCRUMB.append(_('Tag Cloud'), href('wiki', 'wiki/tagcloud'), True) %}
-{% set styles = styles|default([]) + ['wiki', 'highlight'] %}
-{% set active_app = 'wiki' %}
 
 {% block wiki_content %}
   <div class="main_content">
     {% if tag_list %}
-      <h1>{% trans %}Tag Cloud{% endtrans %}</h1>
+      <h1 class="pagetitle">{% trans %}Tag Cloud{% endtrans %}</h1>
       <p>{% trans %}Wiki articles can be tagged by key words. The following tag list overviews them. This is useful to find more articles to a specified topic, etc. There is also a complete <a href="/wiki/tags">alphabetical list</a> of all tags in the wiki.{% endtrans %}</p>
       <div class="tagcloud">
       {% for tag in tag_list %}
