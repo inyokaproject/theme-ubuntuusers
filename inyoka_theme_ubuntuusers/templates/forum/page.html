@@ -27,16 +27,17 @@
           {%- if forum %}
             {%- if USER.is_authenticated() %}
               <li>
+                <a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a>
+                <a href="{{ href('forum', 'egosearch', forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
+              </li>
+
+              <li>
                 <a href="{{ href('forum', 'author', USER.username|e) }}">{% trans %}My posts{% endtrans %}</a>
                 <a href="{{ href('forum', 'author', USER.username|e, 'forum', forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
               </li>
               <li>
                 <a href="{{ href('forum', 'topic_author', USER.username|e) }}">{% trans %}Created topics{% endtrans %}</a>
                 <a href="{{ href('forum', 'topic_author', USER.username|e, forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
-              </li>
-              <li>
-                <a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a>
-                <a href="{{ href('forum', 'egosearch', forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
               </li>
             {%- endif %}
             <li>
@@ -65,9 +66,9 @@
             </li>
           {% else %}
             {%- if USER.is_authenticated() %}
+              <li><a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a></li>
               <li><a href="{{ href('forum', 'author', USER.username|e) }}">{% trans %}My posts{% endtrans %}</a></li>
               <li><a href="{{ href('forum', 'topic_author', USER.username)|e }}">{% trans %}Created topics{% endtrans %}</a></li>
-              <li><a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a></li>
             {%- endif %}
             <li><a href="{{ href('forum', 'newposts') }}">{% trans %}New posts{% endtrans %}</a></li>
             <li><a href="{{ href('forum', 'unanswered') }}">{% trans %}Unanswered topics{% endtrans %}</a></li>
