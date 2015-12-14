@@ -3,3 +3,4 @@ Der Benutzer „{{ rev_username }}“ hat die Wiki-Seite „{{ page_title }}“ 
 Änderungsnotiz: „{{ rev_note }}“
 {%- endif %}
 Unterschiede: {{ diff_url }}
+Alle aktuellen Änderungen: {{ changes_url }}
