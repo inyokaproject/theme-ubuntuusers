@@ -5,5 +5,6 @@ der Benutzer „{{ rev_username }}“ hat die Wiki-Seite „{{ page_name }}“ v
 Es wurde folgende Änderungsnotiz angegeben: „{{ rev_note }}“
 {% endif %}
 Du kannst dir die Änderungen hier ansehen: {{ diff_url }}
+Oder dir hier alle Änderungen seit deinem letzten Besuch anzeigen lassen: {{ changes_url }}
 
 Falls du bei Veränderungen an dieser Seite in Zukunft nicht mehr benachrichtigt werden willst, so kannst du das hier deaktivieren: {{ unsubscribe_url }}
