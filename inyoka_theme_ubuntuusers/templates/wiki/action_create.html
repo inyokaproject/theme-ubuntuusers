@@ -12,6 +12,7 @@
 {%- extends 'wiki/page.html' %}
 {% do BREADCRUMB.append(_('create'), href('wiki', 'create'), True) %}
 {% block wiki_content %}
+<p>{{ help_text }}</p>
 <form action="{{ href('wiki', 'wiki', 'create') }}" method="post">
   {{ csrf_token() }}
   <table>
