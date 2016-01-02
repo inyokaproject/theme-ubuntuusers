@@ -32,8 +32,9 @@
 
 {% block sidebar %}
   <div class="container">
-
-    {% include sidebar/config.html %}
+    {% if can and can.manage %}
+      {% include 'wiki/sidebar/config.html' %}
+    {% endif %}
 
     <h3 class="navi_wiki">{% trans %}Wiki{% endtrans %}</h3>
     <ul>
@@ -63,6 +64,10 @@
       <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Fehlerhaft', 'a', 'backlinks') }}">{% trans %}Incorrect Articles{% endtrans %}</a></li>
       <li><a href="{{ href('forum', 'forum', 'wiki') }}">{% trans %}Around the Wiki{% endtrans %}</a></li>
     </ul>
+
+    {% if not can or not can.manage %}
+      {% include 'wiki/sidebar/config.html' %}
+    {% endif %}
   </div>
 {% endblock %}
 
