@@ -32,45 +32,10 @@
 
 {% block sidebar %}
   <div class="container">
-{% if page %}
-    <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
-      <ul>
-      {% if can %}
-        {% if can.manage %}
-          <li><a href="{{ page|url('rename') }}">{% trans %}Rename page{% endtrans %}</a></li>
-          {% if can.delete %}
-            <li><a href="{{ page|url('delete') }}">{% trans %}Delete page{% endtrans %}</a></li>
-          {% endif %}
+    {% if can and can.manage %}
+      {% include 'wiki/sidebar/config.html' %}
+    {% endif %}
 
-          {% if page.name.startswith('Baustelle/Verlassen') %}
-            <li><a href="{{ page|url('mv_baustelle') }}">{% trans %}Mark page as “under construction”{% endtrans %}</a></li>
-          {% elif page.name.startswith('Baustelle') %}
-            <li><a href="{{ page|url('mv_discontinued') }}">{% trans %}Move page to “discontinued”{% endtrans %}</a></li>
-            <li><a href="{{ page|url('mv_back') }}">{% trans %}Move page back to the wiki{% endtrans %}</a></li>
-          {% else %}
-            <li><a href="{{ page|url('mv_baustelle') }}">{% trans %}Mark page as “under construction”{% endtrans %}</a></li>
-          {% endif %}
-
-          <li><a href="{{ page|url('discussion') }}">{% trans %}Link discussion{% endtrans %}</a></li>
-        {% endif %}
-
-        {% if can.attach %}
-          <li><a href="{{ page|url('attachments') }}">{% trans %}Manage attachments{% endtrans %}</a></li>
-        {% endif %}
-      {% endif %}
-
-        <li><a href="{{ page|url('backlinks') }}">{% trans %}Show backlinks{% endtrans %}</a></li>
-        <li>
-          {% trans %}Export{% endtrans %}
-          <ul>
-            <li><a href="{{ page|url('export', format='meta') }}">{% trans %}Metadata{% endtrans %}</a></li>
-            <li><a href="{{ page|url('export', format='raw') }}">{% trans %}Raw{% endtrans %}</a></li>
-            <li><a href="{{ page|url('export', format='html') }}">{% trans %}HTML{% endtrans %}</a></li>
-            <li><a href="{{ page|url('export', format='ast') }}">{% trans %}AST{% endtrans %}</a></li>
-          </ul>
-        </li>
-    </ul>
-{% endif %}
     <h3 class="navi_wiki">{% trans %}Wiki{% endtrans %}</h3>
     <ul>
       <li><a href="{{ href('wiki', 'Wiki', 'Index') }}">{% trans %}Index{% endtrans %}</a></li>
@@ -85,6 +50,7 @@
       <li><a href="{{ href('wiki', 'Kategorien') }}">{% trans %}Category{% endtrans %}</a></li>
       <li><a href="{{ href('wiki', 'wiki', 'tagcloud') }}">{% trans %}Tag Cloud{% endtrans %}</a></li>
     </ul>
+
     <h3 class="navi_join">{% trans %}Participation{% endtrans %}</h3>
     <ul>
       <li><a href="{{ href('wiki', 'Wikiartikel_anlegen') }}">{% trans %}Create a wiki article{% endtrans %}</a></li>
@@ -98,6 +64,10 @@
       <li><a href="{{ href('wiki', 'Wiki', 'Vorlagen', 'Fehlerhaft', 'a', 'backlinks') }}">{% trans %}Incorrect Articles{% endtrans %}</a></li>
       <li><a href="{{ href('forum', 'forum', 'wiki') }}">{% trans %}Around the Wiki{% endtrans %}</a></li>
     </ul>
+
+    {% if not can or not can.manage %}
+      {% include 'wiki/sidebar/config.html' %}
+    {% endif %}
   </div>
 {% endblock %}
 
