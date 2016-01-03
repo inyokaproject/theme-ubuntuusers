@@ -26,6 +26,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     uglify: {
       options: {
         banner: '/**\n<%= banner %>',
@@ -45,6 +46,8 @@ module.exports = function(grunt) {
         extDot: 'last',
       }
     },
+
+
     jshint: {
       options: {
         curly: true,
@@ -66,6 +69,8 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       }
     },
+
+
     watch: {
       options: {
         atBegin: true
@@ -87,6 +92,8 @@ module.exports = function(grunt) {
         tasks: ['less'],
       }
     },
+
+
     sprite: {
       editor: {
         src: [
@@ -147,6 +154,8 @@ module.exports = function(grunt) {
         algorithm: 'top-down'
       }
     },
+
+
     less: {
       production: {
         options: {
