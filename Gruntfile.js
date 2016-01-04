@@ -12,6 +12,21 @@ module.exports = function(grunt) {
             ' * :license: <%= pkg.license %>\n' +
             ' */\n',
     // Task configuration.
+    compress: {
+      main: {
+        options: {
+          mode: 'gzip',
+          level: 9, // best compression, see http://zlib.net/manual.html#Constants
+        },
+        files: [
+          {expand: true, src: ['inyoka_theme_ubuntuusers/static/js/**/*.min.js'], ext: '.js.gz', extDot: 'last'},
+          {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.css', '!inyoka_theme_ubuntuusers/static/font/**'], ext: '.css.gz', extDot: 'last'},
+          {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.ico'], ext: '.ico.gz', extDot: 'last'},
+        ]
+      }
+    },
+
+
     uglify: {
       options: {
         banner: '/**\n<%= banner %>',
@@ -31,6 +46,8 @@ module.exports = function(grunt) {
         extDot: 'last',
       }
     },
+
+
     jshint: {
       options: {
         curly: true,
@@ -52,6 +69,8 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       }
     },
+
+
     watch: {
       options: {
         atBegin: true
@@ -73,6 +92,8 @@ module.exports = function(grunt) {
         tasks: ['less'],
       }
     },
+
+
     sprite: {
       editor: {
         src: [
@@ -133,6 +154,8 @@ module.exports = function(grunt) {
         algorithm: 'top-down'
       }
     },
+
+
     less: {
       production: {
         options: {
@@ -163,6 +186,7 @@ module.exports = function(grunt) {
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -171,6 +195,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-spritesmith');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'uglify', 'compress']);
 
 };

@@ -1,5 +1,6 @@
 *.css
 *.egg-info
+*.gz
 *.min.js
 *.py[cod]
 
