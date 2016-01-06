@@ -12,11 +12,10 @@
 {% set name = _('Rules') %}
 
 {% block forum_content %}
-  <h1>{{ message.title|e }}</h1>
-  {{ message.text_rendered }}
+  <h1>{{ forum.welcome_title|e }}</h1>
+  {{ forum.welcome_text_rendered }}
   <form method="post" action="{{ forum|url('welcome') }}">
     {{ csrf_token() }}
-    <input type="hidden" name="goto_url" value="{{ goto_url|e }}" />
     <input type="submit" name="accept" value="{% trans %}Read and accepted{% endtrans %}" />
     <input type="submit" name="cancel" value="{% trans %}Reject{% endtrans %}" />
   </form>
