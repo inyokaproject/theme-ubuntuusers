@@ -7,11 +7,11 @@
     :copyright: (c) 2007-2016 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
-{% macro render_forum(forum, subforums, last_posts) %}
+{% macro render_forum(user, forum, subforums, last_posts) %}
   <tr class="entry category-{{ forum.parent_id }}">
 
     <td class="icon">
-      {%- if forum.get_read_status(REQUEST.user) %}
+      {%- if forum.get_read_status(user) %}
       <img src="{{ href('static', 'img', 'forum/forum.png') }}" alt="{% trans %}Forum read{% endtrans %}" />
       {%- else %}
       <img src="{{ href('static', 'img', 'forum/forum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}" />
@@ -20,7 +20,7 @@
     <td class="forum" colspan="3">
       <p class="name">
         <a href="{{ forum|url }}" class="title">{{ forum.name|e }}</a>
-        {%- if REQUEST.user.can('forum_edit') -%}
+        {%- if user.can('forum_edit') -%}
           <a href="{{ href('forum', 'forum', forum.slug, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
         {%- endif -%}
       </p>
@@ -31,7 +31,7 @@
       {%- if subforums %}
         <p class="subforums">{% trans %}Subforums:{% endtrans %}
           {%- for subforum in subforums %}
-            {%- if not subforum.get_read_status(REQUEST.user) %}
+            {%- if not subforum.get_read_status(user) %}
               <img src="{{ href('static', 'img/forum/subforum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}" />
             {%- endif %}
               <a href="{{ subforum|url }}">{{ subforum.name|e }}</a>{% if not loop.last %}, {% endif %}

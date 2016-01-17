@@ -35,7 +35,7 @@
           </th>
         </tr>
         {%- for forum, subforums in forums -%}
-          {{ render_forum(forum, subforums, last_posts) }}
+          {{ render_forum(USER, forum, subforums, last_posts) }}
         {%- else %}
           <tr class="empty category-{{ category.id }}">
             <td colspan="5">{% trans %}This category does not contain any forum.{% endtrans %}</td>

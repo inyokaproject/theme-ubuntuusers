@@ -79,7 +79,7 @@
     </thead>
     <tbody>
     {%- for subforum in subforums %}
-      {{ render_forum(subforum, subforum.children, last_posts) }}
+      {{ render_forum(USER, subforum, subforum.children, last_posts) }}
     {%- endfor %}
     <tr>
       <th class="topic" colspan="2">{% trans %}Topic{% endtrans %}</th>
