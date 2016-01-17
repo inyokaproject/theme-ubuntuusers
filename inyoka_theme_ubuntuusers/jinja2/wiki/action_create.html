@@ -13,7 +13,7 @@
 {% do BREADCRUMB.append(_('create'), href('wiki', 'create'), True) %}
 {% block wiki_content %}
 <form action="{{ href('wiki', 'wiki', 'create') }}" method="post">
-  {{ csrf_token() }}
+  {{ csrf_input }}
   <table>
   {{ form.as_table() }}
   </table>

@@ -24,7 +24,7 @@
 
   {%- if forum_form %}
   <form action="/feeds/forum/" method="post" id="forum">
-  {{ csrf_token() }}
+  {{ csrf_input }}
   <h4>{% trans %}Forum{% endtrans %}</h4>
 
   <dl>
@@ -63,7 +63,7 @@
   {%- endif %}
   {%- if ikhaya_form %}
   <form action="/feeds/ikhaya/" method="post" id="ikhaya">
-  {{ csrf_token() }}
+  {{ csrf_input }}
   <h4>Ikhaya</h4>
 
   <dl>
@@ -83,7 +83,7 @@
   {%- endif %}
   {%- if planet_form %}
   <form action="/feeds/planet/" method="post" id="planet">
-  {{ csrf_token() }}
+  {{ csrf_input }}
   <h4>{% trans %}Planet{% endtrans %}</h4>
   <dl>
     <dt>{% trans %}How{% endtrans %}</dt>
@@ -100,7 +100,7 @@
   {%- endif %}
   {%- if wiki_form %}
   <form action="/feeds/wiki/" method="post" id="wiki">
-  {{ csrf_token() }}
+  {{ csrf_input }}
   <h4>{% trans %}Wiki{% endtrans %}</h4>
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>

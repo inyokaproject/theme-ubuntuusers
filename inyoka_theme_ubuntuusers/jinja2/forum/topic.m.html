@@ -26,7 +26,7 @@
   {%- endif %}
   {% if polls %}
     <form action="" method="post" class="poll">
-      {{ csrf_token() }}
+      {{ csrf_input }}
       {%- for poll in polls %}
         <div class="poll">
           <div><strong>{{ poll.question|e }}</strong></div>
