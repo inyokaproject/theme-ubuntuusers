@@ -13,7 +13,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Difference'), '', True) %} {# XXX: url? #}
+{% do BREADCRUMBS.append(_('Difference'), '') %}
 {% set action = 'log' %}
 {% block wiki_content %}
   <div class="main_content">

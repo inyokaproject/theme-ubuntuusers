@@ -12,7 +12,7 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(_('Groups'), href('portal', 'groups'), True) %}
+{% do BREADCRUMBS.append(_('Groups'), href('portal', 'groups')) %}
 {% block content %}
   <h3>{% trans %}Groups{% endtrans %}</h3>
   <p>

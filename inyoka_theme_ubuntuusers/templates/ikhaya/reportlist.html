@@ -9,7 +9,7 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 
-{% do BREADCRUMB.append(_('Reports'), href('ikhaya', 'reports'), True) %}
+{% do BREADCRUMBS.append(_('Reports'), href('ikhaya', 'reports')) %}
 
 {% block ikhaya_content %}
   {%- for report in reports %}

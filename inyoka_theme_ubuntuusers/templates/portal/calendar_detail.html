@@ -16,9 +16,9 @@
 {% set styles = ['calendar'] %}
 {% set month = event.date.month %}
 {% set year = event.date.year %}
-{% do BREADCRUMB.append(event.name, event|url, True) %}
-{% do BREADCRUMB.append('%s %d'|format(MONTHS[month], year), href('portal', 'calendar', year, '%02d' % month), True) %}
-{% do BREADCRUMB.append('Kalender', href('portal', 'calendar')) %}
+{% do BREADCRUMBS.append(event.name, event|url) %}
+{% do BREADCRUMBS.append('%s %d'|format(MONTHS[month], year), href('portal', 'calendar', year, '%02d' % month)) %}
+{% do BREADCRUMBS.append('Kalender', href('portal', 'calendar')) %}
 
 {% block portal_content %}
 <h3>

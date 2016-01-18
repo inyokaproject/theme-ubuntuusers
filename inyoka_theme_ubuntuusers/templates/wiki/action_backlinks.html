@@ -10,7 +10,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Backlinks'), page|url('backlinks'), True) %}
+{% do BREADCRUMBS.append(_('Backlinks'), page|url('backlinks')) %}
 {% set action = 'backlinks' %}
 {% block wiki_content %}
   {%- if page.backlinks %}

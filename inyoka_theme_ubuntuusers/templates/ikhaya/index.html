@@ -19,7 +19,7 @@
     (name + _('Teaser'), href('ikhaya', 'feeds', category.slug, 'short/20')),
     (name + _('Full'), href('ikhaya', 'feeds', category.slug, 'full/20')),
   ] %}
-  {% do BREADCRUMB.append(category.name, category|url, True) %}
+  {% do BREADCRUMBS.append(category.name, category|url) %}
 {% else %}
   {% set feeds = [
     (_('News') + ' - ' + _('Captions'), href('ikhaya', 'feeds/title/20')),

@@ -12,7 +12,7 @@
 
 {%- extends 'wiki/page.html' %}
 
-{% do BREADCRUMB.append('Dateianhang hinzufügen', page|url('attach'), True) %}
+{% do BREADCRUMBS.append('Dateianhang hinzufügen', page|url('attach')) %}
 {% set action = 'manage' %}
 {% set styles = ['editor'] %}
 {% set scripts = ['WikiEditor'] %}

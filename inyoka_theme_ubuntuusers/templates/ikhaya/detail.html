@@ -10,7 +10,7 @@
 {%- extends 'ikhaya/page.html' %}
 {% from 'macros.html' import render_form, add_user_avatar %}
 
-{% do BREADCRUMB.append(article.subject, article|url, True) %}
+{% do BREADCRUMBS.append(article.subject, article|url) %}
 {% set styles = ['editor']%}
 {% set scripts = ['WikiEditor'] %}
 {% set feed = 'feeds/comments/%s/%%s/20'|format(article.id) %}

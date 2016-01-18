@@ -10,7 +10,7 @@
 #}
 {%- extends 'overall.html' %}
 
-{% do BREADCRUMB.append(_('Planet'), href('planet'), True) %}
+{% do BREADCRUMBS.append(_('Planet'), href('planet')) %}
 {% set active_app = 'planet' %}
 {% set navi_type  = 'sidebar' %}
 {% set styles = styles|default([]) + ['planet'] %}

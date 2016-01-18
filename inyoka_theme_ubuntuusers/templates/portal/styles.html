@@ -11,7 +11,7 @@
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
 
-{% do BREADCRUMB.append(_('Stylesheets'), href('portal', ''), True) %}
+{% do BREADCRUMBS.append(_('Stylesheets'), href('portal', '')) %}
 
 {% block content %}
   <h3>{% trans %}Stylesheets{% endtrans %}</h3>

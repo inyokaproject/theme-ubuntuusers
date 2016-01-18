@@ -12,8 +12,8 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(group.name, group|url, True) %}
-{% do BREADCRUMB.append(_('Groups'), href('portal', 'groups'), True) %}
+{% do BREADCRUMBS.append(group.name, group|url) %}
+{% do BREADCRUMBS.append(_('Groups'), href('portal', 'groups')) %}
 {% block content %}
   <h3>{{ group.name|e }}</h3>
   <p>
