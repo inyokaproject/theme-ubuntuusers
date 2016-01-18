@@ -12,7 +12,7 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
+{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
 {% set scripts = ['DateTime'] %}
 {% set styles = ['datetimefield'] %}
 {% block content %}

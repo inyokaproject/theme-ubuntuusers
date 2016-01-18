@@ -10,8 +10,8 @@
 {%- extends 'portal/user_admin.html' %}
 {% from 'macros.html' import render_form %}
 
-{% do BREADCRUMB.append(_('Create user'), href('portal', 'user', 'new'), True) %}
-{% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
+{% do BREADCRUMBS.append(_('Create user'), href('portal', 'user', 'new')) %}
+{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
 
 {% block content %}
   <form action="" method="post" id="user_edit_form">

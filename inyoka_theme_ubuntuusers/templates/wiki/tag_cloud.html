@@ -10,7 +10,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Tag Cloud'), href('wiki', 'wiki/tagcloud'), True) %}
+{% do BREADCRUMBS.append(_('Tag Cloud'), href('wiki', 'wiki/tagcloud')) %}
 
 {% block wiki_content %}
   <div class="main_content">

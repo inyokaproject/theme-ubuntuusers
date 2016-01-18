@@ -10,7 +10,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Link discussion'), page|url('manage_discussion'), True) %}
+{% do BREADCRUMBS.append(_('Link discussion'), page|url('manage_discussion')) %}
 {% block wiki_content %}
   <form action="{{ page|url('discussion')|e }}" method="post">
     {{ csrf_token() }}

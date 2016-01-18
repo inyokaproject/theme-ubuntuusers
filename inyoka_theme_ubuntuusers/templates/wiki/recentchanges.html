@@ -11,7 +11,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Recent Changes'), '', True) %}
+{% do BREADCRUMBS.append(_('Recent Changes'), '') %}
 {% set action = 'log' %}
 {% block wiki_content %}
   <div class="main_content">

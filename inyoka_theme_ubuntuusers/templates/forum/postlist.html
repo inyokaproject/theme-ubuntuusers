@@ -14,12 +14,12 @@
 {% set rendered_pagination = render_pagination(pagination) %}
 
 {% if forum %}
-    {% do BREADCRUMB.append(forum.name, href('forum', 'author', username|e, 'forum', forum.slug), True) %}
+    {% do BREADCRUMBS.append(forum.name, href('forum', 'author', username|e, 'forum', forum.slug)) %}
 {% endif %}
 {% if topic %}
-    {% do BREADCRUMB.append(topic.title, href('forum', 'author', username|e, 'topic', topic.slug), True) %}
+    {% do BREADCRUMBS.append(topic.title, href('forum', 'author', username|e, 'topic', topic.slug)) %}
 {% endif %}
-{% do BREADCRUMB.append(username, href('forum', 'author', username|e), True) %}
+{% do BREADCRUMBS.append(username, href('forum', 'author', username|e)) %}
 
 
 {% block forum_content %}
@@ -75,7 +75,7 @@
               <a href="{{ post.topic.forum|url }}">{{ post.topic.forum.name|e }}</a>
             </p>
             <p class="description note">
-              {% trans author=username|e, 
+              {% trans author=username|e,
                     userlink=href('portal', 'user', username|e),
                     link=href('forum', 'author', username|e, 'forum', post.topic.forum.slug) %}<a href="{{ link }}">Posts</a> by <a href="{{ userlink }}">{{ author }}</a> in this forum{% endtrans %}
             </p>

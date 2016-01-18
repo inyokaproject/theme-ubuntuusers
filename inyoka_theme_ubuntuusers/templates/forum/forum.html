@@ -35,9 +35,10 @@
   (name + _('Teaser'), href('forum', 'feeds/forum', forum.slug, 'short/20')),
   (name + _('Full post'), href('forum', 'feeds/forum', forum.slug, 'full/20'))
 ] %}
-{% do BREADCRUMB.append(forum.name, forum|url, True) %}
+
+{% do BREADCRUMBS.append(forum.name, forum|url) %}
 {% for parent in forum.parents %}
-  {% do BREADCRUMB.append(parent.name, parent|url, False) %}
+  {% do BREADCRUMBS.append(parent.name, parent|url) %}
 {% endfor %}
 
 {% block search_areas %}

@@ -11,8 +11,8 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(active_tag|e, '', True) %}
-{% do BREADCRUMB.append(_('Tag List'), href('wiki', 'wiki/tags'), True) %}
+{% do BREADCRUMBS.append(active_tag|e, '') %}
+{% do BREADCRUMBS.append(_('Tag List'), href('wiki', 'wiki/tags')) %}
 
 {% block wiki_content %}
   <div class="main_content">

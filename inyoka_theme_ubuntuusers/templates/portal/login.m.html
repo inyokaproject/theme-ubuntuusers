@@ -10,7 +10,7 @@
 
 {%- extends 'portal/overall.m.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMB.append('Login', href('portal', 'login'), True) %}
+{% do BREADCRUMBS.append('Login', href('portal', 'login')) %}
 {% block content %}
   <h3>Login</h3>
   <p>

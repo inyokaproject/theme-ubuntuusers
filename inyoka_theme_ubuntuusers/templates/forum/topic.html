@@ -10,19 +10,20 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
-{% from 'macros.html' import breadcrumb, render_pagination, add_user_avatar %}
+{% from 'macros.html' import render_pagination, add_user_avatar %}
 {% from 'forum/_forum.html' import render_article_list %}
 
-{% do BREADCRUMB.append(topic.title, topic|url, True) %}
 {% set name = topic.title|e %}
 {% set feeds = [
-  (name + ' - ' + _('Captions'), href('forum', 'feeds/topic', topic.slug, 'title/20')),
-  (name + ' - ' + _('Teaser'), href('forum', 'feeds/topic', topic.slug, 'short/20')),
-  (name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
+(name + ' - ' + _('Captions'), href('forum', 'feeds/topic', topic.slug, 'title/20')),
+(name + ' - ' + _('Teaser'), href('forum', 'feeds/topic', topic.slug, 'short/20')),
+(name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
 ] %}
-{% do BREADCRUMB.append(forum.name, forum|url, True) %}
+
+{% do BREADCRUMBS.append(topic.title, topic|url) %}
+{% do BREADCRUMBS.append(forum.name, forum|url) %}
 {% for parent in forum.parents[:-1] %}
-  {% do BREADCRUMB.append(parent.name, parent|url, False) %}
+  {% do BREADCRUMBS.append(parent.name, parent|url) %}
 {% endfor %}
 
 {% set rendered_pagination = render_pagination(pagination) %}
