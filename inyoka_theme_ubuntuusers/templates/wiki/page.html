@@ -11,7 +11,7 @@
 {% extends 'overall.html' %}
 
 {% if page %}
-  {% for part in page.title.split('/') %}
+  {% for part in page.title.split('/')|reverse %}
     {% if loop.first %}
       {% set link = href('wiki', part) %}
     {% else %}
