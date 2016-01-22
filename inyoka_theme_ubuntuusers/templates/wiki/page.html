@@ -15,7 +15,8 @@
     {% if loop.first %}
       {% set link = href('wiki', part) %}
     {% else %}
-      {% set link = link + '/' + part %}
+      {% set sep = '' if link[-1] == '/' else '/' %}
+      {% set link = link + sep + part %}
     {% endif %}
     {% do BREADCRUMBS.append(part, link) %}
   {% endfor %}
