@@ -112,3 +112,12 @@
     src="{{ user.avatar_url|default(href('static', 'img', 'portal', 'no_avatar.png'), true)|e }}"
     alt="{% trans user=user.username|e %}Avatar of {{ user }}{% endtrans %}" />
 {% endmacro %}
+
+{% macro create_title(breadcrumb_list) %}
+  {% set title_parts = ['ubuntuusers.de'] %} {# TODO: use settings.BASE_DOMAIN_NAME #}
+  {% for b in breadcrumb_list %}
+    {% do title_parts.append(b[0]) %}
+  {% endfor %}
+
+  {{ title_parts|reverse|join(' › ') }}
+{% endmacro %}

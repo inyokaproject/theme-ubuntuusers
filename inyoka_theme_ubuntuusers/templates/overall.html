@@ -12,6 +12,8 @@
 {% from 'macros.html' import breadcrumb, render_modnavi_li %}
 {% import 'macros.html' as macros %}
 
+{% set BREADCRUMBS = BREADCRUMBS|default([]) %}
+
 {{- XHTML_DTD }}
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:cc="http://creativecommons.org/ns#"
@@ -21,7 +23,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
-      {{ BREADCRUMBS.labels|reverse|join(' › ') }}
+      {{ macros.create_title(BREADCRUMBS) }}
     </title>
     {% block html_head %}
       {% if deny_robots %}
@@ -141,11 +143,11 @@
             </div>
           </div>
         {% endif %}
-        {% if BREADCRUMBS.path|length < 2 %}
+        {% if BREADCRUMBS|length < 2 %}
           <h1>{% trans %}Portal{% endtrans %}</h1>
         {% else %}
-          <h1><a href="{{ (BREADCRUMBS.path|first)[1] }}" class="separator">{{ (BREADCRUMBS.path|first)[0]|e }}</a></h1>
-            <h2><a href="{{ (BREADCRUMBS.path|last)[1] }}">{{ (BREADCRUMBS.path|last)[0]|e }}</a></h2>
+          <h1><a href="{{ (BREADCRUMBS|first)[1] }}" class="separator">{{ (BREADCRUMBS|first)[0]|e }}</a></h1>
+            <h2><a href="{{ (BREADCRUMBS|last)[1] }}">{{ (BREADCRUMBS|last)[0]|e }}</a></h2>
         {% endif %}
       </div>{# .appheader #}
 
@@ -172,7 +174,7 @@
         {% block breadcrumb %}
           <div class="breadcrumb">
             <ol>
-              {% for breadcrumb in BREADCRUMBS.path %}
+              {% for breadcrumb in BREADCRUMBS %}
                   <li><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
               {% endfor %}
             </ol>
