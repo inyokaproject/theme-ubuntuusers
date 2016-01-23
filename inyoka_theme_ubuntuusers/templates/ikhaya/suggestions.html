@@ -10,7 +10,7 @@
 #}
 
 {%- extends 'ikhaya/page.html' %}
-{% do BREADCRUMBS.append(_('Article suggestions'), href('ikhaya', 'suggestions')) %}
+{% set BREADCRUMBS = [(_('Article suggestions'), href('ikhaya', 'suggestions'))] + BREADCRUMBS|d([]) %}
 
 {% block ikhaya_content %}
   <h3>{% trans %}Article suggestions{% endtrans %}</h3>

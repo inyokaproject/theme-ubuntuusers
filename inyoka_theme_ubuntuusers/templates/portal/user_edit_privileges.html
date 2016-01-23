@@ -1,6 +1,6 @@
 {#
     portal/user_edit_privileges.html
-    ~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Manage the privileges of a user.
 
@@ -9,10 +9,9 @@
 #}
 {%- extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMBS.append(_('Privileges'), href('portal', 'user', user.username, 'edit', 'privileges')) %}
-{% do BREADCRUMBS.append(_('Edit'), href('portal', 'user', user.username, 'edit')) %}
-{% do BREADCRUMBS.append(user.username, user|url) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Privileges'), href('portal', 'user', user.username, 'edit', 'privileges')),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')), (user.username, user|url),
+                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% macro render_grouplist(derived) %}
   {% for group in derived %}<a href="{{ group|url }}">{{ group.name|e }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
@@ -21,7 +20,7 @@
 {% block content %}
   {{ super() }}
   <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     <h3>{% trans %}Privileges{% endtrans %}</h3>
       {%- for id, name, checked, derived in permissions %}
         <input type="checkbox" name="permissions" value="{{ id }}" id="perm_{{ id }}"

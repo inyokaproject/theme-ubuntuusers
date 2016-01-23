@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'pastebin/page.html' %}
-{% do BREADCRUMBS.append(_('Entries'), href('pastebin', 'browse')) %}
+{% set BREADCRUMBS = [(_('Entries'), href('pastebin', 'browse'))] + BREADCRUMBS|d([]) %}
 
 {% block paste_content %}
   {%- if entries %}

@@ -10,7 +10,7 @@
 
 {%- extends 'portal/usercp/overall.html' %}
 {% import 'macros.html' as macros %}
-{% do BREADCRUMBS.append(_('Profile'), href('portal', 'usercp', 'profile')) %}
+{% set BREADCRUMBS = [(_('Profile'), href('portal', 'usercp', 'profile'))] + BREADCRUMBS|d([]) %}
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
 {% set selected = 'profile' %}

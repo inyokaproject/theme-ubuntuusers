@@ -9,7 +9,7 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 
-{% do BREADCRUMBS.append(_('Reports'), href('ikhaya', 'reports')) %}
+{% set BREADCRUMBS = [(_('Reports'), href('ikhaya', 'reports'))] + BREADCRUMBS|d([]) %}
 
 {% block ikhaya_content %}
   {%- for report in reports %}

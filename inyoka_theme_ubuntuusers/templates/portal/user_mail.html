@@ -10,13 +10,13 @@
 {%- extends 'portal/user_admin.html' %}
 {% from 'macros.html' import render_form %}
 
-{% do BREADCRUMBS.append(_('Compose mail'), href('portal', 'user', user.username, 'mail')) %}
-{% do BREADCRUMBS.append(user.username, user|url) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Compose mail'), href('portal', 'user', user.username, 'mail')),
+                      (user.username, user|url),
+                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form id="user_mail_form" method="post" action="">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <h3>{% trans %}Compose mail{% endtrans %}</h3>
   <dl>
     {{ render_form(form, ['text'], inline=true) }}

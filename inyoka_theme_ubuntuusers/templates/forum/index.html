@@ -14,7 +14,7 @@
 
 {% from 'forum/_forum.html' import render_forum %}
 {% if not is_index and categories %}
-  {% do BREADCRUMBS.append(categories[0].name, categories[0]|url) %}
+  {% set BREADCRUMBS = [(categories[0].name, categories[0]|url)] + BREADCRUMBS|d([]) %}
 {% else %}
   {% set feeds = [
     (_('Forum - Captions'), href('forum', 'feeds/title/20')),

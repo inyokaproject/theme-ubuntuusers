@@ -12,12 +12,13 @@
 {% from 'macros.html' import render_form %}
 
 {% if is_new %}
-  {% do BREADCRUMBS.append(_('New group'), href('portal', 'group', 'new')) %}
+  {% set b = [(_('New group'), href('portal', 'group', 'new'))] %}
 {% else %}
-  {% do BREADCRUMBS.append(_('Edit'), href('portal', 'group', group_name, 'edit')) %}
-  {% do BREADCRUMBS.append(group.name, group|url) %}
+  {% set b = [(_('Edit'), href('portal', 'group', group_name, 'edit')),
+              (group.name, group|url)] %}
 {% endif %}
-{% do BREADCRUMBS.append(_('Groups'), href('portal', 'groups')) %}
+{% do b.append ((_('Groups'), href('portal', 'groups'))) %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% set scripts = ['PrivilegeBox'] %}
 

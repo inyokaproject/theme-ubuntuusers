@@ -10,12 +10,12 @@
 {%- extends 'portal/user_admin.html' %}
 {% from 'macros.html' import render_form %}
 
-{% do BREADCRUMBS.append(_('Create user'), href('portal', 'user', 'new')) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Create user'), href('portal', 'user', 'new')),
+          (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   <form action="" method="post" id="user_edit_form">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     <h3>{% trans %}Create user{% endtrans %}</h3>
     <dl>
       {{ render_form(form, ['username', 'password', 'confirm_password', 'email'], inline=true) }}

@@ -9,15 +9,14 @@
 #}
 {% extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMBS.append(_('Group memberships'), href('portal', 'user', user.username, 'edit', 'groups')) %}
-{% do BREADCRUMBS.append(_('Edit'), href('portal', 'user', user.username, 'edit')) %}
-{% do BREADCRUMBS.append(user.username, user|url) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Group memberships'), href('portal', 'user', user.username, 'edit', 'groups')),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')), (user.username, user|url),
+                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   {{ super() }}
   <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     <h3>{% trans %}Group memberships{% endtrans %}</h3>
     <table class="user_groups">
       <tr>

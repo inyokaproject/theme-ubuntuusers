@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'overall.html' %}
-{% do BREADCRUMBS.append(_('Ikhaya'), href('ikhaya')) %}
+{% set BREADCRUMBS = [(_('Ikhaya'), href('ikhaya'))] + BREADCRUMBS|d([]) %}
 {% set styles = styles|default([]) + ['ikhaya', 'highlight'] %}
 {% set scripts = scripts|default([]) + ['ikhaya'] %}
 {% set active_app = 'ikhaya' %}

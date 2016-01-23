@@ -10,7 +10,7 @@
 
 {%- extends 'portal/overall.m.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMBS.append('Login', href('portal', 'login')) %}
+{% set BREADCRUMBS = [('Login', href('portal', 'login'))] + BREADCRUMBS|d([]) %}
 {% block content %}
   <h3>Login</h3>
   <p>
@@ -20,7 +20,7 @@
   </p>
   {% include 'portal/login_text.m.html' with context %}
   <form action="" method="post" class="loginform">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     <dl>
       {{ render_form(form, ['username', 'password'], inline=true) }}
       <dd>

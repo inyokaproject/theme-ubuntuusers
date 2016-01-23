@@ -12,9 +12,9 @@
 {% set scripts = ['jquery.autocomplete'] %}
 
 {% if not blog %}
-  {% do BREADCRUMBS.append(_('Add blog'), href('planet', 'blog', 'new')) %}
+  {% set BREADCRUMBS = [(_('Add blog'), href('planet', 'blog', 'new'))] + BREADCRUMBS|d([]) %}
 {% else %}
-  {% do BREADCRUMBS.append(blog.name|e, blog|url('edit')) %}
+  {% set BREADCRUMBS = [(blog.name|e, blog|url('edit'))] + BREADCRUMBS|d([]) %}
 {% endif %}
 
 {% block content %}

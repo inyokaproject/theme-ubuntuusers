@@ -20,11 +20,11 @@
 (name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
 ] %}
 
-{% do BREADCRUMBS.append(topic.title, topic|url) %}
-{% do BREADCRUMBS.append(forum.name, forum|url) %}
+{% set b = [(topic.title, topic|url), (forum.name, forum|url)] %}
 {% for parent in forum.parents[:-1] %}
-  {% do BREADCRUMBS.append(parent.name, parent|url) %}
+  {% do b.append((parent.name, parent|url)) %}
 {% endfor %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% set rendered_pagination = render_pagination(pagination) %}
 

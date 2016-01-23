@@ -9,9 +9,9 @@
 #}
 {%- extends 'forum/page.html' %}
 {% import 'macros.html' as macros %}
-{% do BREADCRUMBS.append(_('Split topic'), topic|url('split')) %}
-{% do BREADCRUMBS.append(topic.title, topic|url) %}
-{% do BREADCRUMBS.append(topic.forum.name, topic.forum|url) %}
+{% set BREADCRUMBS = [(_('Split topic'), topic|url('split')),
+                      (topic.title, topic|url),
+                      (topic.forum.name, topic.forum|url)] + BREADCRUMBS|d([]) %}
 {% set scripts = ['jquery.autocomplete'] %}
 
 {% block forum_content %}

@@ -10,7 +10,9 @@
 
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMBS.append('Registrierung', href('portal', 'register')) %}
+
+{% set BREADCRUMBS = [('Registrierung', href('portal', 'register'))] + BREADCRUMBS|d([]) %}
+
 {% block portal_content %}
   <h3>Registrierung</h3>
   <form action="" method="post">

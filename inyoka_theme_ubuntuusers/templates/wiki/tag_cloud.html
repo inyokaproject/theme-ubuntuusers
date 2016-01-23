@@ -10,7 +10,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMBS.append(_('Tag Cloud'), href('wiki', 'wiki/tagcloud')) %}
+{% set BREADCRUMBS = [(_('Tag Cloud'), href('wiki', 'wiki/tagcloud'))] + BREADCRUMBS|d([]) %}
 
 {% block wiki_content %}
   <div class="main_content">

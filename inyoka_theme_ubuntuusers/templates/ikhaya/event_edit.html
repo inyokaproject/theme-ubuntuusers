@@ -12,12 +12,12 @@
 {% set scripts = ['WikiEditor', 'DateTime'] %}
 
 {% if not event %}
-  {% do BREADCRUMBS.append(_('Add'), href('ikhaya', 'event', 'new')) %}
+  {% set b = [(_('Add'), href('ikhaya', 'event', 'new'))] %}
 {% else %}
-  {% do BREADCRUMBS.append(_('Edit'), event|url('edit')) %}
-  {% do BREADCRUMBS.append(event.name, event|url) %}
+  {% set b = [(_('Edit'), event|url('edit')), (event.name, event|url)] %}
 {% endif %}
-{% do BREADCRUMBS.append(_('Events'), href('ikhaya', 'events')) %}
+{% do b.append((_('Events'), href('ikhaya', 'events'))) %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">

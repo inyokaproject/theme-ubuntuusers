@@ -36,10 +36,11 @@
   (name + _('Full post'), href('forum', 'feeds/forum', forum.slug, 'full/20'))
 ] %}
 
-{% do BREADCRUMBS.append(forum.name, forum|url) %}
+{% set b = [(forum.name, forum|url)] %}
 {% for parent in forum.parents %}
-  {% do BREADCRUMBS.append(parent.name, parent|url) %}
+  {% do b.append((parent.name, parent|url)) %}
 {% endfor %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% block search_areas %}
   <option value="current_forum" selected="selected">{% trans %}Current forum{% endtrans %}</option>

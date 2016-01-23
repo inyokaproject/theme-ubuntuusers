@@ -11,7 +11,7 @@
 {% import 'macros.html' as macros %}
 {% set rendered_pagination = macros.render_pagination(pagination) %}
 {% set selected = folder.id %}
-{% do BREADCRUMBS.append(folder.name, folder.href) %}
+{% set BREADCRUMBS = [(folder.name, folder.href)] + BREADCRUMBS|d([]) %}
 
 {% block portal_content %}
   {%- if message %}

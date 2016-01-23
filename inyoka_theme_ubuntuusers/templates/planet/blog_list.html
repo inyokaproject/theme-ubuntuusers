@@ -11,7 +11,7 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMBS.append(_('Bloglist'), href('planet', 'blogs')) %}
+{% set BREADCRUMBS = [(_('Bloglist'), href('planet', 'blogs'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   <h3>{% trans %}Blogs{% endtrans %}</h3>

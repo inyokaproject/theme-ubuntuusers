@@ -11,9 +11,9 @@
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
 
-{% do BREADCRUMBS.append('Neue Meldung', article|url('report_new')) %}
-{% do BREADCRUMBS.append('Meldungen', article|url('reports')) %}
-{% do BREADCRUMBS.append(article.subject, article|url) %}
+{% set BREADCRUMBS = [('Neue Meldung', article|url('report_new')),
+                      ('Meldungen', article|url('reports')),
+                      (article.subject, article|url)] + BREADCRUMBS|d([]) %}
 
 {% block ikhaya_content %}
   {{ form.errors.text }}

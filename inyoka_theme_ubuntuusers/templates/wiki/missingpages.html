@@ -11,7 +11,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMBS.append(_('Missing Pages'), '') %}
+{% set BREADCRUMBS = [(_('Missing Pages'), '')] + BREADCRUMBS|d([]) %}
 
 {% block wiki_content %}
   <div class="main_content">

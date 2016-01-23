@@ -9,7 +9,7 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMBS.append('Artikel vorschlagen', href('ikhaya', 'suggest')) %}
+{% set BREADCRUMBS = [('Artikel vorschlagen', href('ikhaya', 'suggest'))] + BREADCRUMBS|d([]) %}
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
 {% block ikhaya_content %}

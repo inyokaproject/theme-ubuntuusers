@@ -11,20 +11,23 @@
 #}
 {% from 'macros.html' import render_form %}
 {%- extends 'forum/page.html' %}
+
+{% set b = [] %}
 {% if not topic %}
-  {% do BREADCRUMBS.append(_('New topic'), forum|url('newtopic')) %}
+  {% do b.append((_('New topic'), forum|url('newtopic'))) %}
 {% else %}
   {% if post %}
-    {% do BREADCRUMBS.append(_('Edit post'), '') %}
+    {% do b.append((_('Edit post'), '')) %}
   {% else %}
-    {% do BREADCRUMBS.append(_('New reply'), topic|url('reply')) %}
+    {% do b.append((_('New reply'), topic|url('reply'))) %}
   {% endif %}
-  {% do BREADCRUMBS.append(topic.title, topic|url) %}
+  {% do b.append((topic.title, topic|url)) %}
 {% endif %}
-{% do BREADCRUMBS.append(forum.name, forum|url) %}
+{% do b.append((forum.name, forum|url)) %}
 {% for parent in forum.parents[:-1] %}
-  {% do BREADCRUMBS.append(parent.name, parent|url) %}
+  {% do b.append((parent.name, parent|url)) %}
 {% endfor %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% set scripts = ['WikiEditor', 'NewTopic'] %}
 {% set styles = ['editor'] %}

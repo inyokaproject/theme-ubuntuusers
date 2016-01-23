@@ -9,8 +9,8 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 
-{% do BREADCRUMBS.append(_('Reports'), article|url('reports')) %}
-{% do BREADCRUMBS.append(article.subject, article|url) %}
+{% set BREADCRUMBS = [(_('Reports'), article|url('reports')),
+                      (article.subject, article|url)] + BREADCRUMBS|d([]) %}
 
 {% block html_head %}
   {{ super() }}

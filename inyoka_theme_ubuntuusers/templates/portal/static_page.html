@@ -9,7 +9,7 @@
 #}
 {%- extends 'portal/overall.html' %}
 
-{% do BREADCRUMBS.append(title, href('portal', key)) %}
+{% set BREADCRUMBS = [(title, href('portal', key))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   <h3>{{ title|e }}

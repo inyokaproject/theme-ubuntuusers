@@ -10,7 +10,7 @@
 #}
 {%- extends 'pastebin/page.html' %}
 
-{% do BREADCRUMBS.append(entry.title, entry|url) %}
+{% set BREADCRUMBS = [(entry.title, entry|url)] + BREADCRUMBS|d([]) %}
 {% set styles = ['highlight'] %}
 {% set scripts = ['Pastebin'] %}
 

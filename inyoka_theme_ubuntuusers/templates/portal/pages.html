@@ -9,7 +9,7 @@
 #}
 {%- extends 'portal/overall.html' %}
 
-{% do BREADCRUMBS.append(_('Static pages'), href('portal', 'pages')) %}
+{% set BREADCRUMBS = [(_('Static pages'), href('portal', 'pages'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <h3>{% trans %}Static pages{% endtrans %}</h3>

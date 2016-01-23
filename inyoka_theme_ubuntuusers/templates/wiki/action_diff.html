@@ -13,7 +13,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMBS.append(_('Difference'), '') %}
+{% set BREADCRUMBS = [(_('Difference'), '')] + BREADCRUMBS|d([]) %}
 {% set action = 'log' %}
 {% block wiki_content %}
   <div class="main_content">

@@ -9,7 +9,7 @@
 #}
 {%- extends 'planet/page.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMBS.append(_('Suggest blog'), href('planet', 'suggest')) %}
+{% set BREADCRUMBS = [(_('Suggest blog'), href('planet', 'suggest'))] + BREADCRUMBS|d([]) %}
 
 {% block planet_content %}
   {# TODO: Text should be changeable via interface #}

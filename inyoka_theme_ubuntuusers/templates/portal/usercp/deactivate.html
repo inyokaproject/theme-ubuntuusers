@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'portal/usercp/overall.html' %}
-{% do BREADCRUMBS.append(_('Deactivate account'), href('portal', 'deactivate')) %}
+{% set BREADCRUMBS = [(_('Deactivate account'), href('portal', 'deactivate'))] + BREADCRUMBS|d([]) %}
 {% set selected = 'deactivate' %}
 
 {% block portal_content %}

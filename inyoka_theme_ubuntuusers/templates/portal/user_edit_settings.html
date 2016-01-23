@@ -9,10 +9,9 @@
 #}
 {% extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMBS.append(_('Settings'), href('portal', 'user', user.username, 'edit', 'settings')) %}
-{% do BREADCRUMBS.append(_('Edit'), href('portal', 'user', user.username, 'edit')) %}
-{% do BREADCRUMBS.append(user.username, user|url) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Settings'), href('portal', 'user', user.username, 'edit', 'settings')),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')),
+                      (user.username, user|url), (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
 {{ super() }}

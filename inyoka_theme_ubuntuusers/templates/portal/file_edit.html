@@ -11,15 +11,16 @@
 {% from 'macros.html' import render_form %}
 
 {% if not file %}
-  {% do BREADCRUMBS.append(_('Create'), href('portal', 'files', 'new')) %}
+  {% set b = [(_('Create'), href('portal', 'files', 'new'))] %}
 {% else %}
-  {% do BREADCRUMBS.append(file.identifier|e, file|url('edit')) %}
+  {% set b = [(file.identifier|e, file|url('edit'))] %}
 {% endif %}
-{% do BREADCRUMBS.append(_('Static files'), href('portal', 'files')) %}
+{% do b.append((_('Static files'), href('portal', 'files'))) %}
+{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <dl>
     {{ render_form(form, ['is_ikhaya_icon', 'file'], inline=true) }}
     {%- if file %}

@@ -11,7 +11,7 @@
 
 {%- extends 'wiki/page.html' %}
 {% set title = page.title %}
-{% do BREADCRUMBS.append(_('Edit'), page|url('edit')) %}
+{% set BREADCRUMBS = [(_('Edit'), page|url('edit'))] + BREADCRUMBS|d([]) %}
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
 {% set action = 'edit' %}

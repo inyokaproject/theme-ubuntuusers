@@ -9,8 +9,8 @@
 #}
 {%- extends 'portal/overall.html' %}
 
-{% do BREADCRUMBS.append(_('User with special privileges'), href('portal', 'users', 'special_rights')) %}
-{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('User with special privileges'), href('portal', 'users', 'special_rights')),
+                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   <p>
