@@ -10,7 +10,7 @@
 #}
 {% extends 'overall.html' %}
 
-{% set b = [(_('Wiki'), href('wiki'))] %}
+{% set tmp_crumb = [(_('Wiki'), href('wiki'))] %}
 {% if page %}
   {% for part in page.title.split('/') %}
     {% if loop.first %}
@@ -19,11 +19,11 @@
       {% set sep = '' if link[-1] == '/' else '/' %}
       {% set link = link + sep + part %}
     {% endif %}
-    {% do b.append((part, link)) %}
+    {% do tmp_crumb.append((part, link)) %}
   {% endfor %}
 {% endif %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
-{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
 {% set styles = styles|default([]) + ['wiki', 'highlight'] %}
 {% set active_app = 'wiki' %}
 

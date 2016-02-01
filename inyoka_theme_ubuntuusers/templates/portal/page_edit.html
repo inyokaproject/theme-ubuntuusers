@@ -11,12 +11,12 @@
 {% from 'macros.html' import render_form %}
 
 {% if page %}
-  {% set b = [(_('Edit'), page|url('edit')), (page.title|e, page|url())] %}
+  {% set tmp_crumb = [(_('Edit'), page|url('edit')), (page.title|e, page|url())] %}
 {% else %}
-  {% set b = [(_('Create new page'), href('portal', 'page', 'new'))] %}
+  {% set tmp_crumb = [(_('Create new page'), href('portal', 'page', 'new'))] %}
 {% endif %}
-{% do b.append((_('Static pages'), href('portal', 'pages'))) %}
-{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
+{% do tmp_crumb.append((_('Static pages'), href('portal', 'pages'))) %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}
   <h3>{{ page.title|e }}</h3>

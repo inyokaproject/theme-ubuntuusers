@@ -9,12 +9,12 @@
 #}
 {%- extends 'forum/page.html' %}
 
-{% set b = [(_('Move'), topic|url('move')), (topic.title, topic|url),
+{% set tmp_crumb = [(_('Move'), topic|url('move')), (topic.title, topic|url),
             (topic.forum.name, topic.forum|url)] %}
 {% for parent in topic.forum.parents[:-1] %}
-  {% do b.append((parent.name, parent|url)) %}
+  {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
-{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}
   <form action="" method="post" class="new_topic">

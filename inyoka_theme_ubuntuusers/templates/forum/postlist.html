@@ -13,16 +13,16 @@
 {% from 'macros.html' import render_pagination, render_small_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% set b = [] %}
+{% set tmp_crumb = [] %}
 {% if forum %}
-    {% do b.append((forum.name, href('forum', 'author', username|e, 'forum', forum.slug))) %}
+    {% do tmp_crumb.append((forum.name, href('forum', 'author', username|e, 'forum', forum.slug))) %}
 {% endif %}
 {% if topic %}
-    {% do b.append((topic.title, href('forum', 'author', username|e, 'topic', topic.slug))) %}
+    {% do tmp_crumb.append((topic.title, href('forum', 'author', username|e, 'topic', topic.slug))) %}
 {% endif %}
-{% do b.append((username, href('forum', 'author', username|e))) %}
+{% do tmp_crumb.append((username, href('forum', 'author', username|e))) %}
 
-{% set BREADCRUMBS = b + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 
 {% block forum_content %}
