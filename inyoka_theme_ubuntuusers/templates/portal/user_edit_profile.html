@@ -11,7 +11,8 @@
 {% import 'macros.html' as macros %}
 
 {% set BREADCRUMBS = [(_('Profile'), href('portal', 'user', user.username, 'edit', 'profile')),
-                      (_('Edit'), href('portal', 'user', user.username, 'edit')), (user.username, user|url),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')),
+                      (user.username, user|url),
                       (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
