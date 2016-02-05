@@ -15,9 +15,9 @@
 
 {% set name = topic.title|e %}
 {% set feeds = [
-(name + ' - ' + _('Captions'), href('forum', 'feeds/topic', topic.slug, 'title/20')),
-(name + ' - ' + _('Teaser'), href('forum', 'feeds/topic', topic.slug, 'short/20')),
-(name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
+  (name + ' - ' + _('Captions'), href('forum', 'feeds/topic', topic.slug, 'title/20')),
+  (name + ' - ' + _('Teaser'), href('forum', 'feeds/topic', topic.slug, 'short/20')),
+  (name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
 ] %}
 
 {% set tmp_crumb = [(topic.title, topic|url), (forum.name, forum|url)] %}
