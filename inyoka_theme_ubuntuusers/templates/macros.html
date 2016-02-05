@@ -114,7 +114,7 @@
 {% endmacro %}
 
 {% macro create_title(breadcrumb_list) %}
-  {% set title_parts = ['ubuntuusers.de'] %} {# TODO: use settings.BASE_DOMAIN_NAME #}
+  {% set title_parts = [BASE_DOMAIN_NAME] %}
   {% for breadcrumb in breadcrumb_list %}
     {% do title_parts.append(breadcrumb[0]) %}
   {% endfor %}
