@@ -9,7 +9,6 @@
     :copyright: (c) 2007-2016 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 -#}
-{% from 'macros.html' import render_modnavi_li %}
 {% import 'macros.html' as macros %}
 
 {% set BREADCRUMBS = BREADCRUMBS|default([]) %}
@@ -119,19 +118,19 @@
           <div id="admin_menu">
             <div class="bar">
               {% if USER.can('manage_topics') %}
-                {{ render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
+                {{ macros.render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
               {% endif %}
               {% if USER.can('article_edit') %}
                 {% set label = _('Article suggestions') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'suggestions'), href('static', 'img/admin/article.png'), suggestion_count) }}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'suggestions'), href('static', 'img/admin/article.png'), suggestion_count) }}
               {% endif %}
               {% if USER.can('article_edit') %}
                 {% set label = _('Spelling mistakes') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'reports'), href('static', 'img/admin/spelling.png'), article_report_count) }}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'reports'), href('static', 'img/admin/spelling.png'), article_report_count) }}
               {% endif %}
               {% if USER.can('event_edit') %}
                 {% set label = _('Event suggestions') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
               {% endif %}
             </div>
             <div class="bar">
