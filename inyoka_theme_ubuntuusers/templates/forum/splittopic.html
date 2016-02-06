@@ -10,8 +10,8 @@
 {%- extends 'forum/page.html' %}
 {% import 'macros.html' as macros %}
 {% set BREADCRUMBS = [(_('Split topic'), topic|url('split')),
-                      (topic.title, topic|url),
-                      (topic.forum.name, topic.forum|url)] + BREADCRUMBS|d([]) %}
+                      (topic.forum.name, topic.forum|url),
+                      (topic.title, topic|url)] + BREADCRUMBS|d([]) %}
 {% set scripts = ['jquery.autocomplete'] %}
 
 {% block forum_content %}

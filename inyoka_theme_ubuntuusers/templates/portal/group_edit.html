@@ -11,13 +11,13 @@
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
 
+{% set tmp_crumb = [(_('Groups'), href('portal', 'groups'))] %}
 {% if is_new %}
-  {% set tmp_crumb = [(_('New group'), href('portal', 'group', 'new'))] %}
+  {% do tmp_crumb.append((_('New group'), href('portal', 'group', 'new'))) %}
 {% else %}
-  {% set tmp_crumb = [(_('Edit'), href('portal', 'group', group_name, 'edit')),
-              (group.name, group|url)] %}
+  {% do tmp_crumb.extend([(_('Edit'), href('portal', 'group', group_name, 'edit')),
+              (group.name, group|url)]) %}
 {% endif %}
-{% do tmp_crumb.append ((_('Groups'), href('portal', 'groups'))) %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% set scripts = ['PrivilegeBox'] %}

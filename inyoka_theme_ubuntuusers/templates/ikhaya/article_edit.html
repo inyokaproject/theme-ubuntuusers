@@ -15,8 +15,8 @@
 {% if not article %}
   {% set BREADCRUMBS = [(_('New Article'), href('ikhaya', 'new'))] + BREADCRUMBS|d([]) %}
 {% else %}
-  {% set BREADCRUMBS = [(_('Edit'), article|url('edit')), 
-                        (article.subject, article|url)] + BREADCRUMBS|d([]) %}
+  {% set BREADCRUMBS = [(article.subject, article|url),
+                        (_('Edit'), article|url('edit'))] + BREADCRUMBS|d([]) %}
 {% endif %}
 
 {% block content %}

@@ -13,8 +13,8 @@
 {% if not category %}
   {% set BREADCRUMBS = [(_('Create category'), href('ikhaya', 'category', 'new'))] + BREADCRUMBS|d([]) %}
 {% else %}
-  {% set BREADCRUMBS = [(_('Edit'), category|url('edit')),
-                        (category.name, category|url)] + BREADCRUMBS|d([]) %}
+  {% set BREADCRUMBS = [(category.name, category|url),
+                        (_('Edit'), category|url('edit'))] + BREADCRUMBS|d([]) %}
 {% endif %}
 
 {% block content %}

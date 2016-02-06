@@ -16,9 +16,9 @@
 {% set styles = ['calendar'] %}
 {% set month = event.date.month %}
 {% set year = event.date.year %}
-{% set BREADCRUMBS = [(event.name, event|url),
+{% set BREADCRUMBS = [('Kalender', href('portal', 'calendar')),
                       ('%s %d'|format(MONTHS[month], year), href('portal', 'calendar', year, '%02d' % month)),
-                      ('Kalender', href('portal', 'calendar'))] + BREADCRUMBS|d([]) %}
+                      (event.name, event|url)] + BREADCRUMBS|d([]) %}
 
 {% block portal_content %}
 <h3>

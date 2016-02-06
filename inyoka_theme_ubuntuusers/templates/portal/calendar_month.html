@@ -10,8 +10,9 @@
 
 {%- extends 'portal/overall.html' %}
 {% set styles = ['calendar'] %}
-{% set BREADCRUMBS = [('%s %d'|format(MONTHS[month], year), href('portal', 'calendar', year, '%02d' % month)),
-                      ('Kalender', href('portal', 'calendar'))] + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = [('Kalender', href('portal', 'calendar')),
+                      ('%s %d'|format(MONTHS[month], year), href('portal', 'calendar', year, '%02d' % month))]
+                       + BREADCRUMBS|d([]) %}
 {% block portal_content %}
 <ul class="switcher">
   {%- for y in range(year - 2, year + 3) %}

@@ -10,9 +10,10 @@
 {%- extends 'portal/user_admin.html' %}
 {% from 'macros.html' import render_form %}
 
-{% set BREADCRUMBS = [(_('Compose mail'), href('portal', 'user', user.username, 'mail')),
+{% set BREADCRUMBS = [(_('Members'), href('portal', 'users')),
                       (user.username, user|url),
-                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
+                      (_('Compose mail'), href('portal', 'user', user.username, 'mail'))]
+                      + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form id="user_mail_form" method="post" action="">

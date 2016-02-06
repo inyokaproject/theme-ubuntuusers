@@ -36,10 +36,11 @@
   (name + _('Full post'), href('forum', 'feeds/forum', forum.slug, 'full/20'))
 ] %}
 
-{% set tmp_crumb = [(forum.name, forum|url)] %}
+{% set tmp_crumb = [] %}
 {% for parent in forum.parents %}
   {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
+{% do tmp_crumb.append((forum.name, forum|url)) %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block search_areas %}

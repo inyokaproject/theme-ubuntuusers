@@ -9,10 +9,10 @@
 #}
 {% extends 'portal/user_admin.html' %}
 
-{% set BREADCRUMBS = [(_('Group memberships'), href('portal', 'user', user.username, 'edit', 'groups')),
-                      (_('Edit'), href('portal', 'user', user.username, 'edit')),
+{% set BREADCRUMBS = [(_('Members'), href('portal', 'users')),
                       (user.username, user|url),
-                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
+                      (_('Group memberships'), href('portal', 'user', user.username, 'edit', 'groups')),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
   {{ super() }}

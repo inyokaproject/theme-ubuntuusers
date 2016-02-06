@@ -11,12 +11,12 @@
 {% set styles = ['editor', 'datetimefield'] %}
 {% set scripts = ['WikiEditor', 'DateTime'] %}
 
+{% set tmp_crumb = [(_('Events'), href('ikhaya', 'events'))] %}
 {% if not event %}
-  {% set tmp_crumb = [(_('Add'), href('ikhaya', 'event', 'new'))] %}
+  {% do tmp_crumb.append((_('Add'), href('ikhaya', 'event', 'new'))) %}
 {% else %}
-  {% set tmp_crumb = [(_('Edit'), event|url('edit')), (event.name, event|url)] %}
+  {% set tmp_crumb = tmp_crumb + [(event.name, event|url), (_('Edit'), event|url('edit'))] %}
 {% endif %}
-{% do tmp_crumb.append((_('Events'), href('ikhaya', 'events'))) %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}

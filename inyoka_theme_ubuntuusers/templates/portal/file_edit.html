@@ -10,12 +10,12 @@
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
 
+{% set tmp_crumb = [(_('Static files'), href('portal', 'files'))] %}
 {% if not file %}
-  {% set tmp_crumb = [(_('Create'), href('portal', 'files', 'new'))] %}
+  {% do tmp_crumb.append((_('Create'), href('portal', 'files', 'new'))) %}
 {% else %}
-  {% set tmp_crumb = [(file.identifier|e, file|url('edit'))] %}
+  {% do tmp_crumb.append((file.identifier|e, file|url('edit'))) %}
 {% endif %}
-{% do tmp_crumb.append((_('Static files'), href('portal', 'files'))) %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}

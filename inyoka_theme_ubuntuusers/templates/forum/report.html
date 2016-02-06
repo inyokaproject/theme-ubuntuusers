@@ -10,8 +10,8 @@
 #}
 
 {%- extends 'forum/page.html' %}
-{% set BREADCRUMBS = [(_('Report'), topic|url('report')), (topic.title, topic|url),
-                      (topic.forum.name, topic.forum|url)] + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = [(_('Report'), topic|url('report')), (topic.forum.name, topic.forum|url),
+                        (topic.title, topic|url)] + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}
   <form action="" method="post" enctype="multipart/form-data" class="new_topic">

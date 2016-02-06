@@ -9,8 +9,8 @@
 #}
 {%- extends 'portal/overall.html' %}
 
-{% set BREADCRUMBS = [(user.username, user|url),
-                      (_('Members'), href('portal', 'users'))] + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = [(_('Members'), href('portal', 'users')),
+                      (user.username, user|url)] + BREADCRUMBS|d([]) %}
 {% set styles = ['portal', 'highlight'] %}
 {% import 'macros.html' as macros %}
 

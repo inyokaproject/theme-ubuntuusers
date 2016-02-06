@@ -11,8 +11,8 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% set BREADCRUMBS = [(active_tag|e, ''),(_('Tag List'),
-                        href('wiki', 'wiki/tags'))] + BREADCRUMBS|d([]) %}
+{% set BREADCRUMBS = [(_('Tag List'), href('wiki', 'wiki/tags')),
+                      (active_tag|e, '')] + BREADCRUMBS|d([]) %}
 
 {% block wiki_content %}
   <div class="main_content">

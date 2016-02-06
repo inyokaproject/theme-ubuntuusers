@@ -20,7 +20,7 @@
   (name + ' - ' + _('Full'), href('forum', 'feeds/topic', topic.slug, 'full/20'))
 ] %}
 
-{% set tmp_crumb = [(topic.title, topic|url), (forum.name, forum|url)] %}
+{% set tmp_crumb = [(forum.name, forum|url), (topic.title, topic|url)] %}
 {% for parent in forum.parents[:-1] %}
   {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
