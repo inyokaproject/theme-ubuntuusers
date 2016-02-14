@@ -11,11 +11,11 @@
 {% from 'macros.html' import render_form %}
 
 {% if not file %}
-  {% do BREADCRUMB.append(_('Create'), href('portal', 'files', 'new'), True) %}
+  {% do BREADCRUMBS.append(_('Create'), href('portal', 'files', 'new')) %}
 {% else %}
-  {% do BREADCRUMB.append(file.identifier|e, file|url('edit'), True) %}
+  {% do BREADCRUMBS.append(file.identifier|e, file|url('edit')) %}
 {% endif %}
-{% do BREADCRUMB.append(_('Static files'), href('portal', 'files'), True) %}
+{% do BREADCRUMBS.append(_('Static files'), href('portal', 'files')) %}
 
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">

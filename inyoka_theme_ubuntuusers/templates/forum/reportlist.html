@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'forum/page.html' %}
-{% do BREADCRUMB.append(_('Reported topics'), href('forum', 'reported_topics'), True) %}
+{% do BREADCRUMBS.append(_('Reported topics'), href('forum', 'reported_topics')) %}
 
 {% block forum_content %}
 <form action="" method="post">

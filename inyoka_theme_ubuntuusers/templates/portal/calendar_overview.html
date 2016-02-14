@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'portal/overall.html' %}
-{% do BREADCRUMB.append(_('Calendar'), href('portal', 'calendar'), True) %}
+{% do BREADCRUMBS.append(_('Calendar'), href('portal', 'calendar')) %}
 {% set styles = ['calendar'] %}
 
 {% block html_head %}

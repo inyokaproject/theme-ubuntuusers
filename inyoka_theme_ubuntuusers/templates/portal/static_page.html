@@ -9,7 +9,7 @@
 #}
 {%- extends 'portal/overall.html' %}
 
-{% do BREADCRUMB.append(title, href('portal', key), True) %}
+{% do BREADCRUMBS.append(title, href('portal', key)) %}
 
 {% block content %}
   <h3>{{ title|e }}

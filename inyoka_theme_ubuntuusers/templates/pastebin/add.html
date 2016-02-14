@@ -11,7 +11,7 @@
 #}
 {%- extends 'pastebin/page.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMB.append(_('New paste'), href('pastebin', 'add'), True) %}
+{% do BREADCRUMBS.append(_('New paste'), href('pastebin', 'add')) %}
 
 {% block paste_content %}
   <form action="" method="post">

@@ -11,12 +11,12 @@
 {% from 'macros.html' import render_form %}
 
 {% if page %}
-  {% do BREADCRUMB.append(_('Edit'), page|url('edit'), True) %}
-  {% do BREADCRUMB.append(page.title|e, page|url(), True) %}
+  {% do BREADCRUMBS.append(_('Edit'), page|url('edit')) %}
+  {% do BREADCRUMBS.append(page.title|e, page|url()) %}
 {% else %}
-  {% do BREADCRUMB.append(_('Create new page'), href('portal', 'page', 'new'), True) %}
+  {% do BREADCRUMBS.append(_('Create new page'), href('portal', 'page', 'new')) %}
 {% endif %}
-{% do BREADCRUMB.append(_('Static pages'), href('portal', 'pages'), True) %}
+{% do BREADCRUMBS.append(_('Static pages'), href('portal', 'pages')) %}
 
 {% block content %}
   <h3>{{ page.title|e }}</h3>

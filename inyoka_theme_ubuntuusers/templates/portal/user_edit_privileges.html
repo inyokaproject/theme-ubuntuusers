@@ -9,10 +9,10 @@
 #}
 {%- extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMB.append(_('Privileges'), href('portal', 'user', user.username, 'edit', 'privileges'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
-{% do BREADCRUMB.append(user.username, user|url, True) %}
-{% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
+{% do BREADCRUMBS.append(_('Privileges'), href('portal', 'user', user.username, 'edit', 'privileges')) %}
+{% do BREADCRUMBS.append(_('Edit'), href('portal', 'user', user.username, 'edit')) %}
+{% do BREADCRUMBS.append(user.username, user|url) %}
+{% do BREADCRUMBS.append(_('Members'), href('portal', 'users')) %}
 
 {% macro render_grouplist(derived) %}
   {% for group in derived %}<a href="{{ group|url }}">{{ group.name|e }}</a>{% if not loop.last %}, {% endif %}{% endfor %}

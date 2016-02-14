@@ -8,11 +8,11 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
-{% do BREADCRUMB.append(_('Move'), topic|url('move'), True) %}
-{% do BREADCRUMB.append(topic.title, topic|url, True) %}
-{% do BREADCRUMB.append(topic.forum.name, topic.forum|url) %}
+{% do BREADCRUMBS.append(_('Move'), topic|url('move')) %}
+{% do BREADCRUMBS.append(topic.title, topic|url) %}
+{% do BREADCRUMBS.append(topic.forum.name, topic.forum|url) %}
 {% for parent in topic.forum.parents[:-1] %}
-  {% do BREADCRUMB.append(parent.name, parent|url) %}
+  {% do BREADCRUMBS.append(parent.name, parent|url) %}
 {% endfor %}
 
 {% block forum_content %}

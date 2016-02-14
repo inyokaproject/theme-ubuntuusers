@@ -12,12 +12,12 @@
 {% from 'macros.html' import render_form %}
 
 {% if is_new %}
-  {% do BREADCRUMB.append(_('New group'), href('portal', 'group', 'new'), True) %}
+  {% do BREADCRUMBS.append(_('New group'), href('portal', 'group', 'new')) %}
 {% else %}
-  {% do BREADCRUMB.append(_('Edit'), href('portal', 'group', group_name, 'edit'), True) %}
-  {% do BREADCRUMB.append(group.name, group|url, True) %}
+  {% do BREADCRUMBS.append(_('Edit'), href('portal', 'group', group_name, 'edit')) %}
+  {% do BREADCRUMBS.append(group.name, group|url) %}
 {% endif %}
-{% do BREADCRUMB.append(_('Groups'), href('portal', 'groups'), True) %}
+{% do BREADCRUMBS.append(_('Groups'), href('portal', 'groups')) %}
 
 {% set scripts = ['PrivilegeBox'] %}
 

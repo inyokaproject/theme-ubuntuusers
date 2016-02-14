@@ -10,7 +10,7 @@
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
 
-{% do BREADCRUMB.append(_('Configuration'), href('portal', 'config'), True) %}
+{% do BREADCRUMBS.append(_('Configuration'), href('portal', 'config')) %}
 {% set styles = ['datetimefield'] %}
 {% set scripts = ['DateTime', 'jstableform'] %}
 

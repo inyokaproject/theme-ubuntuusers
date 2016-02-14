@@ -9,7 +9,7 @@
 #}
 {%- extends 'ikhaya/page.html' %}
 
-{% do BREADCRUMB.append(_('Events'), href('ikhaya', 'events'), True) %}
+{% do BREADCRUMBS.append(_('Events'), href('ikhaya', 'events')) %}
 
 {% block content %}
   <h3>{% trans %}Events{% endtrans %}</h3>

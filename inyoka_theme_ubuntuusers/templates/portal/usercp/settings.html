@@ -10,7 +10,7 @@
 
 {%- extends 'portal/usercp/overall.html' %}
 {% from 'macros.html' import render_form %}
-{% do BREADCRUMB.append(_('Settings'), href('portal', 'usercp', 'settings'), True) %}
+{% do BREADCRUMBS.append(_('Settings'), href('portal', 'usercp', 'settings')) %}
 {% set scripts = ['WikiEditor'] %}
 {% set styles = ['editor'] %}
 {% set selected = 'settings' %}
