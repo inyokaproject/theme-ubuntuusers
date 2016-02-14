@@ -10,7 +10,7 @@
 
 
 {%- extends 'wiki/page.html' %}
-{% do BREADCRUMB.append(_('Random Pages'), href('wiki', 'wiki/randompages'), True) %}
+{% set BREADCRUMBS = [(_('Random Pages'), href('wiki', 'wiki/randompages'))] + BREADCRUMBS|d([]) %}
 
 {% block wiki_content %}
   <div class="main_content">

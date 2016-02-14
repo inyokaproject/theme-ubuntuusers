@@ -8,12 +8,12 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
-{% do BREADCRUMB.append(_('Move'), topic|url('move'), True) %}
-{% do BREADCRUMB.append(topic.title, topic|url, True) %}
-{% do BREADCRUMB.append(topic.forum.name, topic.forum|url) %}
+
+{% set tmp_crumb = [(_('Move'), topic|url('move')), (topic.forum.name, topic.forum|url), (topic.title, topic|url)] %}
 {% for parent in topic.forum.parents[:-1] %}
-  {% do BREADCRUMB.append(parent.name, parent|url) %}
+  {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}
   <form action="" method="post" class="new_topic">

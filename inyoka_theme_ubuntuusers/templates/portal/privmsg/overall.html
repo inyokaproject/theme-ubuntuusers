@@ -7,7 +7,7 @@
 #}
 
 {%- extends 'portal/overall.html' %}
-{% do BREADCRUMB.append(_('Private message'), href('portal', 'privmsg'), True) %}
+{% set BREADCRUMBS = [(_('Private message'), href('portal', 'privmsg'))] + BREADCRUMBS|d([]) %}
 {% set navi_type = 'both' %}
 
 {% block tabbar %}

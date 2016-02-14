@@ -9,15 +9,16 @@
 #}
 {%- extends 'portal/user_admin.html' %}
 
-{% do BREADCRUMB.append(_('Status'), href('portal', 'user', user.username, 'edit', 'status'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
-{% do BREADCRUMB.append(user.username, user|url, True) %}
-{% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Members'), href('portal', 'users')),
+                      (user.username, user|url),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')),
+                      (_('Status'), href('portal', 'user', user.username, 'edit', 'status'))]
+                       + BREADCRUMBS|d([]) %}
 
 {% block content %}
   {{ super() }}
   <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     <h3>{% trans %}Status{% endtrans %}</h3>
       {{ form.non_field_errors() }}
       <dt>{{ form.status.label_tag() }}</dt>

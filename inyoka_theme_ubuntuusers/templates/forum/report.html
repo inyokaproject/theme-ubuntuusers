@@ -10,9 +10,8 @@
 #}
 
 {%- extends 'forum/page.html' %}
-{% do BREADCRUMB.append(_('Report'), topic|url('report'), True) %}
-{% do BREADCRUMB.append(topic.title, topic|url, True) %}
-{% do BREADCRUMB.append(topic.forum.name, topic.forum|url) %}
+{% set BREADCRUMBS = [(_('Report'), topic|url('report')), (topic.forum.name, topic.forum|url),
+                        (topic.title, topic|url)] + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}
   <form action="" method="post" enctype="multipart/form-data" class="new_topic">

@@ -11,10 +11,10 @@
 {% from 'macros.html' import render_form %}
 
 {% if not category %}
-  {% do BREADCRUMB.append(_('Create category'), href('ikhaya', 'category', 'new'), True) %}
+  {% set BREADCRUMBS = [(_('Create category'), href('ikhaya', 'category', 'new'))] + BREADCRUMBS|d([]) %}
 {% else %}
-  {% do BREADCRUMB.append(_('Edit'), category|url('edit'), True) %}
-  {% do BREADCRUMB.append(category.name, category|url, True) %}
+  {% set BREADCRUMBS = [(category.name, category|url),
+                        (_('Edit'), category|url('edit'))] + BREADCRUMBS|d([]) %}
 {% endif %}
 
 {% block content %}

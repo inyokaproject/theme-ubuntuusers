@@ -1311,3 +1311,17 @@ div#database_debug_table ul li pre,div#database_debug_table table {
     content: url('../img/down.png');
   }
 }
+
+.breadcrumb {
+  ol {
+    list-style-type: none;
+  }
+  li {
+    &:not(:last-child):after {
+      content: '›';
+      font-size: 0.85em;
+      padding-left: 0.5em;
+    }
+    display: inline;
+  }
+}

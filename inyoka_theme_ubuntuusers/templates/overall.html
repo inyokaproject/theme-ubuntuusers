@@ -9,7 +9,10 @@
     :copyright: (c) 2007-2016 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 -#}
-{%- from 'macros.html' import breadcrumb, render_modnavi_li -%}
+{% import 'macros.html' as macros %}
+
+{% set BREADCRUMBS = BREADCRUMBS|default([]) %}
+
 {{- XHTML_DTD }}
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:cc="http://creativecommons.org/ns#"
@@ -19,17 +22,17 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
-      {{ BREADCRUMB.render('title') }}
+      {{ macros.create_title(BREADCRUMBS) }}
     </title>
-    {%- block html_head %}
-      {%- if deny_robots %}
+    {% block html_head %}
+      {% if deny_robots %}
         <meta name="robots" content="{% if deny_robots == true %}noindex, nofollow{% else %}{{ deny_robots }}{% endif %}" />
-      {%- endif %}
+      {% endif %}
       {#- This way the local stylesheets can override styles without problems. #}
-      {%- set styles = ['main', 'markup'] + styles|default([]) -%}
-      {%- for style in styles %}
+      {% set styles = ['main', 'markup'] + styles|default([]) %}
+      {% for style in styles %}
         <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style)) }}" />
-      {%- endfor %}
+      {% endfor %}
 
       <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css') }}" />
       <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css') }}" media="print" />
@@ -38,25 +41,25 @@
         <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css) }}" />
       {% endif %}
 
-      {%- for title, url in feeds %}
+      {% for title, url in feeds %}
         <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" />
-      {%- endfor %}
+      {% endfor %}
       <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" />
       <meta name="theme-color" content="#a87300" />
-    {%- endblock %}
+    {% endblock %}
   </head>
   <body>
    <div class="wrap">
     <div class="header">
       <h1><a href="/"><span>{{ SETTINGS.BASE_DOMAIN_NAME }}</span></a></h1>
       <ul class="tabbar">
-        {%- for app in ('portal', 'forum', 'wiki', 'ikhaya', 'planet') %}
+        {% for app in ('portal', 'forum', 'wiki', 'ikhaya', 'planet') %}
           <li class="{{ app }}{% if app == active_app %} active{% endif %}">
             <div class="tab_left"></div>
             <div class="tab_center"><a href="{{ href(app) }}">{{ app|capitalize }}<span></span></a></div>
             <div class="tab_right"></div>
           </li>
-        {%- endfor %}
+        {% endfor %}
         {# TODO: uu specific #}
         <li class="community">
           <div class="tab_left"></div>
@@ -68,67 +71,67 @@
 
     <div class="body">
       <div class="appheader">
-        {%- if not hide_quicklinks %}
+        {% if not hide_quicklinks %}
           <ul class="navi_global">
             <li>
               <noscript><strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong></noscript>
             </li>
-            {%- if USER.is_authenticated() %}
+            {% if USER.is_authenticated() %}
               <li>
                 <a href="{{ href('portal', 'logout', next=CURRENT_URL) }}">
-                  {%- trans user=USER.username|e %}Logout [{{ user }}]{% endtrans -%}
+                  {% trans user=USER.username|e %}Logout [{{ user }}]{% endtrans %}
                 </a>
               </li>
               <li>
                 <a href="{{ href('portal', 'usercp') }}">
-                  {%- trans %}Control panel{% endtrans -%}
+                  {% trans %}Control panel{% endtrans %}
                 </a>
               </li>
               <li>
-                {%- if pm_count -%}
+                {% if pm_count %}
                   <strong>
                     <a href="{{ href('portal', 'privmsg')}}">
-                      {%- trans count=pm_count %}Private messages ({{ count }}){% endtrans -%}
+                      {% trans count=pm_count %}Private messages ({{ count }}){% endtrans %}
                     </a>
                   </strong>
-                {%- else -%}
+                {% else %}
                   <a href="{{ href('portal', 'privmsg') }}">
-                    {%- trans %}Private messages{% endtrans -%}
+                    {% trans %}Private messages{% endtrans %}
                   </a>
-                {%- endif -%}
+                {% endif %}
               </li>
-            {%- else %}
+            {% else %}
               <li>
                 <a href="{{ href('portal', 'login', next=CURRENT_URL) }}" id="login_link">
-                  {%- trans %}Login{% endtrans -%}
+                  {% trans %}Login{% endtrans %}
                 </a>
               </li>
               <li>
                 <a href="{{ href('portal', 'register') }}">
-                  {%- trans %}Register{% endtrans -%}
+                  {% trans %}Register{% endtrans %}
                 </a>
               </li>
-            {%- endif %}
+            {% endif %}
           </ul>{# .navi_global #}
-        {%- endif %}
-        {%- if USER.can('manage_topics') or USER.can('article_edit') or USER.can('event_edit') %}
+        {% endif %}
+        {% if USER.can('manage_topics') or USER.can('article_edit') or USER.can('event_edit') %}
           <div id="admin_menu">
             <div class="bar">
-              {%- if USER.can('manage_topics') %}
-                {{ render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
-              {%- endif %}
-              {%- if USER.can('article_edit') %}
+              {% if USER.can('manage_topics') %}
+                {{ macros.render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
+              {% endif %}
+              {% if USER.can('article_edit') %}
                 {% set label = _('Article suggestions') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'suggestions'), href('static', 'img/admin/article.png'), suggestion_count) }}
-              {%- endif %}
-              {%- if USER.can('article_edit') %}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'suggestions'), href('static', 'img/admin/article.png'), suggestion_count) }}
+              {% endif %}
+              {% if USER.can('article_edit') %}
                 {% set label = _('Spelling mistakes') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'reports'), href('static', 'img/admin/spelling.png'), article_report_count) }}
-              {%- endif %}
-              {%- if USER.can('event_edit') %}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'reports'), href('static', 'img/admin/spelling.png'), article_report_count) }}
+              {% endif %}
+              {% if USER.can('event_edit') %}
                 {% set label = _('Event suggestions') %}
-                {{ render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
-              {%- endif %}
+                {{ macros.render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
+              {% endif %}
             </div>
             <div class="bar">
               <a id="admin_layer_button">
@@ -138,8 +141,16 @@
               </a>
             </div>
           </div>
-        {%- endif %}
-        {{ BREADCRUMB.render('appheader') }}
+        {% endif %}
+
+        <h1>
+          <a href="{{ (BREADCRUMBS|first)[1] }}" {% if BREADCRUMBS|length > 1 %}class="separator"{% endif %}>
+            {{ (BREADCRUMBS|first)[0]|e }}
+          </a>
+        </h1>
+        {% if BREADCRUMBS|length > 1 %}
+          <h2><a href="{{ (BREADCRUMBS|last)[1] }}">{{ (BREADCRUMBS|last)[0]|e }}</a></h2>
+        {% endif %}
       </div>{# .appheader #}
 
       <div class="pathbar">
@@ -162,18 +173,26 @@
         {% block pathbar_extensions %}
         {% endblock %}
 
-        {{ BREADCRUMB.render('breadcrumb') }}
+        {% block breadcrumb %}
+          <div class="breadcrumb">
+            <ol>
+              {% for breadcrumb in BREADCRUMBS %}
+                  <li><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
+              {% endfor %}
+            </ol>
+          </div>
+        {% endblock %}
       </div>{# .pathbar #}
 
-      {%- if GLOBAL_MESSAGE %}
+      {% if GLOBAL_MESSAGE %}
         <div class="message global">{{ GLOBAL_MESSAGE }}</div>
-      {%- endif %}
+      {% endif %}
 
-      {%- if MESSAGES %}
-      {%- for message in MESSAGES %}
+      {% if MESSAGES %}
+      {% for message in MESSAGES %}
         <div class="message {{ message.tags }}">{{ message }}</div>
-      {%- endfor %}
-      {%- endif %}
+      {% endfor %}
+      {% endif %}
 
       <!--[if lt IE 8]>
       <div class="message fail">{{ _('Please install at least Internet Explorer 8.') }}</div>
@@ -182,22 +201,24 @@
       <div class="page_content">
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
-        {%- if sidebar %}
+        {% if sidebar %}
         <div class="navi_sidebar navigation">
-          {%- block sidebar %}{% endblock -%}
+          {% block sidebar %}{% endblock %}
         </div>
-        {%- endif %}
-        {%- if tabbar %}
+        {% endif %}
+        {% if tabbar %}
         <div class="navi_tabbar navigation">
-          {%- block tabbar %}{% endblock -%}
+          {% block tabbar %}{% endblock %}
         </div>
-        {%- endif %}
+        {% endif %}
         <div class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
-          {%- block content %}{% endblock -%}
+          {% block content %}{% endblock %}
         </div>
       </div>
       <div style="clear: both;"></div>
-      <div class="pathbar">{{ BREADCRUMB.render('breadcrumb') }}</div>
+      <div class="pathbar breadcrumb">
+        {{ self.breadcrumb() }}
+      </div>
     </div>
 
     <div class="footer" style="clear: both;">
@@ -205,18 +226,18 @@
         <li class="poweredby">
           {% trans link=href('portal', 'inyoka') %}Powered by <a href="{{ link }}">Inyoka</a>{% endtrans %}
           {% if SETTINGS.DEBUG %}
-            {% trans seconds=REQUEST.watch.duration|round(2) -%}
+            {% trans seconds=REQUEST.watch.duration|round(2) %}
               (rendered in {{ seconds }} seconds)
-            {%- endtrans %}
+            {% endtrans %}
           {% endif %}
           <br />
-          {%- if INYOKA_VERSION -%}
+          {% if INYOKA_VERSION %}
           Inyoka {{ INYOKA_VERSION }}
-          {%- endif -%}
-          {%- if SETTINGS.DEBUG -%}
+          {% endif %}
+          {% if SETTINGS.DEBUG %}
             <br />
             {{ sql_queries_count }} SQL queries in {{ sql_queries_time }}s
-          {%- endif -%}
+          {% endif %}
         </li>
         <li class="license">
           <a href="?flavour=mobile" class="flavour_switch" >{% trans %}To mobile version{% endtrans %}</a><br />
@@ -251,16 +272,15 @@
     /*]]>*/
     </script>
 
-   {%- for script in ['jquery', 'classy', 'jquery.extensions', 'overall'] + scripts|default([]) %}
-     {%- if SETTINGS.DEBUG %}
+   {% for script in ['jquery', 'classy', 'jquery.extensions', 'overall'] + scripts|default([]) %}
+     {% if SETTINGS.DEBUG %}
        <script type="text/javascript" src="{{ href('static', 'js/%s.js'|format(script)) }}"></script>
-     {%- else %}
+     {% else %}
        <script type="text/javascript" src="{{ href('static', 'js/%s.min.js'|format(script)) }}"></script>
      {% endif %}
-   {%- endfor %}
+   {% endfor %}
 
    {% block additional_scripts %}
    {% endblock %}
-
   </body>
 </html>

@@ -10,7 +10,7 @@
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'portal/overall.html' %}
-{%- do BREADCRUMB.append(_('Portal'), href('portal'), True) -%}
+{% set BREADCRUMBS = [(_('Portal'), href('portal'))] + BREADCRUMBS|d([]) %}
 
 {% block pre_navigation %}
   {%- if countdown_active -%}

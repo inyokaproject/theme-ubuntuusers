@@ -14,7 +14,7 @@
 {% import 'macros.html' as macros %}
 {% set rendered_pagination = macros.render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(_('Revisions'), page|url('log'), True) %}
+{% set BREADCRUMBS = [(_('Revisions'), page|url('log'))] + BREADCRUMBS|d([]) %}
 {% set action = 'log' %}
 {% set feeds = [
   (_('Page revisions'), page|url('feed'))

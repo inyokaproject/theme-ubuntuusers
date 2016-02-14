@@ -10,8 +10,8 @@
 #}
 
 {%- extends 'forum/page.html' %}
-{% do BREADCRUMB.append(_('Old revisions'), post|url('revisions'), True) %}
-{% do BREADCRUMB.append(post.topic.title, post.topic|url, True) %}
+{% set BREADCRUMBS = [(post.topic.title, post.topic|url),
+                      (_('Old revisions'), post|url('revisions'))] + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}
   <table class="topic">

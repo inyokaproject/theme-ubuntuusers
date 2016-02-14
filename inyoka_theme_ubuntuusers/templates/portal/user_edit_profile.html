@@ -10,15 +10,16 @@
 {%- extends 'portal/user_admin.html' %}
 {% import 'macros.html' as macros %}
 
-{% do BREADCRUMB.append(_('Profile'), href('portal', 'user', user.username, 'edit', 'profile'), True) %}
-{% do BREADCRUMB.append(_('Edit'), href('portal', 'user', user.username, 'edit'), True) %}
-{% do BREADCRUMB.append(user.username, user|url, True) %}
-{% do BREADCRUMB.append(_('Members'), href('portal', 'users')) %}
+{% set BREADCRUMBS = [(_('Members'), href('portal', 'users')),
+                      (user.username, user|url),
+                      (_('Edit'), href('portal', 'user', user.username, 'edit')),
+                      (_('Profile'), href('portal', 'user', user.username, 'edit', 'profile'))]
+                       + BREADCRUMBS|d([]) %}
 
 {% block content %}
   {{ super() }}
   <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
-		{{ csrf_token() }}
+    {{ csrf_token() }}
     {{ render_form(form, ['username'], inline=true) }}
     <dt>{{ form.member_title.label_tag() }}</dt>
     <dd>{{ form.member_title }}

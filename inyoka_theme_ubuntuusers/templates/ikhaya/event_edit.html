@@ -11,13 +11,13 @@
 {% set styles = ['editor', 'datetimefield'] %}
 {% set scripts = ['WikiEditor', 'DateTime'] %}
 
+{% set tmp_crumb = [(_('Events'), href('ikhaya', 'events'))] %}
 {% if not event %}
-  {% do BREADCRUMB.append(_('Add'), href('ikhaya', 'event', 'new'), True) %}
+  {% do tmp_crumb.append((_('Add'), href('ikhaya', 'event', 'new'))) %}
 {% else %}
-  {% do BREADCRUMB.append(_('Edit'), event|url('edit'), True) %}
-  {% do BREADCRUMB.append(event.name, event|url, True) %}
+  {% set tmp_crumb = tmp_crumb + [(event.name, event|url), (_('Edit'), event|url('edit'))] %}
 {% endif %}
-{% do BREADCRUMB.append(_('Events'), href('ikhaya', 'events'), True) %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">

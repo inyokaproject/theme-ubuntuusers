@@ -13,12 +13,11 @@
 {% set scripts = ['WikiEditor', 'DateTime'] %}
 
 {% if not forum %}
-  {% do BREADCRUMB.append(_('Create forum'), href('forum', 'forum', 'new'), True) %}
+  {% set BREADCRUMBS = [(_('Create forum'), href('forum', 'forum', 'new'))] + BREADCRUMBS|d([]) %}
 {% else %}
-  {% do BREADCRUMB.append(_('Edit'), forum|url('edit'), True) %}
-  {% do BREADCRUMB.append(forum.name|e, forum|url(), True) %}
+  {% set BREADCRUMBS = [(_('Edit'), forum|url('edit')),
+                        (forum.name|e, forum|url())] + BREADCRUMBS|d([]) %}
 {% endif %}
-{% do BREADCRUMB.append(_('Forum'), href('forum'), True) %}
 
 {% block content %}
 <form action="" method="post" class="forum">

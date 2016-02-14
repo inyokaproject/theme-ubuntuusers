@@ -10,7 +10,7 @@
 #}
 {%- extends 'overall.html' %}
 
-{% do BREADCRUMB.append(_('Pastebin'), href('pastebin'), True) %}
+{% set BREADCRUMBS = [(_('Pastebin'), href('pastebin'))] + BREADCRUMBS|d([]) %}
 {% set styles = styles|default([]) + ['pastebin'] %}
 {% set active_app = 'paste' %}
 {% set navi_type  = 'tabbar' %}

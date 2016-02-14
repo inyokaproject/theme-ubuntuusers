@@ -9,7 +9,7 @@
 #}
 
 {%- extends 'portal/overall.html' %}
-{% do BREADCRUMB.append(_('Control panel'), href('portal', 'usercp'), True) %}
+{% set BREADCRUMBS = [(_('Control panel'), href('portal', 'usercp'))] + BREADCRUMBS|d([]) %}
 
 {% block sidebar %}
   <div class="container noh3">

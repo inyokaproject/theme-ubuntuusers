@@ -13,7 +13,8 @@
 {% from 'macros.html' import render_pagination, render_small_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(_('Subscriptions'), href('portal', 'usercp', 'subscriptions'), True) %}
+{% set BREADCRUMBS = [(_('Subscriptions'), href('portal', 'usercp',
+                                'subscriptions'))] + BREADCRUMBS|d([]) %}
 {% set selected = 'subscriptions' %}
 
 {% block sidebar %}

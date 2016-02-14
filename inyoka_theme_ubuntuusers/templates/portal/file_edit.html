@@ -10,16 +10,17 @@
 {%- extends 'portal/overall.html' %}
 {% from 'macros.html' import render_form %}
 
+{% set tmp_crumb = [(_('Static files'), href('portal', 'files'))] %}
 {% if not file %}
-  {% do BREADCRUMB.append(_('Create'), href('portal', 'files', 'new'), True) %}
+  {% do tmp_crumb.append((_('Create'), href('portal', 'files', 'new'))) %}
 {% else %}
-  {% do BREADCRUMB.append(file.identifier|e, file|url('edit'), True) %}
+  {% do tmp_crumb.append((file.identifier|e, file|url('edit'))) %}
 {% endif %}
-{% do BREADCRUMB.append(_('Static files'), href('portal', 'files'), True) %}
+{% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">
-	{{ csrf_token() }}
+  {{ csrf_token() }}
   <dl>
     {{ render_form(form, ['is_ikhaya_icon', 'file'], inline=true) }}
     {%- if file %}

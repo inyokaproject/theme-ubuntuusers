@@ -11,7 +11,7 @@
 {% from 'macros.html' import render_pagination %}
 {% set rendered_pagination = render_pagination(pagination) %}
 
-{% do BREADCRUMB.append(_('Static files'), href('portal', 'files')) %}
+{% set BREADCRUMBS = [(_('Static files'), href('portal', 'files'))] + BREADCRUMBS|d([]) %}
 
 {% block content %}
 <h3>{% trans %}Static files{% endtrans %}</h3>

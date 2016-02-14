@@ -10,7 +10,7 @@
 #}
 {%- extends 'overall.html' %}
 
-{% do BREADCRUMB.append(_('Forum'), href('forum'), True) %}
+{% set BREADCRUMBS = [(_('Forum'), href('forum'))] + BREADCRUMBS|d([]) %}
 {% set active_app = 'forum' %}
 {% set styles = ['forum', 'highlight'] + styles|default([]) %}
 {% set scripts = ['forum'] + scripts|default([]) %}
