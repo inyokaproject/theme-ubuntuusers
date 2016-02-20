@@ -16,6 +16,8 @@
 {% endif %}
 {% set styles = ['portal'] + styles|default([]) %}
 
+{% set BREADCRUMBS = [(_('Portal'), href('portal'))] + BREADCRUMBS|d([]) %}
+
 {% macro feed_button(link) -%}
   <a href="{{ link }}" class="feed_icon"><img src="{{ href('static', 'img', 'feed.png') }}" alt="Newsfeed" /></a>
 {%- endmacro %}
