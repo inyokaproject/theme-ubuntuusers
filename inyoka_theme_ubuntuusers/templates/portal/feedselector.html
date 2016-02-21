@@ -11,6 +11,8 @@
 {% extends 'portal/overall.html' %}
 {% set styles = ['feedselector'] %}
 
+{% set BREADCRUMBS = [(_('Feeds'), href('portal', 'feeds'))] + BREADCRUMBS|d([]) %}
+
 {% block portal_content %}
   <h3>Feed generieren</h3>
   {%- if not app %}

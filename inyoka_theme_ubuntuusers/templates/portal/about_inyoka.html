@@ -9,6 +9,9 @@
 #}
 
 {%- extends 'portal/overall.html' %}
+
+{% set BREADCRUMBS = [(_('Inyoka'), href('portal', 'inyoka'))] + BREADCRUMBS|d([]) %}
+
 {% macro badge(link, alt, img) -%}
   <a href="{{ link|e }}"><img src="{{ href('static',
     'img/badges/' + img)|e }}" alt="{{ alt|e }}" /></a>
