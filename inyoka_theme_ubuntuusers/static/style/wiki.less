@@ -186,6 +186,21 @@ table.diff {
     }
   }
 }
+
+.recent_changes {
+  table-layout: fixed;
+  width: 100%;
+
+  .timestamp {
+    width: 100px;
+  }
+
+  .pagelink {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 table.diff th.old_rev,table.diff th.new_rev {
   width: 3em;
 }
