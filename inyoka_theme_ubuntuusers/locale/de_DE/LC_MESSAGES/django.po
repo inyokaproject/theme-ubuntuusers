@@ -1,24 +1,23 @@
-# German (Germany) translations for .
-# Copyright (C) 2012 ORGANIZATION
-# This file is distributed under the same license as the  project.
+# German (Germany) translations for Inyoka Project.
+# Copyright (C) 2016 Inyoka Team (see AUTHORS)
+# This file is distributed under the same license as the Inyoka Project project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-# Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2016-01-24 16:28+0100\n"
-"PO-Revision-Date: 2016-01-24 16:28+0100\n"
-"Last-Translator: Jonatan Zeidler <jonatan_zeidler@gmx.de>\n"
+"POT-Creation-Date: 2016-03-13 12:14+0100\n"
+"PO-Revision-Date: 2016-03-13 12:25+0100\n"
+"Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
-"X-Generator: Poedit 1.8.4\n"
+"Generated-By: Babel 2.2.0\n"
+"X-Generator: Poedit 1.8.7\n"
 
 msgid " Activation link:"
 msgstr "Aktivierungslink:"
@@ -680,6 +679,9 @@ msgstr "Blogs exportieren"
 msgid "FAQ"
 msgstr "FAQ"
 
+msgid "Feeds"
+msgstr "Feeds"
+
 msgid "Filter"
 msgstr "Filter"
 
@@ -852,6 +854,9 @@ msgstr "Oberfläche"
 
 msgid "Involved topics"
 msgstr "Beteiligte Themen"
+
+msgid "Inyoka"
+msgstr "Inyoka"
 
 msgid "It is not possible to submit images along with the article. If you want to use images please upload them elsewhere and insert the links in the article."
 msgstr "Bilder können in dem Artikelvorschlag leider nicht direkt eingebunden werden. Soll Dein Artikel Bilder enthalten, lade diese bitte irgendwo hoch und füge die Bildlinks an die von Dir gewünschte Stelle des Artikelvorschlags."
@@ -1644,7 +1649,7 @@ msgstr "Der Browser hat keinen oder einen fehlerhaften Kontrollschlüssel übert
 msgid "The chosen posts can form a new topic or be attached to an existing topic."
 msgstr "Die gewählten Beiträge können hier in ein eigenes Thema abgetrennt werden oder an ein bestehendes Thema angehängt werden."
 
-msgid "The following list contains 10 randomly selected wiki articles. <a href=\"/wiki/randompages\">Reload this page</a> to see other suggestions."
+msgid "The following list consists of 10 randomly selected wiki articles. <a href=\"/wiki/randompages\">Reload</a> to see more pages."
 msgstr "Die nachfolgende Liste besteht aus 10 zufällig ausgewählten Wiki-Artikeln. Um weitere Zufallsseiten zu sehen, einfach diese <a href=\"/wiki/randompages\">Seite neuladen</a>."
 
 msgid "The following pages are embedding this articles as attachment."
