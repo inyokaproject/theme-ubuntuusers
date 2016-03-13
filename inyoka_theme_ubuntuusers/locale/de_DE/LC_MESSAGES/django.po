@@ -5,19 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka\n"
+"Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2016-03-13 12:14+0100\n"
-"PO-Revision-Date: 2016-03-13 12:25+0100\n"
-"Last-Translator: Stefan J. Betz <info@stefan-betz.net>\n"
+"POT-Creation-Date: 2016-03-13 15:12+0100\n"
+"PO-Revision-Date: 2016-03-13 15:15+0100\n"
+"Last-Translator: Christoph Volkert <>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
-"X-Generator: Poedit 1.8.7\n"
+"Generated-By: Babel 2.1.1\n"
 
 msgid " Activation link:"
 msgstr "Aktivierungslink:"
@@ -397,6 +396,9 @@ msgstr "Betrifft Artikel „<a href=\"%(link)s\">%(article)s</a>“"
 
 msgid "Configuration"
 msgstr "Konfiguration"
+
+msgid "Confirmation"
+msgstr "Bestätigung"
 
 msgid "Contact"
 msgstr "Kontakt"
@@ -2090,24 +2092,3 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
-
-#~ msgid "The following features are available for this page:"
-#~ msgstr "Die folgenden Funktionen stehen für diese Seite zur Verfügung:"
-
-#~ msgid "Show page"
-#~ msgstr "Seite anzeigen"
-
-#~ msgid "Edit page"
-#~ msgstr "Seite bearbeiten"
-
-#~ msgid "Show log"
-#~ msgstr "Verlauf anzeigen"
-
-#~ msgid "Export page:"
-#~ msgstr "Seite exportieren:"
-
-#~ msgid "Export metadata"
-#~ msgstr "Metadaten exportieren"
-
-#~ msgid "Prune cache"
-#~ msgstr "Cache leeren"
