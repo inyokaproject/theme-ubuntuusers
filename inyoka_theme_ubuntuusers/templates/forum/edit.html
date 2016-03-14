@@ -13,20 +13,20 @@
 {%- extends 'forum/page.html' %}
 
 {% set tmp_crumb = [] %}
+{% for parent in forum.parents|reverse %}
+  {% do tmp_crumb.append((parent.name, parent|url)) %}
+{% endfor %}
+{% do tmp_crumb.append((forum.name, forum|url)) %}
 {% if not topic %}
   {% do tmp_crumb.append((_('New topic'), forum|url('newtopic'))) %}
 {% else %}
+  {% do tmp_crumb.append((topic.title, topic|url)) %}
   {% if post %}
     {% do tmp_crumb.append((_('Edit post'), '')) %}
   {% else %}
     {% do tmp_crumb.append((_('New reply'), topic|url('reply'))) %}
   {% endif %}
-  {% do tmp_crumb.append((topic.title, topic|url)) %}
 {% endif %}
-{% do tmp_crumb.append((forum.name, forum|url)) %}
-{% for parent in forum.parents[:-1] %}
-  {% do tmp_crumb.append((parent.name, parent|url)) %}
-{% endfor %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% set scripts = ['WikiEditor', 'NewTopic'] %}

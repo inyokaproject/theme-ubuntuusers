@@ -9,10 +9,12 @@
 #}
 {%- extends 'forum/page.html' %}
 
-{% set tmp_crumb = [(_('Move'), topic|url('move')), (topic.forum.name, topic.forum|url), (topic.title, topic|url)] %}
-{% for parent in topic.forum.parents[:-1] %}
+{% set tmp_crumb = [] %}
+{% for parent in topic.forum.parents|reverse %}
   {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
+{% do tmp_crumb.extend([(topic.forum.name, topic.forum|url), (topic.title, topic|url),
+                        (_('Move'), topic|url('move'))])%}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block forum_content %}

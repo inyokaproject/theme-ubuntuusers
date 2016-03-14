@@ -37,7 +37,7 @@
 ] %}
 
 {% set tmp_crumb = [] %}
-{% for parent in forum.parents %}
+{% for parent in forum.parents|reverse %}
   {% do tmp_crumb.append((parent.name, parent|url)) %}
 {% endfor %}
 {% do tmp_crumb.append((forum.name, forum|url)) %}
