@@ -36,18 +36,6 @@
         <br />
       {%- endfor %}
       {{ form.permissions.errors }}
-    <h3>{% trans %}Forum privileges{% endtrans %}</h3>
-    <div id="forum_rights">{% trans %}Sorry, you need to enable JavaScript to edit forum privileges.{% endtrans %}</div>
     <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
   </form>
-{% endblock %}
-
-{% block additional_scripts %}
-  {{ super() }}
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var forum_rights = new PrivilegeBox('#forum_rights', {{ user_forum_privileges|jsonencode }},
-      {{ forum_privileges|jsonencode }});
-    /* ]]> */
-  </script>
 {% endblock %}
