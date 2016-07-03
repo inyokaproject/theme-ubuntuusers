@@ -32,7 +32,7 @@
     <dd class="paste_actions">
       <ul>
         <li><a href="{{ entry|url('raw') }}">{% trans %}Display entry as raw text{% endtrans %}</a></li>
-        {%- if USER.can('manage_pastebin') %}
+        {%- if USER.has_perms('pastebin.delete_entry') %}
           <li><a href="{{ entry|url('delete') }}" class="admin_link">{% trans %}Delete entry{% endtrans %}</a></li>
       {%- endif %}
       </ul>
