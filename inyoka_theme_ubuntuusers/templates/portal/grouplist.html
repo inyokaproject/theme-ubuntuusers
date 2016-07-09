@@ -22,7 +22,7 @@
       In total there are {{ count }} groups, you are in {{ usercount }} of them (printed bold).
     {%- endtrans %}
   </p>
-  {%- if USER.can('group_edit') -%}
+  {%- if USER.has_perm('portal.change_user') -%}
     <p>
       <a href="{{ href('portal', 'group', 'new') }}">{% trans %}Create new group{% endtrans %}</a>.
     </p>
@@ -37,7 +37,7 @@
         {%- if group in user_groups %}<strong>{% endif -%}
         <a href="{{ group }}">{{ group.name|e }}</a>
         {%- if group in user_groups %}</strong>{% endif -%}
-        {%- if USER.can('group_edit') -%}
+        {%- if USER.has_perm('portal.change_user') -%}
           <a href="{{ href('portal', 'group', group.name|e, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
         {%- endif -%}
       </td>

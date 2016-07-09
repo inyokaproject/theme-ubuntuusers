@@ -13,7 +13,7 @@
 
 {% block content %}
   <h3>{{ title|e }}
-    {%- if USER.can('static_page_edit') %}
+    {%- if USER.has_perm('portal.change_staticpage') %}
       <a href="{{ page|url('edit') }}"><img src="{{ href('static', 'img', 'ikhaya', 'category_edit.png') }}" /></a><a href="{{ page|url('delete') }}"><img src="{{ href('static', 'img', 'forum', 'delete.png') }}" /></a>
     {%- endif %}
   </h3>

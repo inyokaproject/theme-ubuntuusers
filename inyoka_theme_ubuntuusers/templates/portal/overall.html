@@ -42,7 +42,9 @@
     <ul>
       <li><a href="{{ href('wiki', 'ubuntuusers') }}">Über ubuntuusers.de</a></li>
       <li><a href="{{ href('portal', 'users') }}">{% trans %}Members{% endtrans %}</a></li>
+      {%- if USER.has_perm('portal.change_user') %}
       <li><a href="{{ href('portal', 'groups') }}">{% trans %}Groups{% endtrans %}</a></li>
+      {%- endif %}
       <li><a href="{{ href('wiki', 'ubuntuusers', 'Spenden') }}">Spenden</a></li>
       <li><a href="{{ href('portal', 'kontakt') }}">{% trans %}Contact{% endtrans %}</a></li>
       <li><a href="{{ href('pastebin') }}">Ablage</a></li>
@@ -61,27 +63,35 @@
       <li><a href="{{ href('wiki', 'Links') }}">Links</a></li>
     </ul>
     <h3 class="navi_ikhaya">{{ feed_button(href('portal', 'feeds', 'ikhaya')) }}<a href="{{ href('ikhaya') }}">Ikhaya</a></h3>
+    {%- if USER.has_perm('ikhaya.suggest_article') or USER.has_perm('portal.suggest_event') %}
     <ul>
+      {%- if USER.has_perm('ikhaya.suggest_article') %}
       <li><a href="{{ href('ikhaya', 'suggest', 'new') }}">{% trans %}Suggest an article{% endtrans %}</a></li>
+      {%- endif %}
+      {%- if USER.has_perm('portal.suggest_event') %}
       <li><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest an event{% endtrans %}</a></li>
+      {%- endif %}
     </ul>
+    {%- endif %}
     <h3 class="navi_planet">{{ feed_button(href('portal', 'feeds', 'planet')) }}<a href="{{ href('planet') }}">Planet</a></h3>
+    {%- if USER.has_perm('planet.suggest_blog') %}
     <ul>
       <li><a href="{{ href('planet', 'suggest') }}">{% trans %}Suggest a blog{% endtrans %}</a></li>
     </ul>
-    {%- if USER.can('static_page_edit') or USER.can('static_file_edit') or USER.can('configuration_edit') or USER.can('markup_css_edit') %}
+    {%- endif %}
+    {%- if USER.has_perm('portal.change_staticpage') or USER.has_perm('portal.change_staticfile') or USER.has_perm('portal.change_storage') %}
     <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
     <ul>
-    {%- if USER.can('configuration_edit') %}
+    {%- if USER.has_perm('portal.change_storage') %}
       <li><a href="{{ href('portal', 'config') }}">{% trans %}General{% endtrans %}</a></li>
     {%- endif %}
-    {%- if USER.can('markup_css_edit') %}
+    {%- if USER.has_perm('portal.change_staticfile') %}
       <li><a href="{{ href('portal', 'styles') }}">{% trans %}Stylesheets{% endtrans %}</a></li>
     {%- endif %}
-    {%- if USER.can('static_page_edit') %}
+    {%- if USER.has_perm('portal.change_staticpage') %}
       <li><a href="{{ href('portal', 'pages') }}">{% trans %}Static pages{% endtrans %}</a></li>
     {% endif %}
-    {%- if USER.can('static_file_edit') %}
+    {%- if USER.has_perm('portal.change_staticfile') %}
       <li><a href="{{ href('portal', 'files') }}">{% trans %}Static files{% endtrans %}</a></li>
     {% endif %}
     </ul>

@@ -17,7 +17,7 @@
 {% set styles = ['datetimefield'] %}
 {% block content %}
   <h3>{% trans %}Members{% endtrans %}</h3>
-  {% if USER.can('user_edit') %}
+  {% if USER.has_perm('portal.change_user') %}
     <p>{% trans %}Choose the user you want to edit:{% endtrans %}</p>
     <form action="" method="post">
       {{ csrf_token() }}

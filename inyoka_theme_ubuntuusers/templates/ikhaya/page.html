@@ -80,23 +80,6 @@
         {% endif %}
       </ul>
     {% endif %}
-    {%- if USER.can('static_page_edit') or USER.can('static_file_edit') or USER.can('configuration_edit') or USER.can('markup_css_edit') %}
-      <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
-      <ul>
-        {%- if USER.can('configuration_edit') %}
-          <li><a href="{{ href('portal', 'config') }}">{% trans %}General{% endtrans %}</a></li>
-        {%- endif %}
-        {%- if USER.can('markup_css_edit') %}
-          <li><a href="{{ href('portal', 'styles') }}">{% trans %}Stylesheets{% endtrans %}</a></li>
-        {%- endif %}
-        {%- if USER.can('static_page_edit') %}
-          <li><a href="{{ href('portal', 'pages') }}">{% trans %}Static pages{% endtrans %}</a></li>
-        {% endif %}
-        {%- if USER.can('static_file_edit') %}
-          <li><a href="{{ href('portal', 'files') }}">{% trans %}Static files{% endtrans %}</a></li>
-        {% endif %}
-      </ul>
-    {%- endif %}
 
   </div>
 {% endblock %}

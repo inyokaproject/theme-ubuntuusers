@@ -114,21 +114,19 @@
             {% endif %}
           </ul>{# .navi_global #}
         {% endif %}
-        {% if USER.can('manage_topics') or USER.can('article_edit') or USER.can('event_edit') %}
+        {% if USER.can('manage_topics') or USER.has_perm('ikhaya.change_article') or USER.has_perm('portal.change_event') %}
           <div id="admin_menu">
             <div class="bar">
               {% if USER.can('manage_topics') %}
                 {{ macros.render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
               {% endif %}
-              {% if USER.can('article_edit') %}
+              {% if USER.has_perm('ikhaya.change_article') %}
                 {% set label = _('Article suggestions') %}
                 {{ macros.render_modnavi_li(label, href('ikhaya', 'suggestions'), href('static', 'img/admin/article.png'), suggestion_count) }}
-              {% endif %}
-              {% if USER.can('article_edit') %}
                 {% set label = _('Spelling mistakes') %}
                 {{ macros.render_modnavi_li(label, href('ikhaya', 'reports'), href('static', 'img/admin/spelling.png'), article_report_count) }}
               {% endif %}
-              {% if USER.can('event_edit') %}
+              {% if USER.has_perm('portal.change_event') %}
                 {% set label = _('Event suggestions') %}
                 {{ macros.render_modnavi_li(label, href('ikhaya', 'events', 'invisible'), href('static', 'img/admin/event.png'), event_count) }}
               {% endif %}
