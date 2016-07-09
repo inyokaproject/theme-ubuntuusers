@@ -20,29 +20,7 @@
 {% endif %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
-{% set scripts = ['PrivilegeBox'] %}
-
 {% block content %}
 <h3>{% trans %}Group configuration{% endtrans %}</h3>
-<form enctype="multipart/form-data" action="" method="post">
-	{{ csrf_token() }}
-  <dl>
-    {{ render_form(form, ['name'], inline=true) }}
-    {{ render_form(form, ['permissions']) }}
-    <dt>{% trans %}Forum privileges:{% endtrans %}</dt>
-    <dd id="forum_rights">{% trans %}Please turn JavaScript on to edit the privileges.{% endtrans %}</dd>
-  </dl>
-  <input type="submit" value="{% trans %}Submit{% endtrans %}" />
-</form>
-{% endblock %}
-
-{% block additional_scripts %}
-  {{ super() }}
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var forum_rights = new PrivilegeBox('#forum_rights', {{ group_forum_privileges|jsonencode }},
-      {{ forum_privileges|jsonencode }});
-    $('input.permission').parent().parent().parent().attr('class', 'permissions');
-    /* ]]> */
-  </script>
+Not implemented yet.
 {% endblock %}

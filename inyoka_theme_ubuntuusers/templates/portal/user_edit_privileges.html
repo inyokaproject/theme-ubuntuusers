@@ -15,27 +15,8 @@
                       (_('Privileges'), href('portal', 'user', user.username, 'edit', 'privileges'))]
                        + BREADCRUMBS|d([]) %}
 
-{% macro render_grouplist(derived) %}
-  {% for group in derived %}<a href="{{ group|url }}">{{ group.name|e }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
-{%- endmacro %}
-
 {% block content %}
   {{ super() }}
-  <form enctype="multipart/form-data" id="user_edit_form" method="post" action="">
-    {{ csrf_token() }}
     <h3>{% trans %}Privileges{% endtrans %}</h3>
-      {%- for id, name, checked, derived in permissions %}
-        <input type="checkbox" name="permissions" value="{{ id }}" id="perm_{{ id }}"
-               {%- if checked %} checked="checked"{% endif %} />
-        <label for="perm_{{ id }}">{{ name|e }}</label>
-        {%- if derived %}
-          <span class="note">{% trans grouplist=render_grouplist(derived) -%}
-            (Derived from {{ grouplist }})
-          {%- endtrans %}</span>
-        {%- endif -%}
-        <br />
-      {%- endfor %}
-      {{ form.permissions.errors }}
-    <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
-  </form>
+  Not implemented yet.
 {% endblock %}
