@@ -123,7 +123,7 @@
                 {{ csrf_token() }}
                 {{ form.text }}
                 <div class="note">{{ form.fields.text.help_text }}</div>
-                {% if form.data.comment_id and USER.can('comment_edit') %}
+                {% if form.data.comment_id and USER.has_perm('ikhaya.change_comment') %}
                   {{ form.comment_id }}
                 {% endif %}
                 <p>
