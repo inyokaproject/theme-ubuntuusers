@@ -22,7 +22,7 @@
   <dl>
     <dt>{% trans %}Title:{% endtrans %}</dt>
     <dd>{{ entry.title|e }}</dd>
-    {%- if not entry.author.is_anonymous %}
+    {%- if not entry.author.is_anonymous() %}
       <dt>{% trans %}Author:{% endtrans %}</dt>
       <dd><a href="{{ entry.author|url }}">{{ entry.author.username|e }}</a></dd>
     {%- endif %}
