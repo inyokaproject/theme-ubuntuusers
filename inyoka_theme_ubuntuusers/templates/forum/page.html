@@ -83,7 +83,7 @@
   </div>
 
   <div class="pathbar_extension">
-    {% if USER.can('forum_edit') %}
+    {% if USER.has_perm('forum.change_forum') %}
       {% if forum %}
         <a class="admin_link" href="{{ href('forum', 'forum', 'new', forum.id) }}">{% trans %}Create new forum{% endtrans %}</a>
       {% else %}

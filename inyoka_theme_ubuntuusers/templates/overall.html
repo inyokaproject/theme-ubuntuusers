@@ -114,10 +114,10 @@
             {% endif %}
           </ul>{# .navi_global #}
         {% endif %}
-        {% if USER.can('manage_topics') or USER.has_perm('ikhaya.change_article') or USER.has_perm('portal.change_event') %}
+        {% if USER.has_perm('forum.manage_reported_topic') or USER.has_perm('ikhaya.change_article') or USER.has_perm('portal.change_event') %}
           <div id="admin_menu">
             <div class="bar">
-              {% if USER.can('manage_topics') %}
+              {% if USER.has_perm('forum.manage_reported_topic') %}
                 {{ macros.render_modnavi_li(_('Reported topics'), href('forum', 'reported_topics'), href('static', 'img/admin/report.png'), report_count) }}
               {% endif %}
               {% if USER.has_perm('ikhaya.change_article') %}
