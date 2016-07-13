@@ -33,7 +33,7 @@
     </tr>
     {%- for group in groups %}
     <tr>
-      <td{% if not group.is_public %} class="hidden"{% endif %}>
+      <td>
         {%- if group in user_groups %}<strong>{% endif -%}
         <a href="{{ group }}">{{ group.name|e }}</a>
         {%- if group in user_groups %}</strong>{% endif -%}
