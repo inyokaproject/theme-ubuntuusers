@@ -35,7 +35,7 @@
     <tr>
       <td>
         {%- if group in user_groups %}<strong>{% endif -%}
-        <a href="{{ group }}">{{ group.name|e }}</a>
+        <a href="{{ href('portal', 'group', group) }}">{{ group.name|e }}</a>
         {%- if group in user_groups %}</strong>{% endif -%}
         {%- if USER.has_perm('portal.change_user') -%}
           <a href="{{ href('portal', 'group', group.name|e, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
