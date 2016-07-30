@@ -12,7 +12,7 @@
 {% from 'macros.html' import render_form %}
 
 {% set tmp_crumb = [(_('Groups'), href('portal', 'groups'))] %}
-{% if is_new %}
+{% if not group is defined %}
   {% do tmp_crumb.append((_('New group'), href('portal', 'group', 'new'))) %}
 {% else %}
   {% do tmp_crumb.extend([(_('Edit'), href('portal', 'group', group_name, 'edit')),
@@ -21,6 +21,10 @@
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}
-<h3>{% trans %}Group configuration{% endtrans %}</h3>
-Not implemented yet.
+  {{ super() }}
+  <form enctype="multipart/form-data" class="usercp_form" method="post" action="">
+  {{ csrf_token() }}
+  {{ form }}
+  <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+  </form>
 {% endblock %}
