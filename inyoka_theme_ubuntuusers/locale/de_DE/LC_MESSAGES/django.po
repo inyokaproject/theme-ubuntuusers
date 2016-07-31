@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2016-03-14 18:57+0100\n"
-"PO-Revision-Date: 2016-03-13 15:15+0100\n"
-"Last-Translator: Christoph Volkert <>\n"
+"POT-Creation-Date: 2016-07-30 21:17+0200\n"
+"PO-Revision-Date: 2016-07-31 08:38+0200\n"
+"Last-Translator: Unknown <chris@Arch-Dev-Virtual>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -69,12 +69,6 @@ msgstr[0] "%(n)s Benutzer angemeldet."
 msgstr[1] "%(n)s Benutzer angemeldet."
 
 #, python-format
-msgid "%(n)s user has special privileges:"
-msgid_plural "%(n)s users have special privileges:"
-msgstr[0] "%(n)s Benutzer hat besondere Berechtigungen:"
-msgstr[1] "%(n)s Benutzer haben besondere Berechtigungen:"
-
-#, python-format
 msgid "%(name)s is a system user."
 msgstr "%(name)s ist ein Systembenutzer"
 
@@ -94,10 +88,6 @@ msgstr "%(subject)s von %(author)s"
 
 msgid "(De)select all"
 msgstr "Alle an- / abwählen"
-
-#, python-format
-msgid "(Derived from %(grouplist)s)"
-msgstr "(Von %(grouplist)s geerbt)"
 
 msgid "(Topic starter)"
 msgstr "(Themenstarter)"
@@ -189,9 +179,6 @@ msgstr "Kategorie hinzufügen"
 
 msgid "Add event"
 msgstr "Veranstaltung hinzufügen"
-
-msgid "Add group"
-msgstr "Gruppe hinzufügen"
 
 msgid "Add new blog"
 msgstr "Neues Blog hinzufügen"
@@ -291,9 +278,6 @@ msgstr "Autor"
 msgid "Author:"
 msgstr "Autor:"
 
-msgid "Available groups"
-msgstr "Verfügbare Gruppen"
-
 #, python-format
 msgid "Avatar of %(user)s"
 msgstr "Avatar von %(user)s"
@@ -303,9 +287,6 @@ msgstr "Avatar Einstellungen"
 
 msgid "Backlinks"
 msgstr "Backlinks"
-
-msgid "Bad request"
-msgstr "Fehlerhafte Abfrage"
 
 msgid "Bloglist"
 msgstr "Blogliste"
@@ -332,6 +313,9 @@ msgstr "Mit diesem Formular kannst du einen neuen Eintrag in unseren <a href=\"%
 
 msgid "CAUTION: A change of the file destroys all links from articles to this file!"
 msgstr "VORSICHT: Eine Änderung der Datei zerstört alle Links von Artikeln, die auf diese Datei verweisen!"
+
+msgid "CSRF verification failed. Request aborted."
+msgstr "Der CSRF-Token ist ungültig. Die Anfrage wurde daher verworfen."
 
 msgid "Calendar"
 msgstr "Kalender"
@@ -518,9 +502,6 @@ msgstr "Seite löschen"
 msgid "Delete selected subscriptions"
 msgstr "Lösche gewählte Abonnements"
 
-msgid "Delete team icon"
-msgstr "Team-Icon löschen"
-
 #, python-format
 msgid "Describe here briefly the discovered mistake. Please make sure that the mistake was not <a href=\"%(link)s\">already reported</a>."
 msgstr "Bitte beschreibe hier kurz die im Artikel gefundenen Fehler. Bitte achte darauf, dass der Fehler nicht bereits <a href=\"%(link)s\">gemeldet wurde</a>."
@@ -693,6 +674,9 @@ msgstr "Für ein Thema:"
 msgid "For the following forum:"
 msgstr "Für das folgende Forum:"
 
+msgid "Forbidden (403)"
+msgstr "Unzulässig (403)"
+
 msgid "Forum"
 msgstr "Forum"
 
@@ -707,12 +691,6 @@ msgstr "Forum - Einleitung"
 
 msgid "Forum of the new topic:"
 msgstr "Forum des neuen Themas:"
-
-msgid "Forum privileges"
-msgstr "Forumsprivilegien"
-
-msgid "Forum privileges:"
-msgstr "Forenberechtigungen:"
 
 msgid "Forum read"
 msgstr "Forum gelesen"
@@ -768,9 +746,6 @@ msgstr "Gehe zu Beitrag"
 msgid "Gravatar:"
 msgstr "Gravatar:"
 
-msgid "Group configuration"
-msgstr "Gruppenkonfiguration"
-
 msgid "Group memberships"
 msgstr "Gruppenmitgliedschaften"
 
@@ -816,6 +791,18 @@ msgstr "Ich versichere hiermit, dass der Beitrag weder fremde Rechte noch die <a
 msgid "Identifier"
 msgstr "Bezeichner"
 
+msgid ""
+"If you have configured your browser to disable 'Referer' headers,\n"
+"      please re-enable them, at least for this site, or for HTTPS\n"
+"      connections, or for 'same-origin' requests."
+msgstr "Wenn du Referrer in deinem Browser deaktiviert hast, aktivierte dies bitte wieder. Es ist dabei ausreichend, Referrer nur für diese Domain, HTTPS-Verbindungen oder an die Ursprungsdomain („same-origin“) zu senden."
+
+msgid ""
+"If you have configured your browser to disable cookies, please\n"
+"      re-enable them, at least for this site, or for 'same-origin'\n"
+"      requests."
+msgstr "Wenn du Cookies in deinem Browser deaktiviert hast, aktivierte dies bitte wieder. Es ist dabei ausreichend, Cookies nur für diese Domain oder die Ursprungsdomain („same-origin“) zu aktivieren."
+
 #, python-format
 msgid "If you received a spam message, please forward it to a <a href=\"%(moderators)s\">moderator</a>."
 msgstr "Wenn du eine Spam-Nachricht erhalten hast, leite diese bitte an einen <a href=\"%(moderators)s\">Moderator</a> weiter."
@@ -828,9 +815,6 @@ msgstr "Du willst, dass wir etwas Bestimmtes im Ikhaya veröffentlichen? Eine wi
 
 msgid "Ikhaya"
 msgstr "Ikhaya"
-
-msgid "In some browsers it is possible to click on the \"back\" or the \"reload\" button to request a new control key the sending the page again."
-msgstr "In manchen Browsern ist es möglich durch Klicken auf „Zurück“ und dann „Aktualiseren“ einen neuen Kontrollschlüssel anzufordern, um das Absenden erneut durchzuführen."
 
 #, python-format
 msgid "In total there are %(global_registered_users)s users registered."
@@ -1014,9 +998,6 @@ msgstr "Mitglieder"
 
 msgid "Members with green usernames belong to the team."
 msgstr "Benutzer mit grünem Benutzernamen gehören zum Team."
-
-msgid "Membership"
-msgstr "Mitgliedschaft"
 
 #, python-format
 msgid "Message from %(name)s"
@@ -1221,15 +1202,8 @@ msgstr "Bitte installiere den Internet Explorer 8 oder neuer."
 msgid "Please note that the maximum size for the avatar is %(width)sx%(height)s pixels and %(size)s KiB. Everything that exceeds this limit will automatically be resized."
 msgstr "Bitte beachte, dass die maximale Größe eines Avatars %(width)sx%(height)s Pixel und %(size)s KiB beträgt. Avatare, die dieses Limit überschreiten, werden automatisch verkleinert."
 
-#, python-format
-msgid "Please note that the team icon can not be bigger than %(width)sx%(height)s pixel. Images exceeding this limit will be resized automatically."
-msgstr "Bitte beachte, dass das Teamicon nicht größer als %(width)sx%(height)s Pixel sein darf. Bilder, die dieses Limit überschreiten werden automatisch verkleinert."
-
 msgid "Please save long code snippets or program outputs in our paste service and link to the respective entry."
 msgstr "Bitte speichere lange Code-Ausschnitte oder Programmausgaben in unserer Ablage und verlinke den entsprechenden Beitrag."
-
-msgid "Please turn JavaScript on to edit the privileges."
-msgstr "Bitte aktiviere JavaScript, um die Berechtigungen zu ändern."
 
 msgid "Please turn on JavaScript!"
 msgstr "Bitte aktiviere JavaScript!"
@@ -1334,9 +1308,6 @@ msgstr "Registrierte Benutzer:"
 
 msgid "Reject"
 msgstr "Ablehnen"
-
-msgid "Remove group"
-msgstr "Gruppe entfernen"
 
 msgid "Rename"
 msgstr "Umbenennen"
@@ -1475,9 +1446,6 @@ msgstr "Revisionen anzeigen"
 msgid "Show unread posts"
 msgstr "Zeige ungelesene Beiträge"
 
-msgid "Show users with special rights"
-msgstr "Zeige Nutzer mit Sonderrechten"
-
 msgid "Signature"
 msgstr "Signatur"
 
@@ -1489,9 +1457,6 @@ msgstr "Slug des Themas"
 
 msgid "Solved"
 msgstr "Gelöst"
-
-msgid "Sorry, you need to enable JavaScript to edit forum privileges."
-msgstr "Entschuldige, du musst JavaScript aktivieren, um Forenberechtigungen zu bearbeiten."
 
 msgid "Spelling mistakes"
 msgstr "Rechtschreibfehler"
@@ -1611,9 +1576,6 @@ msgstr "Tagliste"
 msgid "Team icon"
 msgstr "Team-Icon"
 
-msgid "Team icon:"
-msgstr "Teamicon:"
-
 msgid "Teaser"
 msgstr "Einleitung"
 
@@ -1644,9 +1606,6 @@ msgid "The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(co
 msgid_plural "The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(count)s revisions."
 msgstr[0] "Der Artikel “<a href=\"%(link)s\">%(article)s</a>“ hat eine Revision."
 msgstr[1] "Der Artikel „<a href=\"%(link)s\">%(article)s</a>“ hat %(count)s Revisionen."
-
-msgid "The browser did not transmit a valid control key and therefore the processing has been canceled for security reasons."
-msgstr "Der Browser hat keinen oder einen fehlerhaften Kontrollschlüssel übertragen; die Weiterverarbeitung wurde aus Sicherheitsgründen abgebrochen."
 
 msgid "The chosen posts can form a new topic or be attached to an existing topic."
 msgstr "Die gewählten Beiträge können hier in ein eigenes Thema abgetrennt werden oder an ein bestehendes Thema angehängt werden."
@@ -1747,9 +1706,6 @@ msgstr "Dieser Anhang ist verwaist und von keiner Seite referenziert."
 
 msgid "This category does not contain any forum."
 msgstr "Diese Kategorie enthält keine Foren"
-
-msgid "This error usually occurs when you are trying to transfer data automatically to the server. In rare cases this can also happen if the browser configuration was changed while the form data is transmitted."
-msgstr "Dieser Fehler tritt normalerweise auf, wenn versucht wurde Daten automatisiert auf den Server zu übertragen. In seltenen Fällen kann dies auch passieren, wenn die Browserkonfiguration verändert wurde, während die Formulardaten übertragen wurden."
 
 msgid "This group is private and the membership is not shown public."
 msgstr "Diese Gruppe ist privat, die Mitgliedschaft wird nicht öffentlich angezeigt."
@@ -1885,9 +1841,6 @@ msgstr "Benutzer"
 msgid "User page"
 msgstr "Benutzerseite"
 
-msgid "User with special privileges"
-msgstr "Nutzer mit Sonderrechten"
-
 msgid "User:"
 msgstr "Benutzer:"
 
@@ -1957,6 +1910,20 @@ msgstr "Hier kannst du einen Blog für den Planeten vorschlagen."
 
 msgid "Write comment"
 msgstr "Kommentar schreiben"
+
+msgid ""
+"You are seeing this message because this HTTPS site requires a\n"
+"      'Referer header' to be sent by your Web browser, but none was\n"
+"      sent. This header is required for security reasons, to ensure\n"
+"      that your browser is not being hijacked by third parties."
+msgstr "Du siehst diese Nachricht, weil diese Seite einen 'Referrer-header' benötigt. Letzterer wurde aber nicht von deinem Browser gesendet. Der Header schützt dabei vor einer Accountübernahme durch Dritte."
+
+msgid ""
+"You are seeing this message because this site requires a CSRF\n"
+"      cookie when submitting forms. This cookie is required for\n"
+"      security reasons, to ensure that your browser is not being\n"
+"      hijacked by third parties."
+msgstr "Du siehst diese Nachricht, weil diese Seite beim Absenden von Daten einen CSRF-Cookie benötigt. Letzterer wurde aber nicht von deinem Browser gesendet. Der Cookie schützt dabei vor einer Übernahme durch Dritte."
 
 #, python-format
 msgid "You are trying to compare two equal revision of the article “<a href=\"%(link)s\">%(article)s</a>”. For this reason no change is displayed."
@@ -2028,9 +1995,6 @@ msgstr "Erstellen"
 msgid "dead link"
 msgstr "Verwaister Link"
 
-msgid "delete"
-msgstr "löschen"
-
 msgid "edit"
 msgstr "Bearbeiten"
 
@@ -2092,4 +2056,3 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
-

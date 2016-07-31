@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.14.0\n"
+"Project-Id-Version: Inyoka Project v0.14.3\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-14 18:57+0100\n"
+"POT-Creation-Date: 2016-07-30 21:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,12 +68,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, python-format
-msgid "%(n)s user has special privileges:"
-msgid_plural "%(n)s users have special privileges:"
-msgstr[0] ""
-msgstr[1] ""
-
-#, python-format
 msgid "%(name)s is a system user."
 msgstr ""
 
@@ -92,10 +86,6 @@ msgid "%(subject)s from %(author)s"
 msgstr ""
 
 msgid "(De)select all"
-msgstr ""
-
-#, python-format
-msgid "(Derived from %(grouplist)s)"
 msgstr ""
 
 msgid "(Topic starter)"
@@ -187,9 +177,6 @@ msgid "Add category"
 msgstr ""
 
 msgid "Add event"
-msgstr ""
-
-msgid "Add group"
 msgstr ""
 
 msgid "Add new blog"
@@ -290,9 +277,6 @@ msgstr ""
 msgid "Author:"
 msgstr ""
 
-msgid "Available groups"
-msgstr ""
-
 #, python-format
 msgid "Avatar of %(user)s"
 msgstr ""
@@ -301,9 +285,6 @@ msgid "Avatar settings"
 msgstr ""
 
 msgid "Backlinks"
-msgstr ""
-
-msgid "Bad request"
 msgstr ""
 
 msgid "Bloglist"
@@ -330,6 +311,9 @@ msgid "By using this form you can suggest a new entry for the <a href=\"%(link_c
 msgstr ""
 
 msgid "CAUTION: A change of the file destroys all links from articles to this file!"
+msgstr ""
+
+msgid "CSRF verification failed. Request aborted."
 msgstr ""
 
 msgid "Calendar"
@@ -517,9 +501,6 @@ msgstr ""
 msgid "Delete selected subscriptions"
 msgstr ""
 
-msgid "Delete team icon"
-msgstr ""
-
 #, python-format
 msgid "Describe here briefly the discovered mistake. Please make sure that the mistake was not <a href=\"%(link)s\">already reported</a>."
 msgstr ""
@@ -692,6 +673,9 @@ msgstr ""
 msgid "For the following forum:"
 msgstr ""
 
+msgid "Forbidden (403)"
+msgstr ""
+
 msgid "Forum"
 msgstr ""
 
@@ -705,12 +689,6 @@ msgid "Forum - Teaser"
 msgstr ""
 
 msgid "Forum of the new topic:"
-msgstr ""
-
-msgid "Forum privileges"
-msgstr ""
-
-msgid "Forum privileges:"
 msgstr ""
 
 msgid "Forum read"
@@ -767,9 +745,6 @@ msgstr ""
 msgid "Gravatar:"
 msgstr ""
 
-msgid "Group configuration"
-msgstr ""
-
 msgid "Group memberships"
 msgstr ""
 
@@ -815,6 +790,18 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
+msgid ""
+"If you have configured your browser to disable 'Referer' headers,\n"
+"      please re-enable them, at least for this site, or for HTTPS\n"
+"      connections, or for 'same-origin' requests."
+msgstr ""
+
+msgid ""
+"If you have configured your browser to disable cookies, please\n"
+"      re-enable them, at least for this site, or for 'same-origin'\n"
+"      requests."
+msgstr ""
+
 #, python-format
 msgid "If you received a spam message, please forward it to a <a href=\"%(moderators)s\">moderator</a>."
 msgstr ""
@@ -826,9 +813,6 @@ msgid "If you want to suggest a new article please submit your article below."
 msgstr ""
 
 msgid "Ikhaya"
-msgstr ""
-
-msgid "In some browsers it is possible to click on the \"back\" or the \"reload\" button to request a new control key the sending the page again."
 msgstr ""
 
 #, python-format
@@ -1012,9 +996,6 @@ msgid "Members"
 msgstr ""
 
 msgid "Members with green usernames belong to the team."
-msgstr ""
-
-msgid "Membership"
 msgstr ""
 
 #, python-format
@@ -1220,14 +1201,7 @@ msgstr ""
 msgid "Please note that the maximum size for the avatar is %(width)sx%(height)s pixels and %(size)s KiB. Everything that exceeds this limit will automatically be resized."
 msgstr ""
 
-#, python-format
-msgid "Please note that the team icon can not be bigger than %(width)sx%(height)s pixel. Images exceeding this limit will be resized automatically."
-msgstr ""
-
 msgid "Please save long code snippets or program outputs in our paste service and link to the respective entry."
-msgstr ""
-
-msgid "Please turn JavaScript on to edit the privileges."
 msgstr ""
 
 msgid "Please turn on JavaScript!"
@@ -1332,9 +1306,6 @@ msgid "Registered users:"
 msgstr ""
 
 msgid "Reject"
-msgstr ""
-
-msgid "Remove group"
 msgstr ""
 
 msgid "Rename"
@@ -1474,9 +1445,6 @@ msgstr ""
 msgid "Show unread posts"
 msgstr ""
 
-msgid "Show users with special rights"
-msgstr ""
-
 msgid "Signature"
 msgstr ""
 
@@ -1487,9 +1455,6 @@ msgid "Slug of the topic:"
 msgstr ""
 
 msgid "Solved"
-msgstr ""
-
-msgid "Sorry, you need to enable JavaScript to edit forum privileges."
 msgstr ""
 
 msgid "Spelling mistakes"
@@ -1610,9 +1575,6 @@ msgstr ""
 msgid "Team icon"
 msgstr ""
 
-msgid "Team icon:"
-msgstr ""
-
 msgid "Teaser"
 msgstr ""
 
@@ -1643,9 +1605,6 @@ msgid "The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(co
 msgid_plural "The article “<a href=\"%(link)s\">%(article)s</a>” has currently %(count)s revisions."
 msgstr[0] ""
 msgstr[1] ""
-
-msgid "The browser did not transmit a valid control key and therefore the processing has been canceled for security reasons."
-msgstr ""
 
 msgid "The chosen posts can form a new topic or be attached to an existing topic."
 msgstr ""
@@ -1745,9 +1704,6 @@ msgid "This attachment is an orphan and not referenced by any site."
 msgstr ""
 
 msgid "This category does not contain any forum."
-msgstr ""
-
-msgid "This error usually occurs when you are trying to transfer data automatically to the server. In rare cases this can also happen if the browser configuration was changed while the form data is transmitted."
 msgstr ""
 
 msgid "This group is private and the membership is not shown public."
@@ -1884,9 +1840,6 @@ msgstr ""
 msgid "User page"
 msgstr ""
 
-msgid "User with special privileges"
-msgstr ""
-
 msgid "User:"
 msgstr ""
 
@@ -1957,6 +1910,20 @@ msgstr ""
 msgid "Write comment"
 msgstr ""
 
+msgid ""
+"You are seeing this message because this HTTPS site requires a\n"
+"      'Referer header' to be sent by your Web browser, but none was\n"
+"      sent. This header is required for security reasons, to ensure\n"
+"      that your browser is not being hijacked by third parties."
+msgstr ""
+
+msgid ""
+"You are seeing this message because this site requires a CSRF\n"
+"      cookie when submitting forms. This cookie is required for\n"
+"      security reasons, to ensure that your browser is not being\n"
+"      hijacked by third parties."
+msgstr ""
+
 #, python-format
 msgid "You are trying to compare two equal revision of the article “<a href=\"%(link)s\">%(article)s</a>”. For this reason no change is displayed."
 msgstr ""
@@ -2025,9 +1992,6 @@ msgid "create"
 msgstr ""
 
 msgid "dead link"
-msgstr ""
-
-msgid "delete"
 msgstr ""
 
 msgid "edit"
