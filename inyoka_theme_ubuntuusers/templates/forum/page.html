@@ -84,11 +84,7 @@
 
   <div class="pathbar_extension">
     {% if USER.can('forum_edit') %}
-      {% if forum %}
-        <a class="admin_link" href="{{ href('forum', 'forum', 'new', forum.id) }}">{% trans %}Create new forum{% endtrans %}</a>
-      {% else %}
-        <a class="admin_link" href="{{ href('forum', 'forum', 'new') }}">{% trans %}Create new forum{% endtrans %}</a>
-      {% endif %}
+      <a class="admin_link" href="{{ href('forum', 'forum', 'new') }}">{% trans %}Create new forum{% endtrans %}</a>
     {% endif %}
     <a href="{{ href('forum', 'markread') }}">{% trans %}Mark all forums as read{% endtrans %}</a>
   </div>
