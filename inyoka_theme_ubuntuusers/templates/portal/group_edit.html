@@ -24,10 +24,20 @@
 {% block content %}
   {{ super() }}
   <form enctype="multipart/form-data" class="usercp_form" method="post" action="">
-  {{ csrf_token() }}
-  {{ form }}
-  {{ global_permission_form }}
-  {{ forum_permission_form }}
-  <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+    {{ csrf_token() }}
+
+    {{ form.as_p() }}
+
+    {{ global_permission_form.non_field_errors() }}
+    {% for field in global_permission_form %}
+      {{ field.errors }}
+        <h2>{{ field.label }}</h2>
+        {{ field }}
+    {% endfor %}
+
+    <h2>{% trans %}Forum{% endtrans %}</h2>
+    {{ forum_permission_form }}
+
+    <input type="submit" value="{% trans %}Submit{% endtrans %}" />
   </form>
 {% endblock %}
