@@ -46,6 +46,17 @@
       {% endfor %}
       <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" />
       <meta name="theme-color" content="#a87300" />
+
+      {% if pagination %}
+          {% if pagination.prev %}
+            <link rel="prev" href="{{ pagination.prev }}" />
+          {% endif %}
+
+          {% if pagination.next %}
+            <link rel="next" href="{{ pagination.next }}" />
+          {% endif %}
+      {% endif %}
+
     {% endblock %}
   </head>
   <body>

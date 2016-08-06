@@ -31,6 +31,10 @@
     ] %}
 {% endif %}
 
+{% if full %}
+  {% set deny_robots = 'noindex' %}
+{% endif %}
+
 {% block ikhaya_content %}
   {%- if articles %}
     <ul class="articles">
