@@ -15,9 +15,8 @@
 {% if not group is defined %}
   {% do tmp_crumb.append((_('New group'), href('portal', 'group', 'new'))) %}
 {% else %}
-  {% do tmp_crumb.extend([(group.name, group|url),
-                          (_('Edit'), href('portal', 'group', group.name, 'edit'))
-                         ]) %}
+ {% do tmp_crumb.extend([(group.name, href('portal', 'group', group.name))]) %}
+ {% do tmp_crumb.extend([(_('Edit'), href('portal', 'group', group.name, 'edit'))]) %}
 {% endif %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
@@ -27,17 +26,10 @@
     {{ csrf_token() }}
 
     {{ form.as_p() }}
-
-    {{ global_permission_form.non_field_errors() }}
-    {% for field in global_permission_form %}
-      {{ field.errors }}
-        <h2>{{ field.label }}</h2>
-        {{ field }}
-    {% endfor %}
-
-    <h2>{% trans %}Forum{% endtrans %}</h2>
-    {{ forum_permission_form }}
-
     <input type="submit" value="{% trans %}Submit{% endtrans %}" />
   </form>
+{% if group is defined %}
+  <a href="{{ href('portal', 'group', group.name, 'edit', 'global_permissions') }}">Global Permissions</a>
+  <a href="{{ href('portal', 'group', group.name, 'edit', 'forum_permissions') }}">Forum Permissions</a>
+{% endif %}
 {% endblock %}
