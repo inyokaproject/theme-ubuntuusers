@@ -447,10 +447,38 @@ table.jstableform {
   }
 }
 
-.subscribe_user{
+.subscribe_user {
   border:none;
 
   &_form {
     display: inline;
+  }
+}
+
+.edit-forum-permissions {
+  .permissions-description th {
+    padding: .3em .6em;
+    vertical-align: bottom;
+
+    @media(max-width: 1500px) {
+      writing-mode: sideways-rl;
+    }
+
+    &.hover {
+      writing-mode: initial;
+    }
+  }
+
+  table input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hover {
+    background-color: #eee;
+  }
+  tr:hover {
+    .hover();
   }
 }
