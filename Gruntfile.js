@@ -19,6 +19,7 @@ module.exports = function(grunt) {
           level: 9, // best compression, see http://zlib.net/manual.html#Constants
         },
         files: [
+          {expand: true, src: ['inyoka_theme_ubuntuusers/static/font/**/*.ttf'], ext: '.ttf.gz', extDot: 'last'},
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/js/**/*.min.js'], ext: '.js.gz', extDot: 'last'},
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.css', '!inyoka_theme_ubuntuusers/static/font/**'], ext: '.css.gz', extDot: 'last'},
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.ico'], ext: '.ico.gz', extDot: 'last'},
