@@ -26,6 +26,8 @@ table.forum {
     p {
       margin: 0;
     }
+    word-wrap: break-word;
+    max-width: 0px;
   }
   tr.hidden {
     td.icon {
@@ -190,6 +192,7 @@ table.forum th.last_post, table.forum th.post_count, table.forum th.view_count {
     font-size: 1em;
     padding: 0.3em 0;
     border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
   }
   >div {
     padding: 5px 10px 5px 10px;
@@ -479,6 +482,8 @@ span.pagination {
   text-align: center;
   td.topic {
     text-align: left;
+    word-wrap: break-word;
+    max-width: 0px;
   }
 }
 dl.attachments {
@@ -626,6 +631,12 @@ form {
   }
   tr.reported {
     background-color: #FFE8E8;
+  }
+}
+
+.new_topic {
+  h2 {
+    word-wrap: break-word;
   }
 }
 
