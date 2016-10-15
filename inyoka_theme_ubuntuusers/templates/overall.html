@@ -149,14 +149,16 @@
           </div>
         {% endif %}
 
-        <h1>
-          <a href="{{ (BREADCRUMBS|first)[1] }}" {% if BREADCRUMBS|length > 1 %}class="separator"{% endif %}>
-            {{ (BREADCRUMBS|first)[0]|e }}
-          </a>
-        </h1>
-        {% if BREADCRUMBS|length > 1 %}
-          <h2><a href="{{ (BREADCRUMBS|last)[1] }}">{{ (BREADCRUMBS|last)[0]|e }}</a></h2>
-        {% endif %}
+        <div class="pagetitle">
+          <h1 class="breadcrumb_title">
+            <a href="{{ (BREADCRUMBS|first)[1] }}" {% if BREADCRUMBS|length > 1 %}class="separator"{% endif %}>
+              {{ (BREADCRUMBS|first)[0]|e }}
+            </a>
+          </h1>
+          {% if BREADCRUMBS|length > 1 %}
+            <h2 class="breadcrumb_subtitle"><a href="{{ (BREADCRUMBS|last)[1] }}">{{ (BREADCRUMBS|last)[0]|e }}</a></h2>
+          {% endif %}
+        </div>
       </div>{# .appheader #}
 
       <div class="pathbar">
