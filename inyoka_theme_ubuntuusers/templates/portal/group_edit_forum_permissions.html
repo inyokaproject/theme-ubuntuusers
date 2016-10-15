@@ -1,15 +1,14 @@
 {#
-    portal/group_edit.html
-    ~~~~~~~~~~~~~~~~~
+    portal/group_edit_forum_permissions.html
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-    Edit/Create a new group.
+    Edit the permission of a group within the forum.
 
     :copyright: (c) 2007-2016 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'portal/overall.html' %}
-{% from 'macros.html' import render_form %}
 
 {% set tmp_crumb = [(_('Groups'), href('portal', 'groups'))] %}
 {% do tmp_crumb.extend([(group.name, href('portal', 'group', group.name))]) %}
@@ -18,10 +17,46 @@
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
 {% block content %}
-  {{ super() }}
-  <form enctype="multipart/form-data" class="usercp_form" method="post" action="">
-  {{ csrf_token() }}
-  {{ form.as_p() }}
-  <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+  {{ form.non_field_errors() }}
+
+  <input type="search" id="table-search" placeholder="Filter by Title">
+
+  <form class="edit-forum-permissions" method="post" action="">
+    {{ csrf_token() }}
+
+    {% set first_field = form.fields[form.fields.keys()[0]] %}
+    {% set number_permissions = first_field.choices|length %}
+
+    <table>
+        {% for i in range(0, number_permissions+1) %}
+          <colgroup></colgroup>
+        {% endfor %}
+        <tr>
+          <th rowspan="2">{% trans %}Forum{% endtrans %}</th>
+          <th colspan="{{ number_permissions }}">{% trans %}Permissions{% endtrans %}</th>
+        </tr>
+        <tr class="permissions-description">
+            {% for choice in first_field.choices %}
+              <th>{{ choice[1] }}</th>
+            {% endfor %}
+        </tr>
+
+        {% for field in form %}
+          <tr>
+            {{ field.errors }}
+            <th>
+              {{ field.label }}
+            </th>
+
+            {% for input in field %}
+              <td>
+                {{ input.tag() }}
+              </td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+    </table>
+
+    <input type="submit" value="{% trans %}Submit{% endtrans %}" />
   </form>
 {% endblock %}

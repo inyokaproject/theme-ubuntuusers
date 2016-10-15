@@ -27,6 +27,17 @@ module.exports = function(grunt) {
     },
 
 
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer')({remove: false}), // add vendor prefixes (not remove deprecated ones)
+        ]
+      },
+      dist: {
+        src: ['inyoka_theme_ubuntuusers/static/**/*.css', '!inyoka_theme_ubuntuusers/static/font/**']
+      }
+    },
+
     uglify: {
       options: {
         banner: '/**\n<%= banner %>',
@@ -66,6 +77,9 @@ module.exports = function(grunt) {
         }
       },
       gruntfile: {
+        options: {
+          undef: false,
+        },
         src: 'Gruntfile.js'
       }
     },
@@ -89,8 +103,8 @@ module.exports = function(grunt) {
           '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
           '!inyoka_theme_ubuntuusers/static/style/*.m.less'
         ],
-        tasks: ['less'],
-      }
+        tasks: ['less', 'postcss:dist'],
+      },
     },
 
 
@@ -192,9 +206,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-spritesmith');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'uglify', 'compress']);
+  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'postcss:dist', 'uglify', 'compress']);
 
 };
