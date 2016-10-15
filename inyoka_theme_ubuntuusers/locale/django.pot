@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.14.3\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-30 21:17+0200\n"
+"POT-Creation-Date: 2016-10-15 17:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -688,6 +688,9 @@ msgstr ""
 msgid "Forum - Teaser"
 msgstr ""
 
+msgid "Forum Permissions"
+msgstr ""
+
 msgid "Forum of the new topic:"
 msgstr ""
 
@@ -731,6 +734,9 @@ msgid "Generate a random password"
 msgstr ""
 
 msgid "Generated password:"
+msgstr ""
+
+msgid "Global Permissions"
 msgstr ""
 
 msgid "Go to last comment"
@@ -1250,9 +1256,6 @@ msgstr ""
 msgid "Private messages (%(count)s)"
 msgstr ""
 
-msgid "Privileges"
-msgstr ""
-
 msgid "Profile"
 msgstr ""
 
@@ -1706,13 +1709,10 @@ msgstr ""
 msgid "This category does not contain any forum."
 msgstr ""
 
-msgid "This group is private and the membership is not shown public."
+msgid "This error usually occurs when you are trying to transfer data automatically to the server. In rare cases this can also happen if the browser configuration was changed while the form data is transmitted."
 msgstr ""
 
 msgid "This is a pastebin where you can save error messages, logs, configuration files or source codes to keep threads or IRC channels clean. To do this, just copy the text in the box below and choose the appropriate language. After that, you copy the URL into the topic or the channel."
-msgstr ""
-
-msgid "This is a public group."
 msgstr ""
 
 msgid "This may be because you are not logged in."
