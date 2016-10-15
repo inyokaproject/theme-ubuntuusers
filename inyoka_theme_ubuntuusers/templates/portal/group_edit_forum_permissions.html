@@ -25,7 +25,7 @@
     {{ csrf_token() }}
 
     {% set first_field = form.fields[form.fields.keys()[0]] %}
-    {% set number_permissions = first_field.choices|length %}
+    {% set number_permissions = first_field.choices|list|length %}
 
     <table>
         {% for i in range(0, number_permissions+1) %}
