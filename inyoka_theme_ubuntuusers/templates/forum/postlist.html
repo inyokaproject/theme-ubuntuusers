@@ -10,8 +10,8 @@
 {% extends 'forum/page.html' %}
 
 {% from 'forum/_forum.html' import topic_icon with context %}
-{% from 'macros.html' import render_pagination, render_small_pagination %}
-{% set rendered_pagination = render_pagination(pagination) %}
+{% from 'macros.html' import render_django_pagination, render_small_pagination %}
+{% set rendered_pagination = render_django_pagination(page_obj, url_pattern, url_pattern_kwargs) %}
 
 {% set tmp_crumb = [(username, href('forum', 'author', username|e))] %}
 {% if forum %}
@@ -36,8 +36,7 @@
         <th class="forum">{% trans %}Forum{% endtrans %}</th>
       </tr>
 
-      {% for post in posts if not (post.hidden and not post.topic.hidden and not can_moderate(post.topic))
-                             and not (hide_sticky and post.topic.sticky) %}
+      {% for post in posts if not (post.hidden and not post.topic.hidden and not can_moderate(post.topic)) %}
         {% set classes = [] %}
         {% if can_moderate(post.topic) and (post.topic.hidden or post.hidden) %}{% do classes.append('hidden') %}{% endif %}
         {% if can_moderate(post.topic) and post.topic.reported %}{% do classes.append('reported') %}{% endif %}
