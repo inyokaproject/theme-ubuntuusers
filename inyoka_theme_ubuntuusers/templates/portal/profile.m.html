@@ -28,7 +28,7 @@
   {%- if user[item] and user.settings['show_'+item] -%}
     <dt>{{ label }}</dt>
       <dd>{{ user[item]|e }}</dd>
-  {%- elif user[item] and REQUEST.user.can('user_edit') -%}
+  {%- elif user[item] and REQUEST.user.has_perm('portal.change_user') -%}
     <dt class="hidden">{{ label }}</dt>
       <dd class="hidden">{{ user[item]|e }}</dd>
   {%- endif -%}

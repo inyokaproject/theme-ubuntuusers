@@ -22,7 +22,7 @@
   <dl>
     <dt>{% trans %}Title:{% endtrans %}</dt>
     <dd>{{ entry.title|e }}</dd>
-    {%- if not entry.author.is_anonymous %}
+    {%- if not entry.author.is_anonymous() %}
       <dt>{% trans %}Author:{% endtrans %}</dt>
       <dd><a href="{{ entry.author|url }}">{{ entry.author.username|e }}</a></dd>
     {%- endif %}
@@ -32,7 +32,7 @@
     <dd class="paste_actions">
       <ul>
         <li><a href="{{ entry|url('raw') }}">{% trans %}Display entry as raw text{% endtrans %}</a></li>
-        {%- if USER.can('manage_pastebin') %}
+        {%- if USER.has_perms('pastebin.delete_entry') %}
           <li><a href="{{ entry|url('delete') }}" class="admin_link">{% trans %}Delete entry{% endtrans %}</a></li>
       {%- endif %}
       </ul>

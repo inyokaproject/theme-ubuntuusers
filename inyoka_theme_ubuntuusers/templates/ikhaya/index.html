@@ -78,7 +78,7 @@
               {%- endif %}
             {%- endif %}
             | <a href="{{ article|url('id') }}">#</a>
-            {%- if USER.can('article_edit') -%}
+            {%- if USER.has_perm('ikhaya.change_article') -%}
               <span class="admin_link"> |
                 <a href="{{ article|url('edit') }}">{% trans %}Edit{% endtrans %}</a>
               </span>

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Inyoka\n"
 "Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2016-07-30 21:17+0200\n"
-"PO-Revision-Date: 2016-07-31 08:38+0200\n"
-"Last-Translator: Unknown <chris@Arch-Dev-Virtual>\n"
+"POT-Creation-Date: 2016-10-15 17:32+0200\n"
+"PO-Revision-Date: 2016-10-15 17:15+0200\n"
+"Last-Translator: Christoph Volkert <>\n"
 "Language: de_DE\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -689,6 +689,9 @@ msgstr "Forum - Ganzer Beitrag"
 msgid "Forum - Teaser"
 msgstr "Forum - Einleitung"
 
+msgid "Forum Permissions"
+msgstr "Forum Berechtigungen"
+
 msgid "Forum of the new topic:"
 msgstr "Forum des neuen Themas:"
 
@@ -733,6 +736,9 @@ msgstr "Generiere ein zufälliges Passwort"
 
 msgid "Generated password:"
 msgstr "Generiertes Passwort:"
+
+msgid "Global Permissions"
+msgstr "Globale Berechtigungen"
 
 msgid "Go to last comment"
 msgstr "Zum letzten Kommentar springen"
@@ -1251,9 +1257,6 @@ msgstr "Private Nachrichten"
 msgid "Private messages (%(count)s)"
 msgstr "Private Nachrichten (%(count)s)"
 
-msgid "Privileges"
-msgstr "Privilegien"
-
 msgid "Profile"
 msgstr "Profil"
 
@@ -1707,14 +1710,11 @@ msgstr "Dieser Anhang ist verwaist und von keiner Seite referenziert."
 msgid "This category does not contain any forum."
 msgstr "Diese Kategorie enthält keine Foren"
 
-msgid "This group is private and the membership is not shown public."
-msgstr "Diese Gruppe ist privat, die Mitgliedschaft wird nicht öffentlich angezeigt."
+msgid "This error usually occurs when you are trying to transfer data automatically to the server. In rare cases this can also happen if the browser configuration was changed while the form data is transmitted."
+msgstr "Dieser Fehler tritt normalerweise auf, wenn versucht wurde Daten automatisiert auf den Server zu übertragen. In seltenen Fällen kann dies auch passieren, wenn die Browserkonfiguration verändert wurde, während die Formulardaten übertragen wurden."
 
 msgid "This is a pastebin where you can save error messages, logs, configuration files or source codes to keep threads or IRC channels clean. To do this, just copy the text in the box below and choose the appropriate language. After that, you copy the URL into the topic or the channel."
 msgstr "Dies ist eine Ablage, in der du Fehlermeldungen, Logs, Konfigurationsdateien oder Quelltexte speichern kannst, um Forenthemen oder IRC-Kanäle nicht unnötig unleserlich zu machen. Dazu kopierst du den Text in das Textfeld und wählst die passende Sprache aus. Dann kopierst du die URL in das Thema bzw. den Kanal."
-
-msgid "This is a public group."
-msgstr "Diese Gruppe ist öffentlich"
 
 msgid "This may be because you are not logged in."
 msgstr "Das könnte daran liegen, dass du nicht angemeldet bist."

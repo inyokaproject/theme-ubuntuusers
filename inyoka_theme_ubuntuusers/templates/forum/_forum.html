@@ -20,7 +20,7 @@
     <td class="forum" colspan="3">
       <p class="name">
         <a href="{{ forum|url }}" class="title">{{ forum.name|e }}</a>
-        {%- if REQUEST.user.can('forum_edit') -%}
+        {%- if REQUEST.user.has_perm('forum.change_forum') -%}
           <a href="{{ href('forum', 'forum', forum.slug, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
         {%- endif -%}
       </p>
