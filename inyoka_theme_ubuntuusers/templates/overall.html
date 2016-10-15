@@ -13,12 +13,9 @@
 
 {% set BREADCRUMBS = BREADCRUMBS|default([]) %}
 
-{{- XHTML_DTD }}
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:cc="http://creativecommons.org/ns#"
-      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-      xmlns:dc="http://purl.org/dc/elements/1.1/"
-      xml:lang="de" lang="de" dir="ltr">
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
@@ -31,14 +28,14 @@
       {#- This way the local stylesheets can override styles without problems. #}
       {% set styles = ['main', 'markup'] + styles|default([]) %}
       {% for style in styles %}
-        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style)) }}" />
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style), v=INYOKA_VERSION) }}" />
       {% endfor %}
 
-      <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css') }}" />
-      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css') }}" media="print" />
+      <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css', v=INYOKA_VERSION) }}" />
+      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css', v=INYOKA_VERSION) }}" media="print" />
 
       {% if special_day_css %}
-        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css) }}" />
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css, v=INYOKA_VERSION) }}" />
       {% endif %}
 
       {% for title, url in feeds %}
@@ -46,6 +43,17 @@
       {% endfor %}
       <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" />
       <meta name="theme-color" content="#a87300" />
+
+      {% if pagination %}
+          {% if pagination.prev %}
+            <link rel="prev" href="{{ pagination.prev }}" />
+          {% endif %}
+
+          {% if pagination.next %}
+            <link rel="next" href="{{ pagination.next }}" />
+          {% endif %}
+      {% endif %}
+
     {% endblock %}
   </head>
   <body>
@@ -257,7 +265,7 @@
     <div style="clear: both;"></div>
    </div>
 
-    <script type="text/javascript" src="{{ href('portal', 'jsi18n') }}"></script>
+    <script type="text/javascript" src="{{ href('portal', 'jsi18n', v=INYOKA_VERSION) }}"></script>
     <script type="text/javascript">
     /*<![CDATA[*/
       var
@@ -274,7 +282,7 @@
      {% if SETTINGS.DEBUG %}
        <script type="text/javascript" src="{{ href('static', 'js/%s.js'|format(script)) }}"></script>
      {% else %}
-       <script type="text/javascript" src="{{ href('static', 'js/%s.min.js'|format(script)) }}"></script>
+       <script type="text/javascript" src="{{ href('static', 'js/%s.min.js'|format(script), v=INYOKA_VERSION) }}"></script>
      {% endif %}
    {% endfor %}
 
