@@ -21,9 +21,8 @@
     </div>
   {%- else %}
     <div class="errors">
-      {%- trans name=username|e, resend=href('portal', 'register', 'resend', username|e),
-               mail='team@ubuntuusers.de', mailto='mailto:team@ubuntuusers.de' -%}
-          Login failed because the user “{{ name }}” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If you didn’t received that mail, you can <a href="{{ resend }}">request a new one</a>. If it is still not working, contact us: <a href="{{ mailto }}">{{ mail }}</a>
+      {%- trans name=username|e, mail='team@ubuntuusers.de', mailto='mailto:team@ubuntuusers.de' -%}
+          Login failed because the user “{{ name }}” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If it is still not working, contact us: <a href="{{ mailto }}">{{ mail }}</a>
       {%- endtrans -%}
     </div>
   {%- endif %}
