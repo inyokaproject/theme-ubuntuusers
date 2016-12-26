@@ -209,6 +209,11 @@
             editor.insertTag('{{{#!code ' + k + '\n%s\n}}}', 'Code');
           }));
       });
+      tds.push.apply(tds, [$('<td>Inline</td>').click(function() {
+            editor.insertTag('`%s`', 'Code');
+        }), $('<td>Inline Escaped</td>').click(function() {
+            editor.insertTag('``%s``', 'Code');
+      })]);
       for (var i = 0; i < tds.length / 2; i++) {
         $('<tr />')
           .appendTo(codebox)
