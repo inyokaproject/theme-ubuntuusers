@@ -85,7 +85,7 @@
     {%- if USER.has_perm('portal.change_storage') %}
       <li><a href="{{ href('portal', 'config') }}">{% trans %}General{% endtrans %}</a></li>
     {%- endif %}
-    {%- if USER.has_perm('portal.change_staticfile') %}
+    {%- if USER.has_perm('portal.change_staticpage') %}
       <li><a href="{{ href('portal', 'styles') }}">{% trans %}Stylesheets{% endtrans %}</a></li>
     {%- endif %}
     {%- if USER.has_perm('portal.change_staticpage') %}
