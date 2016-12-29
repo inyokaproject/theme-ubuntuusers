@@ -37,7 +37,7 @@
 
     {%- if blogs %}
       <h3 class="navi_blogs admin_link_hover">
-        {%- if USER.has_perm('planet.change_blog') -%}
+        {%- if USER.has_perm('planet.add_blog') -%}
           <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/category_new.png') }}" /></a>
         {%- endif -%}{% trans %}Blogs{% endtrans %}
       </h3>
@@ -52,7 +52,7 @@
         {%- endfor %}
       </ul>
     {%- endif %}
-    {%- if USER.has_perm('planet.change_blog') %}
+    {%- if USER.has_perm('planet.add_blog') %}
       <h3 class="navi_blogs admin_link_hover">
           <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/article_new.png') }}" /></a>
         {% trans %}Configuration{% endtrans %}
