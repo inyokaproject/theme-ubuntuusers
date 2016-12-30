@@ -31,7 +31,9 @@
     <h3 class="navi_new_article admin_link_hover">{% trans %}Suggest{% endtrans %}</h3>
     <ul>
       <li><a href="{{ href('ikhaya', 'suggest', 'new') }}">{% trans %}Suggest article{% endtrans %}</a></li>
-      <li><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest event{% endtrans %}</a></li>
+      {% if USER.has_perm('portal.suggest_event') %}
+        <li><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest event{% endtrans %}</a></li>
+      {% endif %}
       {%- if USER.has_perm('ikhaya.change_article') -%}
         <li class="admin_link"><a href="{{ href('ikhaya', 'article', 'new') }}">{% trans %}New article{% endtrans %}</a></li>
       {%- endif -%}
