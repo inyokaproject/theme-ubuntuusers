@@ -65,11 +65,11 @@
     <h3 class="navi_ikhaya">{{ feed_button(href('portal', 'feeds', 'ikhaya')) }}<a href="{{ href('ikhaya') }}">Ikhaya</a></h3>
     {%- if USER.has_perm('ikhaya.suggest_article') or USER.has_perm('portal.suggest_event') %}
     <ul>
-      {%- if USER.has_perm('ikhaya.suggest_article') %}
-      <li><a href="{{ href('ikhaya', 'suggest', 'new') }}">{% trans %}Suggest an article{% endtrans %}</a></li>
-      {%- endif %}
+      {% if USER.has_perm('ikhaya.suggest_article') %}
+        <li><a href="{{ href('ikhaya', 'suggest', 'new') }}">{% trans %}Suggest an article{% endtrans %}</a></li>
+      {% endif %}
       {%- if USER.has_perm('portal.suggest_event') %}
-      <li><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest an event{% endtrans %}</a></li>
+        <li><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest an event{% endtrans %}</a></li>
       {%- endif %}
     </ul>
     {%- endif %}
