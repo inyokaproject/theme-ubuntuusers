@@ -58,5 +58,7 @@
   </tr>
   {% endfor %}
 </table>
-<p><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest new event{% endtrans %}</a></p>
+{% if USER.has_perm('portal.suggest_event') %}
+  <p><a href="{{ href('ikhaya', 'event', 'suggest') }}">{% trans %}Suggest new event{% endtrans %}</a></p>
+{% endif %}
 {% endblock %}
