@@ -82,8 +82,10 @@
       {%- if topic.hidden %}
         <a href="{{ topic|url('restore') }}"
            class="action action_restore admin_link">{% trans %}Restore{% endtrans %}</a> |
+        {%- if USER.has_perm('forum.delete_topic_forum') %}
         <a href="{{ topic|url('delete') }}"
            class="action action_delete admin_link">{% trans %}Delete{% endtrans %}</a> |
+        {%- endif %}
         <a href="{{ topic.first_post|url('ham') }}"
            class="action action_mark_ham admin_link">{% trans %}Mark ham{% endtrans %}</a>
       {%- else %}
