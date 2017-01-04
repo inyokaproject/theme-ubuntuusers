@@ -48,8 +48,10 @@
               <span class="linklist"> | </span>
               <a href="{{ href('ikhaya', 'suggest', suggestion.id, 'assign', '-') }}" class="unassign admin_link" id="{{ suggestion.id }}">{% trans %}Delete assignment{% endtrans %}</a>
               <span class="linklist"> | </span>
+              {%- if USER.has_perm('ikhaya.delete_suggestion') %}
               <a href="{{ href('ikhaya', 'suggest', suggestion.id, 'delete') }}" class="admin_link">{% trans %}Delete{% endtrans %}</a>
               <span class="linklist"> | </span>
+              {%- endif %}
               <a href="{{ href('ikhaya', 'article', 'new', suggestion.id) }}" class="admin_link">{% trans %}New article{% endtrans %}</a>
               <span class="linklist"> | </span>
               {# Disabled for security reasons #}
