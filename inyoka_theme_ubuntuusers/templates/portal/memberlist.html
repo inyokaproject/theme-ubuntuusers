@@ -28,12 +28,14 @@
           You can also enter an e-mail address instead of a user name.
         {%- endtrans %}</span>
       </p>
+    </form>
+  {% endif %}
+  {% if USER.has_perm('portal.add_user') %}
       <p>
         <a href="{{ href('portal', 'user', 'new') }}">
           {%- trans %}Create a new user{% endtrans -%}
         </a>
       </p>
-    </form>
   {% endif %}
   <table>
     <tr>
