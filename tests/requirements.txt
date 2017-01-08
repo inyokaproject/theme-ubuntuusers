@@ -1,2 +1,2 @@
-jinja2
-nosexcover
+Jinja2==2.8.1
+nosexcover==1.0.11
