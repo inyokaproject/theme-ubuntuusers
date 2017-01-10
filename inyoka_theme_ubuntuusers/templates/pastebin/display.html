@@ -37,14 +37,6 @@
       {%- endif %}
       </ul>
     </dd>
-    {%- if entry.referrer|length %}
-      <dt>{% trans %}Pages that are referencing this entry:{% endtrans %}</dt>
-      <dd><ul>
-      {%- for link in entry.referrer_list %}
-        <li>{{ link|urlize(60) }}</li>
-      {%- endfor %}
-      </ul></dd>
-    {%- endif %}
     <dt>{% trans %}Code:{% endtrans %}</dt>
     <dd>
       {{ entry.code_rendered }}
