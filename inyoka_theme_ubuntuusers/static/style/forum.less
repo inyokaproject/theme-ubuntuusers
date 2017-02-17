@@ -26,8 +26,8 @@ table.forum {
     p {
       margin: 0;
     }
-    word-wrap: break-word;
-    max-width: 0px;
+
+    word-break: break-all;
   }
   tr.hidden {
     td.icon {
@@ -548,7 +548,8 @@ div.code {
   }
 }
 tr.unstable {
-  .topic_title {
+  .topic_title:before {
+    content: " ";
     padding-left: 20px;
     .sprite-image(@unstable);
     .sprite-position(@unstable);
