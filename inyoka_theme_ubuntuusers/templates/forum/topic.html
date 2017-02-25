@@ -203,10 +203,10 @@
           <td class="author"{%- if post.author_id == USER.id %} style="background-color: #F6F4EF"{%- endif %}>
             <p class="username{% if not post.author.is_active %} inactive{% endif %}">
               <a href="{{ post.author|url }}">{{ post.author.username|e }}</a>
-              {%- if post.author.primary_group and post.author.primary_group.icon %}
-                <img class="teamicon" src="{{ post.author.primary_group.icon_url }}"
+              {% if post.author.icon %}
+                <img class="teamicon" src="{{ post.author.icon_url }}"
                      alt="{% trans %}Team icon{% endtrans %}" />
-              {%- endif %}
+              {% endif %}
             </p>
             {%- if post.author.member_title %}
               <div class="member_title">{{ post.author.member_title|e }}</div>
