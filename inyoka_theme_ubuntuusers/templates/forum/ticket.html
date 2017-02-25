@@ -1,0 +1,32 @@
+{#
+    forum/ticket_post.html
+    ~~~~~~~~~~~~~~~~~
+
+    The user can report a topic to the moderators on this page.
+    It shows a text field where the user can describe the problem.
+
+    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{%- extends 'forum/page.html' %}
+{% from 'macros.html' import render_form %}
+{% set BREADCRUMBS = [(_('Ticket'), post|url('ticket')), (post.topic.forum.name, post.topic.forum|url),
+                        (post.id, post|url)] + BREADCRUMBS|d([]) %}
+
+{% block content %}
+  <form id="create_ticket" method="post" action="" class="new_topic">
+    {{ csrf_token() }}
+    <h2>{% trans post=post.id|e %}Report post “{{ post }}”{% endtrans %}</h2>
+    <p>
+      {%- trans link=href('wiki', 'ubuntuusers/Moderatoren/Forenregeln') -%}
+        Here you can report a post to the moderators if it is against our <a href="{{ link }}">rules</a>. Please add a short explanation:
+      {%- endtrans -%}
+    </p>
+    <dl>
+      {{ render_form(form, ['reason', 'reporter_comment'], inline=true) }}
+    </dl>
+    </p>
+    <p><input type="submit" value="{% trans %}Report post{% endtrans %}" /></p>
+  </form>
+{% endblock %}
