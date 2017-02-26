@@ -1,0 +1,51 @@
+{#
+    portal/grouplist.html
+    ~~~~~~~~~~~~~~~~~~~~~
+
+    This page shows the link map for interwiki link shortcuts.
+
+    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{% extends 'portal/overall.html' %}
+{% from 'macros.html' import render_pagination %}
+{% set rendered_pagination = render_pagination(pagination) %}
+
+{% set BREADCRUMBS = [(_('Link Map'), href('portal', 'linkmap'))] + BREADCRUMBS|d([]) %}
+{% block content %}
+  <h3>{% trans %}Link Map{% endtrans %}</h3>
+  <p>
+    {% trans count=shortcut_count %}
+      In total there is {{ count }} link shortcut.
+    {% pluralize %}
+      In total there are {{ count }} link shortcuts.
+    {% endtrans %}
+  </p>
+  {% if USER.has_perm('portal.add_linkmap') %}
+    <p>
+      <a href="{{ href('portal', 'linkmap', 'new') }}">{% trans %}Create new link shortcut{% endtrans %}</a>
+    </p>
+  {% endif %}
+  <table class="admin_link_hover">
+    <tr>
+      <th>{{ table.get_html('token', _('Token')) }}</th>
+      <th>{{ table.get_html('url', _('URL')) }}</th>
+    </tr>
+    {% for shortcut in linkmap %}
+    <tr>
+      <td>
+        {{ shortcut.token|e }}
+        {% if USER.has_perm('portal.change_linkmap') %}
+          <a href="{{ href('portal', 'linkmap', shortcut.token|e, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
+          <a href="{{ href('portal', 'linkmap', shortcut.token|e, 'delete') }}" class="admin_link"><img src="{{ href('static', 'img/forum/delete.png') }}" /></a>
+        {% endif %}
+      </td>
+      <td>
+        {{ shortcut.url|e }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <div class="pagination">{{rendered_pagination}}</div>
+{% endblock %}
