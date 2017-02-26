@@ -42,9 +42,7 @@
     <ul>
       <li><a href="{{ href('wiki', 'ubuntuusers') }}">Über ubuntuusers.de</a></li>
       <li><a href="{{ href('portal', 'users') }}">{% trans %}Members{% endtrans %}</a></li>
-      {%- if USER.has_perm('portal.change_user') %}
       <li><a href="{{ href('portal', 'groups') }}">{% trans %}Groups{% endtrans %}</a></li>
-      {%- endif %}
       <li><a href="{{ href('wiki', 'ubuntuusers', 'Spenden') }}">Spenden</a></li>
       <li><a href="{{ href('portal', 'kontakt') }}">{% trans %}Contact{% endtrans %}</a></li>
       <li><a href="{{ href('pastebin') }}">Ablage</a></li>
