@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[inyoka.theme]
+source_file = inyoka_theme_ubuntuusers/locale/django.pot
+source_lang = en
+file_filter = inyoka_theme_ubuntuusers/locale/<lang>/LC_MESSAGES/django.po
+

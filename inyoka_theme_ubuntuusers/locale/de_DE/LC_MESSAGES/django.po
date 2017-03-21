@@ -1,17 +1,17 @@
 # German (Germany) translations for Inyoka Project.
-# Copyright (C) 2016 Inyoka Team (see AUTHORS)
+# Copyright (C) 2017 Inyoka Team (see AUTHORS)
 # This file is distributed under the same license as the Inyoka Project project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version:  Inyoka\n"
-"Report-Msgid-Bugs-To: http://trac.inyokaproject.org/\n"
-"POT-Creation-Date: 2016-10-15 17:32+0200\n"
-"PO-Revision-Date: 2016-10-15 17:15+0200\n"
-"Last-Translator: Christoph Volkert <>\n"
+"Project-Id-Version: Inyoka Project v0.15.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-03-21 16:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
-"Language-Team: German (Germany) (http://www.transifex.com/projects/p/inyoka/language/de_DE/)\n"
+"Language-Team: German (Germany) (https://www.transifex.com/entequak/teams/12802/de_DE/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -927,6 +927,10 @@ msgid "Login failed because the user “%(name)s” is currently banned. You wer
 msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit gesperrt ist. Du wurdest darüber weitgehend informiert. Solltest du dem nicht zustimmen oder sollte ein Irrtum vorliegen, so schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>."
 
 #, python-format
+msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
+msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit inaktiv ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink in der Bestätigungsmail, die dir nach der Registrierung zugeschickt wurde, nicht aufgerufen hast. Falls es weiterhin nicht funktioniert, schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>"
+
+#, python-format
 msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If you didn’t received that mail, you can <a href=\"%(resend)s\">request a new one</a>. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
 msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit inaktiv ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink in der Bestätigungsmail, die dir nach der Registrierung zugeschickt wurde, nicht aufgerufen hast. Solltest du diese Mail nicht bekommen haben, kannst du sie <a href=\"%(resend)s\">erneut anfordern</a>. Falls es weiterhin nicht funktioniert, schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>"
 
@@ -1162,9 +1166,6 @@ msgstr "Seite nicht gefunden"
 msgid "Page revisions"
 msgstr "Seitenrevisionen"
 
-msgid "Pages that are referencing this entry:"
-msgstr "Seiten, die auf diesen Eintrag verweisen:"
-
 msgid "Participation"
 msgstr "Mitmachen"
 
@@ -1176,6 +1177,9 @@ msgstr "Ablage"
 
 msgid "Permanent link"
 msgstr "Permalink"
+
+msgid "Permissions"
+msgstr "Rechte"
 
 msgid "Pixel"
 msgstr "Pixel"
@@ -1710,9 +1714,6 @@ msgstr "Dieser Anhang ist verwaist und von keiner Seite referenziert."
 msgid "This category does not contain any forum."
 msgstr "Diese Kategorie enthält keine Foren"
 
-msgid "This error usually occurs when you are trying to transfer data automatically to the server. In rare cases this can also happen if the browser configuration was changed while the form data is transmitted."
-msgstr "Dieser Fehler tritt normalerweise auf, wenn versucht wurde Daten automatisiert auf den Server zu übertragen. In seltenen Fällen kann dies auch passieren, wenn die Browserkonfiguration verändert wurde, während die Formulardaten übertragen wurden."
-
 msgid "This is a pastebin where you can save error messages, logs, configuration files or source codes to keep threads or IRC channels clean. To do this, just copy the text in the box below and choose the appropriate language. After that, you copy the URL into the topic or the channel."
 msgstr "Dies ist eine Ablage, in der du Fehlermeldungen, Logs, Konfigurationsdateien oder Quelltexte speichern kannst, um Forenthemen oder IRC-Kanäle nicht unnötig unleserlich zu machen. Dazu kopierst du den Text in das Textfeld und wählst die passende Sprache aus. Dann kopierst du die URL in das Thema bzw. den Kanal."
 
@@ -2056,3 +2057,4 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
+
