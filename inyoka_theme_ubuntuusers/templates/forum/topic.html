@@ -52,15 +52,17 @@
            class="action action_subscribe subscribe_topic"
            id="{{ topic.slug }}">{% trans %}Subscribe{% endtrans %}</a>
       {%- endif %} |
-      {%- if topic.solved %}
-        <a href="{{ topic|url('unsolve') }}"
-           class="action action_unsolve solve_topic"
-           id="{{ topic.slug }}">{% trans %}Mark as unsolved{% endtrans %}</a>
-      {%- else %}
-        <a href="{{ topic|url('solve') }}"
-           class="action action_solve solve_topic"
-           id="{{ topic.slug }}">{% trans %}Mark as solved{% endtrans %}</a>
-      {%- endif %} |
+      {% if not topic.locked or can_moderate %}
+        {% if topic.solved %}
+          <a href="{{ topic|url('unsolve') }}"
+             class="action action_unsolve solve_topic"
+             id="{{ topic.slug }}">{% trans %}Mark as unsolved{% endtrans %}</a>
+        {% else %}
+          <a href="{{ topic|url('solve') }}"
+             class="action action_solve solve_topic"
+             id="{{ topic.slug }}">{% trans %}Mark as solved{% endtrans %}</a>
+        {% endif %} |
+      {% endif %}
       <a href="{{ topic|url('report') }}"
          class="action action_report">{% trans %}Report{% endtrans %}</a>
     {% endif %}
