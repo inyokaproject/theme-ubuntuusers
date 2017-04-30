@@ -19,5 +19,16 @@
     <p>
       {% trans %}An internal error occurred. The administration was already notified.{% endtrans %}
     </p>
+
+  {% if dsn and request.sentry and request.sentry.id %}
+    <script src="https://cdn.ravenjs.com/2.3.0/raven.min.js"></script>
+    <script>
+      Raven.showReportDialog({
+        eventId: '{{ request.sentry.id }}',
+        dsn: '{{ dsn }}'
+      });
+    </script>
+  {% endif %}
+
   </body>
 </html>
