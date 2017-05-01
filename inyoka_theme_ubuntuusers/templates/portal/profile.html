@@ -106,7 +106,7 @@
       </tr>
       <tr>
         <th>{% trans %}GPG key{% endtrans %}</th>
-        <td>{% if user.gpgkey %}0x{{ user.gpgkey|e }}{% else %}–{% endif %}</td>
+        <td>{{ user.gpgkey|batch(4)|map('join')|join(' ')|e or '–' }}</td>
       </tr>
       <tr>
         <th>{% trans %}Residence{% endtrans %}</th>
