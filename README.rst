@@ -28,9 +28,10 @@ On development systems:
 3. Activate source ``source ~/.venvs/inyoka/bin/activate``
 4. Install as a development package: ``python setup.py develop``
 5. Run ``npm install`` to install *Grunt*
-6. Run ``./node_modules/grunt-cli/bin/grunt watch`` to build all static files
+6. If you get the error ``/usr/bin/env: node: No such file or directory``, you should create a symbolic link: ``sudo ln -s /usr/bin/nodejs /usr/bin/node``
+7. Run ``./node_modules/grunt-cli/bin/grunt watch`` to build all static files
    and watch for file changes on the CSS / JS files
-7. Let Django know about the theme. Add ``'inyoka_theme_ubuntuusers'`` to the
+8. Open a new terminal and let Django know about the theme. Add ``'inyoka_theme_ubuntuusers'`` to the
    ``INSTALLED_APPS`` in ``inyoka/development_settings.py``::
 
        INSTALLED_APPS = INSTALLED_APPS + (
