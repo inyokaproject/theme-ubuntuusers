@@ -42,7 +42,7 @@
         </tr>
 
         {% for field in form %}
-          <tr>
+          <tr {% if field.field.is_category %}class="head"{% endif %}>
             {{ field.errors }}
             <th>
               {{ field.label }}
