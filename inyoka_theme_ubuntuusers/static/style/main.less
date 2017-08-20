@@ -368,6 +368,9 @@ table {
     }
   }
 }
+table tr.head td {
+    background-color: lighten(#f4e7ce, 5%);
+}
 table tr.head th,table thead th {
   .table-header-gradient;
   padding: 0.3em 0;
@@ -552,19 +555,19 @@ table.syntaxtable {
     opacity: 1.0;
 
     .tab_left {
-      .sprite-image(@tabbar_left_hover);
-      .sprite-position(@tabbar_left_hover);
+      .sprite-image(@tabbar-left-hover);
+      .sprite-position(@tabbar-left-hover);
     }
 
     .tab_center {
-      .sprite-image(@tabbar_center_hover);
-      .sprite-position(@tabbar_center_hover);
+      .sprite-image(@tabbar-center-hover);
+      .sprite-position(@tabbar-center-hover);
       background-repeat: repeat-x;
     }
 
     .tab_right {
-      .sprite-image(@tabbar_right_hover);
-      .sprite-position(@tabbar_right_hover);
+      .sprite-image(@tabbar-right-hover);
+      .sprite-position(@tabbar-right-hover);
     }
 
     a {
@@ -598,19 +601,19 @@ table.syntaxtable {
 
   li:active {
     .tab_left {
-      .sprite-image(@tabbar_left);
-      .sprite-position(@tabbar_left);
+      .sprite-image(@tabbar-left);
+      .sprite-position(@tabbar-left);
     }
 
     .tab_center {
-      .sprite-image(@tabbar_center);
-      .sprite-position(@tabbar_center);
+      .sprite-image(@tabbar-center);
+      .sprite-position(@tabbar-center);
       background-repeat: repeat-x;
     }
 
     .tab_right {
-      .sprite-image(@tabbar_right);
-      .sprite-position(@tabbar_right);
+      .sprite-image(@tabbar-right);
+      .sprite-position(@tabbar-right);
     }
   }
 }
