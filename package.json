@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/inyokaproject/theme-ubuntuusers",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.0"
   },
   "dependencies": {
     "autoprefixer": "^6.6.0",
-    "grunt": "^0.4.5",
+    "grunt": "^1.0",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-compress": "^1.4.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "~1.1.0",
     "grunt-contrib-less": "^1.4.0",
