@@ -16,7 +16,7 @@
 <h3>{% trans %}Subscriptions{% endtrans %}</h3>
 <table class="usercp_subscriptions">
   {%- for sub in subscriptions %}
-  {%- if sub.can_read -%}
+  {%- if sub.can_read() -%}
     <tr class="item {% if sub.notified %}unread{% endif %}">
       <td>
       {%- set type = sub.content_type.model -%}
