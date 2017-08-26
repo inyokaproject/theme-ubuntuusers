@@ -12,14 +12,15 @@
 
 {% set tmp_crumb = [(_('Wiki'), href('wiki'))] %}
 {% if page %}
+  {% set part_list = [] %}
   {% for part in page.title.split('/') %}
     {% if loop.first %}
-      {% set link = href('wiki', part) %}
+      {% do part_list.append(href('wiki', part)[:-1]) %}
     {% else %}
-      {% set sep = '' if link[-1] == '/' else '/' %}
-      {% set link = link + sep + part %}
+      {% do part_list.append(part) %}
     {% endif %}
-    {% do tmp_crumb.append((part, link)) %}
+
+    {% do tmp_crumb.append((part, part_list|join('/') + '/')) %}
   {% endfor %}
 {% endif %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
