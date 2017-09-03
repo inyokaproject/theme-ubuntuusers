@@ -183,15 +183,12 @@ $(document).ready(function () {
 
         switch(selectedArea) {
           case "forum":
-            return "site:forum.ubuntuusers.de " + searchWords;
           case "ikhaya":
-            return "site:ikhaya.ubuntuusers.de " + searchWords;
           case "planet":
-            return "site:planet.ubuntuusers.de " + searchWords;
           case "wiki":
-            return "site:wiki.ubuntuusers.de " + searchWords;
+            return "site:" + selectedArea + "." + $BASE_DOMAIN_NAME + " " + searchWords;
           default: // equals "portal"
-            return "site:ubuntuusers.de " + searchWords;
+            return "site:" + $BASE_DOMAIN_NAME + " " + searchWords;
         }
       });
 
