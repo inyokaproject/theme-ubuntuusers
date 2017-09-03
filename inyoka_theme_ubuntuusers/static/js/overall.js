@@ -152,7 +152,7 @@ $(document).ready(function () {
     });
   }());
 
-  // searchintegration for startpage
+  // searchintegration for duckduckgo
   // only temporarily, done fast and thus a bit hacky!
   (function () {
     // object that lists, in which locations the user can search
@@ -178,7 +178,7 @@ $(document).ready(function () {
      * The search engine will only recognize the value of the hidden input.
      */
     document.getElementsByClassName("search")[0].onsubmit = (function() {
-      $('form.search input[name=query]').val( function() {
+      $('form.search input[name=q]').val(function() {
         var searchWords = searchField.val();
 
         switch(selectedArea) {
