@@ -163,18 +163,22 @@
 
       <div class="pathbar">
 
-        {# search via ixquick
-           requires JS to work #}
-        <form method=POST accept-charset="UTF-8" action='https://ixquick.com/do/search' class="search" name="searchsys" data-active-app="{{ active_app }}">
+        {# search via duckduckgo requires JS #}
+        <form method="GET" action="https://duckduckgo.com/" class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
-            <input type="text" name="keyword" class="search_query" />
-            <input type="hidden" name="query">
-            <input value="deutsch" type="hidden" name="language">
-            <input value="ubuntuusers.de" type="hidden" name="host"> {# fallback for no-JS-users: restricts search-entries to ubuntuusers.de #}
+            <input type="text" size="40" name="keyword" class="search_query" />
+            <input type="hidden" name="q">
+
+            {# customization to duckduckgo layout, see https://duckduckgo.com/params #}
+            <input type="hidden" name="kam" value="osm">
+            <input type="hidden" name="kj" value="D8A648">
+            <input type="hidden" name="ky" value="f3eedd">
+            <input type="hidden" name="k18" value="1">
+            <input type="hidden" name="ka" value="Ubuntu">
 
             <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" />
 
-            <a href="{{ href('wiki', 'Suchfunktion') }}">via <img src="https://ixquick.com/graphics/ixquick_logo_small_option1.jpg" /></a>
+            <a href="{{ href('wiki', 'Suchfunktion') }}">via DuckDuckGo</a>
           </div>
         </form>
 
