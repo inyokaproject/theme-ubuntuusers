@@ -31,13 +31,18 @@
     {%- endif %}
 
     <div class="articles">
-      {% set article_index = 0 %}
+      {% set article_index = [0] %}
       {%- for day in days %}
         <div class="day">
           <h2>{{ day.date|naturalday }}</h2>
           {% set dayloop = loop %}
           {% for article in day.articles %}
-            <div class="article admin_link_hover" id="article_{{ article_index + loop.index0 }}">
+            {% set current_article_id = article_index[0] + loop.index0 %}
+            {% if loop.last %}
+              {% do article_index.pop() %}
+              {% do article_index.append(current_article_id + 1) %}
+            {% endif %}
+            <div class="article admin_link_hover" id="article_{{ current_article_id }}">
               <div class="head">
                 <a href="{{ article.blog|url|e }}">
                   <img
@@ -49,15 +54,15 @@
                   {{ article.pub_date|datetime }}
                   <div class="easy-navigation">
                     {%- if not (dayloop.first and loop.first) %}
-                      <a href="#article_{{ article_index + loop.index0 - 1 }}">{% trans %}« Previous{% endtrans %}</a>
+                      <a href="#article_{{ current_article_id - 1 }}">{% trans %}« Previous{% endtrans %}</a>
                     {%- endif %}
                     {%- if not (dayloop.last and loop.last) %}
-                      <a href="#article_{{ article_index + loop.index0 + 1 }}">{% trans %}Next »{% endtrans %}</a>
+                      <a href="#article_{{ current_article_id + 1 }}">{% trans %}Next »{% endtrans %}</a>
                     {%- endif %}
                   </div>
                   <h3>
                     <a href="{{ article|url|e }}">{{ article.title }}</a>
-                    <a class="headerlink" href="#article_{{ article_index + loop.index0 }}">¶</a>
+                    <a class="headerlink" href="#article_{{ current_article_id }}">¶</a>
                   </h3>
               </div>
               </div>
@@ -83,7 +88,6 @@
               </div>
             </div>
           {%- endfor %}
-          {% set article_index = article_index + day.articles|length %}
         </div>
       {%- endfor %}
     </div>
