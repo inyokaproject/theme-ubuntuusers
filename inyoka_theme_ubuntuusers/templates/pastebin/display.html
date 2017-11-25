@@ -21,13 +21,13 @@
 {% block paste_content %}
   <dl>
     <dt>{% trans %}Title:{% endtrans %}</dt>
-    <dd>{{ entry.title|e }}</dd>
+    <dd id="entry_title">{{ entry.title|e }}</dd>
     {%- if not entry.author.is_anonymous() %}
       <dt>{% trans %}Author:{% endtrans %}</dt>
-      <dd><a href="{{ entry.author|url }}">{{ entry.author.username|e }}</a></dd>
+      <dd id="entry_author"><a href="{{ entry.author|url }}">{{ entry.author.username|e }}</a></dd>
     {%- endif %}
     <dt>{% trans %}Date:{% endtrans %}</dt>
-    <dd>{{ entry.pub_date|datetime }}</dd>
+    <dd id="entry_date">{{ entry.pub_date|datetime }}</dd>
     <dt>{% trans %}Actions:{% endtrans %}</dt>
     <dd class="paste_actions">
       <ul>
@@ -38,7 +38,7 @@
       </ul>
     </dd>
     <dt>{% trans %}Code:{% endtrans %}</dt>
-    <dd>
+    <dd id="entry_code">
       {{ entry.code_rendered }}
     </dd>
   </dl>
