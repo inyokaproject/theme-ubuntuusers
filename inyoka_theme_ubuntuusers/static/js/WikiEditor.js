@@ -279,7 +279,7 @@
         item('{{{#!vorlage Warnung\n%s\n}}}', 'Warnung'),
         item('{{{#!vorlage Experten\n%s\n}}}', 'Experten-Info'),
         item('[[Vorlage(Tasten, %s)]]', 'Taste'),
-        item('{{{#!vorlage Tabelle\n{S/[:Wiki/Syntax/Tabellen:]}\n}}}', 'Tabelle')
+        item('{{{#!vorlage Tabelle\n{S/[:Wiki/Tabellen:]}\n}}}', 'Tabelle')
       ],
       function(evt) {
         if (evt.target.value.length > 0)

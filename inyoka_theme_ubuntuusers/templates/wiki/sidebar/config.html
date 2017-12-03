@@ -29,10 +29,10 @@
       <li>
         {% trans %}Export{% endtrans %}
         <ul>
-          <li><a href="{{ page|url('export', format='meta') }}">{% trans %}Metadata{% endtrans %}</a></li>
-          <li><a href="{{ page|url('export', format='raw') }}">{% trans %}Raw{% endtrans %}</a></li>
-          <li><a href="{{ page|url('export', format='html') }}">{% trans %}HTML{% endtrans %}</a></li>
-          <li><a href="{{ page|url('export', format='ast') }}">{% trans %}AST{% endtrans %}</a></li>
+          <li><a href="{{ page|url('export', format='meta') }}" rel="nofollow">{% trans %}Metadata{% endtrans %}</a></li>
+          <li><a href="{{ page|url('export', format='raw') }}" rel="nofollow">{% trans %}Raw{% endtrans %}</a></li>
+          <li><a href="{{ page|url('export', format='html') }}" rel="nofollow">{% trans %}HTML{% endtrans %}</a></li>
+          <li><a href="{{ page|url('export', format='ast') }}" rel="nofollow">{% trans %}AST{% endtrans %}</a></li>
         </ul>
       </li>
     </ul>
