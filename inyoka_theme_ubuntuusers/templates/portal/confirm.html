@@ -23,8 +23,7 @@
   {% endif %}
   <form method="post" action="">
 		{{ csrf_token() }}
-    <p>{% trans %}Please enter the string which was sent to you by email below:{% endtrans %}</p>
-    <p><textarea name="data" cols="80" rows="5"></textarea></p>
+		{{ form.as_p() }}
     <p><input type="submit" value="Absenden" /></p>
   </form>
 {% endif %}
