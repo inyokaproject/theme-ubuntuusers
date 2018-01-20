@@ -1,10 +1,10 @@
 /**
  * style.fonts
  * ~~~~~~~~~~~
- * 
+ *
  * Mixins and variables for fonts.
- * 
- * :copyright: (c) 2011-2017 by the Inyoka Team, see AUTHORS for more details.
+ *
+ * :copyright: (c) 2011-2018 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -29,13 +29,13 @@
 
 /** Mixin for the *inner* body of a @font-face-declaration.
  *  So the usage is as following:
- * 
+ *
  *  @font-face {
  *      .bulletproof-FontFace(<parameters>);
  *  }
- * 
+ *
  * Important: the @Filename must not include its file-type (.tff f.e.)
- * 
+ *
  */
 .fontFace(@Family; @Filename; @Weight: normal; @Style: normal; @woff2: false) when (@woff2 = true) {
   font-family: @Family;
