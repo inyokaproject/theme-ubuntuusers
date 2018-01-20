@@ -141,7 +141,7 @@
           <strong>{{ poll.question|e }}</strong>
         </div>
         <table class="poll">
-          {%- for option in poll.options.all() %}
+          {%- for option in poll.options.order_by('id').all() %}
             <tr>
               <td>
                 {%- if poll.can_vote and can_vote and not show_vote_results %}
