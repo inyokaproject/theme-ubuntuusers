@@ -30,10 +30,10 @@
           {% for page in recentchanges[day].keys() %}
             <tr>
               <td>
-              {{ recentchanges[day][page][-1]['time'] }}
+              {{ recentchanges[day][page][-1]['change_date']|timetz }}
               {% if recentchanges[day][page]|length > 1 %}
               -
-              {{ recentchanges[day][page][0]['time'] }}
+              {{ recentchanges[day][page][0]['change_date']|timetz}}
               {% endif %}
               </td>
               <td class="pagelink">
