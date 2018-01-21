@@ -6,7 +6,7 @@
     It displays the posts and some informations about their authors.
     It is "paginated".
 
-    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
@@ -141,7 +141,7 @@
           <strong>{{ poll.question|e }}</strong>
         </div>
         <table class="poll">
-          {%- for option in poll.options.all() %}
+          {%- for option in poll.options.order_by('id').all() %}
             <tr>
               <td>
                 {%- if poll.can_vote and can_vote and not show_vote_results %}

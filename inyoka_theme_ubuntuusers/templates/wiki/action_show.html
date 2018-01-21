@@ -5,7 +5,7 @@
     This template is used to show a page of the most recent revision or
     of a specific revision.
 
-    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 
@@ -45,7 +45,7 @@
         At this page the following tags have been assigned:
       {%- endtrans %}
       {% for tag in tags -%}
-        <a href="{{ href('wiki', 'wiki', 'tags', tag|e) }}">{{ tag|e }}</a>
+        <a href="{{ href('wiki', 'wiki', 'tags', tag) }}">{{ tag|e }}</a>
         {%- if not loop.last %}, {% endif %}
       {%- endfor %}
     {%- endif %}
