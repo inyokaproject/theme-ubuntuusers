@@ -86,7 +86,7 @@
     {% if USER.has_perm('forum.change_forum') %}
       <a class="admin_link" href="{{ href('forum', 'forum', 'new') }}">{% trans %}Create new forum{% endtrans %}</a>
     {% endif %}
-    {% if not USER.is_anonymous() %}
+    {% if not USER.is_anonymous %}
       <a href="{{ href('forum', 'markread') }}">{% trans %}Mark all forums as read{% endtrans %}</a>
     {% endif %}
   </div>
