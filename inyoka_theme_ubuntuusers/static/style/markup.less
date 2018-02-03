@@ -7,6 +7,7 @@
  */
 
 @import 'layout.less';
+@import 'icon-sprite.less';
 
 :link.missing, :visited.missing {
   color: #999 !important;
@@ -288,4 +289,44 @@ div.moderated {
 }
 div.moderated p, div.edited p {
   margin: 0;
+}
+
+
+span[class^='icon-'] {
+  display: inline-block;
+}
+span {
+  &.icon-frog-xmas {
+    .sprite(@frog-xmas);
+  }
+  &.icon-tux {
+    .sprite(@tux);
+  }
+  &.icon-ubuntu {
+    .sprite(@ubuntu);
+  }
+  &.icon-ubuntugnome {
+    .sprite(@ubuntugnome);
+  }
+  &.icon-kubuntu {
+    .sprite(@kubuntu);
+  }
+  &.icon-lubuntu {
+    .sprite(@lubuntu);
+  }
+  &.icon-ubuntumate {
+    .sprite(@ubuntumate);
+  }
+  &.icon-mythbuntu {
+    .sprite(@mythbuntu);
+  }
+  &.icon-ubuntutouch {
+    .sprite(@ubuntutouch);
+  }
+  &.icon-xubuntu {
+    .sprite(@xubuntu);
+  }
+  &.icon-overview {
+    .sprite(@overview);
+  }
 }
