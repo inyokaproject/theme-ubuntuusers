@@ -44,6 +44,7 @@
        url('@{font-folder}@{Filename}.ttf') format('truetype');
   font-style: @Style;
   font-weight: @Weight;
+  font-display: swap;
 }
 
 .fontFace(@Family; @Filename; @Weight: normal; @Style: normal; @woff2: false) when (@woff2 = false) {
@@ -52,4 +53,5 @@
        url('@{font-folder}@{Filename}.ttf') format('truetype');
   font-style: @Style;
   font-weight: @Weight;
+  font-display: swap;
 }
