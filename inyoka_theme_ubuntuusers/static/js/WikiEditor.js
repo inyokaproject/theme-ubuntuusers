@@ -48,6 +48,59 @@
     'xml': 'XML'
   };
 
+  /* subset of all available smilies, see django's settings.SMILIES */
+  var SMILIES = {
+    ':)': '☺',
+    ':(': '☹',
+    ';)': '😉',
+    ':P': '😛',
+    ':D': '😀',
+    ':o': '😮',
+    ':?': '😕',
+    ':x': '😠',
+    '8-)': '😎',
+    ':-$': '😳',
+    '<3': '♥',
+    ':[]': '😬',
+    '§)': '🤓',
+    '8-o': '😲',
+    '8-}': '🐸',
+    ':|': '😐',
+    ';-(': '😢',
+    ']:-(': '👿',
+    ']:-)': '😈',
+    'O:-)': '😇',
+    ':->': '😊',
+    ':thumbsup:': '👍',
+    ':idea:': '💡',
+    ':lol:': '🤣',
+    ':roll:': '🙄',
+    ':ente:': '🦆',
+    ':!:': '❗',
+    ':?:': '❓',
+    ':arrow:': '▶',
+    ':backarrow:': '◀',
+    ':tux:': '<span class="icon-tux"></span>',
+    '{*}': '<span class="icon-ubuntu"></span>',
+    '{g}': '<span class="icon-ubuntugnome"></span>',
+    '{k}': '<span class="icon-kubuntu"></span>',
+    '{l}': '<span class="icon-lubuntu"></span>',
+    '{ma}': '<span class="icon-ubuntumate"></span>',
+    '{m}': '<span class="icon-mythbuntu"></span>',
+    '{ut}': '<span class="icon-ubuntutouch"></span>',
+    '{x}': '<span class="icon-xubuntu"></span>',
+    '{en}': '🇬🇧',
+    '{de}': '🇩🇪',
+    '{fr}': '🇫🇷',
+    '{at}': '🇦🇹',
+    '{id}': '🇮🇩',
+    '{es}': '🇪🇸',
+    '{ch}': '🇨🇭',
+    '{it}': '🇮🇹',
+    '{us}': '🇺🇸',
+    '{ru}': '🇷🇺'
+  };
+
   /**
    * Helper function that creates a button object.
    */
@@ -234,19 +287,12 @@
         return false;
       }, ['forum'], help("Smiley einfügen"))(editor).appendTo(result);
       var smileybox = $('<ul class="smileybox" />').appendTo(result).hide();
-      smileybox[0].style.display = 'none'; //hide box in safari
-      $.getJSON('/?__service__=wiki.get_smilies', function(smilies) {
-        $.each(smilies, function() {
-          var code = this[0], src = this[1];
-          $('<li />')
-            .append($('<img />')
-              .attr('src', src)
-              .attr('alt', code)
-              .click(function() {
-                editor.insertText(' ' + code + ' ');
-              }))
+      $.each(SMILIES, function(markup, preview) {
+        $('<li />').html(preview)
+            .click(function() {
+              editor.insertText(' ' + markup + ' ');
+              })
             .appendTo(smileybox);
-        });
       });
       $(document).click(function() {
         if (smileybox.is(':visible'))
