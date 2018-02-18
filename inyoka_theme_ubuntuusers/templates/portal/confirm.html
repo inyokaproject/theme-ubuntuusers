@@ -13,8 +13,6 @@
 {%- block portal_content %}
 {%- if success %}
   <p class="success">{{ success }}</p>
-{%- elif failed %}
-  <p class="fail">{{ failed }}</p>
 {%- else %}
   {% if action == 'reactivate_user' %}
     <p>{% trans %}You can restore your account here if you deleted it. Please note that this is only possible one month after the deletion.{% endtrans %}</p>
