@@ -29,7 +29,7 @@ def mkenv(root):
     )
 
     for n in ('date', 'datetime', 'hnumber', 'ischeckbox', 'jsonencode',
-               'naturalday', 'time', 'timedeltaformat', 'url', 'urlencode'):
+               'naturalday', 'time', 'timetz', 'timedeltaformat', 'url', 'urlencode'):
         env.filters[n] = mkdummy(n)
 
     return env

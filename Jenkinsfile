@@ -4,15 +4,8 @@ pipeline {
     agent {
         label 'inyoka-slave'
     }
-
     stages {
-        stage('Checkout') {
-            steps {
-                deleteDir()
-                checkout scm
-            }
-        }
-        stage('Build virtuelenv') {
+        stage('Build virtualenv') {
             steps {
                 sh '''virtualenv venv
                 . ./venv/bin/activate
@@ -26,11 +19,10 @@ pipeline {
                 nosetests --with-xcoverage --with-xunit'''
             }
         }
-
-        stage('Publish test results') {
-            steps {
-                junit '**/nosetests.xml'
-            }
+    }
+    post {
+        always {
+            junit '**/nosetests.xml'
         }
     }
 }
