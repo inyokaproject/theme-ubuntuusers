@@ -55,8 +55,8 @@
     </ul>
     <h3 class="navi_wiki">{{ feed_button(href('portal', 'feeds', 'wiki')) }}<a href="{{ href('wiki') }}">Wiki</a></h3>
     <ul>
-      <li><a href="{{ href('wiki', 'Galerie') }}">Galerie</a></li>
-      <li><a href="{{ href('wiki', 'Links') }}">Links</a></li>
+      <li><a href="{{ href('wiki', 'wiki') }}">Übersicht</a></li>
+      <li><a href="{{ href('wiki', SETTINGS.WIKI_MAIN_PAGE) }}">{{ SETTINGS.WIKI_MAIN_PAGE }}</a></li>
     </ul>
     <h3 class="navi_ikhaya">{{ feed_button(href('portal', 'feeds', 'ikhaya')) }}<a href="{{ href('ikhaya') }}">Ikhaya</a></h3>
     {%- if USER.has_perm('ikhaya.suggest_article') or USER.has_perm('portal.suggest_event') %}
