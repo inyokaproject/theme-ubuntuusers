@@ -121,15 +121,3 @@
     <input type="submit" name="split" value="{% trans %}Split posts{% endtrans %}" />
   </form>
 {% endblock %}
-
-{% block additional_scripts %}
-  {{ super() }}
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    (function () {
-      $('#id_topic').autocomplete('/?__service__=forum.get_topic_autocompletion', {
-        delay: 40, cacheLength: 10});
-    })();
-    /* ]]> */
-  </script>
-{% endblock %}
