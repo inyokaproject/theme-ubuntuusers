@@ -1323,7 +1323,7 @@ msgid "Rename page"
 msgstr "Seite umbenennen"
 
 msgid "Rename to:"
-msgstr "Umbennen zu:"
+msgstr "Umbenennen zu:"
 
 msgid "Replies"
 msgstr "Antworten"
