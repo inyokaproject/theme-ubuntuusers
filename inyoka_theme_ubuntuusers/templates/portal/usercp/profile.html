@@ -65,7 +65,7 @@
       {% endfor %}
     </dl>
     <h3>{% trans %}Signature{% endtrans %}</h3>
-    <p class="note">{% trans n=max_sig_length, link=href('wiki', 'ubuntuusers/Moderatoren/Forenregeln', _anchor='8-Signaturregeln') -%}
+    <p class="note">{% trans n=max_sig_length, link=href('wiki', 'ubuntuusers/Moderatoren/Forenregeln') -%}
       The signature will be appended to every post. It cannot contain more than {{ n }} characters. Please follow the <a href="{{ link }}">signature rules</a>.
     {%- endtrans %}</p>
     {{ form.errors.signature }}
