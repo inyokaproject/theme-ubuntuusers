@@ -51,7 +51,7 @@ module.exports = function(grunt) {
           '*.js',
           '!*.min.js',
           '!less.js',
-          '!jquery{,.ba-hashchange,.cookie}.js',
+          '!jquery{.ba-hashchange,.cookie}.js',
         ],
         dest: 'inyoka_theme_ubuntuusers/static/js/',
         ext: '.min.js',

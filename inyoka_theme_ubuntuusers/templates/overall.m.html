@@ -87,12 +87,11 @@
     </div>
 
     {% block scripts %}
+      <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js') }}"></script>
       {% if SETTINGS.DEBUG %}
-        <script type="text/javascript" src="{{ href('static', 'js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.js') }}"></script>
       {% else %}
-        <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.min.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.min.js') }}"></script>
       {% endif %}
