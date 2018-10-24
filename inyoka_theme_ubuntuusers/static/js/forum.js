@@ -222,4 +222,14 @@ $(function () { /* collapsable elements for the input forms */
       return true;
     });
   })();
+
+  /* Submit Post Form with Ctrl+Enter. */
+  (function() {
+    $("#id_text").keypress(function (event) {
+        if ((event.keyCode == 10 || event.keyCode == 13) && event.ctrlKey &&
+            confirm("Möchtest du den Beitrag absenden?")) {
+            document.getElementById("submit_post").click()
+        }
+    });
+  })();
 });
