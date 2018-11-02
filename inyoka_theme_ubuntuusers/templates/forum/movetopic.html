@@ -25,7 +25,8 @@
     <dl>
       <dt>{% trans %}New forum of the topic:{% endtrans %}</dt>
       <dd>{{ form.forum }}{{ form.errors.forum }}</dd>
-      <dd><input type="checkbox" name="edit" value="edit" /> {% trans %}Edit first post afterwards{% endtrans %}</dd>
+      <dt>{{ form.edit_post.label_tag() }}</dt>
+      <dd>{{ form.edit_post }}</dd>
       <dd><input type="submit" value="{% trans %}Move{% endtrans %}" /></dd>
     </dl>
   </form>
