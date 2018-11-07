@@ -2027,3 +2027,6 @@ msgstr ""
 msgid "“%(name)s” is no member of any group."
 msgstr ""
 
+msgid "Edit group"
+msgstr ""
+
