@@ -485,16 +485,26 @@
     },
 
     /**
-     * Quote a given text.
+     * Quote a given text. If the selection is quoted already, unquote it.
      */
     quoteText : function(text) {
       if (!text)
         return '';
+      quoted = true;
+      $.each(text.split(/\r\n|\r|\n/), function() {
+        // If the line is empty, charAt returns an empty string.
+        if (this.charAt(0) != '>' && this.charAt(0) != '')
+          quoted = false;
+      });
       var lines = [];
       $.each(text.split(/\r\n|\r|\n/), function() {
-        lines.push('>' + (this.charAt(0) != '>' ? ' ' : '') + this);
+        if (quoted)
+          lines.push(this.substring(this.charAt(1) == ' ' ? 2 : 1));
+        else
+          lines.push('>' + (this.charAt(0) != '>' ? ' ' : '') + this);
       });
-      return lines.join('\n') + '\n';
+      // Add ending newline only when quoting and last line wasn't empty, not when unquoting
+      return lines.join('\n') + ((!quoted && lines[lines.length-1] != '> ') ? '\n' : '');
     },
     /**
      * Convert a given text to a list.
