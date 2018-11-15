@@ -41,7 +41,7 @@
         <label for="id_add">{% trans %}Attach to old topic{% endtrans %}</label>
       </dt>
       <dd>
-        {% trans %}Slug of the topic:{% endtrans %} {{ form.topic }}{{ form.errors.topic }}
+        {% trans %}Slug or URL of the topic:{% endtrans %} {{ form.topic }}{{ form.errors.topic }}
       </dd>
       <dt>{{ form.edit_post.label_tag() }}</dt>
       <dd>{{ form.edit_post }}</dd>

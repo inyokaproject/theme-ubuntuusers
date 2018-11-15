@@ -1431,6 +1431,9 @@ msgstr ""
 msgid "Sites under construction"
 msgstr ""
 
+msgid "Slug or URL of the topic:"
+msgstr ""
+
 msgid "Slug of the topic:"
 msgstr ""
 
