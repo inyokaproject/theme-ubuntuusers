@@ -491,23 +491,34 @@
       if (!text) {
         return '';
       }
+
       var quoted = true;
       $.each(text.split(/\r\n|\r|\n/), function() {
-        // If the line is empty, charAt returns an empty string.
-        if (this.charAt(0) !== '>' && this.charAt(0) !== '') {
+        var firstChar = this.charAt(0);
+        var quotedLine = firstChar === '>';
+        var emtyLine = firstChar === '';
+
+        if (!quotedLine && !emtyLine) {
           quoted = false;
         }
       });
+
       var lines = [];
       $.each(text.split(/\r\n|\r|\n/), function() {
         if (quoted) {
           lines.push(this.substring(this.charAt(1) === ' ' ? 2 : 1));
         } else {
-          lines.push('>' + (this.charAt(0) !== '>' ? ' ' : '') + this);
+          lines.push('>' + (this.charAt(0) === '>' ? '' : ' ') + this);
         }
       });
+
       // Add ending newline only when quoting and last line wasn't empty, not when unquoting
-      return lines.join('\n') + ((!quoted && lines[lines.length-1] !== '> ') ? '\n' : '');
+      var newText = lines.join('\n');
+      if(!quoted && lines[lines.length-1] !== '> ') {
+        newText += '\n';
+      }
+
+      return newText;
     },
     /**
      * Convert a given text to a list.
