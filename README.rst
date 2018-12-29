@@ -47,4 +47,4 @@ Deployment
 
 1. Run ``npm install`` to install *Grunt*
 2. Run ``./node_modules/grunt-cli/bin/grunt`` to build all static files
-3. Run ``manage.py collectstatic`` in your Django project
+3. Run ``python manage.py collectstatic`` in your inyoka instance

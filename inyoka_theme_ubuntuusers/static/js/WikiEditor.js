@@ -239,6 +239,7 @@
       var selection = this.getSelection();
       if (selection.length)
         this.setSelection(this.quoteText(selection));
+      else this.insertTag('> %s', 'Zitierter Text');
     }, ['forum'], help("Auswahl zitieren")),
     button('picture', 'Bild', insert('[[Bild(%s)]]', 'Bildname'),
            ['wiki'], help("[[Bild(Bildname)]]")),

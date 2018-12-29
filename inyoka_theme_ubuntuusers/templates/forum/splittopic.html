@@ -12,7 +12,6 @@
 {% set BREADCRUMBS = [(_('Split topic'), topic|url('split')),
                       (topic.forum.name, topic.forum|url),
                       (topic.title, topic|url)] + BREADCRUMBS|d([]) %}
-{% set scripts = ['jquery.autocomplete'] %}
 
 {% block forum_content %}
   <form action="" method="post" class="new_topic">
@@ -30,7 +29,7 @@
         {% trans %}Forum of the new topic:{% endtrans %} {{ form.forum }}{{ form.errors.forum }}
       </dd>
       <dd>
-        {% trans %}Title of the new topic:{% endtrans %} {{ form.title }}{{ form.errors.title }}
+        {% trans %}Title of the new topic:{% endtrans %} {{ form.new_title }}{{ form.errors.new_title }}
       </dd>
       <dd>
         Version des neuen Topics:
@@ -42,8 +41,10 @@
         <label for="id_add">{% trans %}Attach to old topic{% endtrans %}</label>
       </dt>
       <dd>
-        {% trans %}Slug of the topic:{% endtrans %} {{ form.topic }}{{ form.errors.topic }}
+        {% trans %}Slug or URL of the topic:{% endtrans %} {{ form.topic_to_move }}{{ form.errors.topic_to_move }}
       </dd>
+      <dt>{{ form.edit_post.label_tag() }}</dt>
+      <dd>{{ form.edit_post }}</dd>
     </dl>
 
     <h3>{% trans %}Preview{% endtrans %}</h3>
@@ -120,16 +121,4 @@
     </table>
     <input type="submit" name="split" value="{% trans %}Split posts{% endtrans %}" />
   </form>
-{% endblock %}
-
-{% block additional_scripts %}
-  {{ super() }}
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    (function () {
-      $('#id_topic').autocomplete('/?__service__=forum.get_topic_autocompletion', {
-        delay: 40, cacheLength: 10});
-    })();
-    /* ]]> */
-  </script>
 {% endblock %}

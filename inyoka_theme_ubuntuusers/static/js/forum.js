@@ -188,7 +188,7 @@ $(function () { /* collapsable elements for the input forms */
   (function() {
     // Bind events so that we can update the user session
     // properly on interaction.
-    $('.splitinfo input').live('click', function() {
+    $('.splitinfo input').on('click', function() {
       var self = $(this);
       var topic = location.href.slice(location.href.indexOf('/topic/') + 7);
       topic = topic.substring(0, topic.indexOf('/'));
@@ -220,6 +220,20 @@ $(function () { /* collapsable elements for the input forms */
       }
 
       return true;
+    });
+  })();
+
+  /* Submit Post Form with Ctrl+Enter. */
+  (function() {
+    const carriageReturn = 13;
+    const newLine = 10;
+
+    $("#id_text").keypress(function (event) {
+      var enterPressed = event.keyCode === newLine || event.keyCode === carriageReturn;
+      if (enterPressed && event.ctrlKey &&
+          confirm("Möchtest du den Beitrag absenden?")) {
+        document.getElementById("submit_post").click()
+      }
     });
   })();
 });
