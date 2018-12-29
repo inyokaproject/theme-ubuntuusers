@@ -27,7 +27,6 @@ See
  https://gist.github.com/mfornos/9991865#file-emoji-font-css
  https://www.unicode.org/emoji/charts/full-emoji-list.html
  */
-
 .emoji-font-face() {
   src: local(EmojiOne),
        local('EmojiOne Mozilla'),
@@ -35,12 +34,7 @@ See
        local('Noto Color Emoji'),
        local('Android Emoji'),
        local('Segoe UI'),
-       local('Twitter Color Emoji'),
-       /* last resort is to download a font from cdn (which mirrors github),
-          as the fonts are too big to host them ourself */
-       url("https://cdn.rawgit.com/emojione/emojione/9a81e8462ea5c1efc8e4f2947944d0a248b8ec73/extras/fonts/emojione-svg.woff2") format('woff2'),
-       url("https://cdn.rawgit.com/emojione/emojione/9a81e8462ea5c1efc8e4f2947944d0a248b8ec73/extras/fonts/emojione-svg.woff") format('woff');
-
+       local('Twitter Color Emoji');
   /*                            ↓→ Emoji unicode blocks */
   unicode-range: U+1F1E6-1F1FF, U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
   /*             ↑ regional indicators („flags“) */
