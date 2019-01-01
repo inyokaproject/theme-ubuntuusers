@@ -342,18 +342,18 @@
         .appendTo($('<li />').appendTo(t));
 
       /* Formatting helpers inside the textbox */
-      this.textarea.keydown(function(e){
-        if (e.which == 13) { // carriage return
-          // get text from cursor to last newline
-          var i, c, buffer = [];
-          for (i = e.target.selectionEnd - 1; (c = e.target.value.charAt(i)) !== '\n' && c; i--)
-            buffer.push(c);
-          // check for list element
-          if (buffer.length >= 2 && buffer[buffer.length-1] === ' ' && buffer[buffer.length-2] === '*') {
+      this.textarea.keydown(function(e) {
+        const carriageReturn = 13;
+        if (e.which === carriageReturn) {
+          var lineStart = e.target.value.lastIndexOf('\n', e.target.selectionEnd-1) + 1;
+          var line = e.target.value.substring(lineStart, e.target.selectionEnd);
+
+          var isListElement = line.startsWith(' *');
+          if (isListElement) {
             // check if the current list item is empty or not
             var emptyElement = true;
-            for (i = 0; i < buffer.length-2; i++) {
-              if (buffer[i] !== ' ') {
+            for (var i = 2; i < line.length; i++) {
+              if (line[i] !== ' ') {
                 emptyElement = false;
                 break;
               }
@@ -361,15 +361,15 @@
             var initialCursorPosition = e.target.selectionStart;
             if (emptyElement) {
               // Empty list element, stop list and add a new line without *
-              e.target.value = e.target.value.substring(0, e.target.selectionStart-buffer.length-1)
+              e.target.value = e.target.value.substring(0, e.target.selectionStart-line.length-1)
                                + '\n'
-                               + e.target.value.substring(e.target.selectionEnd, e.target.value.length);
+                               + e.target.value.substring(e.target.selectionEnd);
               e.target.selectionStart = e.target.selectionEnd = initialCursorPosition - 3;
             } else {
               // Non-empty list element, add new element
               e.target.value = e.target.value.substring(0, e.target.selectionStart)
                                + '\n * '
-                               + e.target.value.substring(e.target.selectionEnd, e.target.value.length);
+                               + e.target.value.substring(e.target.selectionEnd);
               e.target.selectionStart = e.target.selectionEnd = initialCursorPosition + 4;
               return false;  // suppress additional newline
             }
