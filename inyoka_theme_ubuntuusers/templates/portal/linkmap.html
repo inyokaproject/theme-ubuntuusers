@@ -17,7 +17,7 @@
     {% trans %}This Page lets you edit, delete and add external link shortcuts. The images should be of the size 14px x 14px.{% endtrans %}
   </p>
 
-  <form method="post" action="">
+  <form enctype="multipart/form-data" method="post" action="">
     {{ csrf_token() }}
     {{ formset.management_form }}
     {% for form in formset %}
