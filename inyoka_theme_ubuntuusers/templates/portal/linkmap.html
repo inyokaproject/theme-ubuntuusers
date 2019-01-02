@@ -14,16 +14,48 @@
 {% block content %}
   <h3>{% trans %}Link Map{% endtrans %}</h3>
   <p>
-    {% trans %}This Page lets you edit, delete and add external link shortcuts. The images should be of the size 14px x 14px.{% endtrans %}
+    {% trans %}This Page lets you edit, delete and add external link shortcuts. The icons should be of the size 14px x 14px.{% endtrans %}
   </p>
 
   <form enctype="multipart/form-data" method="post" action="">
     {{ csrf_token() }}
     {{ formset.management_form }}
-    {% for form in formset %}
-      {{ form.as_p() }}
-    {% endfor %}
+    {{ formset.non_form_errors() }}
 
-    <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+    <table>
+      <thead>
+      <tr>
+        {% for field in formset|first %}
+          {% if not field.is_hidden %}
+            <th>
+              {{ field.label }}
+            </th>
+          {% endif %}
+        {% endfor %}
+      </tr>
+      </thead>
+
+      <tbody>
+      {% for form in formset %}
+        {{ form.non_field_errors() }}
+        <tr>
+          {% for field in form %}
+            {% if not field.is_hidden %}
+              <td>
+              {{ field.errors }}
+            {% endif %}
+
+          {{ field }}
+
+          {% if not field.is_hidden %}
+            </td>
+          {% endif %}
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <input type="submit" value="{% trans %}Submit{% endtrans %}"/>
   </form>
 {% endblock %}
