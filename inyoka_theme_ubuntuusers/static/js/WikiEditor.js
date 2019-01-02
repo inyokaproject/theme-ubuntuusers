@@ -341,6 +341,43 @@
       }
       $('<span class="syntax_help note"><a href="' + link + '">Hilfe zur Syntax</a></span>')
         .appendTo($('<li />').appendTo(t));
+
+      /* Formatting helpers inside the textbox */
+      this.textarea.keydown(function(e) {
+        const carriageReturn = 13;
+        if (e.which === carriageReturn) {
+          var lineStart = e.target.value.lastIndexOf('\n', e.target.selectionEnd-1) + 1;
+          var line = e.target.value.substring(lineStart, e.target.selectionEnd);
+
+          var isListElement = line.startsWith(' *');
+          if (isListElement) {
+            // check if the current list item is empty or not
+            var emptyElement = true;
+            for (var i = 2; i < line.length; i++) {
+              if (line[i] !== ' ') {
+                emptyElement = false;
+                break;
+              }
+            }
+            var initialCursorPosition = e.target.selectionStart;
+            if (emptyElement) {
+              // Empty list element, stop list and add a new line without *
+              e.target.value = e.target.value.substring(0, e.target.selectionStart-line.length-1)
+                               + '\n'
+                               + e.target.value.substring(e.target.selectionEnd);
+              e.target.selectionStart = e.target.selectionEnd = initialCursorPosition - 3;
+            } else {
+              // Non-empty list element, add new element
+              e.target.value = e.target.value.substring(0, e.target.selectionStart)
+                               + '\n * '
+                               + e.target.value.substring(e.target.selectionEnd);
+              e.target.selectionStart = e.target.selectionEnd = initialCursorPosition + 4;
+              return false;  // suppress additional newline
+            }
+          }
+        }
+        return true;
+      });
     },
 
     /**
