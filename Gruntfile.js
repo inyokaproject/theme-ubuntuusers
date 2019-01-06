@@ -175,7 +175,8 @@ module.exports = function(grunt) {
       production: {
         options: {
           banner: '/*!\n<%= banner %>',
-          compress: true
+          compress: true,
+          javascriptEnabled: true
         },
         files: [
           {
