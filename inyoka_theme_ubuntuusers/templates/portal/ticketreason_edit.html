@@ -1,0 +1,26 @@
+{#
+    portal/user_edit_status.html
+    ~~~~~~~~~~~~~~~~~~~~
+
+    Change the details of a ticket reason.
+
+    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+{% extends 'portal/overall.html' %}
+{% from 'macros.html' import render_form %}
+
+{% set BREADCRUMBS = [(_('Ticket Reason'), href('portal', 'ticketreason'))] + BREADCRUMBS|d([]) %}
+
+{% block content %}
+  {{ super() }}
+  <form id="ticketreason_edit_form" method="post" action="">
+    {{ csrf_token() }}
+    {{ form.errors.__all__ }}
+    <dl>
+      {{ render_form(form, ['content_type', 'reason'], inline=true) }}
+    </dl>
+    </p>
+    <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
+  </form>
+{% endblock %}

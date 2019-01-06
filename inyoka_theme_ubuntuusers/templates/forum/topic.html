@@ -63,8 +63,6 @@
              id="{{ topic.slug }}">{% trans %}Mark as solved{% endtrans %}</a>
         {% endif %} |
       {% endif %}
-      <a href="{{ topic|url('report') }}"
-         class="action action_report">{% trans %}Report{% endtrans %}</a>
     {% endif %}
   </span>
   {%- if can_moderate %}
@@ -266,6 +264,10 @@
                       {% endif %}
                     </span>
                     {% endif %}
+                {%- endif %}
+                {%- if not USER.is_authenticated() or can_reply and not topic.locked %}
+                  <a href="{{ post|url('ticket') }}"
+                    class="action action_report">{% trans %}Report{% endtrans %}</a> |
                 {%- endif %}
                 {%- if can_edit(post) %}
                   <a href="{{ post|url('edit') }}"

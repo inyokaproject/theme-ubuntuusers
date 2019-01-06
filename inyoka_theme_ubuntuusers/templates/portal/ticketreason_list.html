@@ -1,0 +1,80 @@
+{#
+    portal/ticket_config.html
+    ~~~~~~~~~~~~~~~~~~~~~~
+
+    This page shows the configured ticket reaseons per component (forum, wiki etc.).
+
+    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{%- extends 'portal/overall.html' %}
+
+{% set BREADCRUMBS = [(_('Ticket Reasons'), href('portal', 'ticketreason', 'list'))] + BREADCRUMBS|d([]) %}
+
+{% block content %}
+    <h3>{% trans %}Ticket Reasons{% endtrans %}</h3>
+
+    <table class="admin_link_hover">
+        <tr>
+        <th>{% trans %}ID{% endtrans %}</th>
+        <th>{% trans %}Component{% endtrans %}</th>
+        <th>{% trans %}Reason{% endtrans %}</th>
+        <th></th>
+        <th></th>
+        </tr>
+        {%- for reason in reasons %}
+        <tr>
+            <td>{{ reason.id }}</td>
+            <td>{{ reason.content_type }}</td>
+            <td>{{ reason.reason }}
+                {%- if USER.has_perm('portal.change_ticketreason') and not reason.system_defined -%}
+                    <a href="{{ href('portal', 'ticketreason', reason.id, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
+                {%- endif -%}
+            </td>
+            <td>
+                {%- if USER.has_perm('portal.change_ticketreason') and not reason.system_defined -%}
+                    <a href="{{ href('portal', 'ticketreason', reason.id, 'delete') }}" class="admin_link"><img src="{{ href('static', 'img/forum/delete.png') }}" /></a>
+                {%- endif -%}
+            </td>
+            <td>
+                {%- if USER.has_perm('forum.manage_tickets_forum') -%}
+                    {%- if reason.subscribed %}
+                        <a href="{{ href('portal', 'ticketreason', reason.id, 'unsubscribe') }}">
+                            {%- trans %}Unsubscribe from these tickets{% endtrans -%}
+                        </a>
+                    {%- else %}
+                        <a href="{{ href('portal', 'ticketreason', reason.id, 'subscribe') }}">
+                            {%- trans %}Subscribe to these tickets{% endtrans -%}
+                        </a>
+                    {%- endif %}
+                {%- endif -%}
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">{% trans %}No reasons were found.{% endtrans %}</td>
+        </tr>
+        {%- endfor %}
+    </table>
+
+    <div class="linklist">
+
+        {%- if USER.has_perm('portal.change_ticketreason') -%}
+            <a href="{{ href('portal', 'ticketreason', 'new') }}">{% trans %}Create new ticket reason{% endtrans %}</a>.
+        {%- endif -%} |
+        {%- if all_subscribed or some_subscribed %}
+            <a href="{{ href('portal', 'ticketreason', 'all', 'unsubscribe') }}">
+                {%- trans %}Unsubscribe from all ticket reasons{% endtrans -%}
+            </a>
+        {%- endif %}
+        {%- if some_subscribed and not all_subscribed %}
+            |
+        {%- endif %}
+        {%- if some_subscribed or not all_subscribed %}
+            <a href="{{ href('portal', 'ticketreason', 'all', 'subscribe') }}">
+                {%- trans %}Subscribe to all ticket reasons{% endtrans -%}
+            </a>
+        {%- endif %}
+    </div>
+{% endblock %}

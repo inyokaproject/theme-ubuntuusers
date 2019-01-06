@@ -1,0 +1,121 @@
+{#
+    forum/ticketlist.html
+    ~~~~~~~~~~~~~~~~~~~~~
+
+    The moderators can see all reported topics on this page.
+
+    :copyright: (c) 2007-2017 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{%- extends 'portal/overall.html' %}
+{% from 'macros.html' import render_form %}
+{% set BREADCRUMBS = [(_('Tickets'), href('portal', 'tickets/list'))] + BREADCRUMBS|d([]) %}
+
+{% block content %}
+<form action="" method="post">
+    {{ csrf_token() }}
+
+    <table>
+        <colgroup>
+            <col width="1%"/>
+            <col width="30%"/>
+            <col width="70%"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>{% trans %}#{% endtrans %}</th>
+                <th>{% trans %}Ticket Info{% endtrans %}</th>
+                <th>{% trans %}Comments{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%- for element in elements %}
+            <tr>
+                <th rowspan="3">
+                    {{ element.get_state_display() }}<br>
+                    <input type="checkbox" name="selected" value="{{ element.id }}" />
+                </th>
+                <th>
+                    {{ element.content_type }} {% trans %}reported due to{% endtrans %} {{ element.reason }}
+                </th>
+                <th class="topic">
+                    <a href="{{ element.content_object|url }}">{{ element.content_object|e }}</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    {% trans %}Reported by{% endtrans %} <a href="{{ element.reporting_user|url }}">{{ element.reporting_user.username }}</a><br>
+                    {{ element.reporting_time|datetime }}
+                </td>
+                <td>
+                    {{ element.reporter_comment_rendered }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {% if element.owning_user %}
+                        {% trans %}Owned by{% endtrans %} <a href="{{ element.owning_user|url }}">{{ element.owning_user.username }}</a>
+                        {% if element.owning_user == USER %}
+                            (<a href="../{{ element.id }}/disown">{% trans %}Release ownership{% endtrans %}</a>)
+                        {% endif %}
+                        <br>
+                        {{ element.owned_time|datetime }}
+                    {% else %}
+                        <a href="../{{ element.id }}/own">{% trans %}Take ownership{% endtrans %}</a>
+                        {% if element.owned_time %}
+                            <br>
+                            {% trans %}Previously already owned at {% endtrans %}{{ element.owned_time|datetime }}
+                        {% endif %}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if element.owning_user == USER %}
+                        {% if owner_comment_form and edit_ticket_id==element.id %}
+                            <owner_comment_form id="owner_comment" method="post" action="" class="new_topic">
+                                {{ csrf_token() }}
+                                {{ render_form(owner_comment_form, ['owner_comment'], inline=true) }}<br>
+                                <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+                            </owner_comment_form>
+                        {% else %}
+                            {% if element.owner_comment %}
+                                <a href="../{{ element.id }}/edit" class="action action_edit">{% trans %}Edit comment{% endtrans %}</a><br>
+                                {{ element.owner_comment_rendered }}
+                            {% else %}
+                                <a href="../{{ element.id }}/edit" class="action action_edit">{% trans %}Add comment{% endtrans %}</a><br>
+                            {% endif %}
+                        {% endif %}
+                    {% else %}
+                        {{ element.owner_comment_rendered }}
+                    {% endif %}
+                </td>
+            </tr>
+        {%- else %}
+            <tr>
+                <td colspan="5">
+                {% trans %}There are no open tickets at the moment.{% endtrans %}
+                </td>
+            </tr>
+        {%- endfor %}
+        </tbody>
+    </table>
+    <div class="linklist">
+        <input type="submit" value="{% trans %}Close selected tickets{% endtrans %}" /> |
+        {%- if subscribed %}
+        <a href="{{ href('forum', 'reported_topics', 'unsubscribe') }}">
+            {%- trans %}Unsubscribe from topic reports{% endtrans -%}
+        </a>
+        {%- else %}
+        <a href="{{ href('forum', 'reported_topics', 'subscribe') }}">
+            {%- trans %}Subscribe to topic reports{% endtrans -%}
+        </a>
+        {%- endif %}
+        {%- if USER.has_perm('portal.change_ticketreason') %}
+        |
+        <a href="{{ href('portal', 'ticketreason', 'list') }}">
+            {%- trans %}Manage ticket reasons{% endtrans -%}
+        </a>
+        {%- endif %}
+    </div>
+</form>
+{% endblock %}
