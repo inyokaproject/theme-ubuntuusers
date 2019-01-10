@@ -31,6 +31,9 @@ a.team {
 a.search {
   background-image: url(../img/interwiki/search.png);
 }
+a[href$=".pdf"]:before {
+  content: '📄 ';
+}
 
 #page table {
   width: auto; // override behaviour of main.css for wiki & ikhaya
