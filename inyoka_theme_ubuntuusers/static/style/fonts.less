@@ -29,12 +29,14 @@ See
  */
 .emoji-font-face() {
   src: local(EmojiOne),
-       local('EmojiOne Mozilla'),
+       local('Twemoji Mozilla'),
+       local('EmojiOne Mozilla'), /* can be removed after Firefox 60 ESR EoL*/
        local('Apple Color Emoji'),
        local('Noto Color Emoji'),
        local('Android Emoji'),
        local('Segoe UI'),
-       local('Twitter Color Emoji');
+       local('Twitter Color Emoji'),
+       local('DejaVu Sans');
   /*                            ↓→ Emoji unicode blocks */
   unicode-range: U+1F1E6-1F1FF, U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
   /*             ↑ regional indicators („flags“) */
