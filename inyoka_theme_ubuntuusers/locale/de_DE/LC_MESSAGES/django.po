@@ -1435,6 +1435,9 @@ msgstr "Baustellen"
 msgid "Slug of the topic:"
 msgstr "Slug des Themas"
 
+msgid "Slug or URL of the topic:"
+msgstr "Slug oder URL des Themas"
+
 msgid "Solved"
 msgstr "Gelöst"
 
@@ -2027,4 +2030,7 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
+
+msgid "Edit group"
+msgstr "Gruppe bearbeiten"
 

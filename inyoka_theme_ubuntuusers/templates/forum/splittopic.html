@@ -4,7 +4,7 @@
 
     This page shows the "splittopic" form.
 
-    :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'forum/page.html' %}
@@ -29,7 +29,7 @@
         {% trans %}Forum of the new topic:{% endtrans %} {{ form.forum }}{{ form.errors.forum }}
       </dd>
       <dd>
-        {% trans %}Title of the new topic:{% endtrans %} {{ form.title }}{{ form.errors.title }}
+        {% trans %}Title of the new topic:{% endtrans %} {{ form.new_title }}{{ form.errors.new_title }}
       </dd>
       <dd>
         Version des neuen Topics:
@@ -41,8 +41,10 @@
         <label for="id_add">{% trans %}Attach to old topic{% endtrans %}</label>
       </dt>
       <dd>
-        {% trans %}Slug of the topic:{% endtrans %} {{ form.topic }}{{ form.errors.topic }}
+        {% trans %}Slug or URL of the topic:{% endtrans %} {{ form.topic_to_move }}{{ form.errors.topic_to_move }}
       </dd>
+      <dt>{{ form.edit_post.label_tag() }}</dt>
+      <dd>{{ form.edit_post }}</dd>
     </dl>
 
     <h3>{% trans %}Preview{% endtrans %}</h3>

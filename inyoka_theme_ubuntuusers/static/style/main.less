@@ -4,7 +4,7 @@
  *
  * Some global style definitions.
  *
- * :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -14,38 +14,107 @@
 @import 'search.less';
 
 /*
- * Liberation Sans
+ * Liberation
  */
 @font-face {
-  .fontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Regular/LiberationSans-Regular-webfont");
+  font-family: "Liberation Sans";
+  src: local("Liberation Sans Regular"),
+       local("LiberationSans-Regular"),
+       local("Liberation Sans"),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Regular/LiberationSans-Regular-webfont.woff') format('woff'),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Regular/LiberationSans-Regular-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-  .fontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Italic/LiberationSans-Italic-webfont"; @Style: italic);
+  font-family: "Liberation Sans";
+  src: local("Liberation Sans Italic"),
+       local("LiberationSans-Italic"),
+       local("LiberationSans Italic"),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Italic/LiberationSans-Italic-webfont.woff') format('woff'),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Italic/LiberationSans-Italic-webfont.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-  .fontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/Bold/LiberationSans-Bold-webfont"; bold);
+  font-family: "Liberation Sans";
+  src: local("Liberation Sans Bold"),
+       local("LiberationSans-Bold"),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Bold/LiberationSans-Bold-webfont.woff') format('woff'),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/Bold/LiberationSans-Bold-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
-  .fontFace(dl_liberation_sans; "Liberation_webkit_macroman/Sans/BoldItalic/LiberationSans-BoldItalic-webfont"; bold; italic);
+  font-family: "Liberation Sans";
+  src: local("Liberation Sans BoldItalic"),
+       local("LiberationSans-BoldItalic"),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/BoldItalic/LiberationSans-BoldItalic-webfont.woff') format('woff'),
+       url('@{font-folder}Liberation_webkit_macroman/Sans/BoldItalic/LiberationSans-BoldItalic-webfont.ttf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
 }
 
-/* Liberation Mono */
 @font-face {
-  .fontFace(dl_liberation_mono; "Liberation_webkit_macroman/Mono/Regular/LiberationMono-Regular-webfont");
+  font-family: "Liberation Mono";
+  src: local("LiberationMono"),
+       local("Liberation Mono"),
+       url('@{font-folder}Liberation_webkit_macroman/Mono/Regular/LiberationMono-Regular-webfont.woff') format('woff'),
+       url('@{font-folder}Liberation_webkit_macroman/Mono/Regular/LiberationMono-Regular-webfont.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
 
-/* Ubuntu
- * (only Bold and light)
+
+/*
+ * Ubuntu
  */
 @font-face {
-  .fontFace(dl_ubuntu; "uude-font-0.83/ubuntu_derivative_uude-bold"; bold; @woff2: true);
+  font-family: "Ubuntu";
+  src: local("Ubuntu Bold"),
+       local("Ubuntu-Bold"),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-bold.woff2') format('woff2'),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-bold.woff') format('woff'),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
 }
+
 @font-face {
-  .fontFace(dl_ubuntu; "uude-font-0.83/ubuntu_derivative_uude-light"; lighter; @woff2: true);
+  font-family: "Ubuntu";
+  src: local("Ubuntu Light"),
+       local("Ubuntu-Light"),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-light.woff2') format('woff2'),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-light.woff') format('woff'),
+       url('@{font-folder}uude-font-0.83/ubuntu_derivative_uude-light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
 }
+
+/* Emoji subsets */
+@font-face{
+  font-family: "Liberation Sans";
+  .emoji-font-face()
+}
+@font-face{
+  font-family: "Liberation Mono";
+  .emoji-font-face()
+}
+@font-face{
+  font-family: "Ubuntu";
+  .emoji-font-face()
+}
+
 
 * {
   padding: 0;

@@ -4,7 +4,7 @@
  *
  * JavaScript for the forum.
  *
- * :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -220,6 +220,20 @@ $(function () { /* collapsable elements for the input forms */
       }
 
       return true;
+    });
+  })();
+
+  /* Submit Post Form with Ctrl+Enter. */
+  (function() {
+    const carriageReturn = 13;
+    const newLine = 10;
+
+    $("#id_text").keypress(function (event) {
+      var enterPressed = event.keyCode === newLine || event.keyCode === carriageReturn;
+      if (enterPressed && event.ctrlKey &&
+          confirm("Möchtest du den Beitrag absenden?")) {
+        document.getElementById("submit_post").click()
+      }
     });
   })();
 });
