@@ -4,7 +4,7 @@
  *
  * The styles for Ikhaya.
  *
- * :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -266,4 +266,9 @@ div.preview_wrapper {
   h2.title {
     padding-bottom: 10px;
   }
+}
+
+/* fix too wide text-inputs with Emojis in Firefox 64 */
+input[type="text"] {
+    width: 100%;
 }
