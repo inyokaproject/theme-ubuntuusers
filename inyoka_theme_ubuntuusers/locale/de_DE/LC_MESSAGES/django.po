@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-01 07:15+0200\n"
+"POT-Creation-Date: 2018-09-01 21:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Generated-By: Babel 2.5.1\n"
 
 msgid " Activation link:"
 msgstr "Aktivierungslink:"
@@ -143,9 +143,6 @@ msgstr "<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von %(auth
 #, python-format
 msgid "<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by <a href=\"%(author_link)s\">%(author)s</a>."
 msgstr "<a href=\"%(rev_link)s\">Diese Revision</a> wurde am %(date)s von <a href=\"%(author_link)s\">%(author)s</a> erstellt."
-
-msgid "AST"
-msgstr "AST"
 
 msgid "About Ikhaya"
 msgstr "Über Ikhaya"
@@ -577,9 +574,6 @@ msgstr "Nicht mehr beobachten"
 msgid "Download iCal"
 msgstr "iCal herunterladen"
 
-msgid "Downloads"
-msgstr "Downloads"
-
 msgid "Duplicate attachments on the target page will be overwritten!"
 msgstr "Doppelte Anhänge der Zielseite werden überschrieben!"
 
@@ -728,15 +722,6 @@ msgstr "Allgemein"
 msgid "General settings"
 msgstr "Allgemeine Einstellungen"
 
-msgid "Generate a new one"
-msgstr "Ein neues generieren"
-
-msgid "Generate a random password"
-msgstr "Generiere ein zufälliges Passwort"
-
-msgid "Generated password:"
-msgstr "Generiertes Passwort:"
-
 msgid "Global Permissions"
 msgstr "Globale Berechtigungen"
 
@@ -863,9 +848,6 @@ msgstr "Bitte beachte, dass die Deaktivierung deines Kontos nicht rückgängig g
 msgid "Key"
 msgstr "Schlüssel"
 
-msgid "KiB (0 = unlimited)"
-msgstr "KiB (0 = unbegrenzt)"
-
 #, python-format
 msgid "Last login: %(date)s"
 msgstr "Letzte Anmeldung: %(date)s"
@@ -986,12 +968,6 @@ msgstr "Spam"
 
 msgid "Mark topic as “Important:”"
 msgstr "Thema als „Wichtig:“ markieren"
-
-msgid "Maximum avatar size"
-msgstr "Maximale Avatargröße"
-
-msgid "Maximum team icon size"
-msgstr "Maximale Teamicon Größe"
 
 msgid "Member since"
 msgstr "Mitglied seit"
@@ -1180,9 +1156,6 @@ msgstr "Permalink"
 
 msgid "Permissions"
 msgstr "Rechte"
-
-msgid "Pixel"
-msgstr "Pixel"
 
 msgid "Planet"
 msgstr "Planet"
@@ -1461,6 +1434,9 @@ msgstr "Baustellen"
 
 msgid "Slug of the topic:"
 msgstr "Slug des Themas"
+
+msgid "Slug or URL of the topic:"
+msgstr "Slug oder URL des Themas"
 
 msgid "Solved"
 msgstr "Gelöst"
@@ -1848,9 +1824,6 @@ msgstr "Benutzer:"
 msgid "Username"
 msgstr "Benutzername"
 
-msgid "Various limits"
-msgstr "Diverse Limits"
-
 msgid "Venue"
 msgstr "Veranstaltungsort"
 
@@ -2057,4 +2030,7 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
+
+msgid "Edit group"
+msgstr "Gruppe bearbeiten"
 

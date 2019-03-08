@@ -11,7 +11,7 @@
  * The toolbar is added dynamically to the editor so that users without
  * JavaScript don't get a useless UI.
  *
- * :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -46,6 +46,59 @@
     'sourceslist': 'sources.list',
     'sql': 'SQL',
     'xml': 'XML'
+  };
+
+  /* subset of all available smilies, see django's settings.SMILIES */
+  var SMILIES = {
+    ':)': '☺',
+    ':(': '☹',
+    ';)': '😉',
+    ':P': '😛',
+    ':D': '😀',
+    ':o': '😮',
+    ':?': '😕',
+    ':x': '😠',
+    '8-)': '😎',
+    ':-$': '😳',
+    '<3': '♥',
+    ':[]': '😬',
+    '§)': '🤓',
+    '8-o': '😲',
+    '8-}': '🐸',
+    ':|': '😐',
+    ';-(': '😢',
+    ']:-(': '👿',
+    ']:-)': '😈',
+    'O:-)': '😇',
+    ':->': '😊',
+    ':thumbsup:': '👍',
+    ':idea:': '💡',
+    ':lol:': '🤣',
+    ':roll:': '🙄',
+    ':ente:': '🦆',
+    ':!:': '❗',
+    ':?:': '❓',
+    ':arrow:': '▶',
+    ':backarrow:': '◀',
+    ':tux:': '<span class="icon-tux"></span>',
+    '{*}': '<span class="icon-ubuntu"></span>',
+    '{g}': '<span class="icon-ubuntugnome"></span>',
+    '{k}': '<span class="icon-kubuntu"></span>',
+    '{l}': '<span class="icon-lubuntu"></span>',
+    '{ma}': '<span class="icon-ubuntumate"></span>',
+    '{m}': '<span class="icon-mythbuntu"></span>',
+    '{ut}': '<span class="icon-ubuntutouch"></span>',
+    '{x}': '<span class="icon-xubuntu"></span>',
+    '{en}': '🇬🇧',
+    '{de}': '🇩🇪',
+    '{fr}': '🇫🇷',
+    '{at}': '🇦🇹',
+    '{id}': '🇮🇩',
+    '{es}': '🇪🇸',
+    '{ch}': '🇨🇭',
+    '{it}': '🇮🇹',
+    '{us}': '🇺🇸',
+    '{ru}': '🇷🇺'
   };
 
   /**
@@ -186,6 +239,7 @@
       var selection = this.getSelection();
       if (selection.length)
         this.setSelection(this.quoteText(selection));
+      else this.insertTag('> %s', 'Zitierter Text');
     }, ['forum'], help("Auswahl zitieren")),
     button('picture', 'Bild', insert('[[Bild(%s)]]', 'Bildname'),
            ['wiki'], help("[[Bild(Bildname)]]")),
@@ -234,19 +288,12 @@
         return false;
       }, ['forum'], help("Smiley einfügen"))(editor).appendTo(result);
       var smileybox = $('<ul class="smileybox" />').appendTo(result).hide();
-      smileybox[0].style.display = 'none'; //hide box in safari
-      $.getJSON('/?__service__=wiki.get_smilies', function(smilies) {
-        $.each(smilies, function() {
-          var code = this[0], src = this[1];
-          $('<li />')
-            .append($('<img />')
-              .attr('src', src)
-              .attr('alt', code)
-              .click(function() {
-                editor.insertText(' ' + code + ' ');
-              }))
+      $.each(SMILIES, function(markup, preview) {
+        $('<li />').html(preview)
+            .click(function() {
+              editor.insertText(' ' + markup + ' ');
+              })
             .appendTo(smileybox);
-        });
       });
       $(document).click(function() {
         if (smileybox.is(':visible'))
@@ -340,6 +387,43 @@
       }
       $('<span class="syntax_help note"><a href="' + link + '">Hilfe zur Syntax</a></span>')
         .appendTo($('<li />').appendTo(t));
+
+      /* Formatting helpers inside the textbox */
+      this.textarea.keydown(function(e) {
+        const carriageReturn = 13;
+        if (e.which === carriageReturn) {
+          var lineStart = e.target.value.lastIndexOf('\n', e.target.selectionEnd-1) + 1;
+          var line = e.target.value.substring(lineStart, e.target.selectionEnd);
+
+          var isListElement = line.startsWith(' *');
+          if (isListElement) {
+            // check if the current list item is empty or not
+            var emptyElement = true;
+            for (var i = 2; i < line.length; i++) {
+              if (line[i] !== ' ') {
+                emptyElement = false;
+                break;
+              }
+            }
+            var initialCursorPosition = e.target.selectionStart;
+            if (emptyElement) {
+              // Empty list element, stop list and add a new line without *
+              e.target.value = e.target.value.substring(0, e.target.selectionStart-line.length-1)
+                               + '\n'
+                               + e.target.value.substring(e.target.selectionEnd);
+              e.target.selectionStart = e.target.selectionEnd = initialCursorPosition - 3;
+            } else {
+              // Non-empty list element, add new element
+              e.target.value = e.target.value.substring(0, e.target.selectionStart)
+                               + '\n * '
+                               + e.target.value.substring(e.target.selectionEnd);
+              e.target.selectionStart = e.target.selectionEnd = initialCursorPosition + 4;
+              return false;  // suppress additional newline
+            }
+          }
+        }
+        return true;
+      });
     },
 
     /**
@@ -485,16 +569,40 @@
     },
 
     /**
-     * Quote a given text.
+     * Quote a given text. If the selection is quoted already, unquote it.
      */
     quoteText : function(text) {
-      if (!text)
+      if (!text) {
         return '';
+      }
+
+      var quoted = true;
+      $.each(text.split(/\r\n|\r|\n/), function() {
+        var firstChar = this.charAt(0);
+        var quotedLine = firstChar === '>';
+        var emtyLine = firstChar === '';
+
+        if (!quotedLine && !emtyLine) {
+          quoted = false;
+        }
+      });
+
       var lines = [];
       $.each(text.split(/\r\n|\r|\n/), function() {
-        lines.push('>' + (this.charAt(0) != '>' ? ' ' : '') + this);
+        if (quoted) {
+          lines.push(this.substring(this.charAt(1) === ' ' ? 2 : 1));
+        } else {
+          lines.push('>' + (this.charAt(0) === '>' ? '' : ' ') + this);
+        }
       });
-      return lines.join('\n') + '\n';
+
+      // Add ending newline only when quoting and last line wasn't empty, not when unquoting
+      var newText = lines.join('\n');
+      if(!quoted && lines[lines.length-1] !== '> ') {
+        newText += '\n';
+      }
+
+      return newText;
     },
     /**
      * Convert a given text to a list.

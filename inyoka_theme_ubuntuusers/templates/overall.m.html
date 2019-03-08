@@ -6,7 +6,7 @@
 
     It contains the design elements that are displayed on all pages.
 
-    :copyright: (c) 2007-2018 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {% import 'macros.html' as macros %}
@@ -77,7 +77,7 @@
             {%- trans %}To classic version{% endtrans -%}
           </a>
         </p>
-        2004 – 2018 ubuntuusers.de • Einige Rechte vorbehalten<br />
+        2004 – 2019 ubuntuusers.de • Einige Rechte vorbehalten<br />
         <a href="{{ href('portal', 'lizenz') }}" rel="cc:morePermissions">Lizenz</a> •
         <a href="{{ href('portal', 'kontakt') }}">Kontakt</a> •
         <a href="{{ href('portal', 'datenschutz') }}">Datenschutz</a> •
@@ -87,12 +87,11 @@
     </div>
 
     {% block scripts %}
+      <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js') }}"></script>
       {% if SETTINGS.DEBUG %}
-        <script type="text/javascript" src="{{ href('static', 'js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.js') }}"></script>
       {% else %}
-        <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js/jquery.ba-hashchange.min.js') }}"></script>
         <script type="text/javascript" src="{{ href('static', 'js', 'overall.m.min.js') }}"></script>
       {% endif %}

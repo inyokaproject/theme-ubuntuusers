@@ -2,21 +2,15 @@
  * style.fonts
  * ~~~~~~~~~~~
  *
- * Mixins and variables for fonts.
+ * Variables for fonts.
  *
- * :copyright: (c) 2011-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2011-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
-/* The following first rule checks, whether the font is installed on the local
- * machine. If it is not installed, a font should be download from the cdn.
- * The third and last one is a fallback for the case that the browser does
- * not support @font-face or the font is not installed on the local machine
- * and @font-face is disabled.
- */
-@font-header: "Ubuntu", dl_ubuntu, sans-serif;
-@font-content: "Liberation Sans", dl_liberation_sans, sans-serif;
-@font-monospace: "Liberation Mono", dl_liberation_mono, monospace;
+@font-header: "Ubuntu", sans-serif;
+@font-content: "Liberation Sans", sans-serif;
+@font-monospace: "Liberation Mono", monospace;
 
 @font-size: 0.92em;
 @line-height: 1.45;
@@ -27,29 +21,24 @@
   font: @arguments;
 }
 
-/** Mixin for the *inner* body of a @font-face-declaration.
- *  So the usage is as following:
- *
- *  @font-face {
- *      .bulletproof-FontFace(<parameters>);
- *  }
- *
- * Important: the @Filename must not include its file-type (.tff f.e.)
- *
+/**
+See
+ https://en.wikipedia.org/wiki/Regional_Indicator_Symbol#Font_test
+ https://gist.github.com/mfornos/9991865#file-emoji-font-css
+ https://www.unicode.org/emoji/charts/full-emoji-list.html
  */
-.fontFace(@Family; @Filename; @Weight: normal; @Style: normal; @woff2: false) when (@woff2 = true) {
-  font-family: @Family;
-  src: url('@{font-folder}@{Filename}.woff2') format('woff2'),
-       url('@{font-folder}@{Filename}.woff') format('woff'),
-       url('@{font-folder}@{Filename}.ttf') format('truetype');
-  font-style: @Style;
-  font-weight: @Weight;
-}
-
-.fontFace(@Family; @Filename; @Weight: normal; @Style: normal; @woff2: false) when (@woff2 = false) {
-    font-family: @Family;
-    src: url('@{font-folder}@{Filename}.woff') format('woff'),
-         url('@{font-folder}@{Filename}.ttf') format('truetype');
-    font-style: @Style;
-    font-weight: @Weight;
+.emoji-font-face() {
+  src: local(EmojiOne),
+       local('Twemoji Mozilla'),
+       local('EmojiOne Mozilla'), /* can be removed after Firefox 60 ESR EoL*/
+       local('Apple Color Emoji'),
+       local('Noto Color Emoji'),
+       local('Android Emoji'),
+       local('Segoe UI'),
+       local('Twitter Color Emoji'),
+       local('DejaVu Sans');
+  /*                            ↓→ Emoji unicode blocks */
+  unicode-range: U+1F1E6-1F1FF, U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+  /*             ↑ regional indicators („flags“) */
+  font-display: swap;
 }
