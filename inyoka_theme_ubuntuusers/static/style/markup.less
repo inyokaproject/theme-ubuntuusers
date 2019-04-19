@@ -2,11 +2,12 @@
  * style.markup
  * ~~~~~~~~~~~~
  *
- * :copyright: (c) 2011-2018 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2011-2019 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'layout.less';
+@import 'icon-sprite.less';
 
 :link.missing, :visited.missing {
   color: #999 !important;
@@ -290,6 +291,48 @@ div.moderated p, div.edited p {
 }
 
 
+/* custom 'emojis' that are not included in unicode and thus use a sprite */
+span[class^='icon-'] {
+  display: inline-block;
+}
+span {
+  &.icon-frog-xmas {
+    .sprite(@frog-xmas);
+  }
+  &.icon-tux {
+    .sprite(@tux);
+  }
+  &.icon-ubuntu {
+    .sprite(@ubuntu);
+  }
+  &.icon-ubuntugnome {
+    .sprite(@ubuntugnome);
+  }
+  &.icon-kubuntu {
+    .sprite(@kubuntu);
+  }
+  &.icon-lubuntu {
+    .sprite(@lubuntu);
+  }
+  &.icon-ubuntumate {
+    .sprite(@ubuntumate);
+  }
+  &.icon-mythbuntu {
+    .sprite(@mythbuntu);
+  }
+  &.icon-ubuntutouch {
+    .sprite(@ubuntutouch);
+  }
+  &.icon-xubuntu {
+    .sprite(@xubuntu);
+  }
+  &.icon-overview {
+    .sprite(@overview);
+  }
+}
+
+
+/* table styles for each ubuntu derivat */
 tr {
   &.titel {
     background: #E2C890;
@@ -473,4 +516,3 @@ div.ut_box {
     background-color: @ut_box_orange;
   }
 }
-
