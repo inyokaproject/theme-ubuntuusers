@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-01 21:30+0200\n"
+"POT-Creation-Date: 2019-04-12 20:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -596,6 +596,9 @@ msgstr "Anhang bearbeiten"
 
 msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
+
+msgid "Edit group"
+msgstr "Gruppe bearbeiten"
 
 msgid "Edit post"
 msgstr "Beitrag bearbeiten"
@@ -1879,6 +1882,10 @@ msgstr "Wikiartikel mit dem Tag \"%(tag)s\""
 msgid "Wiki page:"
 msgstr "Wikiseite:"
 
+#, python-format
+msgid "With this form you can create a new wiki article that covers f.e. the usage of a program. If you need support by a specific problem, open a new thread in the <a href=\"%(forum_link)s\">forum</a>."
+msgstr "Mit Hilfe der folgenden Maske kannst du einen neuen Wikiartikel (z.B. für ein Programm, zur Nutzung von Systemkomponenten etc.) anlegen. Falls du eine Supportanfrage hast, ist <a href=\"%(forum_link)s\">das Forum</a> der richtige Platz."
+
 msgid "With this form you can suggest a new blog for the planet."
 msgstr "Hier kannst du einen Blog für den Planeten vorschlagen."
 
@@ -2030,7 +2037,4 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
-
-msgid "Edit group"
-msgstr "Gruppe bearbeiten"
 
