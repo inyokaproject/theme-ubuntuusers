@@ -1,21 +1,21 @@
 # Translations template for Inyoka Project.
-# Copyright (C) 2017 Inyoka Team (see AUTHORS)
+# Copyright (C) 2019 Inyoka Team (see AUTHORS)
 # This file is distributed under the same license as the Inyoka Project project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.15.3\n"
+"Project-Id-Version: Inyoka Project v0.18.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-01 07:15+0200\n"
+"POT-Creation-Date: 2019-04-12 20:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Generated-By: Babel 2.5.1\n"
 
 msgid " Activation link:"
 msgstr ""
@@ -141,9 +141,6 @@ msgstr ""
 
 #, python-format
 msgid "<a href=\"%(rev_link)s\">This revision</a> was created on %(date)s by <a href=\"%(author_link)s\">%(author)s</a>."
-msgstr ""
-
-msgid "AST"
 msgstr ""
 
 msgid "About Ikhaya"
@@ -576,9 +573,6 @@ msgstr ""
 msgid "Download iCal"
 msgstr ""
 
-msgid "Downloads"
-msgstr ""
-
 msgid "Duplicate attachments on the target page will be overwritten!"
 msgstr ""
 
@@ -600,6 +594,9 @@ msgid "Edit attachment"
 msgstr ""
 
 msgid "Edit comment"
+msgstr ""
+
+msgid "Edit group"
 msgstr ""
 
 msgid "Edit post"
@@ -725,15 +722,6 @@ msgid "General"
 msgstr ""
 
 msgid "General settings"
-msgstr ""
-
-msgid "Generate a new one"
-msgstr ""
-
-msgid "Generate a random password"
-msgstr ""
-
-msgid "Generated password:"
 msgstr ""
 
 msgid "Global Permissions"
@@ -862,9 +850,6 @@ msgstr ""
 msgid "Key"
 msgstr ""
 
-msgid "KiB (0 = unlimited)"
-msgstr ""
-
 #, python-format
 msgid "Last login: %(date)s"
 msgstr ""
@@ -984,12 +969,6 @@ msgid "Mark spam"
 msgstr ""
 
 msgid "Mark topic as “Important:”"
-msgstr ""
-
-msgid "Maximum avatar size"
-msgstr ""
-
-msgid "Maximum team icon size"
 msgstr ""
 
 msgid "Member since"
@@ -1178,9 +1157,6 @@ msgid "Permanent link"
 msgstr ""
 
 msgid "Permissions"
-msgstr ""
-
-msgid "Pixel"
 msgstr ""
 
 msgid "Planet"
@@ -1459,6 +1435,9 @@ msgid "Sites under construction"
 msgstr ""
 
 msgid "Slug of the topic:"
+msgstr ""
+
+msgid "Slug or URL of the topic:"
 msgstr ""
 
 msgid "Solved"
@@ -1847,9 +1826,6 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-msgid "Various limits"
-msgstr ""
-
 msgid "Venue"
 msgstr ""
 
@@ -1903,6 +1879,10 @@ msgid "Wiki articles tagged with \"%(tag)s\""
 msgstr ""
 
 msgid "Wiki page:"
+msgstr ""
+
+#, python-format
+msgid "With this form you can create a new wiki article that covers f.e. the usage of a program. If you need support by a specific problem, open a new thread in the <a href=\"%(forum_link)s\">forum</a>."
 msgstr ""
 
 msgid "With this form you can suggest a new blog for the planet."

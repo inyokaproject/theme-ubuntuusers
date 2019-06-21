@@ -7,13 +7,8 @@
 dist
 node_modules
 
-inyoka_theme_ubuntuusers/static/img/editor-sprite.png
-inyoka_theme_ubuntuusers/static/img/forum-sprite.png
-inyoka_theme_ubuntuusers/static/img/main-sprite.png
-
-inyoka_theme_ubuntuusers/static/style/editor-sprite.less
-inyoka_theme_ubuntuusers/static/style/forum-sprite.less
-inyoka_theme_ubuntuusers/static/style/main-sprite.less
+inyoka_theme_ubuntuusers/static/img/*-sprite.png
+inyoka_theme_ubuntuusers/static/style/*-sprite.less
 
 !inyoka_theme_ubuntuusers/static/js/jquery.min.js
 !inyoka_theme_ubuntuusers/static/js/jquery.ba-hashchange.min.js
