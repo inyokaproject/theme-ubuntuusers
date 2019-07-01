@@ -729,14 +729,14 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 .navi_sidebar {
   float: left;
   .container {
-    background-color: #F4F4F4;
     background-repeat: repeat-x;
     padding: 0.1em 1em 0.5em 1em;
     width: 13em;
-    margin-bottom: 5px;
-    border: #CCC 1px solid;
-    .rounded();
-    .gradient(#F4F4F4, #EEE, #F4F4F4);
+    border-right: #CCC 1px solid;
+  }
+  [class="container"] { // elements that have only the container class
+    padding-left: 0.5em;
+    padding-right: 1.5em;
   }
   .noh3 {
     padding-top: 0.5em;
