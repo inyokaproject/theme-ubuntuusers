@@ -210,30 +210,27 @@ div.workinprogress {
   }
 }
 .toc {
-  .rounded(5px);
-  float: right;
-  margin: 0 0 1.5em 1.5em;
   padding: .5em;
-  border: 1px solid #d7b97b;
+
+  @border-toc: 1px solid #E9C790;
+  border-bottom: @border-toc;
+  border-top: @border-toc;
+
   background-image: url(../img/wiki/toc.png);
-  background-color: #fff;
   background-position: top right;
-  background-repeat:no-repeat;
-  font-size: 0.9em;
-  width: 40ex;
+  background-repeat: no-repeat;
+
+  > ol {
+    columns: 25ch 3; /* ideal width and maximum of columns */
+    column-gap: 2em; /* otherwise the numerations are hidden in Chrome */
+  }
+
   .head {
-    text-align: right;
     font-weight: bold;
   }
 
   .head > ol {
     margin-top: 1.8em;
-  }
-  li {
-    text-align: left;
-  }
-  a {
-    color: #3B2800;
   }
 }
 .toc a.toctoggle,.toc .head a {
