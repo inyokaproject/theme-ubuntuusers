@@ -70,8 +70,11 @@
       }
     }
     > .post {
-      border-right: 1px solid #BFBFBF;
-      padding: 0 15px 20px;
+      @post-border: 1px solid #BFBFBF;
+      border-right: @post-border;
+      border-bottom: @post-border;
+
+      padding: 0 1.5em 1.5em 2em;
 
       &.hidden {
         color: #ccc;
