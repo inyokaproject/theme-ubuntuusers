@@ -241,6 +241,11 @@ div.workinprogress {
 
   > ol {
     columns: 25ch 3; /* ideal width and maximum of columns */
+
+    > li:not(:first-child) {
+      /* separate all top level sections */
+      margin-top: 0.5em;
+    }
   }
 
   .head {
