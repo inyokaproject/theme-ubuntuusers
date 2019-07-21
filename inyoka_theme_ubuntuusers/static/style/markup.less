@@ -211,6 +211,7 @@ div.workinprogress {
 }
 .toc {
   padding: .5em;
+  padding-right: 9em; /* prevents brown links to overlap with brown background-image */
 
   @border-toc: 1px solid #E9C790;
   border-bottom: @border-toc;
@@ -220,9 +221,31 @@ div.workinprogress {
   background-position: top right;
   background-repeat: no-repeat;
 
+  ol {
+    /* list markers should look like 1, 1.1, 1.1.1, 2, 2.2 etc.
+       Thus, hide current list-marker and use ::before to display counter
+       ::marker is currently only supported in Firefox and partially Safari
+    */
+    counter-reset: toc-item;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+
+      &::before {
+        content: counters(toc-item, ".") " ";
+        counter-increment: toc-item;
+      }
+    }
+  }
+
   > ol {
     columns: 25ch 3; /* ideal width and maximum of columns */
-    column-gap: 2em; /* otherwise the numerations are hidden in Chrome */
+
+    > li:not(:first-child) {
+      /* separate all top level sections */
+      margin-top: 0.5em;
+    }
   }
 
   .head {
