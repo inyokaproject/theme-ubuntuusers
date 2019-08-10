@@ -130,32 +130,31 @@ body {
 
 div.wrap {
   margin: 0 auto;
-  background-image:url(../img/head.jpg);
+/*  background-image:url(../img/head.jpg); */
   background-repeat: no-repeat;
   background-position: -3px -2px; /* hide the border inside of head.jpg */
   background-color: #FFFFFF;
   min-width: 780px;
-  max-width: 1900-3px; /* see backgrpound-position */
 }
 
 div.body {
   padding: 10px 0 20px 0;
 }
 a, :link, :visited {
-  color: @orange_s_medium;
+  color: @orange_s_dark;
   text-decoration: underline;
   cursor: pointer;
 }
 .content .post .text :visited, .content #page :visited,
 .content .article .intro :visited, .content .article .text :visited,
 .prvmsg_body :visited, .preview :visited, .content .main_content :visited {
-  color: #3d2802;
+  color: #000;
 }
 a img, :link img, :visited img {
   border: none;
 }
 a.strong {
-  color: #191919;
+  color: #000;
   font-weight: bold;
 }
 input {
@@ -591,7 +590,7 @@ table.syntaxtable {
 
     a {
       display: block;
-      color: #673B1A !important;
+      color: #3168A0 !important;
       font-weight: bold;
       text-decoration: none !important;
       background-repeat: no-repeat;
@@ -895,7 +894,7 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
     a {
       display: block;
       padding: 0 0 0 0.4em;
-      color: #B58215;
+      color: @orange_d_dark;
       text-decoration: none;
     }
     a:hover {
@@ -923,9 +922,10 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   padding-left: 2.0em;
 }
 .footer {
-  border-top: 1px solid #aba393;
+  background-color: #2B2929;
+  border-top: 0px solid;
   clear: both;
-  color: #555;
+  color: #fff;
   font-size: 0.8em;
   padding: 8px 10px 8px 10px;
   height: 4.5em;
@@ -942,7 +942,7 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
     width: 33%;
   }
   a {
-    color: #555;
+    color: #fff;
     text-decoration: underline;
   }
   .poweredby {
