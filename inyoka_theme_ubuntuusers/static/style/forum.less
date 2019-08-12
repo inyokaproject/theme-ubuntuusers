@@ -117,7 +117,7 @@ table.forum {
     }
   }
   tr:hover {
-    background-color: #EAECEE;
+    background-color: @grey_dark;
   }
   th.view_count {
     text-align: center;
@@ -186,11 +186,12 @@ table.forum th.last_post, table.forum th.post_count, table.forum th.view_count {
   padding:0px 3px;
 }
 .topic_box {
-  background: #f8f8f8;
+  background: @grey;
   border: 1px solid #ccc;
   margin-bottom: 10px;
   h2 {
-    .table-header-gradient;
+    background-color: @brown_dark;
+    color: @grey_dark;
     text-align: center;
     margin: 0;
     font-size: 1em;
@@ -217,7 +218,7 @@ table.topic {
   }
   td.author {
     vertical-align: top;
-    background: #EAECEE;
+    background: @grey_dark;
     border-right: 1px solid #cccccc;
     width: 150px;
     overflow: hidden;
@@ -261,7 +262,7 @@ table.topic {
     padding: 10px;
     vertical-align: top;
     div.postinfo {
-      .table-header-alternative-gradient;
+      background-color: @grey_dark;
       font-size: 0.9em;
       margin: -10px -10px 10px -10px;
       padding: 6px 25px 10px 5px;
@@ -447,7 +448,7 @@ form.post_editor {
   margin-top: 10px;
 
   h2.title {
-    .table-header-gradient;
+    background-color: brown_dark;
     text-align: center;
     font-size: 1.1em;
     margin: 0;
