@@ -1627,8 +1627,8 @@ msgstr "Signatur"
 msgid "Sites under construction"
 msgstr "Bousteuä"
 
-msgid "Slug or URL of the topic:"
-msgstr "Slug odr URL vom Thema"
+msgid "URL of the topic:"
+msgstr "URL vom Thema"
 
 msgid "Slug of the topic:"
 msgstr "Slug vom Thema"

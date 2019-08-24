@@ -1,6 +1,6 @@
 Hallo,
 
-der Benutzer {{ USER.username }} hat das Thema „{{ topic.title }}“ im Forum „{{ topic.forum }}“ ( {{ topic|url }} ) gemeldet.
+der Benutzer {{ topic.reporter }} hat das Thema „{{ topic.title }}“ im Forum „{{ topic.forum }}“ ( {{ topic|url }} ) gemeldet.
 
     {{ text|wordwrap(75, false)|indent(4) }}
 
