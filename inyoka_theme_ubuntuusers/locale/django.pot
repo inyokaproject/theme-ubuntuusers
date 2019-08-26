@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.18.0\n"
+"Project-Id-Version: Inyoka Project v0.20.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-12 20:37+0200\n"
+"POT-Creation-Date: 2019-08-26 20:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -884,10 +884,16 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
+msgid "Link Map"
+msgstr ""
+
 msgid "Link discussion"
 msgstr ""
 
 msgid "Link to this post"
+msgstr ""
+
+msgid "Linkmap"
 msgstr ""
 
 msgid "List of new articles"
@@ -1177,9 +1183,6 @@ msgstr ""
 msgid "Please click on the link in the topic, there are too much topics to list all of them here."
 msgstr ""
 
-msgid "Please enter the string which was sent to you by email below:"
-msgstr ""
-
 msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
@@ -1434,9 +1437,6 @@ msgstr ""
 msgid "Sites under construction"
 msgstr ""
 
-msgid "URL of the topic:"
-msgstr ""
-
 msgid "Solved"
 msgstr ""
 
@@ -1625,6 +1625,9 @@ msgid_plural "The group “%(name)s” has %(count)s members:"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "The keyword <code>PAGE</code> in a link will be replaced by the user defined value. Otherwise the user value will be appended."
+msgstr ""
+
 #, python-format
 msgid "The poll was started on %(start_date)s and it ended on %(end_date)s."
 msgstr ""
@@ -1678,6 +1681,9 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "There is no article."
+msgstr ""
+
+msgid "This Page lets you edit, delete and add external link shortcuts. The icons should be of the size 14px x 14px."
 msgstr ""
 
 msgid "This article is an orphan and not referenced by any site."
@@ -1764,6 +1770,9 @@ msgid "Trash"
 msgstr ""
 
 msgid "Turn admin links on/off"
+msgstr ""
+
+msgid "URL of the topic:"
 msgstr ""
 
 msgid "URL:"
@@ -1927,14 +1936,11 @@ msgstr ""
 msgid "You can deactivate your account “%(name)s” here. By doing this, we will remove all your personal data. All your forum posts and wiki articles will remain."
 msgstr ""
 
-msgid "You can edit here the stylesheet which is responsibly for formatting the syntax elements. It is included on all pages. Please do only add already tested stylesheets, otherwise all users will get a corrupt stylesheet."
-msgstr ""
-
 #, python-format
 msgid "You can login here if you are already <a href=\"%(register)s\">registered</a>. If you lost your password, you can <a href=\"%(lost_password)s\">request a new one</a>."
 msgstr ""
 
-msgid "You can reset your email address here if you changed it accidently."
+msgid "You can reset your email address here if you changed it accidentally."
 msgstr ""
 
 msgid "You can restore your account here if you deleted it. Please note that this is only possible one month after the deletion."
