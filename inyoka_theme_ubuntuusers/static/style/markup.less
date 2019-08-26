@@ -179,30 +179,50 @@ div.workinprogress {
   }
 }
 .toc {
-  .rounded(5px);
-  float: right;
-  margin: 0 0 1.5em 1.5em;
   padding: .5em;
-  border: 1px solid #d7b97b;
+  padding-right: 9em; /* prevents brown links to overlap with brown background-image */
+
+  @border-toc: 1px solid #E9C790;
+  border-bottom: @border-toc;
+  border-top: @border-toc;
+
   background-image: url(../img/wiki/toc.png);
-  background-color: #fff;
   background-position: top right;
-  background-repeat:no-repeat;
-  font-size: 0.9em;
-  width: 40ex;
+  background-repeat: no-repeat;
+
+  ol {
+    /* list markers should look like 1, 1.1, 1.1.1, 2, 2.2 etc.
+       Thus, hide current list-marker and use ::before to display counter
+       ::marker is currently only supported in Firefox and partially Safari
+    */
+    counter-reset: toc-item;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+
+      &::before {
+        content: counters(toc-item, ".") " ";
+        counter-increment: toc-item;
+      }
+    }
+  }
+
+  > ol {
+    columns: 25ch 3; /* ideal width and maximum of columns */
+
+    > li:not(:first-child) {
+      /* separate all top level sections */
+      margin-top: 0.5em;
+    }
+  }
+
   .head {
-    text-align: right;
     font-weight: bold;
   }
 
   .head > ol {
     margin-top: 1.8em;
-  }
-  li {
-    text-align: left;
-  }
-  a {
-    color: #3B2800;
   }
 }
 .toc a.toctoggle,.toc .head a {
@@ -413,7 +433,7 @@ tr.edu {
     font-weight: bold;
   }
   &-normal {
-    background: #e1dac6f;
+    background: #e1dac6;
     color: @white;
   }
   &-highlight {

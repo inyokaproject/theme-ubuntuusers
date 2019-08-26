@@ -23,18 +23,15 @@
   }
 }
 .articles {
-  .day > {
-    h2 {
+  .day > h2 {
       font-size: 2.4em;
-      margin: 0;
-    }
   }
   .article {
     margin: 1.5em 0;
 
     > .head {
-      display:block;
-      padding: 5px 20px;
+      display: block;
+      padding-right: 0.5em;
       min-height: @icon-size;
 
       img {
@@ -67,16 +64,18 @@
       .easy-navigation {
         float: right;
 
-        > a:not(:first-child)::before {
-          content: " | ";
+        > a:not(:first-child) {
+          padding-left: 1em;
         }
       }
     }
     > .post {
-      .rounded(10px);
-      background: #F8F8F8;
-      border: 1px solid #BFBFBF;
-      padding: 15px 20px;
+      @post-border: 1px solid #BFBFBF;
+      border-right: @post-border;
+      border-bottom: @post-border;
+
+      padding-right: 1.5em;
+      padding-bottom: 1.5em;
 
       &.hidden {
         color: #ccc;
@@ -135,20 +134,9 @@
   }
 }
 .newestarticles {
-  h2 {
-    font-size: 1.1em;
-  }
   ul {
-    line-height: 1.5em;
-    padding: 0;
-    li {
-      display: inline;
-
-      &:not(:first-child)::before {
-        content: " | ";
-        color: #CCC;
-      }
-    }
+    columns: 25ch 3; /* ideal width and maximum of columns */
+    column-gap: 2em; /* otherwise the numerations are hidden in Chrome */
   }
 }
 table tbody tr.not_published, table tbody tr.not_published a {
