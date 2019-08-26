@@ -17,6 +17,10 @@
     {% trans %}This Page lets you edit, delete and add external link shortcuts. The icons should be of the size 14px x 14px.{% endtrans %}
   </p>
 
+  <p>
+    {% trans %}The keyword <code>PAGE</code> in a link will be replaced by the user defined value. Otherwise the user value will be appended.{% endtrans %}
+  </p>
+
   <form enctype="multipart/form-data" method="post" action="">
     {{ csrf_token() }}
     {{ formset.management_form }}
