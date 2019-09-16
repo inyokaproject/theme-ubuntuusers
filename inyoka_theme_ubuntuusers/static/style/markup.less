@@ -99,7 +99,7 @@ span.underline {
 }
 
 div.bash {
-  margin: 0.3em 1em;
+  margin: 0.3em 0;
   pre {
     color: white;
     font-family: @font-monospace;
@@ -352,6 +352,14 @@ span {
 }
 
 
+/* table styles to ease highlighting of every second row */
+table.zebra tr:nth-child(even),
+table.zebra_start2 tr:nth-child(2n+3),
+table.zebra_start3 tr:nth-child(2n+4) {
+  background-color: @grey_light;
+}
+
+
 /* table styles for each ubuntu derivat */
 tr {
   &.titel {
@@ -464,7 +472,7 @@ tr.edu {
     font-weight: bold;
   }
   &-normal {
-    background: #e1dac6f;
+    background: #e1dac6;
     color: @white;
   }
   &-highlight {
