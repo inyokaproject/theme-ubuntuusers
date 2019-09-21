@@ -1,14 +1,14 @@
 # Translations template for Inyoka Project.
-# Copyright (C) 2018 Inyoka Team (see AUTHORS)
+# Copyright (C) 2019 Inyoka Team (see AUTHORS)
 # This file is distributed under the same license as the Inyoka Project project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.17.4\n"
+"Project-Id-Version: Inyoka Project v0.18.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-01 21:30+0200\n"
+"POT-Creation-Date: 2019-04-12 20:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -594,6 +594,9 @@ msgid "Edit attachment"
 msgstr ""
 
 msgid "Edit comment"
+msgstr ""
+
+msgid "Edit group"
 msgstr ""
 
 msgid "Edit post"
@@ -1431,10 +1434,7 @@ msgstr ""
 msgid "Sites under construction"
 msgstr ""
 
-msgid "Slug or URL of the topic:"
-msgstr ""
-
-msgid "Slug of the topic:"
+msgid "URL of the topic:"
 msgstr ""
 
 msgid "Solved"
@@ -1878,6 +1878,10 @@ msgstr ""
 msgid "Wiki page:"
 msgstr ""
 
+#, python-format
+msgid "With this form you can create a new wiki article that covers f.e. the usage of a program. If you need support by a specific problem, open a new thread in the <a href=\"%(forum_link)s\">forum</a>."
+msgstr ""
+
 msgid "With this form you can suggest a new blog for the planet."
 msgstr ""
 
@@ -2028,8 +2032,5 @@ msgstr ""
 
 #, python-format
 msgid "“%(name)s” is no member of any group."
-msgstr ""
-
-msgid "Edit group"
 msgstr ""
 

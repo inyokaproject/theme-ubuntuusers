@@ -126,11 +126,6 @@ body {
   color: black;
   font-size: @font-size;
   line-height: @line-height;
-  padding: 10px;
-}
-
-html, body {
-  background-color: @main_background;
 }
 
 div.wrap {
@@ -139,10 +134,8 @@ div.wrap {
   background-repeat: no-repeat;
   background-position: -3px -2px; /* hide the border inside of head.jpg */
   background-color: #FFFFFF;
-  border: darken(@main_background, 10%) 2px solid;
   min-width: 780px;
   max-width: 1900-3px; /* see backgrpound-position */
-  .rounded();
 }
 
 div.body {
@@ -687,8 +680,7 @@ table.syntaxtable {
   }
 }
 .page_content {
-  margin: 1.0em 20px;
-  margin-top: 0px;
+  margin: 0 20px 1em 0;
 }
 .content {
   clear: right;
@@ -736,14 +728,15 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 .navi_sidebar {
   float: left;
   .container {
-    background-color: #F4F4F4;
     background-repeat: repeat-x;
     padding: 0.1em 1em 0.5em 1em;
     width: 13em;
-    margin-bottom: 5px;
-    border: #CCC 1px solid;
-    .rounded();
-    .gradient(#F4F4F4, #EEE, #F4F4F4);
+    border-right: #CCC 1px solid;
+  }
+  [class="container"] { // elements that have only the container class
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+    background-color: white;
   }
   .noh3 {
     padding-top: 0.5em;
@@ -806,7 +799,7 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
     margin-bottom: 0.7em;
   }
   ul {
-    list-style: url(../img/bullet.gif);
+    list-style: url('data:image/svg+xml;utf8,<svg height="0.45em" width="0.45em" version="1.1" viewBox="0 0 1.968 3.133" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-10.94 -7.463)"><g transform="scale(.2646)" aria-label="🢒"><path d="m41.36 40.05v-11.84l7.44 5.92z"/></g></g></svg>');
     color: #222;
     margin: 0 0 0 1.3em;
     padding: 0;
@@ -985,13 +978,9 @@ p.badges {
   }
 }
 .message {
-  margin: 0px 20px 10px 20px;
+  margin-bottom: 0.6em;
   padding: 0.4em 0.8em;
   background-color: #F9EAAF;
-  background-repeat: no-repeat;
-  background-position: left center;
-  border: 1px solid #BBBBBB;
-  .rounded();
   text-align: left;
   input {
     margin: 5px;
@@ -1317,11 +1306,9 @@ div#database_debug_table ul li pre,div#database_debug_table table {
     margin-left: 16px;
 
     a {
-      border: 1px solid #A4A4A4;
-      border-right: none;
+      border-right: 1px solid #A4A4A4;
       display: block;
       float: left;
-      background: #F4F4F4;
       color: #D4D4D4;
       padding: 4px 10px;
       text-decoration: none;
@@ -1360,12 +1347,8 @@ div#database_debug_table ul li pre,div#database_debug_table table {
           background: #E2D7B3;
         }
       }
-      &:first-child {
-        .left-rounded(3px);
-      }
       &:last-child {
-        border-right: 1px solid #A4A4A4;
-        .right-rounded(3px);
+        border-right: none;
       }
     }
   }
