@@ -9,7 +9,6 @@
  */
 
 $(document).ready(function () {
-  var loginForm = null;
 
   // preload images
   (function () {
