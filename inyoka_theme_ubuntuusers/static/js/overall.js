@@ -162,35 +162,6 @@ $(document).ready(function () {
     });
   })();
 
-  // add links to the "package" macro
-  $('.package-list-apturl, .package-list').each(function (i, elm) {
-    var tmp = $('.bash', elm);
-    var apt = tmp[0];
-    var aptitude = tmp[1];
-    $(aptitude).hide();
-    $($('p', elm)[0]).append(
-      $('<a>apt-get</a>').click(function () {
-        $(this).parent().children().css('font-weight', '');
-        $(this).css('font-weight', 'bold');
-        $(apt).show();
-        $(aptitude).hide();
-      }).click(),
-      ' ',
-      $('<a>aptitude</a>').click(function () {
-        $(this).parent().children().css('font-weight', '');
-        $(this).css('font-weight', 'bold');
-        $(aptitude).show();
-        $(apt).hide();
-     })
-    );
-    if ($(elm).hasClass('package-list-apturl')) {
-      $($('p', elm)[0]).append(
-        ' ',
-        $('<a>apturl</a>').attr('href', 'apt://' + $.trim($(apt).text()).split(' ').slice(3).join(','))
-      );
-    }
-  });
-
   $('div.code').add('pre.notranslate').each(function () {
     if (this.clientHeight < this.scrollHeight) {
       $(this).before('<div class="codeblock_resizer">vergrößern</div>')
