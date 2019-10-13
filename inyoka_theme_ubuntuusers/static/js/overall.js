@@ -9,18 +9,6 @@
  */
 
 $(document).ready(function () {
-
-  // preload images
-  (function () {
-    var container = $('<div>').appendTo('body').css({
-      height: 0,
-      overflow: 'hidden'
-    });
-    $.each([], function () {
-      $('<img />').attr('src', $STATIC_URL + this).appendTo(container);
-    });
-  })();
-
   // add a hide message link to all flash messages
   $.each($('div.message'), function (i, elm) {
     $(elm).prepend($('<a href="#" class="hide" />').click(function () {
