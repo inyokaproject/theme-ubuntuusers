@@ -27,6 +27,6 @@
 {% block tabbar %}
   <ul>
     <li><a href="{{ href('pastebin', 'add') }}"{{ page == 'add' and ' class="active"' or '' }}>{% trans %}New paste{% endtrans %}</a></li>
-    <li><a href="{{ href('pastebin', 'browse') }}"{{ page == 'browse' and ' class="active"' or '' }}>{% trans %}Browse pastes{% endtrans %}</a></li>
+    <li><a href="{{ href('pastebin') }}"{{ page == 'browse' and ' class="active"' or '' }}>{% trans %}Browse pastes{% endtrans %}</a></li>
   </ul>
 {% endblock %}
