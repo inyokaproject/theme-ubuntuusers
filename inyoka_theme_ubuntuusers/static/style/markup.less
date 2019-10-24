@@ -99,7 +99,7 @@ span.underline {
 }
 
 div.bash {
-  margin: 0.3em 1em;
+  margin: 0.3em 0;
   pre {
     color: white;
     font-family: @font-monospace;
@@ -210,30 +210,26 @@ div.workinprogress {
   }
 }
 .toc {
-  .rounded(5px);
+  .top-rounded(.25em);
+  padding: .5em;
   float: right;
   margin: 0 0 1.5em 1.5em;
-  padding: .5em;
-  border: 1px solid #d7b97b;
+
   background-image: url(../img/wiki/toc.png);
-  background-color: #fff;
+  background-color: white; /* prevents that horizontal borders of other elements like headings are shown */
   background-position: top right;
-  background-repeat:no-repeat;
-  font-size: 0.9em;
+  background-repeat: no-repeat;
+
+  border: 0.01em solid #d7b97b;
+
   width: 40ex;
+
   .head {
-    text-align: right;
     font-weight: bold;
   }
 
   .head > ol {
     margin-top: 1.8em;
-  }
-  li {
-    text-align: left;
-  }
-  a {
-    color: #3B2800;
   }
 }
 .toc a.toctoggle,.toc .head a {
@@ -329,6 +325,14 @@ span {
   &.icon-overview {
     .sprite(@overview);
   }
+}
+
+
+/* table styles to ease highlighting of every second row */
+table.zebra tr:nth-child(even),
+table.zebra_start2 tr:nth-child(2n+3),
+table.zebra_start3 tr:nth-child(2n+4) {
+  background-color: @grey_light;
 }
 
 
@@ -444,7 +448,7 @@ tr.edu {
     font-weight: bold;
   }
   &-normal {
-    background: #e1dac6f;
+    background: #e1dac6;
     color: @white;
   }
   &-highlight {

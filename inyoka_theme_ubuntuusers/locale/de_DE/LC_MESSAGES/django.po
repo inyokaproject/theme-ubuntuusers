@@ -1435,11 +1435,8 @@ msgstr "Signatur"
 msgid "Sites under construction"
 msgstr "Baustellen"
 
-msgid "Slug of the topic:"
-msgstr "Slug des Themas"
-
-msgid "Slug or URL of the topic:"
-msgstr "Slug oder URL des Themas"
+msgid "URL of the topic:"
+msgstr "URL des Themas:"
 
 msgid "Solved"
 msgstr "Gelöst"

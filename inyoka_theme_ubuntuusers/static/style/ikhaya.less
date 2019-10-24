@@ -33,7 +33,7 @@ ul.articles {
   margin: 0;
 }
 .article {
-  margin-bottom: 0.7em;
+  margin-bottom: 1.2em;
   hr {
     clear: right;
   }
@@ -71,9 +71,7 @@ div.intro {
 p.meta {
   color: #666;
   font-size: 0.9em;
-  margin: 0.5em 0 0 0 !important;
   padding: 0.4em;
-  border-top: 1px solid #d4d4d4;
   overflow: auto;
   clear: right;
 }
@@ -98,11 +96,14 @@ a.show_comments,a.hide_comments {
 a.show_comments:hover,a.hide_comments:hover {
   text-decoration: underline;
 }
+
+#page table.comments {
+  width: 100%; /* overwrite `#page table` from markup.less */
+}
 table.comments {
   table-layout: fixed;
   margin: 0;
   border: 0;
-  width: 97% !important;
 
   td.author {
     vertical-align: top;
