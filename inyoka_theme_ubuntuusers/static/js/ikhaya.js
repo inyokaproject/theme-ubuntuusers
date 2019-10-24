@@ -30,7 +30,6 @@ function makeCommentLinks(elm) {
 }
 
 $(function () {
-  if (navigator.appName.toLowerCase() == 'konqueror') return;
   makeCommentLinks($('ul.comments > li.comment'));
 
 

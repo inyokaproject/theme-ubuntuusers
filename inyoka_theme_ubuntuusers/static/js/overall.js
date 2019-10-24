@@ -171,7 +171,6 @@ $(document).ready(function () {
   });
 
   (function () {
-    if (navigator.appName.toLowerCase() == 'konqueror') return;
     $('.codeblock_resizer').click(function () {
       $codeblock = $(this).next();
       if (!$codeblock.hasClass('codeblock_expanded')) {
