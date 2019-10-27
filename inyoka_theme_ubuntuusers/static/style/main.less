@@ -121,6 +121,15 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: @font-content;
   color: black;
@@ -1008,10 +1017,6 @@ p.badges {
 }
 .message.success {
   background-color: @green_d_light;
-}
-div.not_found {
-  margin: 10px auto;
-  z-index: 1;
 }
 
 .hidden *, .hidden {
