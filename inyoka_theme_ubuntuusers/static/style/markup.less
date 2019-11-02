@@ -16,11 +16,18 @@
 a.interwiki {
   background-repeat: no-repeat;
 }
-a.user, a.team, a.search {
+/* these links are hardcoded into the markup-parser
+   and not configurable via the linkmap */
+a.user, a.team, a.search, a.ikhaya, a.paste {
   background-repeat: no-repeat;
   padding-left: 16px;
 }
-
+a.paste {
+  background-image: url(../img/favicon.ico);
+}
+a.ikhaya {
+  background-image: url(../img/icons/small/ikhaya.png);
+}
 a.user {
   background-image: url(../img/interwiki/user.png);
 }
@@ -31,46 +38,39 @@ a.team {
 a.search {
   background-image: url(../img/interwiki/search.png);
 }
-
-a.interwiki-bug {
-  background-image: url(../img/interwiki/bug.png);
-  padding-left: 20px;
+a[href^="https://wiki.ubuntuusers.de/"] {
+  background-image: url(../img/icons/small/wiki.png);
+  background-repeat: no-repeat;
+  padding-left: 18px;
 }
-a.interwiki-getdeb {
-  background-image: url(../img/interwiki/getdeb.png);
-  padding-left: 20px;
+a[href^="https://forum.ubuntuusers.de/post/"] {
+  background-image: url(../img/icon_minipost.gif);
+  background-repeat: no-repeat;
+  padding-left: 12px;
 }
-a.interwiki-googlecode {
-  background-image: url(../img/interwiki/googlecode.png);
-  padding-left: 20px;
+a[href^="https://forum.ubuntuusers.de/topic/"] {
+  background-image: url(../img/forum/topic.png);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  padding-left: 16px;
 }
-a.interwiki-isbn {
-  background-image: url(../img/interwiki/isbn.png);
-  padding-left: 20px;
+a[href^="https://forum.ubuntuusers.de/forum/"] {
+  background-image: url(../img/icons/small/forum.png);
+  background-repeat: no-repeat;
+  padding-left: 16px;
 }
-a.interwiki-launchpad {
-  background-image: url(../img/interwiki/launchpad.png);
-  padding-left: 20px;
+a[href$=".pdf"]:before {
+  content: '📄 ';
 }
-a.interwiki-lpuser {
-  background-image: url(../img/interwiki/lpuser.png);
-  padding-left: 20px;
+a[href^="https://github.com"] {
+  background-image: url(../img/icons/small/github.png);
+  background-repeat: no-repeat;
+  padding-left: 16px;
 }
-a.interwiki-sourceforge {
-  background-image: url(../img/interwiki/sourceforge.png);
-  padding-left: 20px;
-}
-a.interwiki-ubuntu {
-  background-image: url(../img/interwiki/ubuntu.png);
-  padding-left: 20px;
-}
-a.interwiki-wikipedia {
-  background-image: url(../img/interwiki/wikipedia.png);
-  padding-left: 20px;
-}
-a.interwiki-wikipedia_en {
-  background-image: url(../img/interwiki/wikipedia_en.png);
-  padding-left: 20px;
+a[href^="http://github.com"] {
+  background-image: url(../img/icons/small/github.png);
+  background-repeat: no-repeat;
+  padding-left: 16px;
 }
 
 #page table {
