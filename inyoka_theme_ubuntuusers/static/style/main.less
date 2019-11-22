@@ -151,9 +151,13 @@ div.body {
 }
 a, :link, :visited {
   color: @blue_s_medium;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
+a:hover {
+   text-decoration: underline;
+}
+
 .content .post .text :visited, .content #page :visited,
 .content .article .intro :visited, .content .article .text :visited,
 .prvmsg_body :visited, .preview :visited, .content .main_content :visited {
