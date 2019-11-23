@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-26 20:50+0200\n"
+"POT-Creation-Date: 2019-11-23 22:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -1640,6 +1640,9 @@ msgstr "Die Umfrage wurde am %(start_date)s gestartet und wird am %(end_date)s e
 #, python-format
 msgid "The signature will be appended to every post. It cannot contain more than %(n)s characters. Please follow the <a href=\"%(link)s\">signature rules</a>."
 msgstr "Die Signatur wird an jeden Beitrag angehängt. Sie kann nicht länger als %(n)s Zeichen sein. Bitte beachte die <a href=\"%(link)s\">Signaturregeln</a>."
+
+msgid "The tokens <code>attachment</code> and <code>user</code> are hardcoded into Inyoka."
+msgstr "Die Kürzel <code>attachment</code> und <code>user</code> sind fest in Inyoka integriert."
 
 msgid "The two revisions are identical."
 msgstr "Die beiden Revisionen sind identisch."
