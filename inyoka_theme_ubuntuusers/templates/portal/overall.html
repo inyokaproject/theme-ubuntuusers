@@ -85,7 +85,7 @@
       <li><a href="{{ href('planet', 'suggest') }}">{% trans %}Suggest a blog{% endtrans %}</a></li>
     </ul>
     {%- endif %}
-    {%- if USER.has_perm('portal.change_staticpage') or USER.has_perm('portal.change_staticfile') or USER.has_perm('portal.change_storage') %}
+    {%- if USER.has_perm('portal.change_staticpage') or USER.has_perm('portal.change_staticfile') or USER.has_perm('portal.change_storage') or USER.has_perm('portal.change_linkmap') %}
     <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
     <ul>
     {%- if USER.has_perm('portal.change_storage') %}
@@ -93,6 +93,9 @@
     {%- endif %}
     {%- if USER.has_perm('portal.change_staticpage') %}
       <li><a href="{{ href('portal', 'styles') }}">{% trans %}Stylesheets{% endtrans %}</a></li>
+    {%- endif %}
+    {% if USER.has_perm('portal.change_linkmap') %}
+      <li><a href="{{ href('portal', 'linkmap') }}">{% trans %}Linkmap{% endtrans %}</a></li>
     {%- endif %}
     {%- if USER.has_perm('portal.change_staticpage') %}
       <li><a href="{{ href('portal', 'pages') }}">{% trans %}Static pages{% endtrans %}</a></li>
