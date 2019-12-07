@@ -589,106 +589,54 @@ table.syntaxtable {
   }
 }
 .tabbar {
-  margin: 0;
-  position: relative;
-  right: 10px;
-  top: 2px;
   float: right;
 
   li {
-    list-style: none;
-    float: left;
-    padding: 4px 0 6px 0;
-    background-repeat: no-repeat;
+    display: inline-block;
+
+    /* define border thickness here, so no 'flicker' on hover */
+    border-left: thin solid transparent;
+    border-right: thin solid transparent;
 
     a {
+      color: #fff;
       display: block;
-      color: #fff !important;
       font-weight: bold;
-      text-decoration: none !important;
-      background-repeat: no-repeat;
-      height: 64px;
-      padding: 3px 5px 0;
-
-      span {
-        display: block;
-        height: 24px;
-        width: 24px;
-        margin: 0 auto;
-      }
+      padding: 0 0.7em;
     }
-
-    div {
-      float: left;
-      height: 59px;
-      min-width: 12px;
+    a::after {
+      display: block;
+      margin: 0 auto;
+      content: "";
     }
   }
 
-  li:hover, li.active {
-    opacity: 1.0;
-
-    .tab_left {
-      .sprite-image(@tabbar-left-hover);
-      .sprite-position(@tabbar-left-hover);
-    }
-
-    .tab_center {
-      .sprite-image(@tabbar-center-hover);
-      .sprite-position(@tabbar-center-hover);
-      background-repeat: repeat-x;
-    }
-
-    .tab_right {
-      .sprite-image(@tabbar-right-hover);
-      .sprite-position(@tabbar-right-hover);
-    }
+  li:hover, li:focus, li.active {
+    border-color: currentColor; /* border width and style are defined in li */
 
     a {
-      color: black !important;
+      color: black;
+      text-decoration: none;
     }
   }
 
-  li.portal a span {
+  li.portal a::after {
     .sprite(@portal);
   }
-
-  li.forum a span {
+  li.forum a::after {
     .sprite(@forum);
   }
-
-  li.wiki a span {
+  li.wiki a::after {
     .sprite(@wiki);
   }
-
-  li.ikhaya a span {
+  li.ikhaya a::after {
     .sprite(@ikhaya);
   }
-
-  li.planet a span {
+  li.planet a::after {
     .sprite(@planet);
   }
-
-  li.community a span {
+  li.community a::after {
     .sprite(@community);
-  }
-
-  li:active {
-    .tab_left {
-      .sprite-image(@tabbar-left);
-      .sprite-position(@tabbar-left);
-    }
-
-    .tab_center {
-      .sprite-image(@tabbar-center);
-      .sprite-position(@tabbar-center);
-      background-repeat: repeat-x;
-    }
-
-    .tab_right {
-      .sprite-image(@tabbar-right);
-      .sprite-position(@tabbar-right);
-    }
   }
 }
 .page_content {

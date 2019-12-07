@@ -63,16 +63,12 @@
       <ul class="tabbar">
         {% for app in ('portal', 'forum', 'wiki', 'ikhaya', 'planet') %}
           <li class="{{ app }}{% if app == active_app %} active{% endif %}">
-            <div class="tab_left"></div>
-            <div class="tab_center"><a href="{{ href(app) }}">{{ app|capitalize }}<span></span></a></div>
-            <div class="tab_right"></div>
+            <a href="{{ href(app) }}">{{ app|capitalize }}</a>
           </li>
         {% endfor %}
         {# TODO: uu specific #}
         <li class="community">
-          <div class="tab_left"></div>
-          <div class="tab_center"><a href="{{ href('wiki','Mitmachen') }}">Mitmachen<span></span></a></div>
-          <div class="tab_right"></div>
+          <a href="{{ href('wiki','Mitmachen') }}">Mitmachen</a>
         </li>
       </ul>{# .tabbar #}
     </div>{# .header #}
