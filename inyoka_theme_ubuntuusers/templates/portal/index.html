@@ -25,8 +25,7 @@
   </div>
   <div class="container calendar">
     <div class="calendar link">
-      <h3><a href="{{ href('portal', 'calendar') }}">{% trans %}Calendar{% endtrans %}</a></h3>
-      <span><a href="/calendar/" class="calendar_link">{% trans %}Upcoming events{% endtrans %}</a></span>
+      <h3><a href="{{ href('portal', 'calendar') }}">{% trans %}Upcoming events{% endtrans %}</a></h3>
     </div>
     {{ calendar_events|safe }}
   </div>
