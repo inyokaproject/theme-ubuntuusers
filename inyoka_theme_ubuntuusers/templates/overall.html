@@ -31,12 +31,13 @@
         <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style), v=INYOKA_VERSION) }}" />
       {% endfor %}
 
-      <link rel="stylesheet" type="text/css" href="{{ href('portal', 'markup.css', v=INYOKA_VERSION) }}" />
       <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css', v=INYOKA_VERSION) }}" media="print" />
 
       {% if special_day_css %}
         <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css, v=INYOKA_VERSION) }}" />
       {% endif %}
+
+      <link rel="stylesheet" type="text/css" href="{{ href('media', 'linkmap', linkmap_css) }}" />
 
       {% for title, url in feeds %}
         <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" />
