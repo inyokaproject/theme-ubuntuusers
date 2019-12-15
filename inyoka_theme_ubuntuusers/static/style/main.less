@@ -874,22 +874,19 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 }
 .footer {
   background-color: @brown_dark;
-  border-top: 0px solid;
   clear: both;
   color: #fff;
   font-size: 0.8em;
-  padding: 8px 10px 8px 10px;
-  min-height: 4.5em;
-  ul {
-    display: block;
+  padding: 0 0.9em;
+  > ul {
+    display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  li {
-    vertical-align: middle;
-    float: left;
-    width: 33%;
+  > ul > li {
+     /* top and bottom padding on each li → if they wrap, there's spacing between each other */
+    padding: 1em 0;
   }
   a {
     color: #fff;
@@ -897,25 +894,16 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   }
   .poweredby {
     text-align: left;
-    width: 25%;
   }
   .license {
     text-align: center;
-    width: 50%;
-    img {
-      vertical-align: middle;
-    }
   }
   .housing {
     text-align: right;
-    width: 25%;
     img {
-      vertical-align: bottom;
-      margin-right: 10px;
+      margin-right: 1em;
       background-color: #fff;
     }
-  }
-  .flavour_switch {
   }
 }
 p.badges {
