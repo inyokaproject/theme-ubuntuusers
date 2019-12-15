@@ -73,7 +73,7 @@
       </ul>{# .tabbar #}
     </header>{# .header #}
 
-        {% if not hide_quicklinks %}
+
           <ul class="navi_global">
             <li>
               <noscript><strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong></noscript>
@@ -115,7 +115,7 @@
               </li>
             {% endif %}
           </ul>{# .navi_global #}
-        {% endif %}
+
         {% if USER.has_perm('forum.manage_reported_topic') or USER.has_perm('ikhaya.change_article') or USER.has_perm('portal.change_event') %}
           <div id="admin_menu">
             <div class="bar">
