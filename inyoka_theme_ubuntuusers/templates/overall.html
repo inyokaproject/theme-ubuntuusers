@@ -196,7 +196,6 @@
       {% endfor %}
       {% endif %}
 
-      <div class="page_content">
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
         {% if sidebar %}
@@ -212,7 +211,7 @@
         <main class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
           {% block content %}{% endblock %}
         </main>
-      </div>
+
       <div style="clear: both;"></div>
       <div class="pathbar breadcrumb">
         {{ self.breadcrumb() }}
