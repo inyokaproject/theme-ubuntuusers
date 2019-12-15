@@ -154,8 +154,6 @@
           {% endif %}
         </div>
 
-      <div class="pathbar">
-
         {# search via duckduckgo requires JS #}
         <form method="GET" action="https://duckduckgo.com/" class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
@@ -187,7 +185,6 @@
             </ol>
           </div>
         {% endblock %}
-      </div>{# .pathbar #}
 
       {% if GLOBAL_MESSAGE %}
         <div class="message global">{{ GLOBAL_MESSAGE }}</div>
