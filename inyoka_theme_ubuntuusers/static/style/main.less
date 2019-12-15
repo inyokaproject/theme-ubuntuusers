@@ -797,34 +797,27 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   }
 }
 
-.appheader {
-  margin: 0 20px 1.0em 20px;
-  h1 {
+.pagetitle {
+  word-wrap: break-word;
+  > h1 {
     color: #a48f65;
     font-size: 2.6em;
     margin: 0 0 0.2em 0;
-    display:inline;
+    display: inline;
     a {
-      color: @orange_d_medium !important;
-      text-decoration: none !important;
+      color: @orange_d_medium;
     }
   }
   .separator:after {
     content:" /";
     color: darken(@orange_d_medium, 10%);
   }
-  h2 {
-    border-bottom: 0;
+  > h2 {
     color: @orange_d_dark;
-    font-size: 1.5em;
-    display:inline;
+    display: inline;
     a {
       color: @orange_d_dark;
-      text-decoration: none;
     }
-  }
-  .pagetitle {
-    word-wrap: break-word;
   }
 }
 .navi_global {
