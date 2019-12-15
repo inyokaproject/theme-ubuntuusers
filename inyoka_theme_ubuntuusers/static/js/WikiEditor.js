@@ -385,8 +385,7 @@
       } else {
         link = '//wiki.ubuntuusers.de/Forum/Syntax';
       }
-      $('<span class="syntax_help note"><a href="' + link + '">Hilfe zur Syntax</a></span>')
-        .appendTo($('<li />').appendTo(t));
+      $('<li class="syntax_help note"><a href="' + link + '">Hilfe zur Syntax</a></li>').appendTo(t);
 
       /* Formatting helpers inside the textbox */
       this.textarea.keydown(function(e) {
