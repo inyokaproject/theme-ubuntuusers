@@ -16,6 +16,19 @@
   background-repeat: no-repeat;
 }
 
+body {
+  /* custom grid-template, as the forum has no sidebar*/
+  grid:
+  "header             header"
+  "pagetitle          navi_global"
+  "pagetitle          admin_menu"
+  "pathbar_extension  forum_dropdown"
+  "breadcrumb         search"
+  "tabbar             tabbar"
+  "content            content" 1fr
+  "footer             footer";
+}
+
 main.content {
   padding: 0;
   border: none;

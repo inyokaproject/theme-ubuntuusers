@@ -145,7 +145,7 @@ $(document).ready(function () {
         component: window.location.hostname.split('.')[0]
       });
       return false;
-    }).insertAfter('form.search');
+    }).insertAfter('.breadcrumb > ol');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 

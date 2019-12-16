@@ -1,0 +1,67 @@
+/**
+ * style.css_grid
+ * ~~~~~~~~~~~~
+ *
+ * Style definitions for CSS grid.
+ *
+ * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :license: BSD, see LICENSE for more details.
+ */
+
+body {
+  display: grid;
+
+  grid:
+  "header     header     header"
+  "pagetitle  pagetitle  navi_global"
+  "pagetitle  pagetitle  admin_menu"
+  "breadcrumb breadcrumb search"
+  "sidebar    tabbar     tabbar"
+  "sidebar    content    content" 1fr
+  "footer     footer     footer"
+  / minmax(auto, 15em) 1fr auto;
+
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+.navi_global {
+  grid-area: navi_global;
+  justify-self: end;
+}
+#admin_menu {
+  grid-area: admin_menu;
+  justify-self: end;
+}
+.pagetitle {
+  grid-area: pagetitle;
+}
+.search {
+  grid-area: search;
+  justify-self: end;
+}
+.breadcrumb {
+  // TODO what's with duplicate at top?
+  grid-area: breadcrumb;
+}
+.navi_sidebar {
+  grid-area: sidebar;
+}
+.navi_tabbar {
+  grid-area: tabbar;
+}
+.content {
+  grid-area: content;
+  overflow: auto;
+}
+.footer {
+  grid-area: footer;
+}
+div.dropdown {
+  grid-area: forum_dropdown;
+}
+.pathbar_extension {
+  grid-area: pathbar_extension;
+}

@@ -186,16 +186,6 @@
           </div>
         {% endblock %}
 
-      {% if GLOBAL_MESSAGE %}
-        <div class="message global">{{ GLOBAL_MESSAGE }}</div>
-      {% endif %}
-
-      {% if MESSAGES %}
-      {% for message in MESSAGES %}
-        <div class="message {{ message.tags }}">{{ message }}</div>
-      {% endfor %}
-      {% endif %}
-
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
         {% if sidebar %}
@@ -203,20 +193,30 @@
           {% block sidebar %}{% endblock %}
         </aside>
         {% endif %}
+
         {% if tabbar %}
         <nav class="navi_tabbar navigation">
           {% block tabbar %}{% endblock %}
         </nav>
         {% endif %}
+
         <main class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
+          {% if GLOBAL_MESSAGE %}
+            <div class="message global">{{ GLOBAL_MESSAGE }}</div>
+          {% endif %}
+
+          {% if MESSAGES %}
+            {% for message in MESSAGES %}
+              <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+
           {% block content %}{% endblock %}
         </main>
 
-      <div style="clear: both;"></div>
-
       {{ self.breadcrumb() }}
 
-    <footer class="footer" style="clear: both;">
+    <footer class="footer">
       <ul>
         <li class="poweredby">
           {% trans link=href('portal', 'inyoka') %}Powered by <a href="{{ link }}">Inyoka</a>{% endtrans %}

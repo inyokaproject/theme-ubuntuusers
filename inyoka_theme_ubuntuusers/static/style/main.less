@@ -12,6 +12,7 @@
 @import 'layout.less';
 @import 'main-sprite.less';
 @import 'search.less';
+@import 'css_grid.less';
 
 /*
  * Liberation
@@ -556,7 +557,6 @@ table.syntaxtable {
   color: #cccccc;
 }
 .header {
-  height: 106px;
   img {
     margin: 5px 0 0 10px;
   }
@@ -630,9 +630,7 @@ table.syntaxtable {
   }
 }
 .content {
-  clear: right;
   background-color: #fff;
-  padding: 0 0 0 20px;
   p {
     margin: 0.7em 0.0em;
   }
@@ -642,9 +640,6 @@ table.syntaxtable {
     margin-bottom: 1.0em;
   }
 }
-.content_sidebar {
-  margin-left: 15.0em;
-}
 .content_tabbar {
   div.pathbar {
     margin: 0;
@@ -652,12 +647,10 @@ table.syntaxtable {
 }
 button.navi_toggle_down, button.navi_toggle_up {
   display: block;
-  float: left;
   background-repeat: no-repeat;
   background-position: center center;
   width: 24px;
   height: 24px;
-  margin: -2px 4px -2px -2px;
   border: 0;
   background-color: transparent;
 }
@@ -673,17 +666,11 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   cursor: pointer;
 }
 .navi_sidebar {
-  float: left;
   .container {
     background-repeat: repeat-x;
-    padding: 0.1em 1em 0.5em 1em;
-    width: 13em;
+    padding: 0.1em 0.5em 0.5em 1em; /* for right padding, see edit-icons f.e. in ikhaya, planet */
+    margin-right: 1em;
     border-right: #CCC 1px solid;
-  }
-  [class="container"] { // elements that have only the container class
-    padding-left: 0.5em;
-    padding-right: 1.5em;
-    background-color: white;
   }
   .noh3 {
     padding-top: 0.5em;
@@ -818,8 +805,6 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   }
 }
 .navi_global {
-  margin: 0;
-  float: right;
   list-style-type: none;
   li {
     a {
@@ -1052,7 +1037,6 @@ ul.dropdown:hover {
 
 div.pathbar_extension, div.dropdown {
   float: right;
-  height: 20px;
   margin: 1px 20px 1px 2px;
   padding: 3px 5px;
 
@@ -1201,11 +1185,8 @@ div#database_debug_table ul li pre,div#database_debug_table table {
 }
 
 #admin_menu {
-  float: right;
   clear: both;
   color: #DDDDDD;
-  text-align: right;
-  margin: 5px 0;
 
   .bar {
     display: block;
