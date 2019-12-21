@@ -176,15 +176,15 @@
         {% block pathbar_extensions %}
         {% endblock %}
 
+      <div class="breadcrumb -top">
         {% block breadcrumb %}
-          <div class="breadcrumb">
-            <ol>
-              {% for breadcrumb in BREADCRUMBS %}
-                  <li><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
-              {% endfor %}
-            </ol>
-          </div>
+          <ol>
+            {% for breadcrumb in BREADCRUMBS %}
+              <li><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
+            {% endfor %}
+          </ol>
         {% endblock %}
+      </div>
 
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
@@ -214,7 +214,9 @@
           {% block content %}{% endblock %}
         </main>
 
+    <div class="breadcrumb -bottom">
       {{ self.breadcrumb() }}
+    </div>
 
     <footer class="footer">
       <ul>
