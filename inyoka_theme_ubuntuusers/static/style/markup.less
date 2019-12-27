@@ -178,14 +178,14 @@ div.workinprogress {
 .toc {
   .top-rounded(.25em);
   padding: .5em;
-  float: right;
-  margin: 0 0 1.5em 1.5em;
-
   background-color: @grey_light; /* prevents that horizontal borders of other elements like headings are shown */
-
   border: 0.01em solid @grey_dark;
 
-  width: 40ex;
+  @media (min-width: @medium-width) {
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+    max-width: 40ex;
+  }
 
   .head {
     font-weight: bold;
