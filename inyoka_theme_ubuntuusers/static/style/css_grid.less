@@ -8,19 +8,36 @@
  * :license: BSD, see LICENSE for more details.
  */
 
+@import "colors.less";
+
 body {
   display: grid;
 
   grid:
-  "header            header            header"
-  "pagetitle         pagetitle         navi_global"
-  "pagetitle         pagetitle         admin_menu"
-  "breadcrumb_top    breadcrumb_top    search"
-  "sidebar           tabbar            tabbar"
-  "sidebar           content           content" 1fr
-  "breadcrumb_bottom breadcrumb_bottom breadcrumb_bottom"
-  "footer            footer            footer"
-  / minmax(auto, 15em) 1fr auto;
+    "header"
+    "navi_global"
+    "admin_menu"
+    "breadcrumb_top"
+    "search"
+    "tabbar"
+    "content" 1fr
+    "sidebar"
+    "breadcrumb_bottom"
+    "footer"
+   / auto;
+
+  @media (min-width: @medium-width) {
+    grid:
+    "header            header            header"
+    "pagetitle         pagetitle         navi_global"
+    "pagetitle         pagetitle         admin_menu"
+    "breadcrumb_top    breadcrumb_top    search"
+    "sidebar           tabbar            tabbar"
+    "sidebar           content           content" 1fr
+    "breadcrumb_bottom breadcrumb_bottom breadcrumb_bottom"
+    "footer            footer            footer"
+    / minmax(auto, 15em) 1fr auto;
+  }
 
   min-height: 100vh;
 }
@@ -38,6 +55,10 @@ body {
 }
 .pagetitle {
   grid-area: pagetitle;
+
+  @media (max-width: @medium-width) {
+    display: none;
+  }
 }
 .search {
   grid-area: search;
