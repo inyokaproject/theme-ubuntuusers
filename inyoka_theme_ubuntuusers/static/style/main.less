@@ -143,6 +143,8 @@ body {
   background-color: #FFFFFF;
 }
 
+@body-innerspace: 0.6rem;
+
 a, :link, :visited {
   color: @blue_s_medium;
   text-decoration: none;
@@ -568,8 +570,7 @@ table.syntaxtable {
       display: block;
       width: 257px;
       height: 90px;
-      margin: 10px;
-      padding: 0;
+      margin: @body-innerspace;
       text-decoration: none;
       background-image: url(../img/logo.png);
     }
@@ -631,6 +632,8 @@ table.syntaxtable {
 }
 .content {
   background-color: #fff;
+  margin: 0 @body-innerspace;
+
   p {
     margin: 0.7em 0.0em;
   }
@@ -668,8 +671,7 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 .navi_sidebar {
   .container {
     background-repeat: repeat-x;
-    padding: 0.1em 0.5em 0.5em 1em; /* for right padding, see edit-icons f.e. in ikhaya, planet */
-    margin-right: 1em;
+    padding: 0 0.5em 0.5em @body-innerspace; /* for right padding, see edit-icons f.e. in ikhaya, planet */
     border-right: #CCC 1px solid;
   }
   .noh3 {
@@ -686,6 +688,9 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
     a {
       color: #333;
     }
+  }
+  h3:first-of-type {
+    margin-top: 0;
   }
 
   .export {
@@ -783,6 +788,8 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 
 .pagetitle {
   word-wrap: break-word;
+  margin-left: @body-innerspace;
+
   > h1 {
     color: #a48f65;
     font-size: 2.6em;
@@ -806,6 +813,8 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 }
 .navi_global {
   list-style-type: none;
+  margin-right: @body-innerspace;
+
   li {
     a {
       display: block;
@@ -826,6 +835,9 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 .search, div.dropdown, .pathbar_extension, .breadcrumb {
   font-size: 0.85em;
 }
+form.search {
+  margin-right: @body-innerspace;
+}
 
 .content ul, .content ol {
   padding-left: 2.0em;
@@ -835,7 +847,7 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
   clear: both;
   color: #fff;
   font-size: 0.8em;
-  padding: 0 0.9em;
+  padding: 0 @body-innerspace;
   > ul {
     display: flex;
     list-style: none;
@@ -1187,6 +1199,7 @@ div#database_debug_table ul li pre,div#database_debug_table table {
 #admin_menu {
   clear: both;
   color: #DDDDDD;
+  margin-right: @body-innerspace;
 
   .bar {
     display: block;
@@ -1258,6 +1271,8 @@ div#database_debug_table ul li pre,div#database_debug_table table {
 }
 
 .breadcrumb {
+  margin-left: @body-innerspace;
+
   ol {
     list-style-type: none;
   }
