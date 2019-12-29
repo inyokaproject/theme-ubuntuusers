@@ -42,50 +42,50 @@ body {
   min-height: 100vh;
 }
 
-.header {
+body > .header {
   grid-area: header;
 }
-.navi_global {
+body > .navi_global {
   grid-area: navi_global;
   justify-self: end;
 }
-#admin_menu {
+body > #admin_menu {
   grid-area: admin_menu;
   justify-self: end;
 }
-.pagetitle {
+body > .pagetitle {
   grid-area: pagetitle;
 
   @media (max-width: @medium-width) {
     display: none;
   }
 }
-.search {
+body > .search {
   grid-area: search;
   justify-self: end;
 }
-.breadcrumb.-top {
+body > .breadcrumb.-top {
   grid-area: breadcrumb_top;
 }
-.breadcrumb.-bottom {
+body > .breadcrumb.-bottom {
   grid-area: breadcrumb_bottom;
 }
-.navi_sidebar {
+body > .navi_sidebar {
   grid-area: sidebar;
 }
-.navi_tabbar {
+body > .navi_tabbar {
   grid-area: tabbar;
 }
-.content {
+body > .content {
   grid-area: content;
   overflow: auto;
 }
-.footer {
+body > .footer {
   grid-area: footer;
 }
-div.dropdown {
+body > div.dropdown {
   grid-area: forum_dropdown;
 }
-.pathbar_extension {
+body > .pathbar_extension {
   grid-area: pathbar_extension;
 }
