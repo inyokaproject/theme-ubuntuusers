@@ -15,7 +15,8 @@
 
 
 <!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ LANGUAGE_CODE }}"
+      {% if USER.settings.get('reduce_motion', False) %}class="reduce-motion"{% endif %}>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
