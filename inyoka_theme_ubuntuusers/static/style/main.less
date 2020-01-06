@@ -634,6 +634,11 @@ table.syntaxtable {
 
   p {
     margin: 0.7em 0.0em;
+
+    @supports(hyphens: auto) {
+      hyphens: auto;
+      text-align: justify;
+    }
   }
 
   .message {
