@@ -145,20 +145,18 @@ body {
 
 @body-innerspace: 0.6rem;
 
-a, :link, :visited {
+a, :link {
   color: @blue_s_medium;
   text-decoration: none;
   cursor: pointer;
+}
+:visited {
+  color: darken(@blue_s_medium, 40%, relative);
 }
 a:hover {
    text-decoration: underline;
 }
 
-.content .post .text :visited, .content #page :visited,
-.content .article .intro :visited, .content .article .text :visited,
-.prvmsg_body :visited, .preview :visited, .content .main_content :visited {
-  color: #000;
-}
 a img, :link img, :visited img {
   border: none;
 }
