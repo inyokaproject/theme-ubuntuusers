@@ -283,11 +283,20 @@ form {
   }
 }
 blockquote {
-  border-left: solid 3px #888;
   font-style: italic;
-  color: #333;
   padding-left: 0.4em;
-  margin-left: 1.0em;
+  margin-left: 2em;
+
+  &::before {
+    content: open-quote;
+    float: left;
+    text-indent: -0.7em;
+    font-size: 2.7em;
+    margin-top: -0.2em;
+  }
+  & > p:last-of-type::after {
+    content: close-quote;
+  }
 }
 code {
   font-family: @font-monospace;
