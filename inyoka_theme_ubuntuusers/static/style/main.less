@@ -164,70 +164,111 @@ a.strong {
   color: #000;
   font-weight: bold;
 }
+
+/*
+ * Inputs and textareas
+ */
+@valid-color: @green_d_light;
+@error-border-color: @red_d_dark;
+@input-focus-color: @blue_dark;
+
 input {
-  border: 1px solid #AAA;
-  font-family: @font-monospace;
   font-size: 1em;
   background-color: #FFFFFF;
   color: #000000;
+  font-family: @font-content; /* reset browser default */
 }
-input[name="username"] {
-  width: 350px;
+input[type="date"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"] {
+  border: none;
+  border-bottom: thin solid #AAA;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: .5em;
+
+  &:invalid {
+    border-bottom: medium solid @error-border-color;
+    box-shadow: none; /* reset browser default */
+  }
+  &:focus {
+    border-bottom: thin solid @input-focus-color;
+  }
 }
-input[type="radio"] {
-  border: 0;
-}
+/* "buttons" */
 input[type="submit"], input[type="button"], input[type="reset"] {
-  border-color: #777;
-  font-family: @font-content;
-  background-color: #eee;
-  color: #333333;
-}
-input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
-  border: 1px #aaa inset;
-  background-color: #f2f2f2!important;
-}
-input[type="submit"] {
-  border-color: #333;
-  font-weight: bold;
-}
-input.cancel[type="submit"] {
-  border-color: #777;
-  font-weight: normal;
-}
-input.disabled, input.disabled:active {
-  color: #888!important;
-  background-color: #e2e2e2!important;
-  border: 1px solid #ccc!important;
-}
-input.linkbutton {
-  height: 1.2em;
+  @button-shadow-height: 0.3em;
+
   border: none;
-  border-color: #F8F8F8;
-  border-bottom: @orange_s_medium 1px solid;
-  font-weight: normal;
-  background-color: #F8F8F8;
-  color: @orange_s_medium;
+  border-radius: 0.3em;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
-  font-family: @font-content;
-}
-input.linkbutton:active {
-  border: none;
-  background-color: #F8F8F8;
-  border-color: #F8F8F8;
-  border-bottom: @orange_s_medium 1px solid;
-  margin: 0;
-  padding: 0;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+
+  &:active {
+    transform: translate(0, @button-shadow-height);
+  }
+
+  .button_mixin(@background-color,
+                @text-color,
+                @shadow-color: darken(@background-color, 25%, relative),
+                @hover-color: lighten(@background-color, 15%, relative)) {
+    background-color: @background-color;
+    box-shadow: 0 @button-shadow-height 0 0 @shadow-color;
+    color: @text-color;
+
+    &:hover, &:focus {
+      background-color: @hover-color;
+    }
+    &:active {
+      box-shadow: none; // has to come after the box-shadow declaration
+    }
+  }
+
+  &:not([class]) { /* button without class */
+    //.button_mixin(#168CD2, #FFF, #11699e, #399dd9);
+    .button_mixin(#168CD2, #FFF);
+  }
+  &.cancel, &[name="cancel"] {
+    //.button_mixin(#C3C3C3, black, rgb(146, 146, 146), rgb(166, 166, 166));
+    .button_mixin(#C3C3C3, black);
+  }
+  &.danger { /* TODO needed? */
+    //.button_mixin(@red_d_dark, white, rgb(163, 62, 59), rgb(223, 109, 105));
+    .button_mixin(@red_d_dark, white)
+  }
+
+  &.disabled, &.disabled:active {
+    color: #888 !important;
+    background-color: #e2e2e2 !important;
+    box-shadow: none;
+  }
+
+  & + & {
+    margin-left: 0.5em;
+  }
 }
 textarea {
   box-sizing: border-box;
-  border: 1px solid #AAA;
-  width:100%;
+  border: thin solid #AAA;
+  width: 100%;
   font-family: @font-monospace;
   font-size: @font-size;
+
+  &:focus {
+    border-color: @input-focus-color;
+  }
 }
+
 div.actions {
   margin: 1em 0 0 0;
 }
@@ -969,12 +1010,8 @@ p.badges {
   color: HighlightText;
 }
 .tf_tokenfield {
-  border: 1px solid #AAAAAA;
-  display: inline-table;
   display: inline-block;
   .tf_token {
-    .rounded(5px);
-    display: inline-table;
     display: inline-block;
     background-color: #F6F6F6;
     border: 1px solid #AAAAAA;
@@ -982,7 +1019,6 @@ p.badges {
     padding-left: .5ex;
     padding-right: .5ex;
     span {
-      display: inline-table;
       display: inline-block;
       width: 15px;
       cursor: default;
@@ -993,7 +1029,7 @@ p.badges {
     }
   }
   input {
-    border: none;
+    width: auto;
   }
 }
 table.filterable {
