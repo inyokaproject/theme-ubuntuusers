@@ -29,8 +29,8 @@ body {
   @media (min-width: @medium-width) {
     grid:
     "header            header            header"
-    "pagetitle         pagetitle         navi_global"
-    "pagetitle         pagetitle         admin_menu"
+    ".                 .                 navi_global"
+    ".                 .                 admin_menu"
     "breadcrumb_top    breadcrumb_top    search"
     "sidebar           tabbar            tabbar"
     "sidebar           content           content" 1fr
@@ -52,13 +52,6 @@ body > .navi_global {
 body > #admin_menu {
   grid-area: admin_menu;
   justify-self: end;
-}
-body > .pagetitle {
-  grid-area: pagetitle;
-
-  @media (max-width: @medium-width) {
-    display: none;
-  }
 }
 body > .search {
   grid-area: search;

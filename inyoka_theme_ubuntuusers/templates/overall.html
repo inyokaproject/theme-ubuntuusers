@@ -146,17 +146,6 @@
           </div>
         {% endif %}
 
-        <div class="pagetitle">
-          <h1 class="breadcrumb_title">
-            <a href="{{ (BREADCRUMBS|first)[1] }}" {% if BREADCRUMBS|length > 1 %}class="separator"{% endif %}>
-              {{ (BREADCRUMBS|first)[0]|e }}
-            </a>
-          </h1>
-          {% if BREADCRUMBS|length > 1 %}
-            <h2 class="breadcrumb_subtitle"><a href="{{ (BREADCRUMBS|last)[1] }}">{{ (BREADCRUMBS|last)[0]|e }}</a></h2>
-          {% endif %}
-        </div>
-
         {# search via duckduckgo requires JS #}
         <form method="GET" action="https://duckduckgo.com/" class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
