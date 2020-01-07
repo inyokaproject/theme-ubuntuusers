@@ -59,9 +59,7 @@
         {%- endif %}
       </div>
       <h4><a href="{{ article|url }}">{{ article.subject|e }}</a></h4>
-      <p class="text">
-        {{ article.intro_rendered }}
-      </p>
+      {{ article.intro_rendered }}
     </div>
     {%- endfor %}
   </div>
