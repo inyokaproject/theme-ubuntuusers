@@ -70,7 +70,6 @@ table.forum {
   td.icon {
     background-color: #eee;
     border: 1px solid #ccc;
-    width: 40px;
     text-align: center;
     vertical-align: middle;
 
@@ -151,9 +150,7 @@ table.forum {
   }
   td.last_post {
     text-align: right;
-    width: 185px;
     font-size: 0.9em;
-    padding: 5px 15px 5px 0;
   }
   a.pageselect {
     font-size: 0.8em;
@@ -247,7 +244,10 @@ table.topic {
     vertical-align: top;
     background: @grey_dark;
     border-right: 1px solid #cccccc;
-    width: 150px;
+    width: 8em;
+    @media (min-width: @medium-width) {
+      width: 150px;
+    }
     overflow: hidden;
     .break-word();
     p {
