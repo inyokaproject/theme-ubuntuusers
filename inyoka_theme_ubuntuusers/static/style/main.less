@@ -329,9 +329,15 @@ blockquote {
   &::before {
     content: open-quote;
     float: left;
-    text-indent: -0.7em;
     font-size: 2.7em;
+  }
+  &:lang(en)::before {
+    text-indent: -0.7em;
     margin-top: -0.2em;
+  }
+  &:lang(de)::before {
+    text-indent: -0.7em;
+    margin-top: -0.8em;
   }
   & > p:last-of-type::after {
     content: close-quote;
