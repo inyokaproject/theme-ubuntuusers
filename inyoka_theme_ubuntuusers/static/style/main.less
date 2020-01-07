@@ -4,7 +4,7 @@
  *
  * Some global style definitions.
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -122,7 +122,7 @@
   margin: 0;
 }
 
-html {
+html:not(.reduce-motion) {
   scroll-behavior: smooth;
 }
 @media (prefers-reduced-motion: reduce) {
