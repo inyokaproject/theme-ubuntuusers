@@ -17,17 +17,34 @@
 }
 
 body {
-  /* custom grid-template, as the forum has no sidebar*/
+  /* custom grid-template, as the forum has no sidebar */
   grid:
-  "header             header"
-  "pagetitle          navi_global"
-  "pagetitle          admin_menu"
-  "pathbar_extension  forum_dropdown"
-  "breadcrumb_top     search"
-  "tabbar             tabbar"
-  "content            content" 1fr
-  "breadcrumb_bottom  breadcrumb_bottom"
-  "footer             footer";
+    "header"
+    "navi_global"
+    "admin_menu"
+    "pathbar_extension"
+    "forum_dropdown"
+    "breadcrumb_top"
+    "search"
+    "tabbar"
+    "content" 1fr
+    "sidebar"
+    "breadcrumb_bottom"
+    "footer"
+   / auto;
+
+  @media (min-width: @medium-width) {
+    grid:
+    "header             header"
+    "pagetitle          navi_global"
+    "pagetitle          admin_menu"
+    "pathbar_extension  forum_dropdown"
+    "breadcrumb_top     search"
+    "tabbar             tabbar"
+    "content            content" 1fr
+    "breadcrumb_bottom  breadcrumb_bottom"
+    "footer             footer";
+  }
 }
 
 main.content {
