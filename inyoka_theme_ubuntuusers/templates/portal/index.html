@@ -41,6 +41,8 @@
   <div class="articles">
     {%- for article in ikhaya_latest %}
     <div class="article">
+      <h4><a href="{{ article|url }}">{{ article.subject|e }}</a></h4>
+
       <div class="meta">
         {%- if article.pub_datetime == article.updated %}
           <a href="{{ article|url }}">{{ article.updated|datetime }}</a>
@@ -58,7 +60,6 @@
           </a>
         {%- endif %}
       </div>
-      <h4><a href="{{ article|url }}">{{ article.subject|e }}</a></h4>
       {{ article.intro_rendered }}
     </div>
     {%- endfor %}

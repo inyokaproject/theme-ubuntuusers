@@ -74,19 +74,31 @@ img.cat {
 }
 
 .article {
-  font-size: @font-size;
-  padding: 1em 0;
-  background-position: top;
-  background-repeat: repeat-x;
   .meta {
-    float: right;
     font-weight: bold;
-    text-align: right;
-    margin: 0.8em 0 0 0.8em;
-    padding: 0.2em 1em;
     .comments {
       color: @brown_light;
     }
+  }
+
+  @media (min-width: @medium-width) {
+    > .meta {
+      grid-area: meta;
+      align-self: end;
+      text-align: right;
+    }
+    > h4 {
+      grid-area: heading;
+      margin-bottom: 0;
+    }
+    > p {
+      grid-area: intro;
+    }
+
+    display: grid;
+    grid: "heading meta"
+          "intro   intro"
+          / 1fr    auto;
   }
 }
 hr.divider {
