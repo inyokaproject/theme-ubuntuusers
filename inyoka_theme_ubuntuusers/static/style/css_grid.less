@@ -14,8 +14,8 @@ body {
   display: grid;
 
   grid:
-    "header"
     "navi_global"
+    "header"
     "admin_menu"
     "breadcrumb_top"
     "search"
@@ -28,8 +28,8 @@ body {
 
   @media (min-width: @medium-width) {
     grid:
+    "navi_global       navi_global       navi_global"
     "header            header            header"
-    ".                 .                 navi_global"
     ".                 .                 admin_menu"
     "breadcrumb_top    breadcrumb_top    search"
     "sidebar           tabbar            tabbar"
@@ -47,7 +47,6 @@ body > .header {
 }
 body > .navi_global {
   grid-area: navi_global;
-  justify-self: end;
 }
 body > #admin_menu {
   grid-area: admin_menu;

@@ -136,11 +136,6 @@ body {
   color: black;
   font-size: @font-size;
   line-height: @line-height;
-
-  background-image:url(../img/head.jpg);
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-color: #FFFFFF;
 }
 
 @body-innerspace: 0.6rem;
@@ -604,6 +599,11 @@ table.syntaxtable {
   color: #cccccc;
 }
 .header {
+  background-image:url(../img/head.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+
   img {
     margin: 5px 0 0 10px;
   }
@@ -837,25 +837,23 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 }
 
 .navi_global {
-  list-style-type: none;
-  margin-right: @body-innerspace;
+  padding: 0.5em @body-innerspace;
+  background-color: @brown_light;
+  a {
+    color: white;
+  }
+  .avatar {
+    max-height: 1em;
+  }
 
-  li {
-    a {
-      display: block;
-      padding: 0 0 0 0.4em;
-      color: @blue_s_medium;
-      text-decoration: none;
-    }
-    a:hover {
-      color: @aubergine_s_dark;
-      text-decoration: underline;
+  > ul {
+    list-style-type: none;
+    float: right;
+    > li {
+      display: inline-block;
+      padding-left: .7em;
     }
   }
-}
-.navi_global li {
-  float: left;
-  margin-left: 5px;
 }
 .search, div.dropdown, .pathbar_extension, .breadcrumb {
   font-size: 0.85em;

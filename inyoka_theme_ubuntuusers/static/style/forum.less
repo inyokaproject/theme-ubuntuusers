@@ -19,8 +19,8 @@
 body {
   /* custom grid-template, as the forum has no sidebar */
   grid:
-    "header"
     "navi_global"
+    "header"
     "admin_menu"
     "pathbar_extension"
     "forum_dropdown"
@@ -35,8 +35,8 @@ body {
 
   @media (min-width: @medium-width) {
     grid:
+    "navi_global        navi_global"
     "header             header"
-    ".                  navi_global"
     ".                  admin_menu"
     "pathbar_extension  forum_dropdown"
     "breadcrumb_top     search"
