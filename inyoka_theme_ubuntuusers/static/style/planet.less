@@ -67,11 +67,13 @@
     }
   }
   > .post {
-    @post-border: thin solid #BFBFBF;
-    border-right: @post-border;
-    border-bottom: @post-border;
+    @media (min-width: @medium-width) {
+      @post-border: thin solid #BFBFBF;
+      border-right: @post-border;
+      border-bottom: @post-border;
 
-    padding-right: 1.5em;
+      padding-right: 1.5em;
+    }
     padding-bottom: 1.5em;
 
     &.hidden {
