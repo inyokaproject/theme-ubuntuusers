@@ -28,7 +28,7 @@
       </ul>
     {%- endif %}
 
-    <div class="articles">
+
       {% set article_index = [0] %}
       {%- for day in days %}
         <section class="day">
@@ -88,7 +88,6 @@
           {%- endfor %}
         </section>
       {%- endfor %}
-    </div>
 
     <div class="pagination pagination_right">{{ rendered_pagination }}</div>
   {%- else %}
