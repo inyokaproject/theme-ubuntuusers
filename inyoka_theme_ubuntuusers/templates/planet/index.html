@@ -20,14 +20,12 @@
 {% block planet_content %}
   {%- if days %}
     {%- if page == 1 %}
-      <div class="newestarticles">
-        <h2>{% trans %}Recent articles{% endtrans %}</h2>
-        <ul>
-          {%- for article in articles[:10] %}
-            <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
+      <h2>{% trans %}Recent articles{% endtrans %}</h2>
+      <ul class="newestarticles">
+        {%- for article in articles[:10] %}
+          <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
+        {%- endfor %}
+      </ul>
     {%- endif %}
 
     <div class="articles">
