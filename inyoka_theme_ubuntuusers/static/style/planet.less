@@ -23,96 +23,97 @@
   }
 }
 
-  .day > h2 {
-      font-size: 2.4em;
-  }
-  .article {
-    margin: 1.5em 0;
+.day > h2 {
+  font-size: 2.4em;
+}
 
-    > .head {
-      display: block;
-      padding-right: 0.5em;
-      min-height: @icon-size;
+.article {
+  margin: 1.5em 0;
 
-      img {
-        float: left;
-        max-width: @icon-size;
-        max-height: @icon-size;
+  > .head {
+    display: block;
+    padding-right: 0.5em;
+    min-height: @icon-size;
+
+    img {
+      float: left;
+      max-width: @icon-size;
+      max-height: @icon-size;
+    }
+    > .title-column  {
+      display: inline-block;
+      width: ~"calc(100% - @{icon-size} - 10px)";
+      padding-left: 10px;
+    }
+    h3 {
+      font-size: 1.6em;
+      line-height: 1em;
+      clear: right;
+
+      a {
+        color: black;
+
+        &.headerlink {
+          color: @link-color;
+        }
       }
-      > .title-column  {
-        display: inline-block;
-        width: ~"calc(100% - @{icon-size} - 10px)";
-        padding-left: 10px;
+    }
+    .easy-navigation {
+      float: right;
+
+      > a:not(:first-child) {
+        padding-left: 1em;
+      }
+    }
+  }
+  > .post {
+    @post-border: thin solid #BFBFBF;
+    border-right: @post-border;
+    border-bottom: @post-border;
+
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+
+    &.hidden {
+      color: #ccc;
+    }
+    .text {
+      max-width: 100% !important;
+      overflow: auto;
+
+      h1 {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.5em;
       }
       h3 {
-        font-size: 1.6em;
-        line-height: 1em;
-        clear: right;
+        font-size: 1.3em;
 
-        a {
-          color: black;
-
-          &.headerlink {
-            color: @link-color;
-          }
+        .note {
+          font-size: 0.7em;
+          padding-left: 0;
         }
       }
-      .easy-navigation {
-        float: right;
+      h4 {
+        font-size: 1.1em;
+      }
+      img {
+        /* `!important` needed as width and height are sometimes inline
+          defined (→ wrong form-factor if scaled) */
+        width: auto !important;
+        height: auto !important;
 
-        > a:not(:first-child) {
-          padding-left: 1em;
-        }
+        max-width: 100% !important;
+        max-height: 250px;
       }
     }
-    > .post {
-      @post-border: thin solid #BFBFBF;
-      border-right: @post-border;
-      border-bottom: @post-border;
-
-      padding-right: 1.5em;
-      padding-bottom: 1.5em;
-
-      &.hidden {
-        color: #ccc;
-      }
-      .text {
-        max-width: 100% !important;
-        overflow: auto;
-
-        h1 {
-          font-size: 1.8em;
-        }
-        h2 {
-          font-size: 1.5em;
-        }
-        h3 {
-          font-size: 1.3em;
-
-          .note {
-            font-size: 0.7em;
-            padding-left: 0;
-          }
-        }
-        h4 {
-          font-size: 1.1em;
-        }
-        img {
-          /* `!important` needed as width and height are sometimes inline
-           defined (→ wrong form-factor if scaled) */
-          width: auto !important;
-          height: auto !important;
-
-          max-width: 100% !important;
-          max-height: 250px;
-        }
-      }
-      .meta {
-        text-align: right;
-        font-size: 0.9em;
-      }
+    .meta {
+      text-align: right;
+      font-size: 0.9em;
     }
   }
+}
 
 ul.newestarticles {
   columns: 25ch 3; /* ideal width and maximum of columns */
