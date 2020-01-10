@@ -598,10 +598,16 @@ table.syntaxtable {
   color: #cccccc;
 }
 .header {
-  background-image:url(../img/head.jpg);
+  background-image: url(../img/head/trianglify_masked_optimized.svg);
   background-position: left top;
   background-repeat: no-repeat;
   background-color: #FFFFFF;
+
+  background-size: cover;
+  @media (min-width: 2000px) {
+    /* on big screens stretch the img to the whole width and height */
+    background-size: 100% 100%;
+  }
 
   img {
     margin: 5px 0 0 10px;
