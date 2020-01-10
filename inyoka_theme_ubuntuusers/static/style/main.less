@@ -307,14 +307,12 @@ dt {
   }
 }
 dl {
-  margin-bottom:0.7em;
+  margin-bottom: 0.7em;
 }
-form {
-  dd {
-    margin: 0.3em 0 0 0;
-  }
-  dt {
-    margin: 1em 0 0 0;
+form.-horizontal dl {
+  @media (min-width: @medium-width) {
+    display: grid;
+    grid-template-columns: 12em auto;
   }
 }
 blockquote {
