@@ -138,8 +138,6 @@ body {
   line-height: @line-height;
 }
 
-@body-innerspace: 0.6rem;
-
 a, :link {
   color: @blue_s_medium;
   text-decoration: none;
@@ -603,8 +601,10 @@ table.syntaxtable {
   background-repeat: no-repeat;
   background-color: #FFFFFF;
 
+  .horizontal-space-big-width();
+
   background-size: cover;
-  @media (min-width: 2000px) {
+  @media (min-width: @huge-width) {
     /* on big screens stretch the img to the whole width and height */
     background-size: 100% 100%;
   }
@@ -623,6 +623,10 @@ table.syntaxtable {
       margin: @body-innerspace;
       text-decoration: none;
       background-image: url(../img/logo.png);
+
+      @media(min-width: @big-width) {
+        margin-left: 0;
+      }
     }
     span {
       display: none;
@@ -844,6 +848,9 @@ button.navi_toggle_down:hover, button.navi_toggle_up:hover {
 .navi_global {
   padding: 0.3em @body-innerspace;
   background-color: @brown_dark;
+
+  .horizontal-space-big-width();
+
   a {
     color: white;
   }
@@ -877,6 +884,9 @@ form.search {
   color: #fff;
   font-size: 0.8em;
   padding: 0 @body-innerspace;
+
+  .horizontal-space-big-width();
+
   > ul {
     display: flex;
     list-style: none;

@@ -45,6 +45,20 @@ body {
     "breadcrumb_bottom  breadcrumb_bottom"
     "footer             footer";
   }
+
+  @media(min-width: @big-width) {
+    grid:
+    "navi_global navi_global        navi_global       navi_global"
+    "header      header             header            header"
+    ".           .                  admin_menu        ."
+    ".           pathbar_extension  forum_dropdown    ."
+    ".           breadcrumb_top     search            ."
+    ".           tabbar             tabbar            ."
+    ".           content            content           ." 1fr
+    ".           breadcrumb_bottom  breadcrumb_bottom ."
+    "footer      footer             footer            footer"
+    / @h_space   auto               auto              @h_space;
+  }
 }
 
 main.content {

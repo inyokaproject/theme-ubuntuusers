@@ -79,3 +79,10 @@
   padding: 0;
   margin: 0;
 }
+
+.horizontal-space-big-width() {
+  @media(min-width: @big-width) {
+    padding-left: calc(@h_space + @body-innerspace);
+    padding-right: calc(@h_space + @body-innerspace);
+  }
+}
