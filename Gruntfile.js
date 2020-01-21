@@ -158,10 +158,8 @@ module.exports = function(grunt) {
           'inyoka_theme_ubuntuusers/static/img/tabbar_right_hover.png',
           'inyoka_theme_ubuntuusers/static/img/icons/portal.png',
           'inyoka_theme_ubuntuusers/static/img/icons/forum.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/wiki.png',
           'inyoka_theme_ubuntuusers/static/img/icons/ikhaya.png',
           'inyoka_theme_ubuntuusers/static/img/icons/planet.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/community.png'
         ],
         dest: 'inyoka_theme_ubuntuusers/static/img/main-sprite.png',
         destCss: 'inyoka_theme_ubuntuusers/static/style/main-sprite.less',
