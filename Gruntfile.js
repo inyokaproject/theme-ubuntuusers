@@ -149,12 +149,6 @@ module.exports = function(grunt) {
       },
       main: {
         src: [
-          'inyoka_theme_ubuntuusers/static/img/tabbar_left.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_center.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_right.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_left_hover.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_center_hover.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_right_hover.png',
           'inyoka_theme_ubuntuusers/static/img/icons/portal.png',
           'inyoka_theme_ubuntuusers/static/img/icons/forum.png',
           'inyoka_theme_ubuntuusers/static/img/icons/ikhaya.png',
