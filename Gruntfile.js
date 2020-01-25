@@ -102,7 +102,6 @@ module.exports = function(grunt) {
         files: [
           'inyoka_theme_ubuntuusers/static/style/*.less',
           '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
-          '!inyoka_theme_ubuntuusers/static/style/*.m.less'
         ],
         tasks: ['less', 'postcss:dist'],
       },
@@ -190,17 +189,8 @@ module.exports = function(grunt) {
             src: [
               'inyoka_theme_ubuntuusers/static/style/**/*.less',
               '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
-              '!inyoka_theme_ubuntuusers/static/style/*.m.less'
             ],
             ext: '.css',
-          },
-          {
-            "inyoka_theme_ubuntuusers/static/style/overall.m.css": "inyoka_theme_ubuntuusers/static/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/forum/style/overall.m.css": "inyoka_theme_ubuntuusers/static/forum/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/ikhaya/style/overall.m.css": "inyoka_theme_ubuntuusers/static/ikhaya/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/planet/style/overall.m.css": "inyoka_theme_ubuntuusers/static/planet/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/portal/style/overall.m.css": "inyoka_theme_ubuntuusers/static/portal/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/wiki/style/overall.m.css": "inyoka_theme_ubuntuusers/static/wiki/style/overall.m.less"
           }
         ]
       }
