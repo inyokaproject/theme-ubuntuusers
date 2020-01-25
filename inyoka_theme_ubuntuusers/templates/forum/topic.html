@@ -202,7 +202,7 @@
     <tbody>
       {%- for post in posts if not (post.hidden and not can_moderate and not post.author_id == USER.id) %}
         <tr id="post-{{ post.id }}"{% if post.hidden %} class="hidden"{% endif %}>
-          <td class="author"{%- if post.author_id == USER.id %} style="background-color: #F6F4EF"{%- endif %}>
+          <td class="author{% if post.author_id == USER.id %} -own{% endif %}">
             <p class="username{% if not post.author.is_active %} inactive{% endif %}">
               <a href="{{ post.author|url }}">{{ post.author.username|e }}</a>
               {% if post.author.icon %}
@@ -225,7 +225,7 @@
               <p>{% trans %}Residence:{% endtrans %} {{ post.author.location|e }}</p>
             {%- endif %}
           </td>
-          <td class="post"{%- if post.author_id == USER.id %} style="background-color: #F8F6F1"{% endif %}>
+          <td class="post{% if post.author_id == USER.id %} -own{% endif %}">
             <div class="postinfo">
               <div class="linklist">
                 {%- if can_delete(post) %}
