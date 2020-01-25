@@ -307,7 +307,6 @@
             </div>
             {%- set attachments = post.grouped_attachments if post.has_attachments else [] %}
             {%- if attachments %}
-              <hr />
               <dl class="attachments">
                 {%- for group, list, class in attachments %}
                   {%- if group %}
