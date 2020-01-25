@@ -94,7 +94,11 @@ table.comments {
     vertical-align: top;
     background: @grey_dark;
     border-right: 1px solid #cccccc;
-    width: 150px;
+    width: 8em;
+    @media (min-width: @medium-width) {
+      width: 150px;
+    }
+
     &.-own {
       background: @orange_s_light;
     }
