@@ -194,7 +194,7 @@
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
         {% if sidebar %}
-        <aside id="sidebar" class="navi_sidebar navigation" tabindex="0">
+        <aside id="sidebar" class="navi_sidebar navigation">
           {% block sidebar %}{% endblock %}
         </aside>
         {% endif %}
@@ -205,7 +205,7 @@
         </nav>
         {% endif %}
 
-        <main id="main" tabindex="0"
+        <main id="main"
               class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
           {% if GLOBAL_MESSAGE %}
             <div class="message global">{{ GLOBAL_MESSAGE }}</div>
