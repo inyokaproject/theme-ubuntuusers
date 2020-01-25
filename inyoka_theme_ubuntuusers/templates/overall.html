@@ -62,6 +62,8 @@
   </head>
   <body>
   <nav class="navi_global">
+    <a href="#main" class="skip-link">{% trans %}Skip to main content{% endtrans %}</a>
+    <a href="#sidebar" class="skip-link">{% trans %}Skip to sidebar{% endtrans %}</a>
     <a href="https://verein.ubuntu-de.org/">
       <img src="{{ href('static', 'img/ubuntu-logo-set-web-svg/SVG_small_use/ubuntu_white_hex_su-ubuntu_Deutschland_eV-no_font.svg') }}"
            alt="ubuntu Deutschland e.V. Logo">
@@ -192,7 +194,7 @@
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
         {% if sidebar %}
-        <aside class="navi_sidebar navigation">
+        <aside id="sidebar" class="navi_sidebar navigation" tabindex="0">
           {% block sidebar %}{% endblock %}
         </aside>
         {% endif %}
@@ -203,7 +205,8 @@
         </nav>
         {% endif %}
 
-        <main class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
+        <main id="main" tabindex="0"
+              class="content{{ tabbar and ' content_tabbar' or '' }}{{ sidebar and ' content_sidebar' or '' }}">
           {% if GLOBAL_MESSAGE %}
             <div class="message global">{{ GLOBAL_MESSAGE }}</div>
           {% endif %}
