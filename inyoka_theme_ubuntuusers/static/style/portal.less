@@ -31,21 +31,12 @@ img.cat {
 }
 
 .container.get_ubuntu {
-  .gradient(@orange_d_dark, darken(@orange_d_dark, 10%), @orange_d_dark);
+  background-color: @orange_d_light;
+  padding-bottom: 0.25em;
 }
-.get_ubuntu div {
-    display: block;
-    text-decoration: none;
-    padding: 0.5em 1em 0.5em 45px;
-    background-image: url(../img/download.png);
-    background-repeat: no-repeat;
-    background-position: center left;
-}
-.get_ubuntu h3,.calendar h3 {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 1.1em;
+.get_ubuntu h3 {
+  padding: 0.5em 1em 0.5em 45px;
+  background-image: url(../img/download.png);
 }
 
 #counter {
@@ -54,6 +45,9 @@ img.cat {
 
 .container.calendar {
   .gradient(@grey_dark, darken(@grey_dark, 10%), @grey_dark);
+  h3 {
+    padding: 0;
+  }
 }
 .calendar:hover {
   color: #666;
