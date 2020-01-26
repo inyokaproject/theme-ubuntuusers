@@ -24,6 +24,22 @@ table:not([class]) {
   display: inline-block;
   overflow-x: auto;
   border: none;
+
+  /* show gradient on side, if table is too wide and thus scrollable
+     see https://codepen.io/smashing-magazine/embed/mvrVpB
+     https://www.smashingmagazine.com/2019/01/table-design-patterns-web/
+     http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+     http://lea.verou.me/2012/04/background-attachment-local/
+  */
+  background:
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-attachment: local, local, scroll, scroll;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-repeat: no-repeat;
+  background-size: 2.5rem 100%, 2.5rem 100%, 0.875rem 100%, 0.875rem 100%;
 }
 
 .navi_sidebar {
