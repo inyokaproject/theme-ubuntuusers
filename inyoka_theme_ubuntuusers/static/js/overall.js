@@ -107,7 +107,7 @@ $(document).ready(function () {
          popup.toggle();
       }
     });
-    $('form.search').append(expander);
+    expander.insertAfter(searchField);
 
     $(document).click(function (e) {
       if(e.target.className != "search_expander") {
