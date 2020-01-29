@@ -219,6 +219,12 @@ table.forum td.post_count, table.forum td.view_count,table.forum td.topic_count 
   color: #888;
   width: 6%;
 }
+table.forum .post_count, table.forum .view_count {
+  @media (max-width: @medium-width) {
+    display: none;
+  }
+}
+
 table.forum th.last_post, table.forum th.post_count, table.forum th.topic, table.forum th.view_count {
   text-align: center;
 }
