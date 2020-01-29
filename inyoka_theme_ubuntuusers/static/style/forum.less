@@ -210,7 +210,9 @@ table.forum {
 table.forum tr.entry p.description,table.forum tr.entry p.subforums {
   font-size: 0.8em;
   margin: 0;
-  padding: 4px 0 3px 5px;
+  @media (min-width: @medium-width) {
+    padding: 4px 0 3px 5px;
+  }
 }
 table.forum td.post_count, table.forum td.view_count,table.forum td.topic_count {
   text-align: center;
