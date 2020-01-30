@@ -102,7 +102,6 @@ module.exports = function(grunt) {
         files: [
           'inyoka_theme_ubuntuusers/static/style/*.less',
           '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
-          '!inyoka_theme_ubuntuusers/static/style/*.m.less'
         ],
         tasks: ['less', 'postcss:dist'],
       },
@@ -150,18 +149,10 @@ module.exports = function(grunt) {
       },
       main: {
         src: [
-          'inyoka_theme_ubuntuusers/static/img/tabbar_left.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_center.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_right.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_left_hover.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_center_hover.png',
-          'inyoka_theme_ubuntuusers/static/img/tabbar_right_hover.png',
           'inyoka_theme_ubuntuusers/static/img/icons/portal.png',
           'inyoka_theme_ubuntuusers/static/img/icons/forum.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/wiki.png',
           'inyoka_theme_ubuntuusers/static/img/icons/ikhaya.png',
           'inyoka_theme_ubuntuusers/static/img/icons/planet.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/community.png'
         ],
         dest: 'inyoka_theme_ubuntuusers/static/img/main-sprite.png',
         destCss: 'inyoka_theme_ubuntuusers/static/style/main-sprite.less',
@@ -192,17 +183,8 @@ module.exports = function(grunt) {
             src: [
               'inyoka_theme_ubuntuusers/static/style/**/*.less',
               '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
-              '!inyoka_theme_ubuntuusers/static/style/*.m.less'
             ],
             ext: '.css',
-          },
-          {
-            "inyoka_theme_ubuntuusers/static/style/overall.m.css": "inyoka_theme_ubuntuusers/static/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/forum/style/overall.m.css": "inyoka_theme_ubuntuusers/static/forum/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/ikhaya/style/overall.m.css": "inyoka_theme_ubuntuusers/static/ikhaya/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/planet/style/overall.m.css": "inyoka_theme_ubuntuusers/static/planet/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/portal/style/overall.m.css": "inyoka_theme_ubuntuusers/static/portal/style/overall.m.less",
-            "inyoka_theme_ubuntuusers/static/wiki/style/overall.m.css": "inyoka_theme_ubuntuusers/static/wiki/style/overall.m.less"
           }
         ]
       }

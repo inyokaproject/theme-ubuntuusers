@@ -107,7 +107,7 @@ $(document).ready(function () {
          popup.toggle();
       }
     });
-    $('form.search').append(expander);
+    expander.insertAfter(searchField);
 
     $(document).click(function (e) {
       if(e.target.className != "search_expander") {
@@ -145,7 +145,7 @@ $(document).ready(function () {
         component: window.location.hostname.split('.')[0]
       });
       return false;
-    }).insertAfter('form.search');
+    }).insertAfter('.breadcrumb.-top > ol');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 

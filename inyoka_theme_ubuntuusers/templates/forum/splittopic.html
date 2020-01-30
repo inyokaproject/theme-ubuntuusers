@@ -54,7 +54,7 @@
       <tbody>
         {%- for post in posts %}
           <tr id="post-{{ post.id }}"{% if post.hidden %} class="hidden"{% endif %}>
-            <td class="author"{%- if post.author_id == USER.id %} style="background-color: #F6F4EF"{%- endif %}>
+            <td class="author{% if post.author_id == USER.id %} -own{% endif %}">
               <p class="username{% if not post.author.is_active %} inactive{% endif %}">
                 <a href="{{ post.author|url }}">{{ post.author.username|e }}</a>
                 {%- if post.author.primary_group and post.author.primary_group.icon %}
@@ -73,7 +73,7 @@
               <p>{% trans %}Member since:{% endtrans %}<br />{{ post.author.date_joined|naturalday }}</p>
               <p>{% trans %}Posts:{% endtrans %} {{ post.author.post_count }}</p>
             </td>
-            <td class="post"{%- if post.author_id == USER.id %} style="background-color: #F8F6F1"{% endif %}>
+            <td class="post{% if post.author_id == USER.id %} -own{% endif %}">
               <div class="postinfo">
                 <div class="linklist">
                 </div>
@@ -87,7 +87,6 @@
               </div>
               {%- set attachments = post.grouped_attachments %}
               {%- if attachments %}
-                <hr />
                 <dl class="attachments">
                   {%- for group, list, class in attachments %}
                     {%- if group %}

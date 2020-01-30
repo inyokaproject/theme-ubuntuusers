@@ -20,20 +20,18 @@
 {% block planet_content %}
   {%- if days %}
     {%- if page == 1 %}
-      <div class="newestarticles">
-        <h2>{% trans %}Recent articles{% endtrans %}</h2>
-        <ul>
-          {%- for article in articles[:10] %}
-            <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
+      <h2>{% trans %}Recent articles{% endtrans %}</h2>
+      <ul class="newestarticles">
+        {%- for article in articles[:10] %}
+          <li><a title="{{ article.blog }}" href="#article_{{ loop.index0 }}">{{ article.title }}</a></li>
+        {%- endfor %}
+      </ul>
     {%- endif %}
 
-    <div class="articles">
+
       {% set article_index = [0] %}
       {%- for day in days %}
-        <div class="day">
+        <section class="day">
           <h2>{{ day.date|naturalday }}</h2>
           {% set dayloop = loop %}
           {% for article in day.articles %}
@@ -42,7 +40,7 @@
               {% do article_index.pop() %}
               {% do article_index.append(current_article_id + 1) %}
             {% endif %}
-            <div class="article admin_link_hover" id="article_{{ current_article_id }}">
+            <article class="article admin_link_hover" id="article_{{ current_article_id }}">
               <div class="head">
                 <a href="{{ article.blog|url|e }}">
                   <img
@@ -86,11 +84,10 @@
                   {% endif %}
                 </div>
               </div>
-            </div>
+            </article>
           {%- endfor %}
-        </div>
+        </section>
       {%- endfor %}
-    </div>
 
     <div class="pagination pagination_right">{{ rendered_pagination }}</div>
   {%- else %}

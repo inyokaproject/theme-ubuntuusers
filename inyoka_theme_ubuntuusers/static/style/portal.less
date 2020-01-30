@@ -11,8 +11,7 @@
 @import 'layout.less';
 
 h3 {
-  border-bottom: 1px solid @orange_d_medium;
-  color: #444;
+  color: @brown_light;
 }
 h4 {
   font-size: 1.3em;
@@ -30,86 +29,66 @@ img.cat {
   float: right;
   margin: 0.5em 0 0.5em 0.5em;
 }
+
 .container.get_ubuntu {
-  .gradient(@orange_d_light, darken(@orange_d_light, 10%), @orange_d_light);
+  background-color: @orange_d_light;
+  padding-bottom: 0.25em;
 }
-.get_ubuntu {
-  div {
-    display: block;
-    text-decoration: none;
-    margin: 0 -1em -0.5em -0.5em;
-    padding: 0.5em 1em 0.5em 45px;
-    background-image: url(../img/download.png);
-    background-repeat: no-repeat;
-    background-position: center left;
-  }
+.get_ubuntu h3 {
+  padding: 0.5em 1em 0.5em 45px;
+  background-image: url(../img/download.png);
 }
-.get_ubuntu h3,.calendar h3 {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 1.1em;
-}
-.countdown {
+
+#counter {
   text-align: center;
-  border: none !important;
-  margin: 0 auto .5em;
-  img {
-    max-width: 14em;
-  }
 }
+
 .container.calendar {
-  .gradient(@green_d_light, darken(@green_d_light, 10%), @green_d_light);
+  .gradient(@grey_dark, darken(@grey_dark, 10%), @grey_dark);
+  h3 {
+    padding: 0;
+  }
 }
 .calendar:hover {
   color: #666;
 }
-.calendar {
-  div.calendar.link {
-    display: block;
-    text-decoration: none;
-    margin: 0 -1em -0.5em -0.5em;
-    padding: 0.5em 1em 0.5em 45px;
-    background-image: url(../img/calendar.png);
-    background-repeat: no-repeat;
-    background-position: center left;
-  }
-  div.calendar.overview {
-    margin-top: 10px;
-    border-top: 1px solid @green_d_medium;
-    .event_link {
-      color: #555;
-      text-decoration: underline;
-    }
-  }
+.calendar div.calendar.link {
+  display: block;
+  padding: 0.5em 1em 0.5em 45px;
+  background-image: url(../img/calendar.png);
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 .calendar div.calendar.overview p,.calendar div.calendar.overview ul {
   margin-top: 5px;
 }
+
 .article {
-  font-size: @font-size;
-  padding: 1em 0;
-  background-position: top;
-  background-repeat: repeat-x;
   .meta {
-    float: right;
     font-weight: bold;
-    text-align: right;
-    margin: 0.8em 0 0 0.8em;
-    padding: 0.2em 1em;
     .comments {
-      color: #666;
-    }
-    a {
-      text-decoration: underline;
+      color: @brown_light;
     }
   }
-  a {
-    font-weight: bold;
-    text-decoration: none;
-  }
-  p {
-    color: #333;
+
+  @media (min-width: @medium-width) {
+    > .meta {
+      grid-area: meta;
+      align-self: end;
+      text-align: right;
+    }
+    > h4 {
+      grid-area: heading;
+      margin-bottom: 0;
+    }
+    > p {
+      grid-area: intro;
+    }
+
+    display: grid;
+    grid: "heading meta"
+          "intro   intro"
+          / 1fr    auto;
   }
 }
 hr.divider {
@@ -142,7 +121,7 @@ table.userinfo {
 table.userinfo th,table.userinfo td {
   width: 33%;
   padding: 0.2em;
-  border: 1px dotted #ccc;
+  border: 1px solid #ccc;
 }
 div.usercp_control {
   ul {
@@ -150,12 +129,11 @@ div.usercp_control {
     text-align: center;
     border: none;
     li {
-      display: inline;
       display: inline-block;
       span {
         text-align: center;
         display: table-cell;
-        border: 1px dotted #E3D6C4;
+        border: 1px solid @grey_dark;
         padding: 0;
         a {
           width: 250px;
@@ -341,20 +319,6 @@ select.permissions, select.forums {
 select.permissions option, select.forums option {
   padding: 0.2em 0.8em;
 }
-table.user_groups {
-  width: 50%;
-  tr {
-    th {
-      font-size: 0.8em;
-      border: 1px dotted #ccc;
-      text-align: center;
-    }
-    td {
-      text-align: center;
-      border: 1px solid #ccc;
-    }
-  }
-}
 div.group_titles {
   border: 1px solid #ccc;
   margin: 5px 0px 5px 20px;
@@ -422,9 +386,6 @@ table.jstableform {
     background-repeat: no-repeat;
     background-position: center;
   }
-  input, textarea {
-    width: 100%;
-  }
   thead {
     font-weight: bold;
     .jstableform-type-boolean {
@@ -458,7 +419,6 @@ table.jstableform {
   }
 
   table input {
-    box-sizing: border-box;
     width: 100%;
   }
 
