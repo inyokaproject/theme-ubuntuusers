@@ -69,7 +69,7 @@
   </span>
   {%- if can_moderate %}
     <br />
-    <span class="linklist admin_link_hover"><span class="admin_link">
+    <span class="linklist admin_link_hover">
       <a href="{{ topic|url('split') }}"
          class="action action_split admin_link">{% trans %}Split{% endtrans %}</a> |
       <a href="{{ topic|url('move') }}"
@@ -351,7 +351,6 @@
          rel="nofollow" class="prev">{% trans %}« Previous topic{% endtrans %}</a>
       <a href="{{ href('forum', 'topic', topic.slug, 'next') }}"
          rel="nofollow" class="next">{% trans %}Next topic »{% endtrans %}</a>
-    </div>
     </div>
   </div>{# .pathbar #}
 {% endblock %}
