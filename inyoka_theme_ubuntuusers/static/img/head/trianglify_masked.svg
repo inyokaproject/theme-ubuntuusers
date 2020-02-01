@@ -11,7 +11,7 @@
    height="145.36182"
    version="1.1"
    id="svg730"
-   sodipodi:docname="trianglify_masked_path.svg"
+   sodipodi:docname="trianglify_masked.svg"
    inkscape:label="new"
    inkscape:version="0.92.4 5da689c313, 2019-01-14">
   <sodipodi:namedview
@@ -23,15 +23,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="986"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
      id="namedview372"
      showgrid="false"
-     inkscape:zoom="0.19602907"
-     inkscape:cx="1312.834"
-     inkscape:cy="169.71088"
+     inkscape:zoom="0.78411628"
+     inkscape:cx="1919.1099"
+     inkscape:cy="-38.802829"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg730" />
   <metadata
@@ -50,17 +50,18 @@
      id="defs734">
     <clipPath
        clipPathUnits="userSpaceOnUse"
-       id="clipPath1200">
+       id="clipPath1179">
       <path
-         style="display:inline;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.55044526px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 1997.6016,2.6582083 -61.259239,3.0963692 -61.405291,71.372104 C 8.2883663,78.346939 77.981215,85.321443 212.33035,81.676114 346.67948,78.03084 545.68537,63.765457 744.6898,49.500239 l -11.67639,0.316758 13.50095,-0.410229 c -0.6052,0.03134 -1.21947,0.06208 -1.82456,0.09347 l 448.6283,0.265239 c 141.9632,7.338218 283.9265,14.676382 417.9161,15.498381 133.9895,0.821943 260.0007,-4.871729 386.0162,-10.566006 z"
-         id="path1202"
+         inkscape:label="01-10"
          inkscape:connector-curvature="0"
-         inkscape:label="01-10" />
+         id="path1181"
+         d="M 1997.6016,2.6582083 -61.259239,3.0963692 -61.405291,71.372104 C 8.2883663,78.346939 77.981215,85.321443 212.33035,81.676114 346.67948,78.03084 598.17033,56.663986 744.6898,49.500239 c 146.51948,-7.163747 327.8296,0.179069 448.6283,0.265239 71.0764,0.04202 283.9265,14.676382 417.9161,15.498381 133.9895,0.821943 260.0007,-4.871729 386.0162,-10.566006 z"
+         style="display:inline;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.55044526px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="cccsscscc" />
     </clipPath>
   </defs>
   <g
-     clip-path="url(#clipPath1200)"
+     clip-path="url(#clipPath1179)"
      transform="matrix(1.8187384,0,0,1.8187384,111.68016,-4.8345856)"
      id="g1925">
     <path
