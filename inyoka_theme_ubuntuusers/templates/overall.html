@@ -70,11 +70,11 @@
     </a>
 
   <ul>
-    <noscript>
-      <li>
+    <li>
+      <noscript>
         <strong class="nojs error">{{ _('Please turn on JavaScript!') }}</strong>
-      </li>
-    </noscript>
+      </noscript>
+    </li>
     {% if USER.is_authenticated() %}
       <li>
         <a href="{{ href('portal', 'logout', next=CURRENT_URL) }}">
