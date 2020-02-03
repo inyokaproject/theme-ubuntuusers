@@ -149,12 +149,8 @@ table.comments {
       float: right;
     }
   }
-  tr:target {
-    td.comment {
-      div.commentinfo {
-        .table-header-alternative-target-gradient;
-      }
-    }
+  tr:target td.comment div.commentinfo {
+    background-color: @target-background;
   }
 }
 .action {
