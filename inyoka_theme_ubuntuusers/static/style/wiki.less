@@ -11,14 +11,6 @@
 
 @import 'fonts.less';
 
-.content {
-  counter-reset: nth-h2-section;
-  h2[id]::before { /* headings for boxes/tocs dont have an id-attribute */
-    counter-increment: nth-h2-section;
-    content: counter(nth-h2-section)'. ';
-  }
-}
-
 table:not([class]), table[class^="zebra"] {
   max-width: 100%;
   display: inline-block;
