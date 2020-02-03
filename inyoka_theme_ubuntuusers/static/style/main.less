@@ -318,10 +318,12 @@ form.-horizontal dl {
     grid-template-columns: 12em auto;
   }
 }
-blockquote {
+blockquote:not(:empty) {
   font-style: italic;
   padding-left: 0.4em;
   margin-left: 2em;
+  color: #333;
+  border-left: medium #8c8c8c solid;
 
   &::before {
     float: left;
@@ -959,7 +961,7 @@ p.badges {
 .message {
   margin-bottom: 0.6em;
   padding: 0.4em 0.8em;
-  background-color: @orange_d_medium;
+  background-color: #fff8d6;
   text-align: left;
   input {
     margin: 5px;
