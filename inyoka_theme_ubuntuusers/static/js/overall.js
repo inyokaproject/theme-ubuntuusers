@@ -11,7 +11,8 @@
 $(document).ready(function () {
   // add a hide message link to all flash messages
   $.each($('div.message'), function (i, elm) {
-    $(elm).prepend($('<a href="#" class="hide" />').click(function () {
+    var button = $('<button class="hide" aria-label="close"><span aria-hidden="true">×</span></button>');
+    $(elm).prepend(button.click(function () {
       if ($(this).parent().hasClass('global')) {
         $.post('/?__service__=portal.hide_global_message', {});
       }

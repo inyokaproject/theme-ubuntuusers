@@ -968,29 +968,31 @@ p.badges {
   input {
     margin: 5px;
   }
-  a.hide {
+  button.hide {
     float: right;
     display: block;
-    background-image: url(../img/hide.png);
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 16px;
-  }
-  a.hide:hover {
-    background-image: url(../img/message_fail.png);
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
+    background: none;
+    border: thin solid transparent;
+    border-radius: 1em;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 1.1em;
+
+    &:hover, &:focus {
+      border-color: initial;
+    }
   }
   ul {
     list-style: none;
   }
-}
-.message.fail {
-  background-color: @red_d_light;
-}
-.message.success {
-  background-color: @green_d_light;
+
+  &.fail {
+    background-color: @red_d_light;
+  }
+  &.success {
+    background-color: @green_d_light;
+  }
 }
 
 .hidden *, .hidden {
