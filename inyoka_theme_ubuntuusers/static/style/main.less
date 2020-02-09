@@ -725,26 +725,19 @@ table.syntaxtable {
   margin: 0;
 }
 
-button.navi_toggle_down, button.navi_toggle_up {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 24px;
-  height: 24px;
-  border: 0;
-  background-color: transparent;
-}
-button.navi_toggle_down {
-  background-image: url(../img/toggle_sidebar_down.png);
-}
-button.navi_toggle_up {
-  background-image: url(../img/toggle_sidebar_up.png);
-}
-button.navi_toggle_down:hover, button.navi_toggle_up:hover {
-  background-color: #F5DAC1;
-  border: 1px solid #E6A66B;
+button.navi_toggle {
+  border: thin solid transparent;
+  background: none;
   cursor: pointer;
+  width: 1.2em;
+  font-size: 2.2em;
+
+  &:hover, &:focus {
+    background-color: @navi_toggle-hover-background;
+    border-color: @navi_toggle-hover-border_color;
+  }
 }
+
 .navi_sidebar {
   .container {
     background-repeat: repeat-x;
