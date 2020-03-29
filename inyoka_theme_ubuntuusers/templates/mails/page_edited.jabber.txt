@@ -4,3 +4,4 @@ Der Benutzer „{{ rev_username }}“ hat die Wiki-Seite „{{ page_title }}“ 
 {%- endif %}
 Unterschiede: {{ diff_url }}
 Alle aktuellen Änderungen: {{ changes_url }}
+Aktuelle Version: {{ page_url }}
