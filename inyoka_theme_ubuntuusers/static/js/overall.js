@@ -344,6 +344,20 @@ $(document).ready(function () {
       $(":first-child th").eq($(this).index()+1).removeClass("hover");
     }
   });
+
+  // Warn users from leaving the page with unsaved form data
+  // https://github.com/inyokaproject/inyoka/issues/1036
+  window.addEventListener("beforeunload", function(event) {
+    // check if there is really something changed
+    if ($("#id_title").val() || $("#id_text").val()) {
+      // Cancel the event as stated by the standard.
+      event.preventDefault();
+      // Standard says we could change the shown message, but modern browsers ignore it anyway. So we don't even try.
+      return;
+    } else {
+      return;
+    }
+  });
 });
 
 String.prototype.htmlEscape = function () {
