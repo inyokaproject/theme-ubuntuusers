@@ -357,6 +357,9 @@ $(document).ready(function () {
       if (element.id !== 'id_override' && element.value !== element.defaultValue) {
         // Cancel the event as stated by the standard.
         event.preventDefault();
+        // Chrome requires returnValue to be set.
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event#Examples
+        event.returnValue = '';
         // Standard says we could change the shown message, but modern browsers ignore it anyway. So we don't even try.
         // And abort on first changed input field
         return;
