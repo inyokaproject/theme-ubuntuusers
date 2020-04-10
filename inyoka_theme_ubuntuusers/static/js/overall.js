@@ -172,20 +172,22 @@ $(document).ready(function () {
       return undefined;
     }
 
-    // check if there is really something changed
-    elements = Array.from(document.getElementsByTagName('input'));
-    elements = elements.concat(Array.from(document.getElementsByTagName('textarea')));
-    for (index in elements) {
-      element = elements[index];
-      // id_override has always a changed value.
-      if (element.id !== 'id_override' && element.value !== element.defaultValue) {
-        // Cancel the event as stated by the standard.
+    // check if input values changed
+    const elements = document.querySelectorAll('input, textarea');
+    for (const element of elements) {
+      let is_checkbox = element.attributes.getNamedItem('type');
+      is_checkbox = is_checkbox !== null && is_checkbox.value === 'checkbox';
+
+      const checkbox_changed = is_checkbox && element.checked !== element.defaultChecked;
+      const field_changed = (!is_checkbox) && element.value !== element.defaultValue;
+
+      if (checkbox_changed || field_changed) {
+        // Cancel the event.
         event.preventDefault();
         // Chrome requires returnValue to be set.
         // https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event#Examples
         event.returnValue = '';
-        // Standard says we could change the shown message, but modern browsers ignore it anyway. So we don't even try.
-        // And abort on first changed input field
+        // abort on first changed input field
         return;
       }
     }
