@@ -292,6 +292,11 @@
                ({% trans %}last edited:{% endtrans %} {{ post.revisions.latest('store_date').store_date|datetime }})
               {% endif %}
             </div>
+            {% if post.hidden and post.author_id == USER.id %}
+            <div class="postinfo">
+              {% trans %}This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators.{% endtrans %}
+            </div>
+            {% endif %}
             {% if can_moderate %}
               <div class="splitinfo admin_link">
                 {% trans %}Split:{% endtrans %}

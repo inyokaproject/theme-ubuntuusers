@@ -1980,3 +1980,5 @@ msgstr ""
 msgid "“%(name)s” is no member of any group."
 msgstr ""
 
+msgid "This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators."
+msgstr ""
