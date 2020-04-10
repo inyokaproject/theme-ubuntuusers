@@ -349,13 +349,18 @@ $(document).ready(function () {
   // https://github.com/inyokaproject/inyoka/issues/1036
   window.addEventListener("beforeunload", function(event) {
     // check if there is really something changed
-    if ($("#id_title").val() || $("#id_text").val()) {
-      // Cancel the event as stated by the standard.
-      event.preventDefault();
-      // Standard says we could change the shown message, but modern browsers ignore it anyway. So we don't even try.
-      return;
-    } else {
-      return;
+    elements = Array.from(document.getElementsByTagName('input'));
+    elements = elements.concat(Array.from(document.getElementsByTagName('textarea')));
+    for (index in elements) {
+      element = elements[index];
+      // id_override has always a changed value.
+      if (element.id !== 'id_override' && element.value !== element.defaultValue) {
+        // Cancel the event as stated by the standard.
+        event.preventDefault();
+        // Standard says we could change the shown message, but modern browsers ignore it anyway. So we don't even try.
+        // And abort on first changed input field
+        return;
+      }
     }
   });
 });
