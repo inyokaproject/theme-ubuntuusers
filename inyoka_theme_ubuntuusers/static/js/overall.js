@@ -173,15 +173,22 @@ $(document).ready(function () {
     }
 
     // check if input values changed
-    const elements = document.querySelectorAll('input, textarea');
+    const elements = document.querySelectorAll('input, select, textarea');
     for (const element of elements) {
       let is_checkbox = element.attributes.getNamedItem('type');
       is_checkbox = is_checkbox !== null && is_checkbox.value === 'checkbox';
 
-      const checkbox_changed = is_checkbox && element.checked !== element.defaultChecked;
-      const field_changed = (!is_checkbox) && element.value !== element.defaultValue;
+      let selector_changed = false;
+      const is_select = element.tagName === 'SELECT';
+      if (is_select) {
+        let selected = element.querySelector('option[selected]');
+        selector_changed = selected !== null && selected.value !== element.value;
+      }
 
-      if (checkbox_changed || field_changed) {
+      const checkbox_changed = is_checkbox && element.checked !== element.defaultChecked;
+      const field_changed = (!is_checkbox) && !(is_select) && element.value !== element.defaultValue;
+
+      if (checkbox_changed || selector_changed || field_changed) {
         // Cancel the event.
         event.preventDefault();
         // Chrome requires returnValue to be set.
