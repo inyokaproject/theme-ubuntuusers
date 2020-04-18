@@ -1,14 +1,14 @@
 # Translations template for Inyoka Project.
-# Copyright (C) 2019 Inyoka Team (see AUTHORS)
+# Copyright (C) 2020 Inyoka Team (see AUTHORS)
 # This file is distributed under the same license as the Inyoka Project project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.18.0\n"
+"Project-Id-Version: Inyoka Project v0.21.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-12 20:37+0200\n"
+"POT-Creation-Date: 2020-01-30 21:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,10 +80,6 @@ msgid "%(registered)s Registered user"
 msgid_plural "%(registered)s Registered users"
 msgstr[0] ""
 msgstr[1] ""
-
-#, python-format
-msgid "%(subject)s from %(author)s"
-msgstr ""
 
 msgid "(De)select all"
 msgstr ""
@@ -197,9 +193,6 @@ msgstr ""
 msgid "An internal error occurred. The administration was already notified."
 msgstr ""
 
-msgid "Applications"
-msgstr ""
-
 msgid "Archive"
 msgstr ""
 
@@ -234,9 +227,6 @@ msgstr ""
 msgid "Article suggestions"
 msgstr ""
 
-msgid "Article:"
-msgstr ""
-
 msgid "Assign to me"
 msgstr ""
 
@@ -253,9 +243,6 @@ msgid "Attach to old topic"
 msgstr ""
 
 msgid "Attachment:"
-msgstr ""
-
-msgid "Attachments"
 msgstr ""
 
 msgid "Attachments:"
@@ -694,9 +681,6 @@ msgstr ""
 msgid "Forum read"
 msgstr ""
 
-msgid "Forum:"
-msgstr ""
-
 msgid "Forward"
 msgstr ""
 
@@ -884,10 +868,16 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
+msgid "Link Map"
+msgstr ""
+
 msgid "Link discussion"
 msgstr ""
 
 msgid "Link to this post"
+msgstr ""
+
+msgid "Linkmap"
 msgstr ""
 
 msgid "List of new articles"
@@ -912,13 +902,6 @@ msgstr ""
 
 #, python-format
 msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
-msgstr ""
-
-#, python-format
-msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If you didn’t received that mail, you can <a href=\"%(resend)s\">request a new one</a>. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
-msgstr ""
-
-msgid "Logout"
 msgstr ""
 
 #, python-format
@@ -987,13 +970,6 @@ msgstr ""
 msgid "Members with green usernames belong to the team."
 msgstr ""
 
-#, python-format
-msgid "Message from %(name)s"
-msgstr ""
-
-msgid "Messages"
-msgstr ""
-
 msgid "Metadata"
 msgstr ""
 
@@ -1001,9 +977,6 @@ msgid "Missing Pages"
 msgstr ""
 
 msgid "Missing article"
-msgstr ""
-
-msgid "More"
 msgstr ""
 
 #, python-format
@@ -1039,9 +1012,6 @@ msgid "New article"
 msgstr ""
 
 msgid "New attachment:"
-msgstr ""
-
-msgid "New comment"
 msgstr ""
 
 msgid "New forum of the topic:"
@@ -1175,12 +1145,6 @@ msgid "Please be patient. It could take a while, until we approve your suggestio
 msgstr ""
 
 msgid "Please click on the link in the topic, there are too much topics to list all of them here."
-msgstr ""
-
-msgid "Please enter the string which was sent to you by email below:"
-msgstr ""
-
-msgid "Please install at least Internet Explorer 8."
 msgstr ""
 
 #, python-format
@@ -1365,9 +1329,6 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-msgid "Send"
-msgstr ""
-
 msgid "Send mail"
 msgstr ""
 
@@ -1434,7 +1395,10 @@ msgstr ""
 msgid "Sites under construction"
 msgstr ""
 
-msgid "URL of the topic:"
+msgid "Skip to main content"
+msgstr ""
+
+msgid "Skip to sidebar"
 msgstr ""
 
 msgid "Solved"
@@ -1478,12 +1442,6 @@ msgid "Status:"
 msgstr ""
 
 msgid "Sticky:"
-msgstr ""
-
-msgid "Stylesheets"
-msgstr ""
-
-msgid "Subforums"
 msgstr ""
 
 msgid "Subforums:"
@@ -1625,6 +1583,9 @@ msgid_plural "The group “%(name)s” has %(count)s members:"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "The keyword <code>PAGE</code> in a link will be replaced by the user defined value. Otherwise the user value will be appended."
+msgstr ""
+
 #, python-format
 msgid "The poll was started on %(start_date)s and it ended on %(end_date)s."
 msgstr ""
@@ -1635,6 +1596,9 @@ msgstr ""
 
 #, python-format
 msgid "The signature will be appended to every post. It cannot contain more than %(n)s characters. Please follow the <a href=\"%(link)s\">signature rules</a>."
+msgstr ""
+
+msgid "The tokens <code>attachment</code> and <code>user</code> are hardcoded into Inyoka."
 msgstr ""
 
 msgid "The two revisions are identical."
@@ -1678,6 +1642,9 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "There is no article."
+msgstr ""
+
+msgid "This Page lets you edit, delete and add external link shortcuts. The icons should be of the size 14px x 14px."
 msgstr ""
 
 msgid "This article is an orphan and not referenced by any site."
@@ -1729,13 +1696,7 @@ msgstr ""
 msgid "To be always up to date you can read the <a href=\"%(feed_link)s\">atom feed</a> or <a href=\"%(subscribe_link)s\">subscribe</a>."
 msgstr ""
 
-msgid "To classic version"
-msgstr ""
-
 msgid "To deactivate your account, you need to enter your password."
-msgstr ""
-
-msgid "To mobile version"
 msgstr ""
 
 msgid "To refer to an attachment you can either link to the corresponding wiki page or include it with the <code>[[Bild()]]</code> macro."
@@ -1745,12 +1706,6 @@ msgid "To:"
 msgstr ""
 
 msgid "Topic"
-msgstr ""
-
-msgid "Topic:"
-msgstr ""
-
-msgid "Topics"
 msgstr ""
 
 #, python-format
@@ -1764,6 +1719,9 @@ msgid "Trash"
 msgstr ""
 
 msgid "Turn admin links on/off"
+msgstr ""
+
+msgid "URL of the topic:"
 msgstr ""
 
 msgid "URL:"
@@ -1815,9 +1773,6 @@ msgid "User"
 msgstr ""
 
 msgid "User page"
-msgstr ""
-
-msgid "User:"
 msgstr ""
 
 msgid "Username"
@@ -1875,9 +1830,6 @@ msgstr ""
 msgid "Wiki articles tagged with \"%(tag)s\""
 msgstr ""
 
-msgid "Wiki page:"
-msgstr ""
-
 #, python-format
 msgid "With this form you can create a new wiki article that covers f.e. the usage of a program. If you need support by a specific problem, open a new thread in the <a href=\"%(forum_link)s\">forum</a>."
 msgstr ""
@@ -1927,14 +1879,11 @@ msgstr ""
 msgid "You can deactivate your account “%(name)s” here. By doing this, we will remove all your personal data. All your forum posts and wiki articles will remain."
 msgstr ""
 
-msgid "You can edit here the stylesheet which is responsibly for formatting the syntax elements. It is included on all pages. Please do only add already tested stylesheets, otherwise all users will get a corrupt stylesheet."
-msgstr ""
-
 #, python-format
 msgid "You can login here if you are already <a href=\"%(register)s\">registered</a>. If you lost your password, you can <a href=\"%(lost_password)s\">request a new one</a>."
 msgstr ""
 
-msgid "You can reset your email address here if you changed it accidently."
+msgid "You can reset your email address here if you changed it accidentally."
 msgstr ""
 
 msgid "You can restore your account here if you deleted it. Please note that this is only possible one month after the deletion."
@@ -2019,9 +1968,6 @@ msgstr ""
 
 #, python-format
 msgid "| Hidden by: <a href=\"%(link)s\">%(name)s</a>"
-msgstr ""
-
-msgid "« Back"
 msgstr ""
 
 msgid "« Previous"

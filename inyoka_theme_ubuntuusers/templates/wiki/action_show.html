@@ -5,7 +5,7 @@
     This template is used to show a page of the most recent revision or
     of a specific revision.
 
-    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 
@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block wiki_content %}
-  <h1 class="pagetitle"><a href="{{ page|url('backlinks')|e }}">{{ page.short_title|e }}</a></h1>
+  <h1 class="pagetitle">{{ page.short_title|e }}</h1>
 
   {% if page.rev.attachment %}
     <div id="attachment">{{ page.rev.attachment.html_representation }}</div>

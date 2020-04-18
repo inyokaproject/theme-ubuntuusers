@@ -4,7 +4,7 @@
 
     Show a single ikhaya article.
 
-    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'ikhaya/page.html' %}
@@ -22,7 +22,7 @@
 
 
 {% macro user_column(user) %}
-  <td class="author"{%- if user.id == USER.id %} style="background-color: #F6F4EF"{%- endif %}>
+  <td class="author{% if user.id == USER.id %} -own{%- endif %}">
     <p class="username{% if not user.is_active %} inactive{% endif %}">
       <a href="{{ user|url }}">{{ user.username|e }}</a>
       {%- if user.primary_group_id and user.primary_group.icon %}
@@ -80,7 +80,7 @@
           {%- else %}
             <tr id="comment_{{ loop.index }}" class="admin_link_hover{% if comment.deleted %} hidden{% endif %}">
               {{ user_column(comment.author) }}
-              <td class="comment"{% if comment.author == USER %} style="background-color: #F8F6F1"{% endif %}>
+              <td class="comment{% if comment.author == USER %} -own{% endif %}">
                 <div class="commentinfo">
                   <div class="linklist">
                     {# TODO: remove "can_admin_comment" if revision for comments is built in #}

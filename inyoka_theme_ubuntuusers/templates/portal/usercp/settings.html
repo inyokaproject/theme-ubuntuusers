@@ -4,7 +4,7 @@
 
     This page shows the user control panel settings page.
 
-    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 
@@ -40,6 +40,12 @@
         {{ form.hide_profile }}
         <label for="id_hide_profile">{{ form.hide_profile.label }}</label>
         {{ form.errors.hide_profile }}
+      </dd>
+      <dd>
+        {{ form.reduce_motion }}
+        <label for="id_reduce_motion">{{ form.reduce_motion.label }}</label>
+        <span class="note">{{ form.reduce_motion.help_text }}</span>
+        {{ form.errors.reduce_motion }}
       </dd>
       <dt>Forum</dt>
       <dd>

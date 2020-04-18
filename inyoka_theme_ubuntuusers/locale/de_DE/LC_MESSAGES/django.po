@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-12 20:37+0200\n"
+"POT-Creation-Date: 2020-01-30 21:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -81,10 +81,6 @@ msgid "%(registered)s Registered user"
 msgid_plural "%(registered)s Registered users"
 msgstr[0] "%(registered)s Registrierte Benutzer"
 msgstr[1] "%(registered)s Registrierte Benutzer"
-
-#, python-format
-msgid "%(subject)s from %(author)s"
-msgstr "%(subject)s von %(author)s"
 
 msgid "(De)select all"
 msgstr "Alle an- / abwählen"
@@ -198,9 +194,6 @@ msgstr "Mehrere Antworten erlauben"
 msgid "An internal error occurred. The administration was already notified."
 msgstr "Ein interner Fehler ist aufgetreten. Die Administratoren wurden bereits benachrichtigt."
 
-msgid "Applications"
-msgstr "Anwendungen"
-
 msgid "Archive"
 msgstr "Archiv"
 
@@ -235,9 +228,6 @@ msgstr "Artikelideen"
 msgid "Article suggestions"
 msgstr "Artikelvorschläge"
 
-msgid "Article:"
-msgstr "Artikel:"
-
 msgid "Assign to me"
 msgstr "Mir zuweisen"
 
@@ -255,9 +245,6 @@ msgstr "An bestehendes Thema anhängen"
 
 msgid "Attachment:"
 msgstr "Anlage:"
-
-msgid "Attachments"
-msgstr "Anhänge"
 
 msgid "Attachments:"
 msgstr "Anhänge:"
@@ -695,9 +682,6 @@ msgstr "Forum des neuen Themas:"
 msgid "Forum read"
 msgstr "Forum gelesen"
 
-msgid "Forum:"
-msgstr "Forum:"
-
 msgid "Forward"
 msgstr "Weiterleiten"
 
@@ -885,11 +869,17 @@ msgstr "Legende:"
 msgid "Link"
 msgstr "Link"
 
+msgid "Link Map"
+msgstr "Link Map"
+
 msgid "Link discussion"
 msgstr "Diskussion verlinken"
 
 msgid "Link to this post"
 msgstr "Permalink zu diesem Beitrag"
+
+msgid "Linkmap"
+msgstr "Linkmap"
 
 msgid "List of new articles"
 msgstr "Liste neuer Artikel"
@@ -914,13 +904,6 @@ msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derz
 #, python-format
 msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
 msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit inaktiv ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink in der Bestätigungsmail, die dir nach der Registrierung zugeschickt wurde, nicht aufgerufen hast. Falls es weiterhin nicht funktioniert, schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>"
-
-#, python-format
-msgid "Login failed because the user “%(name)s” is inactive. You probably didn’t click on the link in the activation mail which was sent to you after your registration. If you didn’t received that mail, you can <a href=\"%(resend)s\">request a new one</a>. If it is still not working, contact us: <a href=\"%(mailto)s\">%(mail)s</a>"
-msgstr "Du konntest nicht angemeldet werden, da der Benutzer „%(name)s“ derzeit inaktiv ist. Das liegt wahrscheinlich daran, dass du den Aktivierungslink in der Bestätigungsmail, die dir nach der Registrierung zugeschickt wurde, nicht aufgerufen hast. Solltest du diese Mail nicht bekommen haben, kannst du sie <a href=\"%(resend)s\">erneut anfordern</a>. Falls es weiterhin nicht funktioniert, schreibe bitte eine Nachricht an <a href=\"%(mailto)s\">%(mail)s</a>"
-
-msgid "Logout"
-msgstr "Abmelden"
 
 #, python-format
 msgid "Logout [%(user)s]"
@@ -988,13 +971,6 @@ msgstr "Mitglieder"
 msgid "Members with green usernames belong to the team."
 msgstr "Benutzer mit grünem Benutzernamen gehören zum Team."
 
-#, python-format
-msgid "Message from %(name)s"
-msgstr "Nachricht von %(name)s"
-
-msgid "Messages"
-msgstr "Private Nachrichten"
-
 msgid "Metadata"
 msgstr "Metadaten"
 
@@ -1003,9 +979,6 @@ msgstr "Fehlende Artikel"
 
 msgid "Missing article"
 msgstr "Fehlender Artikel"
-
-msgid "More"
-msgstr "Mehr"
 
 #, python-format
 msgid "Most users ever online was %(record)s on %(time)s."
@@ -1041,9 +1014,6 @@ msgstr "Neuer Artikel"
 
 msgid "New attachment:"
 msgstr "Neuer Anhang:"
-
-msgid "New comment"
-msgstr "Neuer Kommentar"
 
 msgid "New forum of the topic:"
 msgstr "Neues Forum des Themas:"
@@ -1177,12 +1147,6 @@ msgstr "Bitte habe ein wenig Geduld mit der Bearbeitung. Es kann etwas dauern, b
 
 msgid "Please click on the link in the topic, there are too much topics to list all of them here."
 msgstr "Bitte im Thema auf den Link klicken, es gibt zu viele Themen um sie alle hier aufzulisten."
-
-msgid "Please enter the string which was sent to you by email below:"
-msgstr "Bitte gib die Zeichenkette, welche dir per E-Mail zugesandt wurde, hier ein:"
-
-msgid "Please install at least Internet Explorer 8."
-msgstr "Bitte installiere den Internet Explorer 8 oder neuer."
 
 #, python-format
 msgid "Please note that the maximum size for the avatar is %(width)sx%(height)s pixels and %(size)s KiB. Everything that exceeds this limit will automatically be resized."
@@ -1366,9 +1330,6 @@ msgstr "Suche"
 msgid "Select"
 msgstr "Auswählen"
 
-msgid "Send"
-msgstr "Senden"
-
 msgid "Send mail"
 msgstr "E-Mail absenden"
 
@@ -1435,8 +1396,11 @@ msgstr "Signatur"
 msgid "Sites under construction"
 msgstr "Baustellen"
 
-msgid "URL of the topic:"
-msgstr "URL des Themas:"
+msgid "Skip to main content"
+msgstr "Zum Hauptinhalt springen"
+
+msgid "Skip to sidebar"
+msgstr "Zur Seitenleiste springen"
 
 msgid "Solved"
 msgstr "Gelöst"
@@ -1480,12 +1444,6 @@ msgstr "Status:"
 
 msgid "Sticky:"
 msgstr "Wichtig:"
-
-msgid "Stylesheets"
-msgstr "Stylesheets"
-
-msgid "Subforums"
-msgstr "Unterforen"
 
 msgid "Subforums:"
 msgstr "Unterforen:"
@@ -1626,6 +1584,9 @@ msgid_plural "The group “%(name)s” has %(count)s members:"
 msgstr[0] "Die Gruppe „%(name)s“ hat %(count)s Mitglied:"
 msgstr[1] "Die Gruppe „%(name)s“ hat %(count)s Mitglieder:"
 
+msgid "The keyword <code>PAGE</code> in a link will be replaced by the user defined value. Otherwise the user value will be appended."
+msgstr "<code>PAGE</code> in einem Link wird durch die Nutzereingabe ersetzt. Ansonsten wird diese an den Link hinten angehängt."
+
 #, python-format
 msgid "The poll was started on %(start_date)s and it ended on %(end_date)s."
 msgstr "Die Umfrage wurde am %(start_date)s gestartet und endete am %(end_date)s."
@@ -1637,6 +1598,9 @@ msgstr "Die Umfrage wurde am %(start_date)s gestartet und wird am %(end_date)s e
 #, python-format
 msgid "The signature will be appended to every post. It cannot contain more than %(n)s characters. Please follow the <a href=\"%(link)s\">signature rules</a>."
 msgstr "Die Signatur wird an jeden Beitrag angehängt. Sie kann nicht länger als %(n)s Zeichen sein. Bitte beachte die <a href=\"%(link)s\">Signaturregeln</a>."
+
+msgid "The tokens <code>attachment</code> and <code>user</code> are hardcoded into Inyoka."
+msgstr "Die Kürzel <code>attachment</code> und <code>user</code> sind fest in Inyoka integriert."
 
 msgid "The two revisions are identical."
 msgstr "Die beiden Revisionen sind identisch."
@@ -1680,6 +1644,9 @@ msgstr[1] "Diese Seite hat aktuell %(count)s Anhänge."
 
 msgid "There is no article."
 msgstr "Es gibt keinen Artikel."
+
+msgid "This Page lets you edit, delete and add external link shortcuts. The icons should be of the size 14px x 14px."
+msgstr "Über diese Seite können Interwikilinks bearbeitet, hinzugefügt und gelöscht werden. Icons sollten die Größe 14px x 14px haben."
 
 msgid "This article is an orphan and not referenced by any site."
 msgstr "Dieser Artikel ist verwaist und von keiner Seite referenziert."
@@ -1730,14 +1697,8 @@ msgstr "An"
 msgid "To be always up to date you can read the <a href=\"%(feed_link)s\">atom feed</a> or <a href=\"%(subscribe_link)s\">subscribe</a>."
 msgstr "Um immer auf dem aktuellen Stand zu sein, kannst du den <a href=\"%(feed_link)s\">Atom Feed</a> lesen oder <a href=\"%(subscribe_link)s\">abonnieren</a>."
 
-msgid "To classic version"
-msgstr "Zur klassischen Version"
-
 msgid "To deactivate your account, you need to enter your password."
 msgstr "Bitte gib dein Passwort ein, um dein Konto zu deaktivieren."
-
-msgid "To mobile version"
-msgstr "Zur mobilen Version"
 
 msgid "To refer to an attachment you can either link to the corresponding wiki page or include it with the <code>[[Bild()]]</code> macro."
 msgstr "Um auf einen Anhang zu verweisen, kannst du entweder zu der entsprechenden Wikiseite verlinken oder diese mit dem <code>[[Bild()]]</code> Makro einbinden."
@@ -1747,12 +1708,6 @@ msgstr "An:"
 
 msgid "Topic"
 msgstr "Thema"
-
-msgid "Topic:"
-msgstr "Thema:"
-
-msgid "Topics"
-msgstr "Themen"
 
 #, python-format
 msgid "Topics: <strong>%(n)s</strong>"
@@ -1766,6 +1721,9 @@ msgstr "Papierkorb"
 
 msgid "Turn admin links on/off"
 msgstr "Adminlinks ein/aus"
+
+msgid "URL of the topic:"
+msgstr "URL des Themas:"
 
 msgid "URL:"
 msgstr "URL:"
@@ -1817,9 +1775,6 @@ msgstr "Benutzer"
 
 msgid "User page"
 msgstr "Benutzerseite"
-
-msgid "User:"
-msgstr "Benutzer:"
 
 msgid "Username"
 msgstr "Benutzername"
@@ -1876,9 +1831,6 @@ msgstr "Durch Tags kann man einem Wiki-Artikel Schlagworte hinzufügen. Die nach
 msgid "Wiki articles tagged with \"%(tag)s\""
 msgstr "Wikiartikel mit dem Tag \"%(tag)s\""
 
-msgid "Wiki page:"
-msgstr "Wikiseite:"
-
 #, python-format
 msgid "With this form you can create a new wiki article that covers f.e. the usage of a program. If you need support by a specific problem, open a new thread in the <a href=\"%(forum_link)s\">forum</a>."
 msgstr "Mit Hilfe der folgenden Maske kannst du einen neuen Wikiartikel (z.B. für ein Programm, zur Nutzung von Systemkomponenten etc.) anlegen. Falls du eine Supportanfrage hast, ist <a href=\"%(forum_link)s\">das Forum</a> der richtige Platz."
@@ -1928,15 +1880,12 @@ msgstr "Du kannst ein Thema als Diskussionsthema dieses Artikels wählen."
 msgid "You can deactivate your account “%(name)s” here. By doing this, we will remove all your personal data. All your forum posts and wiki articles will remain."
 msgstr "Du kannst hier dein Konto „%(name)s“ deaktivieren. Wenn du das tust, werden wir alle deine persönlichen Daten löschen. Forenbeiträge und Wikiartikel werden allerdings erhalten bleiben."
 
-msgid "You can edit here the stylesheet which is responsibly for formatting the syntax elements. It is included on all pages. Please do only add already tested stylesheets, otherwise all users will get a corrupt stylesheet."
-msgstr "Hier kannst du das Stylesheet bearbeiten, das für die Formatierung von Syntax-Elementen zuständig ist. Es wird auf allen Seiten eingebunden. Bitte trage hier nur Styles ein, die du schon vorher getestet hast, da sonst alle Nutzer ein möglicherweise fehlerhaftes Stylesheet sehen."
-
 #, python-format
 msgid "You can login here if you are already <a href=\"%(register)s\">registered</a>. If you lost your password, you can <a href=\"%(lost_password)s\">request a new one</a>."
 msgstr "Du kannst dich hier anmelden, wenn du bereits <a href=\"%(register)s\">registriert bist</a>. Falls du dein Passwort vergessen hast, kannst du dir <a href=\"%(lost_password)s\">ein neues zusenden lassen</a>."
 
-msgid "You can reset your email address here if you changed it accidently."
-msgstr "Du kannst hier deine E-Mail Adresse zurücksetzen, falls du sie versehentlich geändert hast."
+msgid "You can reset your email address here if you changed it accidentally."
+msgstr "Du kannst hier deine E-Mail-Adresse zurücksetzen, falls du sie aus Versehen geändert hast."
 
 msgid "You can restore your account here if you deleted it. Please note that this is only possible one month after the deletion."
 msgstr "Du kannst hier dein Konto wiedeherstellen, falls du es gelöscht hast. Bitte beachte, dass dies maximal einen Monat nach der Löschung möglich ist."
@@ -2022,9 +1971,6 @@ msgstr "Anhang hochladen"
 msgid "| Hidden by: <a href=\"%(link)s\">%(name)s</a>"
 msgstr "| Verborgen von: <a href=\"%(link)s\">%(name)s</a>"
 
-msgid "« Back"
-msgstr "« Zurück"
-
 msgid "« Previous"
 msgstr "« Zurück"
 
@@ -2034,4 +1980,3 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
-

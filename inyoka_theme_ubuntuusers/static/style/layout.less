@@ -2,7 +2,7 @@
  * style.layout
  * ~~~~~~~~~~~~
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -38,30 +38,30 @@
 }
 
 /*
- * Gradient-mixins
+ * Gradient-mixins (Legacy)
  */
 .gradient(@from: #ccc, @to: #000, @default: #999) {
   background: repeat-x @default; /* fallback */
   background: linear-gradient(to bottom,  @from,  @to);
 }
 
-.table-header-gradient(@from: #f4e7ce, @to: #e8c989,
-    @default: #e6c784 url(../img/table-header.png)) {
+.table-header-gradient(@from: #2B2929, @to: #2B2929,
+    @default: #2B2929) {
   .gradient(@from, @to, @default);
 }
 
-.table-header-alternative-gradient(@from: #e0e0e0, @to: #cacaca,
-    @default: #d9d9d9 url(../img/table-header-alternative.png)) {
+.table-header-alternative-gradient(@from: #EAECEE, @to: #EAECEE,
+    @default: #EAECEE) {
   .gradient(@from, @to, @default);
 }
 
-.table-header-alternative-solved-gradient(@from: #cfefcf, @to: #ace3ac,
-    @default: #c4ebc4 url(../img/table-header-alternative-solved.png)) {
+.table-header-alternative-solved-gradient(@from: #3EB34F, @to: #3EB34F,
+    @default: #3EB34F) {
   .gradient(@from, @to, @default);
 }
 
-.table-header-alternative-target-gradient(@from: #f9f1bd, @to: #f7eb95,
-    @default: #f7eb95 url(../img/table-header-alternative-target.png)) {
+.table-header-alternative-target-gradient(@from: #E95420, @to: #E95420,
+    @default: #E95420) {
   .gradient(@from, @to, @default);
 }
 
@@ -78,4 +78,11 @@
   /* reset margin and padding */
   padding: 0;
   margin: 0;
+}
+
+.horizontal-space-big-width() {
+  @media(min-width: @big-width) {
+    padding-left: calc(@h_space + @body-innerspace);
+    padding-right: calc(@h_space + @body-innerspace);
+  }
 }

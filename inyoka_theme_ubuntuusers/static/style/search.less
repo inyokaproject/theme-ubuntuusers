@@ -4,15 +4,13 @@
  *
  * Some hacky style-definitions for the search-field.
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'fonts.less';
 
 form.search {
-  float:right;
-
   a {
     text-decoration: none;
     color: inherit;
@@ -25,9 +23,7 @@ form.search {
 
   .search_query { /* text-input-field for the search-words */
     font-family: @font-content;
-    border: solid 1px #888;
-    background-color: #fefefe;
-    width: 10.0em;
+    max-width: 15em;
 
     background-image: url(../img/icons/small/portal.png);
     background-repeat: no-repeat;
@@ -37,11 +33,9 @@ form.search {
 
   input[type=submit] {
     background: url(../img/search.png);
-    background-color: #eee;
     color:#333333;
     background-repeat: no-repeat;
     background-position: left center;
-    padding: 0px;
     padding-left: 18px;
     &:hover {
       background-color:#FFFFFF;
@@ -50,7 +44,7 @@ form.search {
 
   .search_expander { /* little down-arrow at the righbottom of the search-location-selector (→ just eyecandy) */
     cursor: pointer;
-    margin-top: -20px;
+    margin-top: -25px;
     position: absolute;
     background-image: url(../img/search_expander.png);
     background-position: 11px 13px;
@@ -84,7 +78,8 @@ form.search {
 }
 
 form.search ul.search_area li.area_wiki, .search input.area_wiki {
-  background-image: url(../img/icons/small/wiki.png);
+  background-image: url(../img/wiki.svg);
+  background-size: 16px 16px;
 }
 form.search ul.search_area li.area_forum, .search input.area_forum {
   background-image: url(../img/icons/small/forum.png);

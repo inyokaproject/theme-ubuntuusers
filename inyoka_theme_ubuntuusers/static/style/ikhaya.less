@@ -4,7 +4,7 @@
  *
  * The styles for Ikhaya.
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -37,9 +37,6 @@ ul.articles {
   hr {
     clear: right;
   }
-  div.text {
-    margin: 0 0.5em;
-  }
   .image-right {
     float: right;
     clear: none !important;
@@ -52,26 +49,14 @@ ul.articles {
 h2, h3, h4 {
   color: #444;
 }
-h2, h3 {
-  border-bottom: 1px solid #e0c99d;
-}
-h3.title {
-  margin: 0.3em 0 0.3em 0em;
-  padding-left: 0.4em;
-  a {
-    color: #673B1A;
-    text-decoration: none;
-  }
-}
 
 div.intro {
-  margin: 0 1.5em;
-  font-style: italic;
+  font-size: 1.1em;
 }
 p.meta {
   color: #666;
   font-size: 0.9em;
-  padding: 0.4em;
+  padding: 0.4em 0;
   overflow: auto;
   clear: right;
 }
@@ -107,9 +92,16 @@ table.comments {
 
   td.author {
     vertical-align: top;
-    background: #eeeeee;
+    background: @grey_dark;
     border-right: 1px solid #cccccc;
-    width: 150px;
+    width: 8em;
+    @media (min-width: @medium-width) {
+      width: 150px;
+    }
+
+    &.-own {
+      border-right-color: @own-post-border;
+    }
 
     p {
       margin: 2px 0 5px 0;
@@ -146,7 +138,7 @@ table.comments {
       overflow: auto;
     }
     .commentinfo {
-      .table-header-alternative-gradient;
+      background: @grey_dark;
       font-size: 0.9em;
       margin: -10px;
       margin-bottom: 10px;
@@ -157,12 +149,8 @@ table.comments {
       float: right;
     }
   }
-  tr:target {
-    td.comment {
-      div.commentinfo {
-        .table-header-alternative-target-gradient;
-      }
-    }
+  tr:target td.comment div.commentinfo {
+    background-color: @target-background;
   }
 }
 .action {
@@ -267,9 +255,4 @@ div.preview_wrapper {
   h2.title {
     padding-bottom: 10px;
   }
-}
-
-/* fix too wide text-inputs with Emojis in Firefox 64 */
-input[type="text"] {
-    width: 100%;
 }

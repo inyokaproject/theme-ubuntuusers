@@ -4,7 +4,7 @@
  *
  * The style for the javascript-based wiki syntax editor.
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -22,25 +22,21 @@ p.ubuntu_version {
 }
 ul.toolbar {
   margin: 0.5em 0 0.2em 0;
-  padding: 0px;
-  padding-left: 1px !important;
-  list-style: none;
-  height: 32px;
-  line-height: 28px;
+  padding-left: 1px;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
-  position: relative;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  > li {
+    min-height: 28px;
+  }
   li {
-    float: left;
-    margin: 0;
-    padding: 2px 1px 2px 1px;
+    padding: 2px 1px;
     a.button {
       display: block;
       width: 26px;
       height: 26px;
-      background-position: center center;
       background-repeat: no-repeat;
       border: 1px solid #ddd;
       span {
@@ -56,7 +52,7 @@ ul.toolbar {
       border: 1px solid #888;
     }
     select {
-      margin: 0 4px 0 4px;
+      height: 100%;
       option.title {
         font-weight: bold;
         background-color: #eee;
@@ -159,10 +155,6 @@ ul.toolbar {
         padding: 0;
         border: 1px solid white;
       }
-    }
-    span.syntax_help {
-      position: absolute;
-      right: 5px;
     }
     span.toolbar_help {
       text-align: center;

@@ -5,17 +5,33 @@
  * The style for the wiki. This does not include styles for wiki markup
  * because that one can appear outside of the wiki.
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'fonts.less';
 
-table:not([class]) {
+table:not([class]), table[class^="zebra"] {
   max-width: 100%;
   display: inline-block;
   overflow-x: auto;
   border: none;
+
+  /* show gradient on side, if table is too wide and thus scrollable
+     see https://codepen.io/smashing-magazine/embed/mvrVpB
+     https://www.smashingmagazine.com/2019/01/table-design-patterns-web/
+     http://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+     http://lea.verou.me/2012/04/background-attachment-local/
+  */
+  background:
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-attachment: local, local, scroll, scroll;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-repeat: no-repeat;
+  background-size: 2.5rem 100%, 2.5rem 100%, 0.875rem 100%, 0.875rem 100%;
 }
 
 .navi_sidebar {
@@ -27,25 +43,10 @@ table:not([class]) {
   }
 }
 
-h1.pagetitle {
-  color: #a57205;
-  margin: 0.2em 0 0.5em 0;
-}
-h1.pagetitle {
-  a {
-    color: #b58215;
-    text-decoration: none;
-  }
-}
-h2 {
-  border-bottom: 1px solid #e0c99d;
-}
 h2, h3, h4 {
   margin-top: 1.4em;
 }
 #page, .preview {
-  line-height: 1.5em;
-  font-size: 1em;
   margin: 0;
   a img {
     vertical-align: middle;
@@ -67,10 +68,6 @@ p.meta {
   clear: both;
 }
 #form_addattachment {
-  textarea {
-    width: 35em;
-    height: 6em;
-  }
   label {
     float: left;
     padding-right: 0.5em;
@@ -79,51 +76,33 @@ p.meta {
     float: none;
   }
 }
+
 table.revisions {
-  margin-bottom: 0;
-  td {
-    border-left: 1px solid #ccc;
-  }
-  tr.odd {
-    background-color: #f5f1e6;
-  }
+  margin-bottom: 0; /* remove space between compare-button and table */
   .compare {
-    width: 85px;
     text-align: center;
+    white-space: nowrap;
     input[name="rev"] {
-      margin-right: 10px;
+      margin-right: 0.5em;
     }
   }
   span.time-elapsed {
     color: #999;
   }
   .author {
-    width: 16em;
-    margin-left: 0px;
     a {
-      text-decoration: none;
       color: #000;
       font-weight: bold;
     }
     img {
-      background-color: #FFFFFF;
-      border:1px solid #999999;
-      display: block;
-      float: left;
-      height: 16px;
-      margin: 0 0.5em 0 0;
-      overflow: hidden;
-      padding: 2px;
-      width: 16px;
+      height: 1em;
     }
   }
   .actions {
-    width: 6em;
-    text-align: center;
+    white-space: nowrap;
+    text-align: right;
     a {
-      float: right;
-      display: block;
-      margin: 0 4px 0 0;
+      display: inline-block;
       width: 24px;
       height: 24px;
       background-position: center center;
@@ -145,13 +124,8 @@ table.revisions {
       background-image: url(../img/icons/raw.png);
     }
   }
-  .old_rev {
-    text-align: right;
-  }
-  .new_rev {
-    text-align: left;
-  }
 }
+
 table.diff {
   empty-cells: show;
   tr.ellipsis {
@@ -227,6 +201,7 @@ div.conflict {
     color: black;
   }
 }
+
 .tagcloud {
   text-align: center;
 }

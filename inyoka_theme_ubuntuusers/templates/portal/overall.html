@@ -4,7 +4,7 @@
 
     This is the base layout for all portal pages.
 
-    :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'overall.html' %}
@@ -57,18 +57,27 @@
       <li><a href="{{ href('pastebin') }}">Ablage</a></li>
       <li><a href="{{ href('portal', 'whoisonline') }}">{% trans %}Who is online?{% endtrans %}</a></li>
     </ul>
-    <h3 class="navi_forum">{{ feed_button(href('portal', 'feeds', 'forum')) }}<a href="{{ href('forum') }}">{% trans %}Forum{% endtrans %}</a></h3>
+    <h3 class="navi_forum">
+      <a href="{{ href('forum') }}">{% trans %}Forum{% endtrans %}</a>
+      {{ feed_button(href('portal', 'feeds', 'forum')) }}
+    </h3>
     <ul>
       <li><a href="{{ href('wiki', 'Forum', 'Kurzanleitung') }}">Kurzanleitung</a></li>
       <li><a href="{{ href('wiki', 'ubuntuusers', 'Moderatoren', 'Richtig_fragen') }}">Richtig fragen</a></li>
       <li><a href="{{ href('wiki', 'Forum', 'Syntax') }}">Foren-Syntax</a></li>
     </ul>
-    <h3 class="navi_wiki">{{ feed_button(href('portal', 'feeds', 'wiki')) }}<a href="{{ href('wiki') }}">Wiki</a></h3>
+    <h3 class="navi_wiki">
+      <a href="{{ href('wiki') }}">Wiki</a>
+      {{ feed_button(href('portal', 'feeds', 'wiki')) }}
+    </h3>
     <ul>
       <li><a href="{{ href('wiki', 'wiki') }}">Übersicht</a></li>
       <li><a href="{{ href('wiki', SETTINGS.WIKI_MAIN_PAGE) }}">{{ SETTINGS.WIKI_MAIN_PAGE }}</a></li>
     </ul>
-    <h3 class="navi_ikhaya">{{ feed_button(href('portal', 'feeds', 'ikhaya')) }}<a href="{{ href('ikhaya') }}">Ikhaya</a></h3>
+    <h3 class="navi_ikhaya">
+      <a href="{{ href('ikhaya') }}">Ikhaya</a>
+      {{ feed_button(href('portal', 'feeds', 'ikhaya')) }}
+    </h3>
     {%- if USER.has_perm('ikhaya.suggest_article') or USER.has_perm('portal.suggest_event') %}
     <ul>
       {% if USER.has_perm('ikhaya.suggest_article') %}
@@ -79,20 +88,23 @@
       {%- endif %}
     </ul>
     {%- endif %}
-    <h3 class="navi_planet">{{ feed_button(href('portal', 'feeds', 'planet')) }}<a href="{{ href('planet') }}">Planet</a></h3>
+    <h3 class="navi_planet">
+      <a href="{{ href('planet') }}">Planet</a>
+      {{ feed_button(href('portal', 'feeds', 'planet')) }}
+    </h3>
     {%- if USER.has_perm('planet.suggest_blog') %}
     <ul>
       <li><a href="{{ href('planet', 'suggest') }}">{% trans %}Suggest a blog{% endtrans %}</a></li>
     </ul>
     {%- endif %}
-    {%- if USER.has_perm('portal.change_staticpage') or USER.has_perm('portal.change_staticfile') or USER.has_perm('portal.change_storage') %}
+    {%- if USER.has_perm('portal.change_staticpage') or USER.has_perm('portal.change_staticfile') or USER.has_perm('portal.change_storage') or USER.has_perm('portal.change_linkmap') %}
     <h3 class="navi_config">{% trans %}Configuration{% endtrans %}</h3>
     <ul>
     {%- if USER.has_perm('portal.change_storage') %}
       <li><a href="{{ href('portal', 'config') }}">{% trans %}General{% endtrans %}</a></li>
     {%- endif %}
-    {%- if USER.has_perm('portal.change_staticpage') %}
-      <li><a href="{{ href('portal', 'styles') }}">{% trans %}Stylesheets{% endtrans %}</a></li>
+    {% if USER.has_perm('portal.change_linkmap') %}
+      <li><a href="{{ href('portal', 'linkmap') }}">{% trans %}Linkmap{% endtrans %}</a></li>
     {%- endif %}
     {%- if USER.has_perm('portal.change_staticpage') %}
       <li><a href="{{ href('portal', 'pages') }}">{% trans %}Static pages{% endtrans %}</a></li>

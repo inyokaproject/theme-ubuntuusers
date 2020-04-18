@@ -4,7 +4,7 @@
  *
  * Some general scripts for the whole portal (requires jQuery).
  *
- * :copyright: (c) 2007-2019 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
@@ -107,7 +107,7 @@ $(document).ready(function () {
          popup.toggle();
       }
     });
-    $('form.search').append(expander);
+    expander.insertAfter(searchField);
 
     $(document).click(function (e) {
       if(e.target.className != "search_expander") {
@@ -145,7 +145,7 @@ $(document).ready(function () {
         component: window.location.hostname.split('.')[0]
       });
       return false;
-    }).insertAfter('form.search');
+    }).insertAfter('.breadcrumb.-top > ol');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
   })();
 
@@ -171,7 +171,6 @@ $(document).ready(function () {
   });
 
   (function () {
-    if (navigator.appName.toLowerCase() == 'konqueror') return;
     $('.codeblock_resizer').click(function () {
       $codeblock = $(this).next();
       if (!$codeblock.hasClass('codeblock_expanded')) {
