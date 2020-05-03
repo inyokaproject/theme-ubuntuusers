@@ -152,15 +152,62 @@ $(document).ready(function () {
   // use javascript to deactivate the submit button on click
   // we don't make the elements really disabled because then
   // the button won't appear in the form data transmitted
-  (function () {
-    var submitted = false;
-    $('form').submit(function () {
-      if ($(this).hasClass('nosubmitprotect')) return true;
-      if (submitted) return false;
-      $('input[type="submit"]').addClass('disabled');
-      submitted = true;
-    });
-  })();
+  var form_submitted = false;
+  $('form').submit(function () {
+    if ($(this).hasClass('nosubmitprotect')) {
+      return true;
+    }
+    if (form_submitted) {
+      return false;
+    }
+    $('input[type="submit"]').addClass('disabled');
+    form_submitted = true;
+  });
+
+  // Warn users from leaving the page with unsaved form data
+  // https://github.com/inyokaproject/inyoka/issues/1036
+  window.addEventListener("beforeunload", function(event) {
+    if (form_submitted) {
+      // if a form was submitted, no dialogue should show
+      return undefined;
+    }
+
+    function _show_dialog() {
+        // Cancel the event.
+        event.preventDefault();
+        // Chrome requires returnValue to be set.
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event#Examples
+        event.returnValue = '';
+    }
+
+    // check if checkbox values changed
+    for (const element of document.querySelectorAll('input[type="checkbox"]')) {
+      if (element.checked !== element.defaultChecked) {
+        _show_dialog();
+        // abort on first changed input field
+        return;
+      }
+    }
+
+    // check if select values changed
+    for (const element of document.querySelectorAll('select')) {
+      const default_selected = element.querySelector('option[selected]');
+      if (default_selected !== null && default_selected.value !== element.value) {
+        _show_dialog();
+        // abort on first changed input field
+        return;
+      }
+    }
+
+    // check if other input values changed
+    for (const element of document.querySelectorAll('input:not([type="checkbox"]), textarea')) {
+      if (element.value !== element.defaultValue) {
+        _show_dialog();
+        // abort on first changed input field
+        return;
+      }
+    }
+  });
 
   $('div.code').add('pre.notranslate').each(function () {
     if (this.clientHeight < this.scrollHeight) {

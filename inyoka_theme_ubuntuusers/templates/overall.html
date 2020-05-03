@@ -273,11 +273,7 @@
 
    <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js', v=INYOKA_VERSION) }}"></script>
    {% for script in ['classy', 'jquery.extensions', 'overall'] + scripts|default([]) %}
-     {% if SETTINGS.DEBUG %}
-       <script type="text/javascript" src="{{ href('static', 'js/%s.js'|format(script)) }}"></script>
-     {% else %}
-       <script type="text/javascript" src="{{ href('static', 'js/%s.min.js'|format(script), v=INYOKA_VERSION) }}"></script>
-     {% endif %}
+       <script type="text/javascript" src="{{ href('static', 'js/%s.js'|format(script), v=INYOKA_VERSION) }}"></script>
    {% endfor %}
 
    {% block additional_scripts %}
