@@ -4,3 +4,4 @@ der Benutzer {{ comment_author }} hat einen neuen Kommentar zum Artikel „{{ ar
 Du kannst ihn dir hier ansehen: {{ comment_url }}
 
 Falls du bei Beiträgen in diesem Thema in Zukunft nicht mehr benachrichtigt werden willst, so kannst du das hier deaktivieren: {{ article_unsubscribe }}
+Du erhältst keine weitere Benachrichtigung solange du den Artikel nicht im angemeldeten Zustand besuchst.
