@@ -23,6 +23,7 @@ module.exports = function(grunt) {
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/js/**/*.js'], ext: '.js.gz', extDot: 'last'},
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.css', '!inyoka_theme_ubuntuusers/static/font/**'], ext: '.css.gz', extDot: 'last'},
           {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.ico'], ext: '.ico.gz', extDot: 'last'},
+          {expand: true, src: ['inyoka_theme_ubuntuusers/static/**/*.svg'], ext: '.svg.gz', extDot: 'last'},
         ]
       }
     },
