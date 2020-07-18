@@ -200,9 +200,9 @@
 
   <table class="topic admin_link_hover">
     <tbody>
-      {%- for post in posts if not (post.hidden and not can_moderate and not post.author_id == USER.id) %}
+      {%- for post in posts if not (post.hidden and not can_moderate and not post.author == USER) %}
         <tr id="post-{{ post.id }}"{% if post.hidden %} class="hidden"{% endif %}>
-          <td class="author{% if post.author_id == USER.id %} -own{% endif %}">
+          <td class="author{% if post.author == USER %} -own{% endif %}">
             <p class="username{% if not post.author.is_active %} inactive{% endif %}">
               <a href="{{ post.author|url }}">{{ post.author.username|e }}</a>
               {% if post.author.icon %}
@@ -225,7 +225,7 @@
               <p>{% trans %}Residence:{% endtrans %} {{ post.author.location|e }}</p>
             {%- endif %}
           </td>
-          <td class="post{% if post.author_id == USER.id %} -own{% endif %}">
+          <td class="post{% if post.author == USER %} -own{% endif %}">
             <div class="postinfo">
               <div class="linklist">
                 {%- if can_delete(post) %}
@@ -292,7 +292,7 @@
                ({% trans %}last edited:{% endtrans %} {{ post.revisions.latest('store_date').store_date|datetime }})
               {% endif %}
             </div>
-            {% if post.hidden and post.author_id == USER.id %}
+            {% if post.hidden and post.author == USER %}
             <div class="postinfo">
               {% trans %}This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators.{% endtrans %}
             </div>
