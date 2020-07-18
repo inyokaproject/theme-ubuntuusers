@@ -508,7 +508,7 @@ table tbody th,table tbody td {
   float: right;
 }
 .error {
-  color: #920000;
+  color: @orange_s_medium;
 }
 
 .nojs .error {
@@ -639,7 +639,8 @@ table.syntaxtable {
       }
     }
     span {
-      display: none;
+      left: -2000em;
+      position: absolute;
     }
   }
 }
@@ -720,31 +721,23 @@ table.syntaxtable {
     margin-bottom: 1.0em;
   }
 }
-.content_tabbar {
-  div.pathbar {
-    margin: 0;
+.content_tabbar div.pathbar {
+  margin: 0;
+}
+
+button.navi_toggle {
+  border: thin solid transparent;
+  background: none;
+  cursor: pointer;
+  width: 1.2em;
+  font-size: 2.2em;
+
+  &:hover, &:focus {
+    background-color: @navi_toggle-hover-background;
+    border-color: @navi_toggle-hover-border_color;
   }
 }
-button.navi_toggle_down, button.navi_toggle_up {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 24px;
-  height: 24px;
-  border: 0;
-  background-color: transparent;
-}
-button.navi_toggle_down {
-  background-image: url(../img/toggle_sidebar_down.png);
-}
-button.navi_toggle_up {
-  background-image: url(../img/toggle_sidebar_up.png);
-}
-button.navi_toggle_down:hover, button.navi_toggle_up:hover {
-  background-color: #F5DAC1;
-  border: 1px solid #E6A66B;
-  cursor: pointer;
-}
+
 .navi_sidebar {
   .container {
     background-repeat: repeat-x;
@@ -967,29 +960,31 @@ p.badges {
   input {
     margin: 5px;
   }
-  a.hide {
+  button.hide {
     float: right;
     display: block;
-    background-image: url(../img/hide.png);
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 16px;
-  }
-  a.hide:hover {
-    background-image: url(../img/message_fail.png);
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
+    background: none;
+    border: thin solid transparent;
+    border-radius: 1em;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 1.1em;
+
+    &:hover, &:focus {
+      border-color: initial;
+    }
   }
   ul {
     list-style: none;
   }
-}
-.message.fail {
-  background-color: @red_d_light;
-}
-.message.success {
-  background-color: @green_d_light;
+
+  &.fail {
+    background-color: @red_d_light;
+  }
+  &.success {
+    background-color: @green_d_light;
+  }
 }
 
 .hidden *, .hidden {

@@ -11,7 +11,8 @@
 $(document).ready(function () {
   // add a hide message link to all flash messages
   $.each($('div.message'), function (i, elm) {
-    $(elm).prepend($('<a href="#" class="hide" />').click(function () {
+    var button = $('<button class="hide" aria-label="close"><span aria-hidden="true">×</span></button>');
+    $(elm).prepend(button.click(function () {
       if ($(this).parent().hasClass('global')) {
         $.post('/?__service__=portal.hide_global_message', {});
       }
@@ -135,15 +136,20 @@ $(document).ready(function () {
   (function () {
     var sidebar = $('.navi_sidebar');
     if (!sidebar.length) return;
-    var togglebutton =
-    $('<button class="navi_toggle_up" title="Navigation ausblenden" />').click(function () {
+    var togglebutton = $('<button class="navi_toggle" aria-label="Navigation ausblenden">↑</button>').click(function () {
       $('.content').toggleClass('content_sidebar');
       sidebar.toggle();
-      togglebutton.toggleClass('navi_toggle_up').toggleClass('navi_toggle_down');
+      if (sidebar.is(':visible')) {
+        this.innerText = "↑";
+      } else {
+        this.innerText = "↓";
+      }
+
       if ($IS_LOGGED_IN) $.get('/?__service__=portal.toggle_sidebar', {
         hide: !sidebar.is(':visible'),
         component: window.location.hostname.split('.')[0]
       });
+
       return false;
     }).insertAfter('.breadcrumb.-top > ol');
     if ($SIDEBAR_HIDDEN) togglebutton.click();
