@@ -58,14 +58,14 @@
                       <a href="#article_{{ current_article_id + 1 }}">{% trans %}Next »{% endtrans %}</a>
                     {%- endif %}
                   </div>
-                  <h3>
+                  <h3 id="article_title_{{ current_article_id }}">
                     <a href="{{ article|url|e }}">{{ article.title }}</a>
                     <a class="headerlink" href="#article_{{ current_article_id }}">¶</a>
                   </h3>
               </div>
               </div>
               <div class="post{% if article.hidden %} hidden{% endif %}">
-                <div class="text">{{ article.text }}</div>
+                <div id="article_text_{{ current_article_id }}" class="text">{{ article.text }}</div>
                 <div class="meta">
                   <a href="{{ article|url|e }}">{% trans %}Permanent link{% endtrans %}</a>
                   {% if USER.has_perm('planet.hide_entry') %}
@@ -91,6 +91,6 @@
 
     <div class="pagination pagination_right">{{ rendered_pagination }}</div>
   {%- else %}
-    <p>{% trans %}No articles were aggregated{% endtrans %}</p>
+    <p id="no_planet_posts">{% trans %}No articles were aggregated{% endtrans %}</p>
   {%- endif %}
 {% endblock %}

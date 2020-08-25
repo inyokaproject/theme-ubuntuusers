@@ -25,7 +25,7 @@
       <li>
         <ul>
           {%- if forum %}
-            {%- if USER.is_authenticated() %}
+            {%- if USER.is_authenticated %}
               <li>
                 <a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a>
                 <a href="{{ href('forum', 'egosearch', forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
@@ -65,7 +65,7 @@
               <a href="{{ href('forum', 'last6', forum.slug|e) }}" class="limited">{% trans %}only here{% endtrans %}</a>
             </li>
           {% else %}
-            {%- if USER.is_authenticated() %}
+            {%- if USER.is_authenticated %}
               <li><a href="{{ href('forum', 'egosearch') }}">{% trans %}Involved topics{% endtrans %}</a></li>
               <li><a href="{{ href('forum', 'author', USER.username|e) }}">{% trans %}My posts{% endtrans %}</a></li>
               <li><a href="{{ href('forum', 'topic_author', USER.username)|e }}">{% trans %}Created topics{% endtrans %}</a></li>
@@ -86,7 +86,7 @@
     {% if USER.has_perm('forum.change_forum') %}
       <a class="admin_link" href="{{ href('forum', 'forum', 'new') }}">{% trans %}Create new forum{% endtrans %}</a>
     {% endif %}
-    {% if not USER.is_anonymous() %}
+    {% if not USER.is_anonymous %}
       <a href="{{ href('forum', 'markread') }}">{% trans %}Mark all forums as read{% endtrans %}</a>
     {% endif %}
   </div>
