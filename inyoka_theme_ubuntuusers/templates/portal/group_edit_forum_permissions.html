@@ -2,7 +2,6 @@
     portal/group_edit_forum_permissions.html
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
     Edit the permission of a group within the forum.
 
     :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
@@ -24,7 +23,7 @@
   <form class="edit-forum-permissions" method="post" action="">
     {{ csrf_token() }}
 
-    {% set first_field = form.fields[form.fields.keys()[0]] %}
+    {% set first_field = form.fields[form.fields.keys()|first] %}
     {% set number_permissions = first_field.choices|list|length %}
 
     <table>
