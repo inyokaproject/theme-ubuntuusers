@@ -17,9 +17,9 @@
   <p>{% trans name=USER.username|e -%}
     You can deactivate your account “{{ name }}” here. By doing this, we will remove all your personal data. All your forum posts and wiki articles will remain.
   {%- endtrans %}</p>
-  <p><strong>{% trans name=USER.username|e -%}
-    Keep in mind that deactivating your account cannot be undone. After that, you will never be able to log in with the account “{{ name }}” again.
-  {%- endtrans %}</strong></p>
+  <p>{% trans name=USER.username|e -%}
+    You can reactivate your user account “{{ name }}” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again.
+  {%- endtrans %}</p>
   <form autocomplete="off" method="post" action="">
     {{ csrf_token() }}
     <p>{% trans %}To deactivate your account, you need to enter your password.{% endtrans %}</p>
