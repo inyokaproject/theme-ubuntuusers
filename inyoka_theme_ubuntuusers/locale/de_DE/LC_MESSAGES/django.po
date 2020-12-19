@@ -829,8 +829,8 @@ msgid "Jabber"
 msgstr "Jabber"
 
 #, python-format
-msgid "Keep in mind that deactivating your account cannot be undone. After that, you will never be able to log in with the account “%(name)s” again."
-msgstr "Bitte beachte, dass die Deaktivierung deines Kontos nicht rückgängig gemacht werden kann. Du wirst danach nicht mehr in der Lage sein, dich mit deinem Konto „%(name)s“ wieder anzumelden."
+msgid "You can reactivate your user account “%(name)s” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again."
+msgstr "Du kannst dein Benutzerkonto „%(name)s“ bis zu einem Monat lang mit einem dir zugesandten Link wieder aktivieren. Danach wirst du nicht mehr in der Lage sein, Zugriff auf dein Benutzerkonto zu erlangen."
 
 msgid "Key"
 msgstr "Schlüssel"
