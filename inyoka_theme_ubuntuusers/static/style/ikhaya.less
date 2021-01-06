@@ -220,7 +220,7 @@ div.report {
   border: 1px solid #CCC;
   margin: 0 0 0.5em 0;
   .report_header {
-    .table-header-alternative-gradient;
+    background-color: #EAECEE;
     padding: 0.2em;
   }
   .text {
@@ -229,11 +229,11 @@ div.report {
 }
 
 div.solved .report_header {
-  .table-header-alternative-solved-gradient;
+  background-color: @green_d_light;
 }
 
 div.report:target .report_header {
-  .table-header-alternative-target-gradient;
+  background-color: @target-background;
 }
 table.events td.actions, table.events td.date, table.events td.author {
   margin-top: .2em;

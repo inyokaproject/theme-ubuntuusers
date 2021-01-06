@@ -37,33 +37,6 @@
   border-bottom-right-radius: @radius;
 }
 
-/*
- * Gradient-mixins (Legacy)
- */
-.gradient(@from: #ccc, @to: #000, @default: #999) {
-  background: repeat-x @default; /* fallback */
-  background: linear-gradient(to bottom,  @from,  @to);
-}
-
-.table-header-gradient(@from: #2B2929, @to: #2B2929,
-    @default: #2B2929) {
-  .gradient(@from, @to, @default);
-}
-
-.table-header-alternative-gradient(@from: #EAECEE, @to: #EAECEE,
-    @default: #EAECEE) {
-  .gradient(@from, @to, @default);
-}
-
-.table-header-alternative-solved-gradient(@from: #3EB34F, @to: #3EB34F,
-    @default: #3EB34F) {
-  .gradient(@from, @to, @default);
-}
-
-.table-header-alternative-target-gradient(@from: #E95420, @to: #E95420,
-    @default: #E95420) {
-  .gradient(@from, @to, @default);
-}
 
 /*
  * Other mixins
@@ -72,6 +45,11 @@
 .break-word() {
   overflow-wrap: break-word; /* "newer" name; only supported in Chrome/Opera */
   word-wrap: break-word; /* "older" alternative name */
+}
+
+.gradient(@from: #ccc, @to: #000, @default: #999) {
+  background: repeat-x @default; /* fallback */
+  background: linear-gradient(to bottom,  @from,  @to);
 }
 
 .reset() {
