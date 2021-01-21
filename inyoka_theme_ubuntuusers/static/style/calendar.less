@@ -49,3 +49,9 @@ table.calendar_month .weekday, table.calendar_month .day {
 table.calendar_event_inline {
   position: relative;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  table.calendar_month .weekday, .today, .day, .saturday, .sunday {
+    color: #000000;
+  }
+}
