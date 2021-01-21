@@ -1282,9 +1282,15 @@ select.firstletterselect {
   }
 }
 
-@media screen and (prefers-color-scheme: dark){
+@media screen and (prefers-color-scheme: dark) {
   body {
     color: white;
     background-color: #21252B;
+  }
+  a, :visited {
+    color: darken(@blue_s_medium, 30%, relative);
+  }
+  a.strong {
+    color: #FFF;
   }
 }
