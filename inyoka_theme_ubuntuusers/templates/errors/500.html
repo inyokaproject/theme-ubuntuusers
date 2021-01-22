@@ -2,8 +2,7 @@
     errors/500.html
     ~~~~~~~~~~~~~~~
 
-    This template is shown if the users requested page was moved to another
-    location.
+    This template is shown if an internal servererror occurred.
 
     :copyright: (c) 2007-2021 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
@@ -19,16 +18,6 @@
     <p>
       {% trans %}An internal error occurred. The administration was already notified.{% endtrans %}
     </p>
-
-  {% if dsn and request.sentry and request.sentry.id %}
-    <script src="https://cdn.ravenjs.com/2.3.0/raven.min.js"></script>
-    <script>
-      Raven.showReportDialog({
-        eventId: '{{ request.sentry.id }}',
-        dsn: '{{ dsn }}'
-      });
-    </script>
-  {% endif %}
 
   </body>
 </html>
