@@ -1,10 +1,8 @@
 User-agent: *
 Crawl-delay: 10
-Disallow: /search
 Disallow: /_image?
 Disallow: /Benutzer/
 Disallow: /users/
-Disallow: /*?flavour=mobile
 
 User-agent: BecomeBot
 Disallow: /
