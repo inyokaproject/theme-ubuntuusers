@@ -3,12 +3,3 @@ Crawl-delay: 10
 Disallow: /_image?
 Disallow: /Benutzer/
 Disallow: /users/
-
-User-agent: BecomeBot
-Disallow: /
-
-User-agent: Yahoo! Slurp
-Disallow: /
-
-User-agent: Baiduspider
-Disallow: /
