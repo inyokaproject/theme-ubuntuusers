@@ -39,7 +39,8 @@ table:not([class]), table[class^="zebra"] {
     background-image: url('../img/icons/code.svg');
   }
   .navi_overview {
-    background-image: url('../img/icons/search.png');
+    background-image: url('../img/icons/search.svg');
+    background-size: 16px 16px;
   }
 }
 
@@ -115,13 +116,16 @@ table.revisions {
       background-color: #f2f2f2;
     }
     a.view {
-      background-image: url(../img/icons/search.png);
+      background-image: url(../img/icons/search.svg);
     }
     a.revert {
-      background-image: url(../img/icons/revert.png);
+      background-image: url(../img/icons/revert.svg);
     }
     a.raw {
-      background-image: url(../img/icons/raw.png);
+      background-image: url(../img/icons/raw.svg);
+    }
+    a.raw, a.view, a.revert {
+      background-size: 22px 22px;
     }
   }
 }
