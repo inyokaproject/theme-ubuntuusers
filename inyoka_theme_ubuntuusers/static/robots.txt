@@ -3,3 +3,4 @@ Crawl-delay: 10
 Disallow: /_image?
 Disallow: /Benutzer/
 Disallow: /users/
+Disallow: /*?flavour=mobile
