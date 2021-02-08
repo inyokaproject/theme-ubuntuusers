@@ -4,14 +4,14 @@
  *
  * The styles for Ikhaya.
  *
- * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2021 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'layout.less';
 
 .navi_sidebar .navi_about_ikhaya {
-  background-image: url('../img/icons/ikhaya_sb.png');
+  background-image: url('../img/icons/ikhaya.svg');
 }
 .navi_sidebar {
   .navi_new_article {
@@ -24,7 +24,7 @@
     background-image: url('../img/icons/categories.png');
   }
   .navi_full_articles {
-    background-image: url('../img/icons/ikhaya_sb.png');
+    background-image: url('../img/icons/ikhaya.svg');
   }
 }
 ul.articles {
@@ -220,7 +220,7 @@ div.report {
   border: 1px solid #CCC;
   margin: 0 0 0.5em 0;
   .report_header {
-    .table-header-alternative-gradient;
+    background-color: #EAECEE;
     padding: 0.2em;
   }
   .text {
@@ -229,11 +229,11 @@ div.report {
 }
 
 div.solved .report_header {
-  .table-header-alternative-solved-gradient;
+  background-color: @green_d_light;
 }
 
 div.report:target .report_header {
-  .table-header-alternative-target-gradient;
+  background-color: @target-background;
 }
 table.events td.actions, table.events td.date, table.events td.author {
   margin-top: .2em;

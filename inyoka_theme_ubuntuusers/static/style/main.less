@@ -4,13 +4,12 @@
  *
  * Some global style definitions.
  *
- * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2021 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'fonts.less';
 @import 'layout.less';
-@import 'main-sprite.less';
 @import 'search.less';
 @import 'css_grid.less';
 
@@ -668,6 +667,9 @@ table.syntaxtable {
       display: block;
       margin: 0 auto;
       content: "";
+      height: 24px;
+      width: 24px;
+      background-size: contain;
     }
   }
 
@@ -681,28 +683,22 @@ table.syntaxtable {
   }
 
   li.portal a::after {
-    .sprite(@portal);
+    background-image: url(../img/icons/portal.svg);
   }
   li.forum a::after {
-    .sprite(@forum);
+    background-image: url(../img/icons/forum.svg);
   }
   li.wiki a::after {
     background-image: url(../img/wiki.svg);
-    .sprite-height(@ikhaya);
-    .sprite-width(@ikhaya);
-    background-size: contain;
   }
   li.ikhaya a::after {
-    .sprite(@ikhaya);
+    background-image: url(../img/icons/ikhaya.svg);
   }
   li.planet a::after {
-    .sprite(@planet);
+    background-image: url(../img/icons/planet.svg);
   }
   li.community a::after {
     background-image: url(../img/circle-of-friends-web/SVG/cof_white-black_hex.svg);
-    .sprite-height(@ikhaya);
-    .sprite-width(@ikhaya);
-    background-size: contain;
   }
 }
 .content {
@@ -781,17 +777,16 @@ button.navi_toggle {
     background-image: url('../img/icons/ubuntuusers.png');
   }
   h3.navi_forum {
-    background-image: url('../img/icons/forum_sb.png');
+    background-image: url('../img/icons/forum.svg');
   }
   h3.navi_wiki {
     background-image: url('../img/wiki.svg');
-    background-size: 24px 24px;
   }
   h3.navi_ikhaya {
-    background-image: url('../img/icons/ikhaya_sb.png');
+    background-image: url('../img/icons/ikhaya.svg');
   }
   h3.navi_planet {
-    background-image: url('../img/icons/planet_sb.png');
+    background-image: url('../img/icons/planet.svg');
   }
   h3.navi_config {
     background-image: url('../img/icons/config_sb.png');

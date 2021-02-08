@@ -127,18 +127,6 @@ module.exports = function(grunt) {
         algorithm: 'top-down',
         padding: 8
       },
-      main: {
-        src: [
-          'inyoka_theme_ubuntuusers/static/img/icons/portal.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/forum.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/ikhaya.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/planet.png',
-        ],
-        dest: 'inyoka_theme_ubuntuusers/static/img/main-sprite.png',
-        destCss: 'inyoka_theme_ubuntuusers/static/style/main-sprite.less',
-        imgPath: '../img/main-sprite.png',
-        algorithm: 'top-down'
-      },
       icon: {
         src: 'inyoka_theme_ubuntuusers/static/img/smiley_icons/*.png',
         dest: 'inyoka_theme_ubuntuusers/static/img/icon-sprite.png',

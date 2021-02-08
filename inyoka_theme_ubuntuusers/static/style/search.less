@@ -4,11 +4,13 @@
  *
  * Some hacky style-definitions for the search-field.
  *
- * :copyright: (c) 2007-2020 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2021 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
 @import 'fonts.less';
+
+@icon-size-search: 16px 16px;
 
 form.search {
   a {
@@ -25,7 +27,8 @@ form.search {
     font-family: @font-content;
     max-width: 15em;
 
-    background-image: url(../img/icons/small/portal.png);
+    background-image: url(../img/icons/portal.svg);
+    background-size: @icon-size-search;
     background-repeat: no-repeat;
     background-position: 1px 1px;
     padding: 1px 1px 1px 22px;
@@ -66,7 +69,8 @@ form.search {
       padding: 0.3em 0.4em 0.3em 18px;
       cursor: pointer;
       color: black;
-      background: transparent url(../img/icons/small/portal.png) left no-repeat;
+      background: transparent url(../img/icons/portal.svg) left no-repeat;
+      background-size: @icon-size-search;
     }
     li.active {
       font-weight: bold;
@@ -79,14 +83,13 @@ form.search {
 
 form.search ul.search_area li.area_wiki, .search input.area_wiki {
   background-image: url(../img/wiki.svg);
-  background-size: 16px 16px;
 }
 form.search ul.search_area li.area_forum, .search input.area_forum {
-  background-image: url(../img/icons/small/forum.png);
+  background-image: url(../img/icons/forum.svg);
 }
 form.search ul.search_area li.area_planet, .search input.area_planet {
-  background-image: url(../img/icons/small/planet.png);
+  background-image: url(../img/icons/planet.svg);
 }
 form.search ul.search_area li.area_ikhaya, .search input.area_ikhaya {
-  background-image: url(../img/icons/small/ikhaya.png);
+  background-image: url(../img/icons/ikhaya.svg);
 }
