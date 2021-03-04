@@ -8,15 +8,6 @@
  * :license: BSD, see LICENSE for more details.
  */
 
-@import 'editor-sprite.less';
-
-.editor-button(@sprite) {
-  .sprite-image(@sprite);
-  @sprite-offset-x: extract(@sprite, 3);
-  @sprite-offset-y: extract(@sprite, 4);
-  background-position: (@sprite-offset-x + 2) (@sprite-offset-y + 2);
-}
-
 p.ubuntu_version {
   font-size: 0.8em;
 }
@@ -59,68 +50,68 @@ ul.toolbar {
       }
     }
     #button-bold {
-      .editor-button(@bold);
+      background-image: url('../img/icons/bold.png');
     }
     #button-italic {
-      .editor-button(@italic);
+      background-image: url('../img/icons/italic.png');
     }
     #button-underlined {
-      .editor-button(@underlined);
+      background-image: url('../img/icons/underlined.png');
     }
     #button-code {
-      .editor-button(@code);
+      background-image: url('../img/icons/code.png');
     }
     #button-stroke {
-      .editor-button(@stroke);
+      background-image: url('../img/icons/stroke.png');
     }
     #button-bulletlist {
-      .editor-button(@bulletlist);
+      background-image: url('../img/icons/bulletlist.png');
     }
     #button-numlist {
-      .editor-button(@numlist);
+      background-image: url('../img/icons/numlist.png');
     }
     #button-monospace {
-      .editor-button(@monospace);
+      background-image: url('../img/icons/monospace.png');
     }
     #button-mark {
-      .editor-button(@mark);
+      background-image: url('../img/icons/mark.png');
     }
     #button-wiki-link {
-      .editor-button(@wikilink);
+      background-image: url('../img/icons/wikilink.png');
     }
     #button-external-link {
-      .editor-button(@link);
+      background-image: url('../img/icons/link.png');
     }
     #button-user-link {
-      .editor-button(@user);
+      background-image: url('../img/icons/user.png');
     }
     #button-quote {
-      .editor-button(@quote);
+      background-image: url('../img/icons/quote.png');
     }
     #button-pre {
-      .editor-button(@pre);
+      background-image: url('../img/icons/pre.png');
     }
     #button-picture {
-      .editor-button(@picture);
+      background-image: url('../img/icons/picture.png');
     }
     #button-color {
-      .editor-button(@color);
+      background-image: url('../img/icons/color.png');
     }
     #button-smilies {
-      .editor-button(@smiley);
+      background-image: url('../img/icons/smiley.png');
     }
     #button-date {
-      .editor-button(@date);
+      background-image: url('../img/icons/date.png');
     }
     #button-sig {
-      .editor-button(@sig);
+      background-image: url('../img/icons/sig.png');
     }
     #button-shrink {
-      .editor-button(@shrink);
+      background-image: url('../img/icons/shrink.png');
       height: 12px;
     }
     #button-enlarge {
-      .editor-button(@enlarge);
+      background-image: url('../img/icons/enlarge.png');
       height: 12px;
       position: relative;
       left:-30px;

@@ -89,36 +89,6 @@ module.exports = function(grunt) {
 
 
     sprite: {
-      editor: {
-        src: [
-          'inyoka_theme_ubuntuusers/static/img/icons/bold.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/italic.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/underlined.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/bulletlist.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/numlist.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/code.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/stroke.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/monospace.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/mark.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/wikilink.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/link.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/user.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/quote.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/pre.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/picture.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/color.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/smiley.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/date.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/sig.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/shrink.png',
-          'inyoka_theme_ubuntuusers/static/img/icons/enlarge.png',
-        ],
-        dest: 'inyoka_theme_ubuntuusers/static/img/editor-sprite.png',
-        destCss: 'inyoka_theme_ubuntuusers/static/style/editor-sprite.less',
-        imgPath: '../img/editor-sprite.png',
-        algorithm: 'top-down',
-        padding: 2
-      },
       forum: {
         src: 'inyoka_theme_ubuntuusers/static/img/forum/*.png',
         dest: 'inyoka_theme_ubuntuusers/static/img/forum-sprite.png',
