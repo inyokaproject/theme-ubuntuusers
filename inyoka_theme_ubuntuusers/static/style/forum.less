@@ -9,12 +9,6 @@
  */
 
 @import 'layout.less';
-@import 'forum-sprite.less';
-
-.forum-sprite(@sprite) {
-  .sprite(@sprite);
-  background-repeat: no-repeat;
-}
 
 body {
   /* custom grid-template, as the forum has no sidebar */
@@ -90,8 +84,7 @@ table.forum {
     }
 
     div.icon {
-      .sprite-image(@topic);
-      .sprite-position(@topic);
+      background-image: url('../img/forum/topic.png');
       background-repeat: no-repeat;
       position: relative;
       display: inline-block;
@@ -106,35 +99,35 @@ table.forum {
       }
 
       .sticky {
-        .forum-sprite(@sticky);
+        background-image: url('../img/forum/sticky.png');
         top: 10px;
-        left: 10px;
+        left: 8px;
         z-index: 50;
       }
 
       .new {
-        .forum-sprite(@new);
+        background-image: url('../img/forum/new.png');
         top: -4px;
         left: 20px;
         z-index: 20;
       }
 
       .solved {
-        .forum-sprite(@solved);
+        background-image: url('../img/forum/solved.png');
         top: 20px;
         left: 20px;
         z-index: 10;
       }
 
       .locked {
-        .forum-sprite(@lock);
+        background-image: url('../img/forum/lock.png');
         top: -4px;
         left: -4px;
         z-index: 30;
       }
 
       .reported {
-        .forum-sprite(@reported);
+        background-image: url('../img/forum/reported.png');
         top: 20px;
         left: -4px;
         z-index: 40;
@@ -357,55 +350,55 @@ table.topic table td, table.topic table th {
 }
 
 .action_split {
-  .forum-sprite(@split);
+  background-image: url('../img/forum/split.png');
 }
 .action_move {
-  .forum-sprite(@move);
+  background-image: url('../img/forum/move.png');
 }
 .action_unlock {
-  .forum-sprite(@unlock);
+  background-image: url('../img/forum/unlock.png');
 }
 .action_lock {
-  .forum-sprite(@lock);
+  background-image: url('../img/forum/lock.png');
 }
 .action_restore {
-  .forum-sprite(@restore);
+  background-image: url('../img/forum/restore.png');
 }
 .action_delete {
-  .forum-sprite(@delete);
+  background-image: url('../img/forum/delete.png');
 }
 .action_hide {
-  .forum-sprite(@hide);
+  background-image: url('../img/forum/hide.png');
 }
 .action_reply {
-  .forum-sprite(@comment-add);
+  background-image: url('../img/forum/comment_add.png');
 }
 .action_subscribe {
-  .forum-sprite(@subscribe);
+  background-image: url('../img/forum/subscribe.png');
 }
 .action_unsolve {
-  .forum-sprite(@unsolve);
+  background-image: url('../img/forum/unsolve.png');
 }
 .action_solve {
-  .forum-sprite(@solve);
+  background-image: url('../img/forum/solve.png');
 }
 .action_report {
-  .forum-sprite(@report);
+  background-image: url('../img/forum/report.png');
 }
 .action_review {
-  .forum-sprite(@review);
+  background-image: url('../img/forum/review.png');
 }
 .action_edit {
-  .forum-sprite(@comment-edit);
+  background-image: url('../img/forum/comment_edit.png');
 }
 .action_quote {
-  .forum-sprite(@quote);
+  background-image: url('../img/forum/quote.png');
 }
 .action_mark_ham {
-  .forum-sprite(@mark-ham);
+  background-image: url('../img/forum/mark_ham.png');
 }
 .action_mark_spam {
-  .forum-sprite(@mark-spam);
+  background-image: url('../img/forum/mark_spam.png');
 }
 
 form.poll {
@@ -589,19 +582,19 @@ div.code {
     font-size: 0.9em;
   }
 }
-tr.unstable {
-  .topic_title:before {
-    content: " ";
+
+.unstable-icon() {
     padding-left: 20px;
-    .sprite-image(@unstable);
-    .sprite-position(@unstable);
+    background-image: url('../img/forum/unstable.png');
     background-repeat: no-repeat;
-  }
+}
+tr.unstable .topic_title:before {
+  content: " ";
+ .unstable-icon();
 }
 .topic_box_content {
   .ubuntu_version.unstable {
-    padding-left: 20px;
-    .forum-sprite(@unstable);
+    .unstable-icon();
   }
 
   strong, span {
@@ -617,10 +610,8 @@ span#version_info.current {
 }
 span#version_info.unstable {
   color: #fff;
-  padding-left: 20px;
-  .sprite-image(@unstable);
-  background-position: (@unstable-offset-x + 2) (@unstable-offset-y + 5);
-  background-repeat: no-repeat;
+  .unstable-icon();
+  background-position: left;
   background-color: #cc0033;
   border: 1px solid #a8a887;
 

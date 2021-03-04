@@ -74,31 +74,13 @@ module.exports = function(grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      sprite: {
-        files: ['<%= sprite.editor.src %>', '<%= sprite.forum.src %>', '<%= sprite.main.src %>'],
-        tasks: ['sprite'],
-      },
       style: {
         files: [
           'inyoka_theme_ubuntuusers/static/style/*.less',
-          '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
         ],
         tasks: ['less', 'postcss:dist'],
       },
     },
-
-
-    sprite: {
-      forum: {
-        src: 'inyoka_theme_ubuntuusers/static/img/forum/*.png',
-        dest: 'inyoka_theme_ubuntuusers/static/img/forum-sprite.png',
-        destCss: 'inyoka_theme_ubuntuusers/static/style/forum-sprite.less',
-        imgPath: '../img/forum-sprite.png',
-        algorithm: 'top-down',
-        padding: 8
-      },
-    },
-
 
     less: {
       production: {
@@ -112,7 +94,6 @@ module.exports = function(grunt) {
             expand: true,
             src: [
               'inyoka_theme_ubuntuusers/static/style/**/*.less',
-              '!inyoka_theme_ubuntuusers/static/style/*-sprite.less',
             ],
             ext: '.css',
           }
@@ -128,9 +109,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-spritesmith');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'sprite', 'less', 'postcss:dist', 'compress']);
+  grunt.registerTask('default', ['jshint', 'less', 'postcss:dist', 'compress']);
 
 };
