@@ -30,6 +30,7 @@ ul.toolbar {
       height: 26px;
       background-repeat: no-repeat;
       border: 1px solid #ddd;
+      text-align: center;
       span {
         display: none;
       }
@@ -106,16 +107,28 @@ ul.toolbar {
     #button-sig {
       background-image: url('../img/icons/sig.png');
     }
-    #button-shrink {
-      background-image: url('../img/icons/shrink.png');
+
+    .button_template(@button-text) {
       height: 12px;
+      &:hover {
+        text-decoration: none;
+      }
+      &::before {
+        content: @button-text;
+        font-size: 12px;
+        line-height: 1;
+        vertical-align: top;
+      }
+    }
+    #button-shrink {
+      .button_template('▲');
     }
     #button-enlarge {
-      background-image: url('../img/icons/enlarge.png');
-      height: 12px;
+      .button_template('▼');
+
       position: relative;
-      left:-30px;
-      top:14px;
+      left: -30px;
+      top: 14px;
     }
     table.codebox {
       width: auto !important;
