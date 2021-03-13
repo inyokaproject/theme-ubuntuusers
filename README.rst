@@ -27,15 +27,22 @@ On development systems:
 2. Switch into the repository: ``cd theme-ubuntusers``
 3. Activate source ``source ~/.venvs/inyoka/bin/activate``
 4. Install as a development package: ``python setup.py develop``
-5. Run ``npm install`` to install *Grunt*
-6. Run ``./node_modules/grunt-cli/bin/grunt watch`` to build all static files
-   and watch for file changes on the CSS / JS files
+5. Run ``npm install`` to install all node dependencies (most relevant is ``less`` to generate the CSS)
+6. Run ``npm run watch`` to build all static files and watch for file changes on the CSS / JS files
+   (If it does not work for you out of the box, check whether you have a package like ``inotify-tools`` installed)
 7. Let Django know about the theme. Add ``'inyoka_theme_ubuntuusers'`` to the
    ``INSTALLED_APPS`` in ``inyoka/development_settings.py``::
 
        INSTALLED_APPS = INSTALLED_APPS + (
            'inyoka_theme_ubuntuusers',
        )
+9. Run ``python manage.py collectstatic --noinput --link`` in your inyoka instance
+   This will create a directory ``inyoka/static-collected`` in your inyoka repository. The directory
+   contains links to the found static files in the theme repository. These statics will be served during development.
+    * ``--noinput`` will prevent a 'Are you sure?' question
+    * With ``--link`` you have to only run ``collectstatic`` again, if a new file was added
+ 
+If you want to see some possible locations to improve the JavaScript run ``npm run jshint``.
 
 On Production
 -------------
@@ -45,6 +52,6 @@ On Production
 Deployment
 ----------
 
-1. Run ``npm install`` to install *Grunt*
-2. Run ``./node_modules/grunt-cli/bin/grunt`` to build all static files
+1. Run ``npm install`` to install all node dependencies (most relevant is ``less`` to generate the CSS)
+2. Run ``npm run all`` to build all static files
 3. Run ``python manage.py collectstatic`` in your inyoka instance
