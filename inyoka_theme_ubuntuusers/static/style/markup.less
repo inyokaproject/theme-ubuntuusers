@@ -7,7 +7,6 @@
  */
 
 @import 'layout.less';
-@import 'icon-sprite.less';
 
 :link.missing, :visited.missing {
   color: #666;
@@ -239,40 +238,44 @@ div.moderated p, div.edited p {
 /* custom 'emojis' that are not included in unicode and thus use a sprite */
 span[class^='icon-'] {
   display: inline-block;
+  height: 1ch;
+  width: 1ch;
+  background-repeat: no-repeat;
 }
 span {
   &.icon-frog-xmas {
-    .sprite(@frog-xmas);
+    background-image: url('../img/smiley_icons/frog-xmas.png');
   }
   &.icon-tux {
-    .sprite(@tux);
+    background-image: url('../img/smiley_icons/tux.png');
   }
   &.icon-ubuntu {
-    .sprite(@ubuntu);
+    background-image: url('../img/smiley_icons/ubuntu.png');
+    // TODO use svg and height: 1ex;
   }
   &.icon-ubuntugnome {
-    .sprite(@ubuntugnome);
+    background-image: url('../img/smiley_icons/ubuntugnome.png');
   }
   &.icon-kubuntu {
-    .sprite(@kubuntu);
+    background-image: url('../img/smiley_icons/kubuntu.png');
   }
   &.icon-lubuntu {
-    .sprite(@lubuntu);
+    background-image: url('../img/smiley_icons/lubuntu.png');
   }
   &.icon-ubuntumate {
-    .sprite(@ubuntumate);
+    background-image: url('../img/smiley_icons/ubuntumate.png');
   }
   &.icon-mythbuntu {
-    .sprite(@mythbuntu);
+    background-image: url('../img/smiley_icons/mythbuntu.png');
   }
   &.icon-ubuntutouch {
-    .sprite(@ubuntutouch);
+    background-image: url('../img/smiley_icons/ubuntutouch.png');
   }
   &.icon-xubuntu {
-    .sprite(@xubuntu);
+    background-image: url('../img/smiley_icons/xubuntu.png');
   }
   &.icon-overview {
-    .sprite(@overview);
+    background-image: url('../img/smiley_icons/overview.png');
   }
 }
 

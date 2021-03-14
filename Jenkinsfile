@@ -22,7 +22,7 @@ pipeline {
         stage ('Test npm') {
             steps {
                 sh '''npm install
-                ./node_modules/grunt-cli/bin/grunt'''
+                npm run all'''
             }
         }
     }
