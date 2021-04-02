@@ -13,7 +13,7 @@
    version="1.1"
    id="svg5747"
    sodipodi:docname="easter.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,15 +23,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="971"
+     inkscape:window-width="1366"
+     inkscape:window-height="717"
      id="namedview5749"
      showgrid="false"
-     inkscape:zoom="0.2939054"
-     inkscape:cx="2806.1315"
-     inkscape:cy="-18.123742"
+     inkscape:zoom="1.66258"
+     inkscape:cx="1263.8606"
+     inkscape:cy="86.937566"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5747"
      inkscape:document-rotation="0" />
@@ -1343,6 +1343,22 @@
          height="410.37048"
          x="32.323334"
          y="214.97739" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath859">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.987645px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 82.6459,131.08632 107.0936,-5.48885 38.0357,-2.09657 21.8683,-4.84282 11.7699,-53.470634 -251.7476,-3.882381 14.9237,48.293525 31.6527,28.15843 z"
+         id="path861" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath865">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.987645px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 44.118,134.74378 47.3989,-4.18833 43.2378,-2.40028 34.6033,-2.6643 41.3963,-2.26819 24.9739,-1.54409 7.8656,-0.18592 -1.2786,-56.742027 -216.3218,1.994282 -2.3101,20.205623 z"
+         id="path867" />
     </clipPath>
   </defs>
   <g
@@ -3435,15 +3451,13 @@
              y="-769.32617"
              x="694.57117"
              transform="matrix(0.94551,-0.18052,0.19483,1.0204,0,0)"
-             style="font-size:80.818px;font-family:'Marker Felt';letter-spacing:0;word-spacing:0;fill:#1a1a1a">
-            <tspan
+             style="font-size:80.818px;font-family:'Marker Felt';letter-spacing:0;word-spacing:0;fill:#1a1a1a"><tspan
                id="tspan6816-2"
                font-weight="bold"
                font-size="72.307"
                y="-769.32617"
                x="694.57117"
-               style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'" />
-          </text>
+               style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'" /></text>
           <text
              id="text6822-6"
              word-spacing="0"
@@ -3452,12 +3466,10 @@
              y="-798.56036"
              x="1176.2844"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan6820-1"
                y="-798.56036"
-               x="1176.2844" />
-          </text>
+               x="1176.2844" /></text>
           <text
              id="text6826-8"
              word-spacing="0"
@@ -3466,12 +3478,10 @@
              y="-822.14014"
              x="1179.653"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan6824-7"
                y="-822.14014"
-               x="1179.653" />
-          </text>
+               x="1179.653" /></text>
           <text
              id="text6830-9"
              word-spacing="0"
@@ -3480,12 +3490,10 @@
              y="-296.64761"
              x="-154.28976"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan6828-2"
                y="-296.64761"
-               x="-154.28976" />
-          </text>
+               x="-154.28976" /></text>
         </g>
         <g
            id="g6934-0"
@@ -3647,8 +3655,8 @@
     </g>
   </g>
   <g
-     clip-path="url(#clipPath8279)"
-     transform="matrix(1,0,0,1.0251754,1115.5797,-44.140761)"
+     clip-path="url(#clipPath865)"
+     transform="matrix(1,0,0,1.0251754,1129.5797,-34.140761)"
      id="g8063">
     <g
        id="g8061"
@@ -3669,15 +3677,13 @@
              font-size="80.818"
              letter-spacing="0"
              word-spacing="0"
-             id="text7979">
-            <tspan
+             id="text7979"><tspan
                style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'"
                x="694.57117"
                y="-769.32617"
                font-size="72.307"
                font-weight="bold"
-               id="tspan7977" />
-          </text>
+               id="tspan7977" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3686,12 +3692,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text7983">
-            <tspan
+             id="text7983"><tspan
                x="1176.2844"
                y="-798.56036"
-               id="tspan7981" />
-          </text>
+               id="tspan7981" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3700,12 +3704,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text7987">
-            <tspan
+             id="text7987"><tspan
                x="1179.653"
                y="-822.14014"
-               id="tspan7985" />
-          </text>
+               id="tspan7985" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3714,12 +3716,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text7991">
-            <tspan
+             id="text7991"><tspan
                x="-154.28976"
                y="-296.64761"
-               id="tspan7989" />
-          </text>
+               id="tspan7989" /></text>
         </g>
         <g
            transform="matrix(0.32626127,0,0,0.35533476,458.71064,-664.39398)"
@@ -3903,15 +3903,13 @@
              font-size="80.818"
              letter-spacing="0"
              word-spacing="0"
-             id="text8069">
-            <tspan
+             id="text8069"><tspan
                style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'"
                x="694.57117"
                y="-769.32617"
                font-size="72.307"
                font-weight="bold"
-               id="tspan8067" />
-          </text>
+               id="tspan8067" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3920,12 +3918,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text8073">
-            <tspan
+             id="text8073"><tspan
                x="1176.2844"
                y="-798.56036"
-               id="tspan8071" />
-          </text>
+               id="tspan8071" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3934,12 +3930,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text8077">
-            <tspan
+             id="text8077"><tspan
                x="1179.653"
                y="-822.14014"
-               id="tspan8075" />
-          </text>
+               id="tspan8075" /></text>
           <text
              style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
@@ -3948,12 +3942,10 @@
              font-size="81.345"
              letter-spacing="0"
              word-spacing="0"
-             id="text8081">
-            <tspan
+             id="text8081"><tspan
                x="-154.28976"
                y="-296.64761"
-               id="tspan8079" />
-          </text>
+               id="tspan8079" /></text>
         </g>
         <g
            transform="matrix(0.32626127,0,0,0.35533476,458.71064,-664.39398)"
@@ -4137,15 +4129,13 @@
              y="-769.32617"
              x="694.57117"
              transform="matrix(0.94551,-0.18052,0.19483,1.0204,0,0)"
-             style="font-size:80.818px;font-family:'Marker Felt';letter-spacing:0;word-spacing:0;fill:#1a1a1a">
-            <tspan
+             style="font-size:80.818px;font-family:'Marker Felt';letter-spacing:0;word-spacing:0;fill:#1a1a1a"><tspan
                id="tspan8155"
                font-weight="bold"
                font-size="72.307"
                y="-769.32617"
                x="694.57117"
-               style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'" />
-          </text>
+               style="font-weight:bold;font-size:72.307px;font-family:'LiSong Pro'" /></text>
           <text
              id="text8161"
              word-spacing="0"
@@ -4154,12 +4144,10 @@
              y="-798.56036"
              x="1176.2844"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan8159"
                y="-798.56036"
-               x="1176.2844" />
-          </text>
+               x="1176.2844" /></text>
           <text
              id="text8165"
              word-spacing="0"
@@ -4168,12 +4156,10 @@
              y="-822.14014"
              x="1179.653"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan8163"
                y="-822.14014"
-               x="1179.653" />
-          </text>
+               x="1179.653" /></text>
           <text
              id="text8169"
              word-spacing="0"
@@ -4182,12 +4168,10 @@
              y="-296.64761"
              x="-154.28976"
              transform="matrix(0.93939,-0.17935,0.1961,1.0271,0,0)"
-             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0">
-            <tspan
+             style="font-size:81.345px;font-family:'Heiti TC';letter-spacing:0;word-spacing:0"><tspan
                id="tspan8167"
                y="-296.64761"
-               x="-154.28976" />
-          </text>
+               x="-154.28976" /></text>
         </g>
         <g
            id="g8235"
