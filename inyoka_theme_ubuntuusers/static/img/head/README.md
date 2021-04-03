@@ -21,4 +21,12 @@ Sources:
  * https://pixabay.com/vectors/moon-silhouette-santa-claus-31665/
  * https://pixabay.com/vectors/christmas-trees-set-xmas-christmas-4417880/
 
+### Easter header
+
+Sources:
+
+ * https://pixabay.com/vectors/spring-grass-eggs-easter-striped-48246/
+ * https://pixabay.com/vectors/easter-eggs-easter-basket-eggs-152017/
+ * https://pixabay.com/vectors/easter-eggs-basket-nest-eggs-296456/
+
 License of the sources: https://pixabay.com/de/service/license/
