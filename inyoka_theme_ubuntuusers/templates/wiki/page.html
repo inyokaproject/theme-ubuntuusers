@@ -22,6 +22,10 @@
 
     {% do tmp_crumb.append((part, part_list|join('/') + '/')) %}
   {% endfor %}
+
+  {% if page.rev.attachment %}
+    {% do tmp_crumb.insert(-1, (_('Attachment'), href('wiki', page.trace[-2], 'a', 'attachments'))) %}
+  {% endif %}
 {% endif %}
 {% set BREADCRUMBS = tmp_crumb + BREADCRUMBS|d([]) %}
 
