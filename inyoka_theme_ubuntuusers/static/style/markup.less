@@ -238,8 +238,9 @@ div.moderated p, div.edited p {
 /* custom 'emojis' that are not included in unicode and thus use a sprite */
 span[class^='icon-'] {
   display: inline-block;
-  height: 1ch;
-  width: 1ch;
+  height: 2.2ex;
+  width: 1em;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 span {
@@ -251,7 +252,6 @@ span {
   }
   &.icon-ubuntu {
     background-image: url('../img/smiley_icons/ubuntu.png');
-    // TODO use svg and height: 1ex;
   }
   &.icon-ubuntugnome {
     background-image: url('../img/smiley_icons/ubuntugnome.png');
