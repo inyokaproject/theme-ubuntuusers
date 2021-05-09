@@ -38,14 +38,14 @@
     {%- if blogs %}
       <h3 class="navi_blogs admin_link_hover">
         {%- if USER.has_perm('planet.add_blog') -%}
-          <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/category_new.png') }}" /></a>
+          <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/new.png') }}" /></a>
         {%- endif -%}{% trans %}Blogs{% endtrans %}
       </h3>
       <ul>
         {%- for blog in blogs %}
           <li class="admin_link_hover">
             {%- if USER.has_perm('planet.change_blog') -%}
-              <a class="admin_link" href="{{ blog|url('edit') }}"><img src="{{ href('static', 'img/ikhaya/category_edit.png') }}" /></a>
+              <a class="admin_link" href="{{ blog|url('edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px"/></a>
             {%- endif -%}
             <a href="{{ blog|url|e }}">{{ blog.name|e }}</a>
           </li>
@@ -54,7 +54,7 @@
     {%- endif %}
     {%- if USER.has_perm('planet.add_blog') %}
       <h3 class="navi_blogs admin_link_hover">
-          <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/article_new.png') }}" /></a>
+          <a class="admin_link" href="{{ href('planet', 'blog', 'new') }}"><img src="{{ href('static', 'img/ikhaya/new.png') }}" /></a>
         {% trans %}Configuration{% endtrans %}
       </h3>
       <ul>
