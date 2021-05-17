@@ -102,21 +102,21 @@
               {%- if not entry.is_own_message %}
                 {% if entry.message.author.is_active %}
                   <a href="{{ entry|url('reply') }}" title="{% trans %}Reply{% endtrans %}">{#
-                    #}<img src="{{ href('static', 'img/icons/small/msg-reply.png') }}" alt="{% trans %}Reply{% endtrans %}" />{#
+                    #}<img src="{{ href('static', 'img/icons/msg-reply.svg') }}" alt="{% trans %}Reply{% endtrans %}" width="16px" height="16px"/>{#
                   #}</a>
                 {%- endif -%}
                 {%- if entry.message.recipients|length > 1 %}
                   <a href="{{ entry|url('reply_to_all') }}" title="{% trans %}Reply to all{% endtrans %}">{#
-                    #}<img src="{{ href('static', 'img/icons/small/msg-reply-all.png') }}" alt="{% trans %}Reply to all{% endtrans %}" />{#
+                    #}<img src="{{ href('static', 'img/icons/msg-reply-all.svg') }}" alt="{% trans %}Reply to all{% endtrans %}" width="16px" height="16px" />{#
                   #}</a>
                 {%- endif -%}
               {%- endif %}
               <a href="{{ entry|url('forward') }}" title="{% trans %}Forward{% endtrans %}">{#
-                #}<img src="{{ href('static', 'img/icons/small/msg-forward.png') }}" alt="{% trans %}Forward{% endtrans %}" />{#
+                #}<img src="{{ href('static', 'img/icons/msg-forward.svg') }}" alt="{% trans %}Forward{% endtrans %}" height="16px" width="16px" />{#
               #}</a>
               {%- if not entry.in_archive %}
                 <a href="{{ entry|url }}?action=archive" title="{% trans %}Archive{% endtrans %}">{#
-                  #}<img src="{{ href('static', 'img/icons/small/archive.png') }}" alt="{% trans %}Archive{% endtrans %}" />{#
+                  #}<img src="{{ href('static', 'img/icons/archive.svg') }}" alt="{% trans %}Archive{% endtrans %}" width="16px" height="16px" />{#
                 #}</a>
               {%- endif %}
             </td>

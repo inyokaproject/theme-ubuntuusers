@@ -17,7 +17,7 @@
 {% macro user_edit_button(link, icon, name) %}
   <li>
     <span><a href="{{ link }}">{#
-      #}<img src="{{ href('static', 'img/portal/user_%s.png'|format(icon)) }}" alt="{{ name }}" /><br />
+      #}<img src="{{ href('static', 'img/portal/usercp-%s.svg'|format(icon)) }}" alt="{{ name }}" /><br />
       {{- name -}}
     </a></span>
   </li>
@@ -30,9 +30,9 @@
     <div class="usercp_control">
       <ul>
         {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'profile'), 'profile', _('Profile')) }}
-        {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'settings'), 'settings', _('Settings')) }}
+        {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'settings'), 'preferences', _('Settings')) }}
         {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'groups'), 'groups', _('Group memberships')) }}
-        {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'status'), 'status', _('State')) }}
+        {{ user_edit_button(href('portal', 'user', user.username, 'edit', 'status'), 'deactivate', _('State')) }}
       </ul>
     </div>
     <a href="{{ href('portal', 'user', user.username) }}">{% trans %}View public profile{% endtrans %}</a>
