@@ -1819,32 +1819,6 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 24 : 1"
        sodipodi:type="inkscape:persp3d" />
-    <filter
-       inkscape:collect="always"
-       id="filter5011"
-       x="-0.11615613"
-       width="1.2323123"
-       y="-0.87514281"
-       height="2.7502856"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="11.293729"
-         id="feGaussianBlur5013" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter5019"
-       x="-0.11182286"
-       width="1.2236457"
-       y="-1.1611615"
-       height="3.3223233"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="8.1386681"
-         id="feGaussianBlur5021" />
-    </filter>
   </defs>
   <metadata
      id="metadata7">
@@ -1854,7 +1828,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1870,18 +1844,6 @@
      inkscape:groupmode="layer"
      inkscape:label="Hintergrund"
      style="display:inline">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter5019)"
-       x="108.69957"
-       y="-171.22807"
-       id="text5015"
-       transform="matrix(0.7674265,0,0,0.7674265,14.856431,-38.428918)"><tspan
-         sodipodi:role="line"
-         id="tspan5017"
-         x="108.69957"
-         y="-171.22807"
-         style="font-size:17.8503px;line-height:1.25">fragen ist menschlich!</tspan></text>
     <g
        transform="matrix(0.99056911,0,0,0.99056911,42.161421,-235.36906)"
        id="g4859">
@@ -1910,18 +1872,6 @@
          id="path3208"
          sodipodi:nodetypes="czcczcczcczcc" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter5011)"
-       x="107.29836"
-       y="-193.55042"
-       id="text4951"
-       transform="matrix(0.7674265,0,0,0.7674265,14.856431,-38.428918)"><tspan
-         sodipodi:role="line"
-         id="tspan4953"
-         x="107.29836"
-         y="-193.55042"
-         style="font-size:40.923px;line-height:1.25">ubuntuusers</tspan></text>
     <text
        id="text3210"
        y="-186.96463"
