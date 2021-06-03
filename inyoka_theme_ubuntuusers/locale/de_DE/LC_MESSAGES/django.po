@@ -162,7 +162,7 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 msgid "Add attachment"
-msgstr "Anlage hinzufügen"
+msgstr "Anhang hinzufügen"
 
 msgid "Add blog"
 msgstr "Blog hinzufügen"
@@ -247,7 +247,7 @@ msgid "Attachment"
 msgstr "Anhang"
 
 msgid "Attachment:"
-msgstr "Anlage:"
+msgstr "Anhang:"
 
 msgid "Attachments:"
 msgstr "Anhänge:"
