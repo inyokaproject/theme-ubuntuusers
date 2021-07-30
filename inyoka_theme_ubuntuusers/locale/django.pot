@@ -1,21 +1,21 @@
 # Translations template for Inyoka Project.
-# Copyright (C) 2020 Inyoka Team (see AUTHORS)
+# Copyright (C) 2021 Inyoka Team (see AUTHORS)
 # This file is distributed under the same license as the Inyoka Project project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inyoka Project v0.21.1\n"
+"Project-Id-Version: Inyoka Project v0.26.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-30 21:31+0100\n"
+"POT-Creation-Date: 2021-05-02 23:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.9.0\n"
 
 msgid " Activation link:"
 msgstr ""
@@ -240,6 +240,9 @@ msgid "At this page the following tags have been assigned:"
 msgstr ""
 
 msgid "Attach to old topic"
+msgstr ""
+
+msgid "Attachment"
 msgstr ""
 
 msgid "Attachment:"
@@ -825,10 +828,6 @@ msgid "It is not possible to submit images along with the article. If you want t
 msgstr ""
 
 msgid "Jabber"
-msgstr ""
-
-#, python-format
-msgid "You can reactivate your user account “%(name)s” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again."
 msgstr ""
 
 msgid "Key"
@@ -1662,6 +1661,9 @@ msgstr ""
 msgid "This may be because you are not logged in."
 msgstr ""
 
+msgid "This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators."
+msgstr ""
+
 msgid "This topic"
 msgstr ""
 
@@ -1883,6 +1885,10 @@ msgstr ""
 msgid "You can login here if you are already <a href=\"%(register)s\">registered</a>. If you lost your password, you can <a href=\"%(lost_password)s\">request a new one</a>."
 msgstr ""
 
+#, python-format
+msgid "You can reactivate your user account “%(name)s” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again."
+msgstr ""
+
 msgid "You can reset your email address here if you changed it accidentally."
 msgstr ""
 
@@ -1980,5 +1986,3 @@ msgstr ""
 msgid "“%(name)s” is no member of any group."
 msgstr ""
 
-msgid "This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators."
-msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-30 21:31+0100\n"
+"POT-Creation-Date: 2021-05-02 23:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.9.0\n"
 
 msgid " Activation link:"
 msgstr "Aktivierungslink:"
@@ -162,7 +162,7 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 msgid "Add attachment"
-msgstr "Anlage hinzufügen"
+msgstr "Anhang hinzufügen"
 
 msgid "Add blog"
 msgstr "Blog hinzufügen"
@@ -243,8 +243,11 @@ msgstr "Die folgenden Schlagworte wurden dem Artikel zugewiesen:"
 msgid "Attach to old topic"
 msgstr "An bestehendes Thema anhängen"
 
+msgid "Attachment"
+msgstr "Anhang"
+
 msgid "Attachment:"
-msgstr "Anlage:"
+msgstr "Anhang:"
 
 msgid "Attachments:"
 msgstr "Anhänge:"
@@ -827,10 +830,6 @@ msgstr "Bilder können in dem Artikelvorschlag leider nicht direkt eingebunden w
 
 msgid "Jabber"
 msgstr "Jabber"
-
-#, python-format
-msgid "You can reactivate your user account “%(name)s” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again."
-msgstr "Du kannst dein Benutzerkonto „%(name)s“ bis zu einem Monat lang mit einem dir zugesandten Link wieder aktivieren. Danach wirst du nicht mehr in der Lage sein, Zugriff auf dein Benutzerkonto zu erlangen."
 
 msgid "Key"
 msgstr "Schlüssel"
@@ -1663,6 +1662,9 @@ msgstr "Dies ist eine Ablage, in der du Fehlermeldungen, Logs, Konfigurationsdat
 msgid "This may be because you are not logged in."
 msgstr "Das könnte daran liegen, dass du nicht angemeldet bist."
 
+msgid "This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators."
+msgstr "Dieser Beitrag ist verborgen. Entweder muss er von Moderatoren aktiviert werden oder er wurde explizit von Moderatoren verborgen."
+
 msgid "This topic"
 msgstr "Dieses Thema"
 
@@ -1884,6 +1886,10 @@ msgstr "Du kannst hier dein Konto „%(name)s“ deaktivieren. Wenn du das tust,
 msgid "You can login here if you are already <a href=\"%(register)s\">registered</a>. If you lost your password, you can <a href=\"%(lost_password)s\">request a new one</a>."
 msgstr "Du kannst dich hier anmelden, wenn du bereits <a href=\"%(register)s\">registriert bist</a>. Falls du dein Passwort vergessen hast, kannst du dir <a href=\"%(lost_password)s\">ein neues zusenden lassen</a>."
 
+#, python-format
+msgid "You can reactivate your user account “%(name)s” up to one month with the link sent to you via e-mail. After this period you will never be able to gain access to your account again."
+msgstr "Du kannst dein Benutzerkonto „%(name)s“ bis zu einem Monat lang mit einem dir zugesandten Link wieder aktivieren. Danach wirst du nicht mehr in der Lage sein, Zugriff auf dein Benutzerkonto zu erlangen."
+
 msgid "You can reset your email address here if you changed it accidentally."
 msgstr "Du kannst hier deine E-Mail-Adresse zurücksetzen, falls du sie aus Versehen geändert hast."
 
@@ -1981,5 +1987,3 @@ msgstr "« Vorheriges Thema"
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
 
-msgid "This post is hidden. Either it needs to be activated by moderators or it has been hidden explicitly by moderators."
-msgstr "Dieser Beitrag ist verborgen. Entweder muss er von Moderatoren aktiviert werden oder er wurde explizit von Moderatoren verborgen."
