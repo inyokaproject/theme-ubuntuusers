@@ -2,9 +2,9 @@
 Inyoka ubuntuusers Theme
 ========================
 
-.. image:: https://ci.ubuntu-de.org/job/inyokaproject-github/job/theme-ubuntuusers/job/staging/badge/icon
-    :target: https://ci.ubuntu-de.org/job/theme-ubuntuusers/
-    :alt: Build status of the staging branch
+.. image:: https://github.com/inyokaproject/theme-ubuntuusers/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/inyokaproject/theme-ubuntuusers/actions/workflows/test.yml
+    :alt: Inyoka Theme CI
 
 Installation
 ============
