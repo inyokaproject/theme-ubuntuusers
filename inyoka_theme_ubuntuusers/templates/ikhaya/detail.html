@@ -101,7 +101,7 @@
                     {%- endif -%}
                     {%- if can_post_comment %}
                       <a href="#new_comment" onclick="$('#id_text').val($('#id_text').val() + '@' + {{ loop.index }} + ': ')"
-                         class="action action_quote">{% trans %}Reply{% endtrans %}</a>
+                         class="action action_comment_add">{% trans %}Reply{% endtrans %}</a>
                     {%- endif %}
                   </div>
                   <a href="#comment_{{ loop.index }}"><strong>{{ loop.index }}</strong></a>
