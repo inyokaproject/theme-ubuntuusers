@@ -629,11 +629,11 @@ table.syntaxtable {
     a {
       background-repeat: no-repeat;
       display: block;
-      width: 257px;
+      width: 250px;
       height: 90px;
       margin: @body-innerspace;
       text-decoration: none;
-      background-image: url(../img/logo.png);
+      background-image: url(../img/logo-no_text.svg);
 
       @media(min-width: @big-width) {
         margin-left: 0;
@@ -772,7 +772,8 @@ button.navi_toggle {
   }
 
   h3.navi_ubuntu {
-    background-image: url('../img/icons/ubuntu.png');
+    background-image: url('../img/circle-of-friends-web/SVG/cof_orange_hex.svg');
+    background-size: 28px 100%; /* other icons have a size of 24x24px. However, the SVG has some margin inside the SVG already */
   }
   h3.navi_ubuntuusers {
     background-image: url('../img/icons/ubuntuusers.png');
@@ -790,10 +791,10 @@ button.navi_toggle {
     background-image: url('../img/icons/planet.svg');
   }
   h3.navi_config {
-    background-image: url('../img/icons/config_sb.png');
+    background-image: url('../img/icons/actions.svg');
   }
   h3.actions {
-    background-image: url('../img/icons/actions.png');
+    background-image: url('../img/icons/actions.svg');
   }
   p {
     color: #222;
@@ -1187,6 +1188,8 @@ select.firstletterselect {
 .admin_link.right, .admin_link_js.right {
   float: right;
   margin: 0 5px 0 0;
+  height: 16px;
+  width: 16px;
 }
 
 #admin_menu {

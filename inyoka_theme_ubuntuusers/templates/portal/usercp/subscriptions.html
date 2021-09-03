@@ -70,14 +70,14 @@
                   -#}</a>
                 {% elif type == 'page' -%}
                   <a href="{{ object|url('log') }}" title="{% trans %}Revisions{% endtrans %}">{#-
-                    -#}<img src="{{ href('static', 'img/icons/raw.png') }}" alt="{% trans %}Revisions{% endtrans %}" height="16" />{#-
+                    -#}<img src="{{ href('static', 'img/icons/raw.svg') }}" alt="{% trans %}Revisions{% endtrans %}" height="16" width="16"/>{#-
                   -#}</a>
                 {%- endif %}
                 <a href="{{ object|url('unsubscribe', next=CURRENT_URL) }}">({% trans %}Unsubscribe{% endtrans %})</a>
               </td>
               <td class="read">
                 {%- if sub.notified %}
-                  <img src="{{ href('static', 'img', 'icons', 'new.png') }}" alt="neu" title="{% trans %}Changes since last visit{% endtrans %}" />
+                  <img src="{{ href('static', 'img', 'icons', 'new.svg') }}" alt="neu" title="{% trans %}Changes since last visit{% endtrans %}" width="16" height="16"/>
                 {%- endif %}
               </td>
               <td class="status">

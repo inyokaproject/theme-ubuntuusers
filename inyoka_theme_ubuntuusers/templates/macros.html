@@ -107,8 +107,10 @@
 
 {% macro add_user_avatar(user, css_classes='avatar') %}
   <img class="{{ css_classes }}"
-    src="{{ user.avatar_url|default(href('static', 'img', 'portal', 'no_avatar.png'), true)|e }}"
-    alt="{% trans user=user.username|e %}Avatar of {{ user }}{% endtrans %}" />
+    src="{{ user.avatar_url|default(href('static', 'img', 'portal', 'usercp-profile.svg'), true)|e }}"
+    alt="{% trans user=user.username|e %}Avatar of {{ user }}{% endtrans %}"
+    height="96px"
+    width="96px"/>
 {% endmacro %}
 
 {% macro create_title(breadcrumb_list) %}
