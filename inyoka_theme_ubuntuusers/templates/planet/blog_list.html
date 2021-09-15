@@ -1,6 +1,6 @@
 {#
     planet/blog_list.html
-    ~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~
 
     This is the overview of the static pages configuration.
 
@@ -17,12 +17,6 @@
   <h3>{% trans %}Blogs{% endtrans %}</h3>
   <a href="{{ href('planet', 'blog', 'new') }}">{% trans %}Add new blog{% endtrans %}</a>
   <table class="static_pages">
-    <colgroup>
-      <col width="40%" />
-      <col width="40%" />
-      <col width="15%" />
-      <col width="5%" />
-    </colgroup>
     <thead>
       <tr>
         <th>{{ table.get_html('name', _('Name')) }}</th>
