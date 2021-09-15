@@ -77,10 +77,9 @@
               <div class="postinfo">
                 <div class="linklist">
                 </div>
-                <a href="{{ post|url }}" title="{% trans %}Link to this post{% endtrans %}">{#
-                  #}<img src="{{ href('static', 'img', 'icon_minipost.gif') }}" alt="{% trans %}Post{% endtrans %}" />{#
-                #}</a>
-                {{ post.pub_date|datetime }}
+                <a href="{{ post|url }}" title="{% trans %}Link to this post{% endtrans %}">
+                  {{ post.pub_date|datetime }}
+                </a>
               </div>
               <div class="text">
                 {{ post.get_text() }}

@@ -285,12 +285,11 @@
                 {%- endif %}
               </div>
               <a href="{{ post|url }}" title="{% trans %}Link to this post{% endtrans %}">
-                <img src="{{ href('static', 'img', 'icon_minipost.gif') }}" alt="{% trans %}Post{% endtrans %}" />{#
-              #}</a>
-              {{ post.pub_date|datetime }}
-              {% if post.has_revision %}
-               ({% trans %}last edited:{% endtrans %} {{ post.revisions.latest('store_date').store_date|datetime }})
-              {% endif %}
+                {{ post.pub_date|datetime }}
+                {% if post.has_revision %}
+                ({% trans %}last edited:{% endtrans %} {{ post.revisions.latest('store_date').store_date|datetime }})
+                {% endif %}
+              </a>
             </div>
             {% if post.hidden and post.author == USER %}
             <div class="postinfo">
