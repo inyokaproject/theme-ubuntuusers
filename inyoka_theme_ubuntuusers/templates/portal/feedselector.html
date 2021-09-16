@@ -54,7 +54,7 @@
     <dd class="radiolist">
       {{ forum_form.mode }}{{ forum_form.errors.mode }}
       <p>
-        {{ forum_form.count.label_tag() }}: {{ forum_form.count }}{{ forum_form.errors.count }}
+        {{ forum_form.count.label_tag() }} {{ forum_form.count }}{{ forum_form.errors.count }}
         <span class="help_text">{{ forum_form.count.help_text }}</span>
       </p>
     </dd>
@@ -70,12 +70,12 @@
 
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
-    <dd>{{ ikhaya_form.category.label_tag() }}: {{ ikhaya_form.category }}</dd>
+    <dd>{{ ikhaya_form.category.label_tag() }} {{ ikhaya_form.category }}</dd>
     <dt>{% trans %}How{% endtrans %}</dt>
     <dd class="radiolist">
       {{ ikhaya_form.mode }}{{ ikhaya_form.errors.mode }}
       <p>
-        {{ ikhaya_form.count.label_tag() }}: {{ ikhaya_form.count }}{{ ikhaya_form.errors.count }}
+        {{ ikhaya_form.count.label_tag() }} {{ ikhaya_form.count }}{{ ikhaya_form.errors.count }}
         <span class="help_text">{{ ikhaya_form.count.help_text }}</span>
       </p>
     </dd>
@@ -92,7 +92,7 @@
     <dd class="radiolist">
       {{ planet_form.mode }}{{ planet_form.errors.mode }}
       <p>
-        {{ planet_form.count.label_tag() }}: {{ planet_form.count }}{{ planet_form.errors.count }}
+        {{ planet_form.count.label_tag() }} {{ planet_form.count }}{{ planet_form.errors.count }}
         <span class="help_text">{{ planet_form.count.help_text }}</span>
       </p>
     </dd>
@@ -100,16 +100,17 @@
   <p id="planet_submit_p"><input type="submit" value="Feed anzeigen" /></p>
   </form>
   {%- endif %}
+
   {%- if wiki_form %}
   <form action="/feeds/wiki/" method="post" id="wiki">
   {{ csrf_token() }}
   <h4>{% trans %}Wiki{% endtrans %}</h4>
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
-    <dd>{{ wiki_form.page.label_tag() }}: {{ wiki_form.page }}</dd>
+    <dd>{{ wiki_form.page.label_tag() }} {{ wiki_form.page }}</dd>
     <dd class="help_text">{{ wiki_form.page.help_text }}</dd>
     <p>
-      {{ wiki_form.count.label_tag() }}: {{ wiki_form.count }}{{ wiki_form.errors.count }}
+      {{ wiki_form.count.label_tag() }} {{ wiki_form.count }}{{ wiki_form.errors.count }}
       <span class="help_text">{{ wiki_form.count.help_text }}</span>
     </p>
     <dd>{{ wiki_form.errors }}</dd>
