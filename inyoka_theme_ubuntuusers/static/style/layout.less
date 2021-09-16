@@ -64,3 +64,10 @@
     padding-right: calc(@h_space + @body-innerspace);
   }
 }
+
+.preview-border() {
+  border-right: .5em dashed @orange_s_light;
+  border-image: repeating-linear-gradient(45deg, @orange_s_light, @orange_s_light 35px, rgba(0,0,0,.5) 35px, rgba(0,0,0,.5) 70px) 10;
+  margin: 20px 0 20px 0;
+  padding-right: 1em;
+}

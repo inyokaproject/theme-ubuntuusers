@@ -10,6 +10,7 @@
  */
 
 @import 'fonts.less';
+@import 'layout.less';
 
 table:not([class]), table[class^="zebra"] {
   max-width: 100%;
@@ -54,11 +55,7 @@ h2, h3, h4 {
   }
 }
 div.preview {
-  border: 1px solid #ccc;
-  margin: 20px 0 20px 0;
-  padding: 10px 20px 10px 20px;
-  background-color: #f8f8f8;
-  background-image: url(../img/draft.png);
+  .preview-border();
 }
 p.meta {
   border-top: 1px solid #AAA;
