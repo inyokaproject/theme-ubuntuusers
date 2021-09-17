@@ -155,8 +155,7 @@
               </td>
               {%- if not (poll.can_vote and can_vote) or show_vote_results %}
                 <td class="vote_bar">
-                  <div style="width: {{ (option.percentage * 3) or 2 }}px;">
-                  </div>
+                  <meter min="0" max="100" value="{{ option.percentage }}"></meter>
                 </td>
                 {%- set bc, ac = (option.percentage|string).split('.') %}
                 <td class="percentage">
