@@ -137,10 +137,8 @@
     <form action="" method="post" class="poll">
       {{ csrf_token() }}
       {%- for poll in polls %}
-        <p>
-          <strong>{{ poll.question|e }}</strong>
-        </p>
         <table class="poll">
+          <caption>{{ poll.question|e }}</caption>
           {%- for option in poll.options.order_by('id').all() %}
             <tr>
               <td>
