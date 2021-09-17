@@ -137,9 +137,9 @@
     <form action="" method="post" class="poll">
       {{ csrf_token() }}
       {%- for poll in polls %}
-        <div>
+        <p>
           <strong>{{ poll.question|e }}</strong>
-        </div>
+        </p>
         <table class="poll">
           {%- for option in poll.options.order_by('id').all() %}
             <tr>
@@ -169,7 +169,7 @@
             </tr>
           {%- endfor %}
         </table>
-        <div>
+        <p>
           {%- if poll.ended -%}
             {% trans start_date=poll.start_time|datetime, end_date=poll.end_time|datetime -%}
               The poll was started on {{ start_date }} and it ended on {{ end_date }}.
@@ -179,11 +179,13 @@
               The poll was started on {{ start_date }} and it will end on {{ end_date }}.
             {%- endtrans %}
           {%- endif -%}
-        </div>
-        {% trans count=poll.votes %}{{ count }} vote{% pluralize %}{{ count }} votes{% endtrans %}
-        {%- if poll.multiple_votes %},
-          {% trans count=poll.votings.count() %}{{ count }} voter{% pluralize %}{{ count }} voters{% endtrans %}
-        {%- endif %}
+        </p>
+        <p>
+          {% trans count=poll.votes %}{{ count }} vote{% pluralize %}{{ count }} votes{% endtrans %}
+          {%- if poll.multiple_votes %},
+            {% trans count=poll.votings.count() %}{{ count }} voter{% pluralize %}{{ count }} voters{% endtrans %}
+          {%- endif %}
+        </p>
       {%- endfor %}
       {%- if can_vote and not voted_all %}
         <p>
