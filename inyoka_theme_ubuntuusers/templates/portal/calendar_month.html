@@ -35,8 +35,7 @@
     <th>{% trans %}Events{% endtrans %}</th>
   </tr>
   {% for day, events in days %}
-  <tr {#- #FIXME: if it's weekend today there is only the `today` class, but atm it's not used by the css, so *plonk* :) #}
-     {%- if day == today %} class="today"
+  <tr {%- if day == today %} aria-current="date"
      {%- elif day.weekday() == 6 %} class="sunday"
      {%- elif day.weekday() == 5 %} class="saturday"
      {%- endif %}>
