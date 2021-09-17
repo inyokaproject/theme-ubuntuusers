@@ -179,15 +179,16 @@
         {% block pathbar_extensions %}
         {% endblock %}
 
-      <div class="breadcrumb -top">
+      <nav aria-label="{% trans %}Breadcrumb top{% endtrans %}" class="breadcrumb -top">
         {% block breadcrumb %}
           <ol>
             {% for breadcrumb in BREADCRUMBS %}
-              <li><a href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
+              <li><a {% if loop.last %}aria-current="location"{% endif %}
+                     href="{{ breadcrumb[1] }}">{{ breadcrumb[0] }}</a></li>
             {% endfor %}
           </ol>
         {% endblock %}
-      </div>
+      </nav>
 
         {% set tabbar = navi_type in ['tabbar', 'both'] %}
         {% set sidebar = navi_type in ['sidebar', 'both'] %}
@@ -218,9 +219,9 @@
           {% block content %}{% endblock %}
         </main>
 
-    <div class="breadcrumb -bottom">
+    <nav aria-label="{% trans %}Breadcrumb bottom{% endtrans %}" class="breadcrumb -bottom">
       {{ self.breadcrumb() }}
-    </div>
+    </nav>
 
     <footer class="footer">
       <ul>

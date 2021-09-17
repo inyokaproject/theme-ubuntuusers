@@ -281,6 +281,12 @@ msgstr "Blogliste"
 msgid "Blogs"
 msgstr "Blogs"
 
+msgid "Breadcrumb bottom"
+msgstr "Brotkrumennavigation unten"
+
+msgid "Breadcrumb top"
+msgstr "Brotkrumennavigation oben"
+
 msgid "Browse pastes"
 msgstr "Einträge durchstöbern"
 
