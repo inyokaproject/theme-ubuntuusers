@@ -14,7 +14,7 @@
 {% set BREADCRUMBS = [(_('Feeds'), href('portal', 'feeds'))] + BREADCRUMBS|d([]) %}
 
 {% block portal_content %}
-  <h3>Feed generieren</h3>
+  <h1>{% trans %}Generate feed{% endtrans %}</h1>
   {%- if not app %}
   <ul class="toc">
     <li><a href="#forum">{% trans %}Forum{% endtrans %}</a></li>
@@ -27,7 +27,7 @@
   {%- if forum_form %}
   <form action="/feeds/forum/" method="post" id="forum">
   {{ csrf_token() }}
-  <h4>{% trans %}Forum{% endtrans %}</h4>
+  <h2>{% trans %}Forum{% endtrans %}</h2>
 
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
@@ -54,67 +54,70 @@
     <dd class="radiolist">
       {{ forum_form.mode }}{{ forum_form.errors.mode }}
       <p>
-        {{ forum_form.count.label_tag() }}: {{ forum_form.count }}{{ forum_form.errors.count }}
+        {{ forum_form.count.label_tag() }} {{ forum_form.count }}{{ forum_form.errors.count }}
         <span class="help_text">{{ forum_form.count.help_text }}</span>
       </p>
     </dd>
   </dl>
 
-  <p id="forum_submit_p"><input type="submit" value="Feed anzeigen" /></p>
+  <p id="forum_submit_p"><input type="submit" value="{% trans %}Display feed{% endtrans %}" /></p>
   </form>
   {%- endif %}
+
   {%- if ikhaya_form %}
   <form action="/feeds/ikhaya/" method="post" id="ikhaya">
   {{ csrf_token() }}
-  <h4>Ikhaya</h4>
+  <h2>Ikhaya</h2>
 
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
-    <dd>{{ ikhaya_form.category.label_tag() }}: {{ ikhaya_form.category }}</dd>
+    <dd>{{ ikhaya_form.category.label_tag() }} {{ ikhaya_form.category }}</dd>
     <dt>{% trans %}How{% endtrans %}</dt>
     <dd class="radiolist">
       {{ ikhaya_form.mode }}{{ ikhaya_form.errors.mode }}
       <p>
-        {{ ikhaya_form.count.label_tag() }}: {{ ikhaya_form.count }}{{ ikhaya_form.errors.count }}
+        {{ ikhaya_form.count.label_tag() }} {{ ikhaya_form.count }}{{ ikhaya_form.errors.count }}
         <span class="help_text">{{ ikhaya_form.count.help_text }}</span>
       </p>
     </dd>
   </dl>
-  <p id="ikhaya_submit_p"><input type="submit" value="Feed anzeigen" /></p>
+  <p id="ikhaya_submit_p"><input type="submit" value="{% trans %}Display feed{% endtrans %}" /></p>
   </form>
   {%- endif %}
+
   {%- if planet_form %}
   <form action="/feeds/planet/" method="post" id="planet">
   {{ csrf_token() }}
-  <h4>{% trans %}Planet{% endtrans %}</h4>
+  <h2>{% trans %}Planet{% endtrans %}</h2>
   <dl>
     <dt>{% trans %}How{% endtrans %}</dt>
     <dd class="radiolist">
       {{ planet_form.mode }}{{ planet_form.errors.mode }}
       <p>
-        {{ planet_form.count.label_tag() }}: {{ planet_form.count }}{{ planet_form.errors.count }}
+        {{ planet_form.count.label_tag() }} {{ planet_form.count }}{{ planet_form.errors.count }}
         <span class="help_text">{{ planet_form.count.help_text }}</span>
       </p>
     </dd>
   </dl>
-  <p id="planet_submit_p"><input type="submit" value="Feed anzeigen" /></p>
+  <p id="planet_submit_p"><input type="submit" value="{% trans %}Display feed{% endtrans %}" /></p>
   </form>
   {%- endif %}
+
   {%- if wiki_form %}
   <form action="/feeds/wiki/" method="post" id="wiki">
   {{ csrf_token() }}
-  <h4>{% trans %}Wiki{% endtrans %}</h4>
+  <h2>{% trans %}Wiki{% endtrans %}</h2>
   <dl>
     <dt>{% trans %}What{% endtrans %}</dt>
-    <dd>{{ wiki_form.page.label_tag() }}: {{ wiki_form.page }}</dd>
+    <dd>{{ wiki_form.page.label_tag() }} {{ wiki_form.page }}</dd>
     <dd class="help_text">{{ wiki_form.page.help_text }}</dd>
     <p>
-      {{ wiki_form.count.label_tag() }}: {{ wiki_form.count }}{{ wiki_form.errors.count }}
+      {{ wiki_form.count.label_tag() }} {{ wiki_form.count }}{{ wiki_form.errors.count }}
       <span class="help_text">{{ wiki_form.count.help_text }}</span>
     </p>
     <dd>{{ wiki_form.errors }}</dd>
   </dl>
-  <p id="wiki_submit_p"><input type="submit" value="Feed anzeigen"/></p>
+  <p id="wiki_submit_p"><input type="submit" value="{% trans %}Display feed{% endtrans %}"/></p>
   </form>
   {%- endif %}
 {%- endblock %}

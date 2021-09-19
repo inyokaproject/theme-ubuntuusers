@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-02 23:09+0200\n"
+"POT-Creation-Date: 2021-09-17 00:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 msgid " Activation link:"
 msgstr "Aktivierungslink:"
@@ -172,9 +172,6 @@ msgstr "Kategorie hinzufügen"
 
 msgid "Add event"
 msgstr "Veranstaltung hinzufügen"
-
-msgid "Add new blog"
-msgstr "Neues Blog hinzufügen"
 
 msgid "Add poll"
 msgstr "Umfrage hinzufügen"
@@ -520,6 +517,9 @@ msgstr "Alle Nachrichten auf einer Seite anzeigen"
 msgid "Display entry as raw text"
 msgstr "Zeige Eintrag als Rohtext an"
 
+msgid "Display feed"
+msgstr "Feed anzeigen"
+
 msgid "Display options"
 msgstr "Anzeigeoptionen"
 
@@ -717,6 +717,9 @@ msgstr "Allgemein"
 
 msgid "General settings"
 msgstr "Allgemeine Einstellungen"
+
+msgid "Generate feed"
+msgstr "Feed erstellen"
 
 msgid "Global Permissions"
 msgstr "Globale Berechtigungen"
@@ -1992,4 +1995,3 @@ msgstr "« Vorheriges Thema"
 #, python-format
 msgid "“%(name)s” is no member of any group."
 msgstr "„%(name)s“ ist kein Mitglied einer Gruppe."
-
