@@ -21,10 +21,9 @@
                    title=entry.title|e, author=entry.author.username|e -%}
             <a href="{{ entry_link }}">{{ title }}</a> by <a href="{{ author_link }}">{{- author -}}</a>
           {%- endtrans %}
-          <span class="linklist"> | </span>
-          <span class="date">
-            {{- entry.pub_date|datetime }}
-          </span>
+          <time datetime="{{ entry.pub_date.isoformat() }}"> {# TODO: if py>=3.6, add timespec='minutes' #}
+            {{ entry.pub_date|datetime }}
+          </time>
         </li>
       {%- endfor %}
     </ul>

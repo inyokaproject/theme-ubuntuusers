@@ -9,7 +9,7 @@
  */
 
 $(document).ready(function () {
-  $('dd.paste_actions ul').append($('<li />').append(
+  $('ul.paste_actions').append($('<li />').append(
   $('<a href="#">Zeilennummern ein-/ausschalten</a>').click(function () {
     $('.syntaxtable .linenos').toggle();
     return false;

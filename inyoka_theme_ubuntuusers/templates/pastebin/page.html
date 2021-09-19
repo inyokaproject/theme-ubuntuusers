@@ -13,20 +13,18 @@
 {% set BREADCRUMBS = [(_('Pastebin'), href('pastebin'))] + BREADCRUMBS|d([]) %}
 {% set styles = styles|default([]) + ['pastebin'] %}
 {% set active_app = 'paste' %}
-{% set navi_type  = 'tabbar' %}
+{% set navi_type  = 'sidebar' %}
 
 {% block content %}
-  <div class="container">
-    <div class="contentbar">
-      {%- block paste_content %}
-      {%- endblock %}
-    </div>
-  </div>
+  {%- block paste_content %}
+  {%- endblock %}
 {%- endblock %}
 
-{% block tabbar %}
-  <ul>
-    <li><a href="{{ href('pastebin', 'add') }}"{{ page == 'add' and ' class="active"' or '' }}>{% trans %}New paste{% endtrans %}</a></li>
-    <li><a href="{{ href('pastebin') }}"{{ page == 'browse' and ' class="active"' or '' }}>{% trans %}Browse pastes{% endtrans %}</a></li>
-  </ul>
+{% block sidebar %}
+  <div class="container">
+    <ul>
+      <li><a href="{{ href('pastebin', 'add') }}"{{ page == 'add' and ' class="active"' or '' }}>{% trans %}New paste{% endtrans %}</a></li>
+      <li><a href="{{ href('pastebin') }}"{{ page == 'browse' and ' class="active"' or '' }}>{% trans %}Browse pastes{% endtrans %}</a></li>
+    </ul>
+  </div>
 {% endblock %}

@@ -7,28 +7,33 @@
  * :copyright: (c) 2007-2021 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
+@import 'colors.less';
 
 ul.pastes {
-  margin: 1em 0 1em 0;
   padding: 0;
   list-style: none;
-}
-ul.pastes {
+
   li {
     margin: 0.2em 0 0.2em 0;
     span.number {
       display: block;
       float: left;
       font-weight: bold;
-      width: 5em;
-      padding-right: 12px;
+      padding-right: 0.5em;
+
+      @media (min-width: @medium-width) {
+        width: 5em;
+      }
     }
   }
   li:hover {
     background-color: #eee;
   }
-  li.date {
+  li > time {
     color: #777;
+    @media (min-width: @medium-width) {
+      float: right;
+    }
   }
 }
 div.code, pre {
