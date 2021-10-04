@@ -137,10 +137,8 @@
     <form action="" method="post" class="poll">
       {{ csrf_token() }}
       {%- for poll in polls %}
-        <div>
-          <strong>{{ poll.question|e }}</strong>
-        </div>
         <table class="poll">
+          <caption>{{ poll.question|e }}</caption>
           {%- for option in poll.options.order_by('id').all() %}
             <tr>
               <td>
@@ -155,8 +153,7 @@
               </td>
               {%- if not (poll.can_vote and can_vote) or show_vote_results %}
                 <td class="vote_bar">
-                  <div style="width: {{ (option.percentage * 3) or 2 }}px;">
-                  </div>
+                  <meter min="0" max="100" value="{{ option.percentage }}"></meter>
                 </td>
                 {%- set bc, ac = (option.percentage|string).split('.') %}
                 <td class="percentage">
@@ -169,7 +166,7 @@
             </tr>
           {%- endfor %}
         </table>
-        <div>
+        <p>
           {%- if poll.ended -%}
             {% trans start_date=poll.start_time|datetime, end_date=poll.end_time|datetime -%}
               The poll was started on {{ start_date }} and it ended on {{ end_date }}.
@@ -179,11 +176,13 @@
               The poll was started on {{ start_date }} and it will end on {{ end_date }}.
             {%- endtrans %}
           {%- endif -%}
-        </div>
-        {% trans count=poll.votes %}{{ count }} vote{% pluralize %}{{ count }} votes{% endtrans %}
-        {%- if poll.multiple_votes %},
-          {% trans count=poll.votings.count() %}{{ count }} voter{% pluralize %}{{ count }} voters{% endtrans %}
-        {%- endif %}
+        </p>
+        <p>
+          {% trans count=poll.votes %}{{ count }} vote{% pluralize %}{{ count }} votes{% endtrans %}
+          {%- if poll.multiple_votes %},
+            {% trans count=poll.votings.count() %}{{ count }} voter{% pluralize %}{{ count }} voters{% endtrans %}
+          {%- endif %}
+        </p>
       {%- endfor %}
       {%- if can_vote and not voted_all %}
         <p>

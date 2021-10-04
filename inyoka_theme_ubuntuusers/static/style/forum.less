@@ -419,15 +419,25 @@ form.poll {
 table.poll {
   border: 0;
   width: auto;
+  caption {
+    text-align: left;
+    font-weight: bold;
+  }
   td {
     border: 0;
-    padding: 0 2.5em 0 0;
+    &:first-child {
+      padding-left: 0;
+    }
   }
-  td.vote_bar {
-    min-width: 100px;
-    div {
-      background-color: #EAD1A2;
-      height: 0.7em;
+  meter {
+    background: transparent;
+    border: 1px solid @black_mostly;
+    border-top: none;
+    border-bottom: none;
+    height: 0.7em;
+    width: 10ch;
+    &::-webkit-meter-bar, &::-moz-meter-bar {
+      background: @orange_d_medium;
     }
   }
   td.sum {
