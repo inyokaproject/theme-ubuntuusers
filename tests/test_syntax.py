@@ -55,5 +55,5 @@ def main(root):
             setattr(TestTemplateSyntax, func_name, gen_test_func(name))
 
 
-root = os.path.join(INYOKA_THEME, 'templates')
+root = os.path.join(INYOKA_THEME, 'jinja2')
 main(root)
