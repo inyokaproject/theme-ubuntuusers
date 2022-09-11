@@ -9,7 +9,7 @@ with open('README.rst') as f:
 
 setup(
     name='inyoka-theme-ubuntuusers',
-    version='0.27.0',
+    version='0.28.0',
     description='Inyoka ubuntuusers theme',
     long_description=readme,
     author='Inyoka Team',

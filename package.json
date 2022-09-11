@@ -1,7 +1,7 @@
 {
   "name": "theme-ubuntuusers",
   "title": "Inyoka ubuntuusers.de theme",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "description": "Inyoka ubuntuusers Theme",
   "main": "index.js",
   "scripts": {
