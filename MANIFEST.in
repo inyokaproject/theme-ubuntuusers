@@ -2,4 +2,4 @@ include AUTHORS
 include LICENSE
 include README.rst
 recursive-include inyoka_theme_ubuntuusers/static *.*
-recursive-include inyoka_theme_ubuntuusers/templates *.*
+recursive-include inyoka_theme_ubuntuusers/jinja2 *.*
