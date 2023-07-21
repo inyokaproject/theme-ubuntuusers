@@ -7,7 +7,7 @@
  * It's based on django code that implements a similar widget for the admin
  * panel.
  *
- * :copyright: (c) 2007-2022 by the Inyoka Team, see AUTHORS for more details.
+ * :copyright: (c) 2007-2023 by the Inyoka Team, see AUTHORS for more details.
  * :license: BSD, see LICENSE for more details.
  */
 
