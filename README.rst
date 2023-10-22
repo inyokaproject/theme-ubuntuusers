@@ -26,7 +26,7 @@ On development systems:
 
 2. Switch into the repository: ``cd theme-ubuntusers``
 3. Activate source ``source ~/.venvs/inyoka/bin/activate``
-4. Install as a development package: ``python setup.py develop``
+4. Install as a development package: ``pip install -e .``
 5. Run ``npm install`` to install all node dependencies (most relevant is ``less`` to generate the CSS)
 6. Run ``npm run watch`` to build all static files and watch for file changes on the CSS / JS files
    (If it does not work for you out of the box, check whether you have a package like ``inotify-tools`` installed)
