@@ -116,10 +116,8 @@
       </tr>
       <tr>
         <td>{{ user.location|e or '–' }}</td>
-        {% if user.jabber and user.settings['show_jabber'] -%}
+        {% if user.jabber -%}
         <td><a href="{{ user.jabber_url|e }}">{{ user.jabber|e }}</a></td>
-        {%- elif user.jabber and USER.has_perm('portal.change_user') -%}
-        <td class="hidden"><a href="{{ user.jabber_url|e }}">{{ user.jabber|e }}</a></td>
         {%- else -%}
         <td>–</td>
         {%- endif -%}

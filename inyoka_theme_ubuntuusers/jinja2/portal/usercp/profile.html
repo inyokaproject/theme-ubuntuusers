@@ -1,5 +1,5 @@
 {#
-    portal/usercp/settings.html
+    portal/usercp/profile.html
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     This page shows the user control panel settings page.
@@ -46,7 +46,7 @@
     <dl>
       <dd>
         <p class="note">{% trans -%}
-          By default, the email and jabber addresses are not displayed in your public profile. To publish them, you need to check the “show in profile” box.
+          By default, the email address is not displayed in your public profile. To publish it, you need to check the “show in profile” box.
         {%- endtrans %}</p>
       </dd>
       {% for item in ['email', 'gpgkey', 'jabber', 'website', 'launchpad', 'location'] %}
@@ -54,7 +54,7 @@
           {{ form[item].label_tag() }}
         </dt>
         <dd>{{ form[item] }}
-          {%- if item in ['email', 'jabber'] %}
+          {%- if item in ['email',] %}
             <span class="note">{{ form['show_' + item] }}
               <label for="id_show_{{ item }}">{% trans %}Show in profile{% endtrans %}</label>
             </span>
