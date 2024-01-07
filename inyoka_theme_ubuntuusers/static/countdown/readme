@@ -1,0 +1,26 @@
+COUNTDOWN TIMER FOR UBUNTU LINUX RELEASES
+
+Version:	1.0 (german)
+Format:		PNG optimized (optipng)
+Size:		128x128 px/frame
+Source:		SVG included
+
+Export PNG from SVG source file and crop to frames with ImageMagick:
+
+convert source.png -crop 128x128 +repage +adjoin frames/%02d.png
+ 
+Frame order works for all frames except the last 4 which may need
+manual renaming.
+
+Package content:
+
+./frames
+	/00.png - 31.png
+	/bg.png
+	/empty.png
+	/soon.png
+	/release.png
+./copying
+./preview.png
+./readme
+./source.svg
