@@ -4,7 +4,7 @@
 
     This page shows a user's profile.
 
-    :copyright: (c) 2007-2023 by the Inyoka Team, see AUTHORS for more details.
+    :copyright: (c) 2007-2024 by the Inyoka Team, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 #}
 {%- extends 'portal/overall.html' %}
@@ -116,10 +116,8 @@
       </tr>
       <tr>
         <td>{{ user.location|e or '–' }}</td>
-        {% if user.jabber and user.settings['show_jabber'] -%}
+        {% if user.jabber -%}
         <td><a href="{{ user.jabber_url|e }}">{{ user.jabber|e }}</a></td>
-        {%- elif user.jabber and USER.has_perm('portal.change_user') -%}
-        <td class="hidden"><a href="{{ user.jabber_url|e }}">{{ user.jabber|e }}</a></td>
         {%- else -%}
         <td>–</td>
         {%- endif -%}
