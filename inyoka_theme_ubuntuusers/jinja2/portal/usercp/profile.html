@@ -36,7 +36,7 @@
       {%- if form.errors.avatar %}<dd>{{ form.errors.avatar }}</dd>{% endif %}
       <dt>{% trans %}Gravatar:{% endtrans %}</dt>
       {% if user.settings.use_gravatar %}
-      <dd><img class="usercp_avatar" src="{{ user.gravatar_url }}" alt="Gravatar" /></dd>
+      <dd><img class="usercp_avatar" src="{{ user.gravatar_url }}" alt="Gravatar" ></dd>
       {% endif %}
       <dd>{{ form.use_gravatar }} <label for="id_use_gravatar">{{ form.use_gravatar.label }}</label>
         <dd class="note">{{ form.use_gravatar.help_text|safe }}</dd>
@@ -76,7 +76,7 @@
       {{ form.userpage }}
     </p>
     <p>
-      <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+      <input type="submit" value="{% trans %}Submit{% endtrans %}" >
     </p>
     <p>
       <a href="{{ href('portal', 'user', user.username ) }}">{% trans %}Show my profile{% endtrans %}</a>

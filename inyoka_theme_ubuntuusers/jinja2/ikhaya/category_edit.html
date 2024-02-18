@@ -22,7 +22,7 @@
     {{ csrf_token() }}
     {{ render_form(form, ['name', 'icon']) }}
     <p>
-      <input type="submit" value="{% trans %}Submit{% endtrans %}" />
+      <input type="submit" value="{% trans %}Submit{% endtrans %}" >
     </p>
   </form>
 {% endblock %}

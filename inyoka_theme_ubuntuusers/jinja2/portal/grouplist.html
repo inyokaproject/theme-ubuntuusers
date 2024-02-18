@@ -38,7 +38,7 @@
         <a href="{{ href('portal', 'group', group) }}">{{ group.name|e }}</a>
         {%- if group in user_groups %}</strong>{% endif -%}
         {%- if USER.has_perm('auth.change_group') -%}
-          <a href="{{ href('portal', 'group', group.name|e, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px" /></a>
+          <a href="{{ href('portal', 'group', group.name|e, 'edit') }}" class="admin_link"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px" ></a>
         {%- endif -%}
       </td>
     </tr>

@@ -17,7 +17,7 @@
 {% macro user_edit_button(link, icon, name) %}
   <li>
     <span><a href="{{ link }}">{#
-      #}<img src="{{ href('static', 'img/portal/usercp-%s.svg'|format(icon)) }}" alt="{{ name }}" /><br />
+      #}<img src="{{ href('static', 'img/portal/usercp-%s.svg'|format(icon)) }}" alt="{{ name }}" ><br>
       {{- name -}}
     </a></span>
   </li>

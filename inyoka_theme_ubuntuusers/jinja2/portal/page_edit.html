@@ -24,8 +24,8 @@
     {{ csrf_token() }}
     {{ render_form(form, ('title', 'key', 'content')) }}
     <p>
-      <input type="submit" value="{% trans %}Preview{% endtrans %}" name="preview" />
-      <input type="submit" value="{% trans %}Submit{% endtrans %}" name="send" />
+      <input type="submit" value="{% trans %}Preview{% endtrans %}" name="preview" >
+      <input type="submit" value="{% trans %}Submit{% endtrans %}" name="send" >
     </p>
   </form>
   {%- if preview %}

@@ -31,8 +31,8 @@
     {{ csrf_token() }}
     {{ form.text }}
     <p>
-      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}"/>
-      <input type="submit" name="send" value="{% trans %}Submit{% endtrans %}"/>
+      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}">
+      <input type="submit" name="send" value="{% trans %}Submit{% endtrans %}">
     </p>
   </form>
   {%- if preview %}

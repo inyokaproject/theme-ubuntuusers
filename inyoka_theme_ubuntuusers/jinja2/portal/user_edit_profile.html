@@ -26,7 +26,7 @@
       {% if user.groups.all() %}
       <div class="group_titles">
       {% for group in user.groups.all() %}
-        <input type="checkbox" name="group_titles" value="{{ group }}" /> {{ group }}
+        <input type="checkbox" name="group_titles" value="{{ group }}" > {{ group }}
       {% endfor %}
       </div>
       {%- endif %}
@@ -48,6 +48,6 @@
     <p>{{ form.signature }}</p>
     <h3>{% trans %}User page{% endtrans %}</h3>
     <p>{{ form.userpage }}</p>
-    <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
+    <p><input type="submit" value="{% trans %}Submit{% endtrans %}" ></p>
   </form>
 {% endblock %}

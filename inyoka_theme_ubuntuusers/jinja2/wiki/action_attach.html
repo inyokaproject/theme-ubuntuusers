@@ -30,7 +30,7 @@
         {{ form.attachment }}</p>
       <p><label for="id_filename">{% trans %}Rename to:{% endtrans %}</label>
         {{ form.filename }}</p>
-      <p><label for="id_text">{% trans %}Description:{% endtrans %}</label><br /></p>
+      <p><label for="id_text">{% trans %}Description:{% endtrans %}</label><br></p>
         <p>{{ form.text }}</p>
       <p><label for="id_note">{% trans %}Edit summary:{% endtrans %}</label>
         {{ form.note }}</p>
@@ -40,8 +40,8 @@
           {% trans %}Overwrite existing attachments with same name:{% endtrans %}
         </label>
       </p>
-      <p><input type="submit" value="{% trans %}Upload attachments{% endtrans %}" />
-         <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" /></p>
+      <p><input type="submit" value="{% trans %}Upload attachments{% endtrans %}" >
+         <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" ></p>
     </form>
 
     <h2>{% trans %}Existing attachments{% endtrans %}</h2>

@@ -40,7 +40,7 @@
       </colgroup>
       <thead>
         <tr>
-          <th class="checkboxes"><input type="checkbox" id="check_all" title="{% trans %}(De)select all{% endtrans %}" /></th>
+          <th class="checkboxes"><input type="checkbox" id="check_all" title="{% trans %}(De)select all{% endtrans %}" ></th>
           <th class="name">{% trans %}Name{% endtrans %}</th>
           <th class="read">{% trans %}Read{% endtrans %}</th>
           <th class="status">{% trans %}State{% endtrans %}</th>
@@ -52,13 +52,13 @@
           {%- set object = sub.content_object -%}
           {%- if type != 'suggestion' and object -%}
             <tr>
-              <td class="checkboxes"><input type="checkbox" name="select" value="{{ sub.id }}" /></td>
+              <td class="checkboxes"><input type="checkbox" name="select" value="{{ sub.id }}" ></td>
               <td class="items{% if not sub.can_read %} unreadable{% endif %}">
                 {{ object._meta.verbose_name }}: <a href="{{ object|url }}">{{ object|e }}</a>
                 {% if type == 'topic' -%}
                   {%- if not object.get_read_status(USER) %}
                     <a href="{{ object|url('first_unread') }}" title="{% trans %}Show unread posts{% endtrans %}">{#-
-                      -#}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Show unread posts{% endtrans %}" />{#-
+                      -#}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Show unread posts{% endtrans %}" >{#-
                     -#}</a>
                   {%- endif %}
                   {%- if object.paginated %} &#160; &#160; [<span class="pagination">
@@ -66,17 +66,17 @@
                   </span>]{% endif -%}
                 {% elif type == 'article' -%}
                   <a href="{{ object|url('last_comment') }}" title="{% trans %}Go to last comment{% endtrans %}">{#-
-                    -#}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Go to last comment{% endtrans %}" />{#-
+                    -#}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Go to last comment{% endtrans %}" >{#-
                   -#}</a>
                 {% elif type == 'page' -%}
                   <a href="{{ object|url('log') }}" title="{% trans %}Revisions{% endtrans %}">{#-
-                    -#}<img src="{{ href('static', 'img/icons/raw.svg') }}" alt="{% trans %}Revisions{% endtrans %}" height="16" width="16"/>{#-
+                    -#}<img src="{{ href('static', 'img/icons/raw.svg') }}" alt="{% trans %}Revisions{% endtrans %}" height="16" width="16">{#-
                   -#}</a>
                 {%- endif %}
               </td>
               <td class="read">
                 {%- if sub.notified %}
-                  <img src="{{ href('static', 'img', 'icons', 'new.svg') }}" alt="neu" title="{% trans %}Changes since last visit{% endtrans %}" width="16" height="16"/>
+                  <img src="{{ href('static', 'img', 'icons', 'new.svg') }}" alt="neu" title="{% trans %}Changes since last visit{% endtrans %}" width="16" height="16">
                 {%- endif %}
               </td>
               <td class="status">
@@ -94,8 +94,8 @@
       </tbody>
     </table>
     <div>
-      <input type="submit" name="delete" value="{% trans %}Delete selected subscriptions{% endtrans %}" />
-      <input type="submit" name="mark_read" value="{% trans %}Mark selected subscriptions as read{% endtrans %}" />
+      <input type="submit" name="delete" value="{% trans %}Delete selected subscriptions{% endtrans %}" >
+      <input type="submit" name="mark_read" value="{% trans %}Mark selected subscriptions as read{% endtrans %}" >
     </div>
   </form>
   <div class="pagination right">{{ rendered_pagination }}</div>

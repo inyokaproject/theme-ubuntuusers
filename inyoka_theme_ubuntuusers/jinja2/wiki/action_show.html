@@ -15,7 +15,7 @@
 {% block html_head %}
   {{ super() }}
 
-  <link rel="canonical" href="{{ page|url('show')|e }}" />
+  <link rel="canonical" href="{{ page|url('show')|e }}" >
 {% endblock %}
 
 {% block wiki_content %}
@@ -43,7 +43,7 @@
       {%- endtrans %}
     {% endif %}
     {%- if tags %}
-      <br />
+      <br>
       {%- trans -%}
         At this page the following tags have been assigned:
       {%- endtrans %}

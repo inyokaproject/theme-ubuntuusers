@@ -28,7 +28,7 @@
   <h3>{{ user.username|e }}
   {%- if USER.has_perm('portal.change_user') %}
     <a href="{{ href('portal', 'user', user.username, 'edit') }}" class="admin_link">
-      <img src="{{ href('static', 'img/icons/edit.svg') }}" alt="{% trans %}Edit user{% endtrans %}" title="{% trans %}Edit user{% endtrans %}" height="16" />
+      <img src="{{ href('static', 'img/icons/edit.svg') }}" alt="{% trans %}Edit user{% endtrans %}" title="{% trans %}Edit user{% endtrans %}" height="16" >
     </a>
   {%- endif %}
   {%- if USER.has_perm('portal.subscribe_user') -%}

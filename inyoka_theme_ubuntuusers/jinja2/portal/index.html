@@ -14,7 +14,7 @@
 {% block pre_navigation %}
   {%- if countdown_active -%}
     <div class="container" id="counter">
-      <a href="{{ countdown_target_page|e }}"><img src="{{ countdown_image_url|e }}"/></a>
+      <a href="{{ countdown_target_page|e }}"><img src="{{ countdown_image_url|e }}"></a>
     </div>
   {%- endif -%}
   <div class="container get_ubuntu">
@@ -29,7 +29,7 @@
 {% endblock %}
 
 {% block portal_content %}
-  <img src="{{ href('static', 'img', 'circle-of-friends-2022.svg') }}" width="56" height="56" alt="Ubuntu Logo" class="cat" />
+  <img src="{{ href('static', 'img', 'circle-of-friends-2022.svg') }}" width="56" height="56" alt="Ubuntu Logo" class="cat" >
   {{ welcome_message_rendered|default('', True) }}
 
   {%- if ikhaya_latest %}
