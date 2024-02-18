@@ -256,7 +256,7 @@
       </ul>
     </footer>{# .footer #}
 
-    <script type="text/javascript">
+    <script>
     /*<![CDATA[*/
       var
         $STATIC_URL = {{ href('static')|jsonencode }},
@@ -268,9 +268,9 @@
     /*]]>*/
     </script>
 
-   <script type="text/javascript" src="{{ href('static', 'js/jquery.min.js', v=INYOKA_VERSION) }}"></script>
+   <script src="{{ href('static', 'js/jquery.min.js', v=INYOKA_VERSION) }}"></script>
    {% for script in ['classy', 'jquery.extensions', 'overall'] + scripts|default([]) %}
-       <script type="text/javascript" src="{{ href('static', 'js/%s.js'|format(script), v=INYOKA_VERSION) }}"></script>
+       <script src="{{ href('static', 'js/%s.js'|format(script), v=INYOKA_VERSION) }}"></script>
    {% endfor %}
 
    {% block additional_scripts %}

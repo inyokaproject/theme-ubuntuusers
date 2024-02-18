@@ -51,7 +51,7 @@
 
 {% if hidden_categories %}
   {% block additional_scripts %}
-    <script type="text/javascript">
+    <script>
       $(function() {
         hideForumCategories({{ hidden_categories|jsonencode }});
       });
