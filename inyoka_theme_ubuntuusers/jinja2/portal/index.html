@@ -29,7 +29,7 @@
 {% endblock %}
 
 {% block portal_content %}
-  <img src="{{ href('static', 'img', 'circle-of-friends-2022.svg') }}" width="56" height="56" alt="Ubuntu Logo" class="cat" >
+  <img src="{{ href('static', 'img', 'circle-of-friends-2022.svg') }}" width="56" height="56" alt="Ubuntu Logo" class="cat">
   {{ welcome_message_rendered|default('', True) }}
 
   {%- if ikhaya_latest %}

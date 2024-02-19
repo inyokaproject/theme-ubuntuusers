@@ -13,7 +13,7 @@
 <form action="{{ page|url('revert', revision=page.rev.id)|e }}" method="post">
   {{ csrf_token() }}
   <p>{% trans %}Reason:{% endtrans %}</p>
-  <p><input type="text" name="note" size="30" >
-     <input type="submit" value="{% trans %}Restore{% endtrans %}" >{#
-   #}<input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" ></p>
+  <p><input type="text" name="note" size="30">
+     <input type="submit" value="{% trans %}Restore{% endtrans %}">{#
+   #}<input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}"></p>
 </form>

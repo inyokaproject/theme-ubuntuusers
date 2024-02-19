@@ -14,7 +14,7 @@
 
 {% macro badge(link, alt, img) -%}
   <a href="{{ link|e }}"><img src="{{ href('static',
-    'img/badges/' + img)|e }}" alt="{{ alt|e }}" ></a>
+    'img/badges/' + img)|e }}" alt="{{ alt|e }}"></a>
 {%- endmacro %}
 
 {% block portal_content %}

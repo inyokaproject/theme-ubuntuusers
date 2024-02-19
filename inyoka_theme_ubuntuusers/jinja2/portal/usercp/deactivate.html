@@ -25,7 +25,7 @@
     <p>{% trans %}To deactivate your account, you need to enter your password.{% endtrans %}</p>
     <p>
       {{ form.password_confirmation }}
-      <input type="submit" value="{% trans name=USER.username|e %}Deactivate my account “{{ name }}”{% endtrans %}" >
+      <input type="submit" value="{% trans name=USER.username|e %}Deactivate my account “{{ name }}”{% endtrans %}">
       {{- form.errors.password_confirmation }}
     </p>
   </form>

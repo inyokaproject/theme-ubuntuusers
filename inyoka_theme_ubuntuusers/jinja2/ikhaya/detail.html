@@ -26,7 +26,7 @@
     <p class="username{% if not user.is_active %} inactive{% endif %}">
       <a href="{{ user|url }}">{{ user.username|e }}</a>
       {%- if user.primary_group_id and user.primary_group.icon %}
-        <img class="teamicon" src="{{ user.primary_group.icon_url }}" alt="{% trans %}Team icon{% endtrans %}" >
+        <img class="teamicon" src="{{ user.primary_group.icon_url }}" alt="{% trans %}Team icon{% endtrans %}">
       {%- endif %}
       {%- if user.member_title %}
         <div class="member_title">{{ user.member_title|e }}</div>
@@ -42,7 +42,7 @@
   <div class="article" id="page">
     <h3 class="title"><a href="{{ article|url }}">{{ article.subject|e }}</a></h3>
     {%- if article.article_icon -%}
-      <img class="icon" src="{{ article.article_icon|url }}" alt="{{ article.article_icon.identifier|e }}" >
+      <img class="icon" src="{{ article.article_icon|url }}" alt="{{ article.article_icon.identifier|e }}">
     {%- endif -%}
     <div class="intro">
       {{ article.get_intro() }}
@@ -127,8 +127,8 @@
                   {{ form.comment_id }}
                 {% endif %}
                 <p>
-                  <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}" >
-                  <input type="submit" value="{% trans %}Submit{% endtrans %}" >
+                  <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}">
+                  <input type="submit" value="{% trans %}Submit{% endtrans %}">
                 </p>
                 {%- if preview %}
                   <div class="preview_wrapper">

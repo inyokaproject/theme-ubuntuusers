@@ -42,7 +42,7 @@
         <li class="article{{ article.hidden and ' hidden' or '' }}">
           <h3 class="title"><a href="{{ article|url }}">{{ article.subject|e }}</a></h3>
           {%- if article.article_icon %}
-            <img class="icon" src="{{ article.article_icon|url }}" alt="{{ article.article_icon.identifier|e }}" >
+            <img class="icon" src="{{ article.article_icon|url }}" alt="{{ article.article_icon.identifier|e }}">
           {%- endif %}
           {% if full %}
             <div class="intro">

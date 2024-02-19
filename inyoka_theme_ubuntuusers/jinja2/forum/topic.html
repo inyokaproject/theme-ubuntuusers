@@ -154,7 +154,7 @@
                 {%- if poll.can_vote and can_vote and not show_vote_results %}
                   <input type="{{ poll.multiple_votes and 'checkbox' or 'radio' }}"
                          name="poll_{{ poll.id }}" id="option_{{ option.id }}"
-                         value="{{ option.id }}" >
+                         value="{{ option.id }}">
                   <label for="option_{{ option.id }}">{{ option.name|e }}</label>
                 {%- else %}
                   {{ option.name|e }}
@@ -198,7 +198,7 @@
           {%- if show_vote_results %}
             <a href="?">{% trans %}Hide results{% endtrans %}</a>
           {%- else %}
-            <input type="submit" name="vote" value="{% trans %}Vote{% endtrans %}" >
+            <input type="submit" name="vote" value="{% trans %}Vote{% endtrans %}">
             <a href="?action=vote_results">{% trans %}Show results{% endtrans %}</a>
           {%- endif %}
         </p>
@@ -215,7 +215,7 @@
               <a href="{{ post.author|url }}">{{ post.author.username|e }}</a>
               {% if post.author.icon %}
                 <img class="teamicon" src="{{ post.author.icon_url }}"
-                     alt="{% trans %}Team icon{% endtrans %}" >
+                     alt="{% trans %}Team icon{% endtrans %}">
               {% endif %}
             </p>
             {%- if post.author.member_title %}
@@ -307,10 +307,10 @@
             {% if can_moderate %}
               <div class="splitinfo admin_link">
                 {% trans %}Split:{% endtrans %}
-                <input type="checkbox" name="select" value="{{ post.id }}"{% if post.id|string in marked_split_posts %} checked="checked"{% endif %} >
+                <input type="checkbox" name="select" value="{{ post.id }}"{% if post.id|string in marked_split_posts %} checked="checked"{% endif %}>
                 <span class="right">
                   {% trans %}From here:{% endtrans %}
-                  <input type="radio" name="start" value="{{ post.id }}"{% if "!" + post.id|string in marked_split_posts %} checked="checked"{% endif %} >
+                  <input type="radio" name="start" value="{{ post.id }}"{% if "!" + post.id|string in marked_split_posts %} checked="checked"{% endif %}>
                 </span>
               </div>
             {% endif %}

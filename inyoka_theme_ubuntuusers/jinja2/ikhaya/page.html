@@ -67,7 +67,7 @@
         {%- for category in categories -%}
           <li class="admin_link_hover">
             {%- if USER.has_perm('ikhaya.change_category') -%}
-              <a class="admin_link" href="{{ href('ikhaya', 'category', category.slug, 'edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px" ></a>
+              <a class="admin_link" href="{{ href('ikhaya', 'category', category.slug, 'edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px"></a>
             {%- endif -%}
             <a href="{{ category|url }}">{{ category.name|e }}</a>
           </li>

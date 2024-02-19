@@ -49,15 +49,15 @@
     </p>
     <form action="" method="post" class="nosubmitprotect">
       {{ csrf_token() }}
-      <input type="submit" value="{% trans %}Compare{% endtrans %}" >
-      <input type="hidden" name="action" value="diff" >
+      <input type="submit" value="{% trans %}Compare{% endtrans %}">
+      <input type="hidden" name="action" value="diff">
 
       <table class="revisions zebra">
         {%- for revision in revisions %}
           <tr>
             <td class="compare">
-              <input type="radio" name="rev" value="{{ revision.id }}"{% if loop.index == 2 or revisions|count == 1 %} checked="checked"{% endif %} >
-              <input type="radio" name="new_rev" value="{{ revision.id }}"{% if loop.index == 1 %} checked="checked"{% endif %} >
+              <input type="radio" name="rev" value="{{ revision.id }}"{% if loop.index == 2 or revisions|count == 1 %} checked="checked"{% endif %}>
+              <input type="radio" name="new_rev" value="{{ revision.id }}"{% if loop.index == 1 %} checked="checked"{% endif %}>
             </td>
             <td class="author">
               {%- if revision.user %}

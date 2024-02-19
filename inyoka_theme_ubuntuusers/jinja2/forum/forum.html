@@ -52,7 +52,7 @@
     <thead>
       <tr><th colspan="5" class="category">{{ forum.name|e }}
         {%- if USER.has_perm('forum.change_forum') -%}
-          <a href="{{ href('forum', 'forum', forum.slug, 'edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" class="admin_link right" ></a>
+          <a href="{{ href('forum', 'forum', forum.slug, 'edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" class="admin_link right"></a>
         {%- endif -%}
         </th></tr>
       <tr>
@@ -114,7 +114,7 @@
               {%- endif %}
               {%- if not topic.get_read_status(USER) %}
                 <a href="{{ topic|url('first_unread') }}" title="{% trans %}Show unread posts{% endtrans %}">{#
-                  #}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Show unread posts{% endtrans %}" >{#
+                  #}<img src="{{ href('static', 'img/forum/goto.png') }}" alt="{% trans %}Show unread posts{% endtrans %}">{#
                 #}</a>
               {%- endif %}
             </p>

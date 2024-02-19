@@ -18,7 +18,7 @@
 <html lang="{{ LANGUAGE_CODE }}"
       {% if USER.settings.get('reduce_motion', False) %}class="reduce-motion"{% endif %}>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
@@ -26,35 +26,35 @@
     </title>
     {% block html_head %}
       {% if deny_robots %}
-        <meta name="robots" content="{% if deny_robots == true %}noindex, nofollow{% else %}{{ deny_robots }}{% endif %}" >
+        <meta name="robots" content="{% if deny_robots == true %}noindex, nofollow{% else %}{{ deny_robots }}{% endif %}">
       {% endif %}
       {#- This way the local stylesheets can override styles without problems. #}
       {% set styles = ['main', 'markup'] + styles|default([]) %}
       {% for style in styles %}
-        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style), v=INYOKA_VERSION) }}" >
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', '%s.css'|format(style), v=INYOKA_VERSION) }}">
       {% endfor %}
 
-      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css', v=INYOKA_VERSION) }}" media="print" >
+      <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'print.css', v=INYOKA_VERSION) }}" media="print">
 
       {% if special_day_css %}
-        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css, v=INYOKA_VERSION) }}" >
+        <link rel="stylesheet" type="text/css" href="{{ href('static', 'style', 'special_day', special_day_css, v=INYOKA_VERSION) }}">
       {% endif %}
 
-      <link rel="stylesheet" type="text/css" href="{{ href('media', 'linkmap', linkmap_css) }}" >
+      <link rel="stylesheet" type="text/css" href="{{ href('media', 'linkmap', linkmap_css) }}">
 
       {% for title, url in feeds %}
-        <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml" >
+        <link rel="alternate" href="{{ url|e }}" title="{{ title|e }}" type="application/atom+xml">
       {% endfor %}
-      <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}" >
-      <meta name="theme-color" content="#2b2929" >
+      <link rel="shortcut icon" href="{{ href('static', 'img', 'favicon.ico') }}">
+      <meta name="theme-color" content="#2b2929">
 
       {% if pagination %}
           {% if pagination.prev %}
-            <link rel="prev" href="{{ pagination.prev }}" >
+            <link rel="prev" href="{{ pagination.prev }}">
           {% endif %}
 
           {% if pagination.next %}
-            <link rel="next" href="{{ pagination.next }}" >
+            <link rel="next" href="{{ pagination.next }}">
           {% endif %}
       {% endif %}
 
@@ -153,7 +153,7 @@
               <a id="admin_layer_button">
                 <img src="{{ href('static', 'img/admin/switch.png') }}"
                     alt="{% trans %}Admin{% endtrans %}"
-                    title="{% trans %}Turn admin links on/off{% endtrans %}" >
+                    title="{% trans %}Turn admin links on/off{% endtrans %}">
               </a>
             </div>
           </div>
@@ -162,7 +162,7 @@
         {# search via duckduckgo requires JS #}
         <form method="GET" action="https://duckduckgo.com/" class="search" name="searchsys" data-active-app="{{ active_app }}">
           <div>
-            <input type="text" size="40" name="keyword" class="search_query" >
+            <input type="text" size="40" name="keyword" class="search_query">
             <input type="hidden" name="q">
 
             {# customization to duckduckgo layout, see https://duckduckgo.com/params #}
@@ -170,7 +170,7 @@
             <input type="hidden" name="kj" value="F4AA90">
             <input type="hidden" name="ka" value="Ubuntu">
 
-            <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit" >
+            <input type="submit" value="{% trans %}Search{% endtrans %}" class="search_submit">
 
             <a href="{{ href('wiki', 'Suchfunktion') }}">via DuckDuckGo</a>
           </div>
@@ -251,7 +251,7 @@
         </li>
         <li class="housing">
           <span title="Unterbringung und Netzanbindung eines Servers">Serverhousing</span> gespendet von<br>
-          <a href="https://www.anexia.at/managed-hosting/"><img src="{{ href('static', 'img/anexia_logo.png') }}" alt="anexia" ></a>
+          <a href="https://www.anexia.at/managed-hosting/"><img src="{{ href('static', 'img/anexia_logo.png') }}" alt="anexia"></a>
         </li>
       </ul>
     </footer>{# .footer #}

@@ -12,9 +12,9 @@
 
     <td class="icon">
       {%- if forum.get_read_status(REQUEST.user) %}
-      <img src="{{ href('static', 'img', 'forum/forum.png') }}" alt="{% trans %}Forum read{% endtrans %}" >
+      <img src="{{ href('static', 'img', 'forum/forum.png') }}" alt="{% trans %}Forum read{% endtrans %}">
       {%- else %}
-      <img src="{{ href('static', 'img', 'forum/forum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}" >
+      <img src="{{ href('static', 'img', 'forum/forum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}">
       {%- endif %}
     </td>
     <td class="forum" colspan="3">
@@ -32,7 +32,7 @@
         <p class="subforums">{% trans %}Subforums:{% endtrans %}
           {%- for subforum in subforums %}
             {%- if not subforum.get_read_status(REQUEST.user) %}
-              <img src="{{ href('static', 'img/forum/subforum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}" >
+              <img src="{{ href('static', 'img/forum/subforum_unread.png') }}" alt="{% trans %}Unread posts{% endtrans %}">
             {%- endif %}
               <a href="{{ subforum|url }}">{{ subforum.name|e }}</a>{% if not loop.last %}, {% endif %}
           {%- endfor %}

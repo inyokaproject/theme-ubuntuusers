@@ -51,7 +51,7 @@
   <dd><label for="id_visible">{{ form.visible.label }}</label> {{ form.visible }}</dd>
 
   <p>
-    <input type="submit" value="{% trans %}Submit{% endtrans %}" >
+    <input type="submit" value="{% trans %}Submit{% endtrans %}">
     {%- if event %}
       <span class="linklist">|
         <a href="{{ event|url() }}">{% trans %}Show event{% endtrans %}</a> |
