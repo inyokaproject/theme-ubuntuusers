@@ -20,6 +20,6 @@
   <form method="post" action="">
     {{ csrf_token() }}
     {{ form.as_p() }}
-    <p><input type="submit" value="{% trans %}Submit{% endtrans %}" /></p>
+    <p><input type="submit" value="{% trans %}Submit{% endtrans %}"></p>
   </form>
 {% endblock %}

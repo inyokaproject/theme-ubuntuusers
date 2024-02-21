@@ -16,11 +16,11 @@
   {{ csrf_token() }}
  <table>
    <colgroup>
-      <col width="1%"/>
-      <col width="50%"/>
-      <col width="20%"/>
-      <col width="20%"/>
-      <col width="10%"/>
+      <col width="1%">
+      <col width="50%">
+      <col width="20%">
+      <col width="20%">
+      <col width="10%">
     </colgroup>
     <thead>
       <tr>
@@ -35,7 +35,7 @@
       {%- for topic in topics %}
       <tr class="reportlist_head">
         <td>
-          <input type="checkbox" name="selected" value="{{ topic.id }}" />
+          <input type="checkbox" name="selected" value="{{ topic.id }}">
         </td>
         <td class="topic">
           <a href="{{ topic|url }}">{{ topic.title|e }}</a> ({{ topic.forum.name|e}})
@@ -70,7 +70,7 @@
     </tbody>
   </table>
   <div class="linklist">
-    <input type="submit" value="{% trans %}Close selected tickets{% endtrans %}" /> |
+    <input type="submit" value="{% trans %}Close selected tickets{% endtrans %}"> |
     {%- if subscribed %}
       <a href="{{ href('forum', 'reported_topics', 'unsubscribe') }}">
         {%- trans %}Unsubscribe from topic reports{% endtrans -%}

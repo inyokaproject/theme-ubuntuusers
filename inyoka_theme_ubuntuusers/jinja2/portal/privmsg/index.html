@@ -38,7 +38,7 @@
           {% if message.author.is_active %}
           <a class="pn_reply" href="{{ message|url('reply') }}">{% trans %}Reply{% endtrans %}</a> |
           {%- endif %}
-          {%- if message.recipients|length > 1 %}
+          {%- if message.recipients|length> 1 %}
           <a class="pn_reply_all" href="{{ message|url('reply_to_all') }}">{% trans %}Reply to all{% endtrans %}</a> |
           {%- endif %}
         {%- endif %}
@@ -51,7 +51,7 @@
         <a class="pn_delete" href="?action=delete">{% trans %}Delete message{% endtrans %}</a>
       </div>
     </div>
-    <br/>
+    <br>
     <div>
       {%- trans moderators='//wiki.ubuntuusers.de/ubuntuusers/Moderatoren' -%}
         If you received a spam message, please forward it to a <a href="{{ moderators }}">moderator</a>.
@@ -102,26 +102,26 @@
               {%- if not entry.is_own_message %}
                 {% if entry.message.author.is_active %}
                   <a href="{{ entry|url('reply') }}" title="{% trans %}Reply{% endtrans %}">{#
-                    #}<img src="{{ href('static', 'img/icons/msg-reply.svg') }}" alt="{% trans %}Reply{% endtrans %}" width="16px" height="16px"/>{#
+                    #}<img src="{{ href('static', 'img/icons/msg-reply.svg') }}" alt="{% trans %}Reply{% endtrans %}" width="16px" height="16px">{#
                   #}</a>
                 {%- endif -%}
                 {%- if entry.message.recipients|length > 1 %}
                   <a href="{{ entry|url('reply_to_all') }}" title="{% trans %}Reply to all{% endtrans %}">{#
-                    #}<img src="{{ href('static', 'img/icons/msg-reply-all.svg') }}" alt="{% trans %}Reply to all{% endtrans %}" width="16px" height="16px" />{#
+                    #}<img src="{{ href('static', 'img/icons/msg-reply-all.svg') }}" alt="{% trans %}Reply to all{% endtrans %}" width="16px" height="16px">{#
                   #}</a>
                 {%- endif -%}
               {%- endif %}
               <a href="{{ entry|url('forward') }}" title="{% trans %}Forward{% endtrans %}">{#
-                #}<img src="{{ href('static', 'img/icons/msg-forward.svg') }}" alt="{% trans %}Forward{% endtrans %}" height="16px" width="16px" />{#
+                #}<img src="{{ href('static', 'img/icons/msg-forward.svg') }}" alt="{% trans %}Forward{% endtrans %}" height="16px" width="16px">{#
               #}</a>
               {%- if not entry.in_archive %}
                 <a href="{{ entry|url }}?action=archive" title="{% trans %}Archive{% endtrans %}">{#
-                  #}<img src="{{ href('static', 'img/icons/archive.svg') }}" alt="{% trans %}Archive{% endtrans %}" width="16px" height="16px" />{#
+                  #}<img src="{{ href('static', 'img/icons/archive.svg') }}" alt="{% trans %}Archive{% endtrans %}" width="16px" height="16px">{#
                 #}</a>
               {%- endif %}
             </td>
             <td class="pn_delete">
-              <input type="checkbox" name="delete" value="{{ entry.id }}" />
+              <input type="checkbox" name="delete" value="{{ entry.id }}">
             </td>
           </tr>
         {%- else %}
@@ -151,7 +151,7 @@
             </div>
             <p class="linklist">
               <a href="{{ href('portal', 'privmsg', 'new') }}">{% trans %}Compose message{% endtrans %}</a> |
-              <input type="submit" value="{% trans %}Delete marked messages{% endtrans %}" class="linkbutton" />
+              <input type="submit" value="{% trans %}Delete marked messages{% endtrans %}" class="linkbutton">
             </p>
           </td>
         </tr>
@@ -162,7 +162,7 @@
 
 {% block additional_scripts %}
   {{ super() }}
-  <script type="text/javascript">
+  <script>
     /* <![CDATA[ */
     var all_checked = false;
     $('table.pms th.delete').click(function() {

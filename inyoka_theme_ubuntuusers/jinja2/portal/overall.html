@@ -19,7 +19,7 @@
 {% set BREADCRUMBS = [(_('Portal'), href('portal'))] + BREADCRUMBS|d([]) %}
 
 {% macro feed_button(link) -%}
-  <a href="{{ link }}" class="feed_icon"><img src="{{ href('static', 'img', 'feed.svg') }}" alt="Newsfeed" /></a>
+  <a href="{{ link }}" class="feed_icon"><img src="{{ href('static', 'img', 'feed.svg') }}" alt="Newsfeed"></a>
 {%- endmacro %}
 
 {% block content %}
