@@ -17,7 +17,7 @@
 
 {%- block html_head %}
   {{ super() }}
-  <script type="text/javascript">
+  <script>
     /*<![CDATA[*/
       var $SIDEBAR_HIDDEN = {{ USER.settings.planet_sidebar_hidden and 'true' or 'false' }};
     /*]]>*/
@@ -31,8 +31,8 @@
 
     <h3 class="navi_blogs">{% trans %}Export blogs{% endtrans %}</h3>
     <ul class="export">
-      <li><img src="{{ href('static', 'img', 'opml.png') }}" /><a href="{{ href('planet', 'blogs', 'export', 'opml') }}">OPML</a>
-      <li><img src="{{ href('static', 'img', 'foaf.png') }}" /><a href="{{ href('planet', 'blogs', 'export', 'foaf') }}">FOAF</a>
+      <li><img src="{{ href('static', 'img', 'opml.png') }}"><a href="{{ href('planet', 'blogs', 'export', 'opml') }}">OPML</a>
+      <li><img src="{{ href('static', 'img', 'foaf.png') }}"><a href="{{ href('planet', 'blogs', 'export', 'foaf') }}">FOAF</a>
     </ul>
 
     {%- if blogs %}
@@ -43,7 +43,7 @@
         {%- for blog in blogs %}
           <li class="admin_link_hover">
             {%- if USER.has_perm('planet.change_blog') -%}
-              <a class="admin_link" href="{{ blog|url('edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px"/></a>
+              <a class="admin_link" href="{{ blog|url('edit') }}"><img src="{{ href('static', 'img/icons/edit.svg') }}" height="16px" width="16px"></a>
             {%- endif -%}
             <a href="{{ blog|url|e }}">{{ blog.name|e }}</a>
           </li>

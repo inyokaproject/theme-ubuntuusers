@@ -24,8 +24,8 @@
     {{ render_form(form, ['recipient', 'subject', 'text']) }}
     {% endif %}
     <p>
-      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}" />
-      <input type="submit" value="{% trans %}Send message{% endtrans %}" />
+      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}">
+      <input type="submit" value="{% trans %}Send message{% endtrans %}">
     </p>
   </form>
   {%- if preview %}
@@ -38,14 +38,14 @@
 
 {% block additional_scripts %}
   {{ super() }}
-  <script type="text/javascript">
+  <script>
     /* <![CDATA[ */
     var text = new WikiEditor('textarea[name="text"]', 'forum');
     (function() {
       var
         editor = $('textarea[name="text"]'),
-        output = $('<div class="preview" />')
-      var preview = $('<div class="preview_wrapper" />')
+        output = $('<div class="preview"></div>')
+      var preview = $('<div class="preview_wrapper"></div>')
         .hide()
         .append('<h2 class="title">{% trans %}Preview{% endtrans %}<\/h2>')
         .append(output);

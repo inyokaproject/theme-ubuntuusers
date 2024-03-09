@@ -25,11 +25,11 @@
   {% if action=='delete' %}
     <p>
       <label for="delete_topic_reason">{% trans %}Reason:{% endtrans %}</label>
-      <input name="reason" id="delete_topic_reason" />
+      <input name="reason" id="delete_topic_reason">
     </p>
   {% endif %}
   <p>
-    <input type="submit" value="{% if action=='delete' %}{% trans %}Delete{% endtrans %}{% else %}{% trans %}Hide{% endtrans %}{% endif %}" />
-    <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" />
+    <input type="submit" value="{% if action=='delete' %}{% trans %}Delete{% endtrans %}{% else %}{% trans %}Hide{% endtrans %}{% endif %}">
+    <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}">
   </p>
 </form>

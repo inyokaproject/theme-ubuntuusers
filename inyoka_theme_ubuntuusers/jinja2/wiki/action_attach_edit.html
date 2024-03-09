@@ -29,17 +29,17 @@
       </p>
       <p>
         <label for="id_text">{% trans %}Description:{% endtrans %}</label>
-        <br />
+        <br>
       </p>
       <p>{{ form.text }}</p>
       <p>
         <label for="id_note">{% trans %}Edit summary:{% endtrans %}</label>
-        <br />
+        <br>
         {{ form.note }}
       </p>
       <p>
-        <input type="submit" value="{% trans %}Edit attachment{% endtrans %}" />
-        <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" />
+        <input type="submit" value="{% trans %}Edit attachment{% endtrans %}">
+        <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}">
       </p>
     </form>
   </div>
@@ -47,7 +47,7 @@
 
 {% block additional_scripts %}
   {{ super() }}
-  <script type="text/javascript">
+  <script>
     /* <![CDATA[ */
     var text = new WikiEditor('textarea[name="text"]');
     /* ]]> */

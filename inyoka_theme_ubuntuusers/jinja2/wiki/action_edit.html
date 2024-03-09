@@ -31,9 +31,9 @@
       {% trans %}Edit summary:{% endtrans %} {{ form.note }}
       {{ form.edit_time }}
       {{ form.revision }}
-      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}" />
-      <input type="submit" value="{% trans %}Save{% endtrans %}" />
-      <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}" />
+      <input type="submit" name="preview" value="{% trans %}Preview{% endtrans %}">
+      <input type="submit" value="{% trans %}Save{% endtrans %}">
+      <input type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}">
     </div>
     {{ form.errors.note }}
   </form>
@@ -45,7 +45,7 @@
 
 {% block additional_scripts %}
   {{ super() }}
-  <script type="text/javascript">
+  <script>
     /*<![CDATA[*/
       new WikiEditor('textarea[name="text"]', 'wiki');
 
