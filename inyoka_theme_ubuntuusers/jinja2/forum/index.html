@@ -15,6 +15,13 @@
 {% from 'forum/_forum.html' import render_forum %}
 {% if not is_index and categories %}
   {% set BREADCRUMBS = [(categories[0].name, categories[0]|url)] + BREADCRUMBS|d([]) %}
+
+  {% set name = 'Forum „%s“ - ' % categories[0].name|e %}
+  {% set feeds = [
+    (name + _('Captions'), href('forum', 'feeds/forum', categories[0].slug, 'title/20')),
+    (name + _('Teaser'), href('forum', 'feeds/forum', categories[0].slug, 'short/20')),
+    (name + _('Full post'), href('forum', 'feeds/forum', categories[0].slug, 'full/20'))
+  ] %}
 {% else %}
   {% set feeds = [
     (_('Forum - Captions'), href('forum', 'feeds/title/20')),
