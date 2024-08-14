@@ -170,7 +170,7 @@ img {
 
 input {
   font-size: 1em;
-  background-color: #FFFFFF;
+  background-color: @white;
   color: #000000;
   font-family: @font-content; /* reset browser default */
 }
@@ -1298,5 +1298,47 @@ select.firstletterselect {
     }
     display: inline;
     word-wrap: break-word;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    color: @white;
+    background-color: @grey_darker;
+  }
+  a, :visited {
+    color: darken(@blue_s_medium, 30%, relative);
+  }
+  a.strong {
+    color: #FFF;
+  }
+  input {
+    background-color: @grey_darker;
+    color: #FFF;
+  }
+  blockquote:not(:empty) {
+    color: #c2c2c2;
+  }
+  pre {
+    background-color: #434a58;
+  }
+  .codeblock_resizer {
+    color: black;
+  }
+  div.pagination .pageselect, div.pagination .next, div.pagination .ellipsis, div.pagination .prev {
+    background-color: @grey_darker;
+  }
+  .message {
+    color: #000000;
+  }
+  .navi_sidebar {
+  	 h3.navi_ubuntu, h3.navi_ubuntuusers {
+  	 	a {
+			color: #FFF;    
+		}  
+    }
+    h3.navi_forum, h3.navi_wiki, h3.navi_ikhaya, h3.navi_planet, h3.navi_config, h3.actions {
+      filter: invert(100%);
+    }
   }
 }
