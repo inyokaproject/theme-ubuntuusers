@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from setuptools import find_packages, setup
 
-
 with open('README.rst') as f:
     readme = f.read()
 
