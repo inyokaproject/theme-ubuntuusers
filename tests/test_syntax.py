@@ -7,7 +7,6 @@ from jinja2 import Environment, FileSystemLoader
 
 from inyoka_theme_ubuntuusers import INYOKA_THEME
 
-
 def mkdummy(name):
     def dummy(*args, **kwargs):
         return name
