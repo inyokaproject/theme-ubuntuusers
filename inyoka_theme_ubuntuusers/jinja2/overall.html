@@ -70,7 +70,7 @@
     </a>
 
     <a href="https://www.centron.de/" class="sponsor_link" target="_blank">
-      hosted by <img src="{{ href('static', 'img/centron-logo.png') }}" alt="centron">
+      hosted by <img src="{{ href('static', 'img/Centron_Logo_white.svg') }}" alt="centron">
     </a>
 
   <ul>
@@ -122,14 +122,13 @@
   </nav>{# .navi_global #}
 
     <header class="header">
-      <h1><a href="/"><span>{{ SETTINGS.BASE_DOMAIN_NAME }}</span></a></h1>
+      <h1><a href="/"><span>{{ BASE_DOMAIN_NAME }}</span></a></h1>
       <ul class="tabbar">
         {% for app in ('portal', 'forum', 'wiki', 'ikhaya', 'planet') %}
           <li class="{{ app }}" {% if app == active_app %}aria-current="page"{% endif %}>
             <a href="{{ href(app) }}">{{ app|capitalize }}</a>
           </li>
         {% endfor %}
-        {# TODO: uu specific #}
         <li class="community">
           <a href="{{ href('wiki','Mitmachen') }}">Mitmachen</a>
         </li>
@@ -255,7 +254,8 @@
         </li>
         <li class="housing">
           <span title="Unterbringung und Netzanbindung eines Servers">Serverhousing</span> gespendet von<br>
-          <a href="https://www.anexia.at/managed-hosting/"><img src="{{ href('static', 'img/anexia_logo.png') }}" alt="anexia"></a>
+          <a class="housing-anexia" href="https://www.anexia.at/managed-hosting/"><img src="{{ href('static', 'img/anexia_logo.png') }}" alt="anexia"></a>
+          <a href="https://www.netcologne.de"><img src="{{ href('static', 'img/NetCologne_Logo_WHITE_quer.svg') }}" alt="NetCologne"></a>
         </li>
       </ul>
     </footer>{# .footer #}
