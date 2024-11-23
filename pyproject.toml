@@ -1,0 +1,73 @@
+[build-system]
+requires = [ "setuptools>=72.2.0" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inyoka-theme-ubuntuusers"
+version = "1.0.1"
+description = "Inyoka ubuntuusers theme"
+readme = "README.rst"
+keywords = [ "calendar", "django", "forum", "news", "planet", "wiki" ]
+license = { file = "LICENSE" }
+authors = [
+  { name = "Inyoka Team" },
+]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Django",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Internet :: WWW/HTTP"
+]
+
+dependencies = []
+
+urls.Changelog = "https://github.com/inyokaproject/inyoka/blob/master/ChangeLog.rst"
+urls.Homepage = "https://inyokaproject.org/"
+urls.Issues = "https://github.com/inyokaproject/theme-ubuntuusers/issues"
+urls.Source = "https://github.com/inyokaproject/theme-ubuntuusers"
+
+[tool.setuptools]
+packages = [ "inyoka_theme_ubuntuusers" ]
+
+
+
+[tool.bumpversion]
+current_version = "1.0.1"
+parse = "(?P<major>\\d+)\\.(?P<django>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{django}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+ignore_missing_files = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+allow_dirty = false
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+commit_args = ""
+setup_hooks = []
+pre_commit_hooks = []
+post_commit_hooks = []
+
+[tool.bumpversion.parts.django]
+independent = true
+values = [
+    "42",
+    "52"
+]
+
+[[tool.bumpversion.files]]
+filename = "package.json"
+search = '"version": "{current_version}"'
+replace = '"version": "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
