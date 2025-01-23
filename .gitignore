@@ -2,6 +2,7 @@
 *.egg-info
 *.gz
 *.min.js
+*.pot
 *.py[cod]
 
 dist
