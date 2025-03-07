@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-13 15:20+0200\n"
+"POT-Creation-Date: 2025-01-21 22:49+0100\n"
 "PO-Revision-Date: 2023-11-12 16:29+0100\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -54,6 +54,9 @@ msgstr "Kontrollzentrum"
 
 msgid "Created:"
 msgstr "Erstellt:"
+
+msgid "Downloads"
+msgstr "Downloads"
 
 msgid "Event suggestions"
 msgstr "Veranstaltungsvorschläge"
@@ -138,6 +141,9 @@ msgstr "Einen Artikel vorschlagen"
 
 msgid "Suggest an event"
 msgstr "Eine Veranstaltung vorschlagen"
+
+msgid "There are no upcoming events."
+msgstr "Keine anstehende Veranstaltungen vorhanden."
 
 msgid "Turn admin links on/off"
 msgstr "Adminlinks ein/aus"
