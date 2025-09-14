@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inyoka Project v0.15.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-21 22:49+0100\n"
+"POT-Creation-Date: 2025-06-01 23:01+0200\n"
 "PO-Revision-Date: 2023-11-12 16:29+0100\n"
 "Last-Translator: Lyra, 2017\n"
 "Language: de_DE\n"
@@ -16,23 +16,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
-
-#, python-format
-msgid "%(count)s comment"
-msgid_plural "%(count)s comments"
-msgstr[0] "%(count)s Kommentar"
-msgstr[1] "%(count)s Kommentare"
+"Generated-By: Babel 2.17.0\n"
 
 #, python-format
 msgid "(rendered in %(seconds)s seconds)"
 msgstr "(in %(seconds)s Sekunden gerendert)"
-
-msgid "About"
-msgstr "Über"
-
-msgid "Admin"
-msgstr "Admin"
 
 msgid "Article suggestions"
 msgstr "Artikelvorschläge"
@@ -43,17 +31,8 @@ msgstr "Brotkrumennavigation unten"
 msgid "Breadcrumb top"
 msgstr "Brotkrumennavigation oben"
 
-msgid "Configuration"
-msgstr "Konfiguration"
-
-msgid "Contact"
-msgstr "Kontakt"
-
 msgid "Control panel"
 msgstr "Kontrollzentrum"
-
-msgid "Created:"
-msgstr "Erstellt:"
 
 msgid "Downloads"
 msgstr "Downloads"
@@ -64,21 +43,6 @@ msgstr "Veranstaltungsvorschläge"
 msgid "FAQ"
 msgstr "FAQ"
 
-msgid "Forum"
-msgstr "Forum"
-
-msgid "General"
-msgstr "Allgemein"
-
-msgid "Groups"
-msgstr "Gruppen"
-
-msgid "Last update:"
-msgstr "Letzte Aktualisierung:"
-
-msgid "Linkmap"
-msgstr "Linkmap"
-
 msgid "Login"
 msgstr "Anmelden"
 
@@ -86,17 +50,11 @@ msgstr "Anmelden"
 msgid "Logout [%(user)s]"
 msgstr "Abmelden [%(user)s]"
 
-msgid "Members"
-msgstr "Mitglieder"
-
 msgid "Page not found"
 msgstr "Seite nicht gefunden"
 
 msgid "Please turn on JavaScript!"
 msgstr "Bitte aktiviere JavaScript!"
-
-msgid "Portal"
-msgstr "Portal"
 
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Inyoka</a>"
@@ -127,30 +85,12 @@ msgstr "Zur Seitenleiste springen"
 msgid "Spelling mistakes"
 msgstr "Rechtschreibfehler"
 
-msgid "Static files"
-msgstr "Statische Dateien"
 
-msgid "Static pages"
-msgstr "Statische Seiten"
 
-msgid "Suggest a blog"
-msgstr "Ein Blog vorschlagen"
 
-msgid "Suggest an article"
-msgstr "Einen Artikel vorschlagen"
 
-msgid "Suggest an event"
-msgstr "Eine Veranstaltung vorschlagen"
 
-msgid "There are no upcoming events."
-msgstr "Keine anstehende Veranstaltungen vorhanden."
 
-msgid "Turn admin links on/off"
-msgstr "Adminlinks ein/aus"
 
-msgid "Upcoming events"
-msgstr "Anstehende Veranstaltungen"
 
-msgid "Who is online?"
-msgstr "Wer ist gerade angemeldet?"
 
