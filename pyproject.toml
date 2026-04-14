@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inyoka-theme-ubuntuusers"
-version = "1.52.3"
+version = "1.52.4"
 description = "Inyoka ubuntuusers theme"
 readme = "README.rst"
 keywords = [ "calendar", "django", "forum", "news", "planet", "wiki" ]
@@ -36,7 +36,7 @@ packages = [ "inyoka_theme_ubuntuusers" ]
 
 
 [tool.bumpversion]
-current_version = "1.52.3"
+current_version = "1.52.4"
 parse = "(?P<major>\\d+)\\.(?P<django>\\d+)\\.(?P<patch>\\d+)"
 serialize = ["{major}.{django}.{patch}"]
 search = "{current_version}"
