@@ -1525,6 +1525,9 @@ msgstr "Gmäudet vo <a href=\"%(link)s\">%(author)s</a>"
 msgid "Reported topics"
 msgstr "Gmäudeti Themä"
 
+msgid "Tickets"
+msgstr "Tickets"
+
 msgid "Reports"
 msgstr "Mäudigä"
 
