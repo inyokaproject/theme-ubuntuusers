@@ -85,6 +85,3 @@ msgstr "Rechtschreibfehler"
 msgid "Tickets"
 msgstr "Tickets"
 
-#~ msgid "Reported topics"
-#~ msgstr "Gemeldete Themen"
-
